@@ -80,8 +80,8 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Includes\ACTK.h" />
     <ClInclude Include="..\..\Includes\AKLogger.h" />
-    <ClInclude Include="..\..\Include\ACTK.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Logger.cpp" />

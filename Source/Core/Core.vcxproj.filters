@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Include\ACTK.h">
+    <ClInclude Include="..\..\Includes\AKLogger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Includes\AKLogger.h">
+    <ClInclude Include="..\..\Includes\ACTK.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
