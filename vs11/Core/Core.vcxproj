@@ -46,13 +46,13 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>..\..\lib\</OutDir>
-    <IntDir>..\..\obj\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>..\..\lib\$(Platform)\</OutDir>
+    <IntDir>..\..\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
     <TargetName>$(ProjectName)_d</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>..\..\lib\</OutDir>
-    <IntDir>..\..\obj\$(Configuration)\$(ProjectName)\</IntDir>
+    <OutDir>..\..\lib\$(Platform)\</OutDir>
+    <IntDir>..\..\obj\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -65,7 +65,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>..\..\lib;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib\$(Platform);</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -83,7 +83,7 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <Lib>
-      <AdditionalLibraryDirectories>..\..\lib;</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>..\..\lib\$(Platform);</AdditionalLibraryDirectories>
     </Lib>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
