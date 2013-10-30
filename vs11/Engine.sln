@@ -9,6 +9,11 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Core", "Core\Core.vcxproj",
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "HelloWorld", "..\samples\HelloWorld\HelloWorld.vcxproj", "{90283FD3-62E9-4186-A1D3-AC96B831F4D0}"
 	ProjectSection(ProjectDependencies) = postProject
+		{DF8E35DB-FA71-4261-8FFE-823C324F7029} = {DF8E35DB-FA71-4261-8FFE-823C324F7029}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Renderer", "Renderer\Renderer.vcxproj", "{DF8E35DB-FA71-4261-8FFE-823C324F7029}"
+	ProjectSection(ProjectDependencies) = postProject
 		{6366FAF9-D6C9-470E-BA33-9F4B6755A76F} = {6366FAF9-D6C9-470E-BA33-9F4B6755A76F}
 	EndProjectSection
 EndProject
@@ -26,12 +31,17 @@ Global
 		{90283FD3-62E9-4186-A1D3-AC96B831F4D0}.Debug|Win32.Build.0 = Debug|Win32
 		{90283FD3-62E9-4186-A1D3-AC96B831F4D0}.Release|Win32.ActiveCfg = Release|Win32
 		{90283FD3-62E9-4186-A1D3-AC96B831F4D0}.Release|Win32.Build.0 = Release|Win32
+		{DF8E35DB-FA71-4261-8FFE-823C324F7029}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DF8E35DB-FA71-4261-8FFE-823C324F7029}.Debug|Win32.Build.0 = Debug|Win32
+		{DF8E35DB-FA71-4261-8FFE-823C324F7029}.Release|Win32.ActiveCfg = Release|Win32
+		{DF8E35DB-FA71-4261-8FFE-823C324F7029}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6366FAF9-D6C9-470E-BA33-9F4B6755A76F} = {574EA9AC-4199-47D7-BA46-2941FDA2EEAE}
+		{DF8E35DB-FA71-4261-8FFE-823C324F7029} = {574EA9AC-4199-47D7-BA46-2941FDA2EEAE}
 		{90283FD3-62E9-4186-A1D3-AC96B831F4D0} = {D1FC7B98-7333-42E9-99B4-7D5115B40258}
 	EndGlobalSection
 EndGlobal

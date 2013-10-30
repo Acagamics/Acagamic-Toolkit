@@ -11,8 +11,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{6366FAF9-D6C9-470E-BA33-9F4B6755A76F}</ProjectGuid>
-    <RootNamespace>Core</RootNamespace>
+    <ProjectGuid>{DF8E35DB-FA71-4261-8FFE-823C324F7029}</ProjectGuid>
+    <RootNamespace>Renderer</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -59,6 +59,7 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>..\..\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Core_d.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -77,14 +78,15 @@
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>..\..\lib;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>Core.lib</AdditionalDependencies>
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Logger.cpp" />
+    <ClInclude Include="..\..\include\ACTK.h" />
+    <ClInclude Include="..\..\include\RenderDeviceManager.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\ACTK.h" />
-    <ClInclude Include="..\..\include\AKLogger.h" />
+    <ClCompile Include="..\..\src\Renderer\RenderDeviceManager.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
