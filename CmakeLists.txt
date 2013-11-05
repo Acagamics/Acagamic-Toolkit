@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 2.6)
+
+project(ACTK)
+
+add_subdirectory (Core)
+
+set( ACTK_INCLUDE_DIR /include )
+set( ACTK_SRC_DIR /src )
+set( ACTK_BIN_LIB /lib )
+
+include_directories(${ACTK_INCLUDE_DIR})
+link_directories (${ACTK_BIN_DIR}) 
+
+AUX_SOURCE_DIRECTORY(${ACTK_SRC_DIR}/Core CORE_SRC)
+add_library(Core STATIC ${CORE_SRC})

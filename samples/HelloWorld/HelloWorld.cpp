@@ -1,6 +1,16 @@
 #include "ACTK.h"
+#include "AKLogger.h"
 
-int main()
+namespace ACTK
 {
-	return 0;
+
+	int main()
+	{
+		FN("main(%s)", "bla");
+
+		LOG_INIT("Testo");
+
+		return 0;
+	}
+
 }
