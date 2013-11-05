@@ -59,13 +59,18 @@ namespace ACTK
 		~EventLogger();
 
 		// Initialize and shut down the event logging system
+
+		// ToDo: Stream-Datei laden, die beschrieben wird
         bool init(const char* logName);
+		// ToDo: Stream-Datei freigeben
         void release();
 
 		// Is the event logging system initialized?
         bool isInitialized() { return m_initialized; }
 
 		// Log an event (with or without formatting flags)
+
+		// ToDo: Log in die Datei schreiben (Die ... Notation kann man von EventLogFN übernehmen)
         void logEvent(const char* format, ...);
         void logInit(const char* format, ...);
         void logError(const char* format, ...);
