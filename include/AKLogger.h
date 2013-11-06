@@ -2,7 +2,8 @@
 #include "ACTK.h"
 #include <vector>
 
-#define LOG_LEVEL		0
+// Low Loglevel means that less important logs will be displayed
+#define LOG_LEVEL		1
 #define FN				ACTK::EventLogFN obj____unique_name
 
 #if LOG_LEVEL < 1
@@ -60,7 +61,7 @@ namespace ACTK
         EventLogger& operator=( const EventLogger& ) {return *this;}
 
 	public:
-		static EventLogger& SetInstance(const EventLogger&);
+		static void SetInstance(EventLogger&);
 		static EventLogger& GetInstance();
 
 		~EventLogger();

@@ -9,6 +9,8 @@
 
 namespace ACTK
 {
+	static std::shared_ptr<EventLogger> Instance;
+
 	const int MAX_DEBUG_LINE_LEN = 1024;
 
 	// Helper function designed to push and pop
@@ -47,9 +49,13 @@ namespace ACTK
 		release();
 	}
 
+	void EventLogger::SetInstance(EventLogger& logger)
+	{
+		Instance = std::shared_ptr<EventLogger>(&logger, [](EventLogger* ptr){});
+	}
+
 	EventLogger& EventLogger::GetInstance()
 	{
-		static std::shared_ptr<EventLogger> Instance;
 		if(Instance.get() == nullptr)
 		{
 			Instance = std::shared_ptr<EventLogger>(new EventLogger());
