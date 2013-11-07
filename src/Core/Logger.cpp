@@ -2,10 +2,13 @@
 #include <stdarg.h>
 #include <memory>
 #include <assert.h>
+#include <cstring>
 #include <string>
-
-#include <Windows.h>
 #include <iostream>
+
+#ifdef _WIN32
+#include <Windows.h>
+#endif
 
 namespace ACTK
 {
@@ -185,7 +188,7 @@ namespace ACTK
 	void EventLogger::logOutput(char* buffer, unsigned int flags)
 	{
 		// Strip any unnecessary newline characters at the end of the buffer
-		int i = strlen(buffer);
+        int i = strlen(buffer);
 		if(i == 0)
 			return;
 		if(buffer[i - 1] == '\n')
@@ -224,10 +227,12 @@ namespace ACTK
 	// Debug output functions
 	void EventLogger::debugOutput(const char* buffer)
 	{
+#ifdef _WIN32
 		char buf[MAX_DEBUG_LINE_LEN];
-		sprintf_s(buf, "%s\n", buffer);
+        sprintf_s(buf, "%s\n", buffer);
 		std::cout << buf;
 		OutputDebugString(buf);
+#endif
 	}
 
 }

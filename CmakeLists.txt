@@ -1,15 +1,11 @@
-cmake_minimum_required(VERSION 2.6)
+cmake_minimum_required(VERSION 2.8)
+project(Acagamics-Toolkit)
 
-project(ACTK)
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
-add_subdirectory (Core)
+add_definitions(-std=c++11)
+include_directories(./include)
 
-set( ACTK_INCLUDE_DIR /include )
-set( ACTK_SRC_DIR /src )
-set( ACTK_BIN_LIB /lib )
-
-include_directories(${ACTK_INCLUDE_DIR})
-link_directories (${ACTK_BIN_DIR}) 
-
-AUX_SOURCE_DIRECTORY(${ACTK_SRC_DIR}/Core CORE_SRC)
-add_library(Core STATIC ${CORE_SRC})
+add_subdirectory(src)
