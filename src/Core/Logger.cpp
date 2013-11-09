@@ -67,6 +67,19 @@ namespace ACTK
 		return *Instance.get();
 	}
 
+	// Initialize stereaming file
+	void EventLogger::initLogFile()
+	{
+		std::ofstream myfile;
+		m_logStream.open("Log.txt", std::fstream::in|std::fstream::app);
+
+		if (m_logStream.is_open())
+		{
+			m_logStream.clear();
+		}
+	}
+
+
 	// Initialize and shut down the event logging system
 	bool EventLogger::init(const char* logName)
 	{
@@ -74,6 +87,7 @@ namespace ACTK
 			return false;
 
 		// ToDo: STREAMING DATEI ÖFFNEN UND LEEREN
+		initLogFile();
 
 		m_initialized = true;
 		m_loggedEvent = true;
@@ -85,10 +99,10 @@ namespace ACTK
 	void EventLogger::release()
 	{
 		// ToDo: DATEI SCHLIEßEN UND FREIGEBEN
+		m_logStream.close();
 
 		m_initialized = false;
 	}
-
 
 	void EventLogger::logInfo(const char* text, ...)
 	{
@@ -201,7 +215,7 @@ namespace ACTK
 		logCallStack();
 
 		// ToDo: HIER DEN INHALT VON BUFFER IN DIE DATEI SCHREIBEN
-
+		m_logStream << buffer;
 
 		debugOutput(buffer);
 	}

@@ -1,6 +1,7 @@
 #pragma once
 #include "ACTK.h"
 #include <vector>
+#include <fstream>
 
 // Low Loglevel means that less important logs will be displayed
 #define LOG_LEVEL		1
@@ -68,6 +69,9 @@ namespace ACTK
 
 		// Initialize and shut down the event logging system
 
+		// Initialize log file
+		void initLogFile();
+
 		// ToDo: Stream-Datei laden, die beschrieben wird
         bool init(const char* logName);
 
@@ -101,5 +105,6 @@ namespace ACTK
         bool            m_loggedEvent;
         unsigned int    m_previousStackLevel;
         bool            m_initialized;
+		std::ofstream   m_logStream;
 	};
 }
