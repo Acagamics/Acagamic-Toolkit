@@ -42,13 +42,6 @@ namespace ACTK
 	// "stack" typedef
     typedef std::vector<const char*> CharPtrVec;
 
-	#define LOG_SIZE_LARGE      0x00000040
-    #define LOG_SIZE_SMALL      0x00000080
-
-    #define LOG_BOLD            0x00000100
-    #define LOG_ITALICS         0x00000200
-    #define LOG_UNDERLINE       0x00000400
-
 	//----------------------------------------------------------------------------
     // EventLogger
     //----------------------------------------------------------------------------
