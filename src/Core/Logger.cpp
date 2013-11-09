@@ -121,7 +121,7 @@ namespace ACTK
 		va_end(args);
 
 		// Log output to debug windows and/or disk depending on options
-		logOutput(buffer, LOG_ITALICS | LOG_SIZE_SMALL);
+		logOutput(buffer, 0);
 	}
 
 
@@ -164,7 +164,7 @@ namespace ACTK
 		va_end(args);
 
 		// Log output to debug windows and/or disk depending on options
-		logOutput(buffer, LOG_BOLD | LOG_SIZE_LARGE);
+		logOutput(buffer, 0);
 	}
 
 	void EventLogger::logAssert(bool contidion, const char* file, long line, const char* description)
