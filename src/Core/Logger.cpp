@@ -70,8 +70,7 @@ namespace ACTK
 	// Initialize stereaming file
 	void EventLogger::initLogFile()
 	{
-		std::ofstream myfile;
-		m_logStream.open("Log.txt", std::fstream::in|std::fstream::app);
+		m_logStream.open("Log.txt", std::fstream::out);
 
 		if (m_logStream.is_open())
 		{
@@ -208,6 +207,7 @@ namespace ACTK
 		if(buffer[i - 1] == '\n')
 			buffer[i - 1] = 0;
 
+
 		// Indicate that we have some info to print, so write the stack info
 		m_loggedEvent = true;
 
@@ -215,7 +215,7 @@ namespace ACTK
 		logCallStack();
 
 		// ToDo: HIER DEN INHALT VON BUFFER IN DIE DATEI SCHREIBEN
-		m_logStream << buffer;
+		m_logStream << buffer << '\n';
 
 		debugOutput(buffer);
 	}
