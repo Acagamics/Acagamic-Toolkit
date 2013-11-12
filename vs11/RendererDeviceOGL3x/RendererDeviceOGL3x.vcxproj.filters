@@ -13,30 +13,30 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Interface Files">
-      <UniqueIdentifier>{1f64b645-e08d-4bb9-a392-f18da81bc764}</UniqueIdentifier>
+    <Filter Include="Header Files\Device">
+      <UniqueIdentifier>{d9fe15c0-ca22-4a53-9523-fab375cb150d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Interface Files\Device">
-      <UniqueIdentifier>{190c2b8e-3e2a-4ef4-85d2-d0990f0f52ce}</UniqueIdentifier>
+    <Filter Include="Source Files\Device">
+      <UniqueIdentifier>{eb9aae49-1daa-41a6-b67f-cbd31c3beae0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\ACTK.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\RenderDeviceManager.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\IRenderDevice.h">
-      <Filter>Interface Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\IGraphicsWindow.h">
-      <Filter>Interface Files\Device</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\src\Renderer\RenderDeviceManager.cpp">
+    <ClCompile Include="DLLExport.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="RenderDeviceOGL3x.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphicsWindowOGL3x.cpp">
+      <Filter>Source Files\Device</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RenderDeviceOGL3x.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphicsWindowOGL3x.h">
+      <Filter>Header Files\Device</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
