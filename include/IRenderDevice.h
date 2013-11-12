@@ -5,6 +5,12 @@
 
 namespace ACTK
 {
+	enum class WindowType : char
+	{
+		Windowed,
+		Fullscreen
+	};
+
 	/// @brief RendererDevice represents the Graphics Server
 	class IRenderDevice
 	{
@@ -12,7 +18,7 @@ namespace ACTK
 		IRenderDevice(){}
 		virtual ~IRenderDevice(){}
 
-		virtual GraphicsWindowPtr createWindow(int width, int height, std::string title) =0;
+		virtual GraphicsWindowPtr createWindow(int width = 800, int height = 600, std::string title = "ACTK-Engine", WindowType = WindowType::Windowed) = 0;
 	};
 
 	typedef std::shared_ptr<IRenderDevice> RenderDevicePtr;
