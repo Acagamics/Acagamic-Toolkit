@@ -82,13 +82,13 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="DLLExport.cpp" />
-    <ClCompile Include="GraphicsWindowOGL3x.cpp" />
-    <ClCompile Include="RenderDeviceOGL3x.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\DLLExport.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GraphicsWindowOGL3x.h" />
-    <ClInclude Include="RenderDeviceOGL3x.h" />
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h" />
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

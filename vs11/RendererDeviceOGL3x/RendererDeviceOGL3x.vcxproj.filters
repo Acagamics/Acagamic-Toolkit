@@ -21,22 +21,22 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="DLLExport.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="RenderDeviceOGL3x.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="GraphicsWindowOGL3x.cpp">
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.cpp">
       <Filter>Source Files\Device</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\DLLExport.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RenderDeviceOGL3x.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GraphicsWindowOGL3x.h">
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h">
       <Filter>Header Files\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
