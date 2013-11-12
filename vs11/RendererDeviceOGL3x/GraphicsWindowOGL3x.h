@@ -13,7 +13,8 @@ namespace ACTK
 		// =========================================================================
 		// INIT/RELEASE STUFF:
 		// =========================================================================
-		// Creates the Window
+
+		// Creates the Window and register the Windows-Callback
 		bool initialize(HINSTANCE hInstance, int width, int height, std::string title);
 		void release(void);
 
