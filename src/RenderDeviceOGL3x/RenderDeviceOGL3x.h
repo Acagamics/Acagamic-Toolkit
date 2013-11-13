@@ -12,7 +12,7 @@ namespace ACTK {
 		~RenderDeviceOGL3x(void);
 
 		// Creates Window and handles Resize and Destruction itselfs
-		GraphicsWindowPtr createWindow(int width, int height, std::string title);
+		GraphicsWindowPtr createWindow(int width, int height, const std::string& title, WindowType);
 
 	private:
 		HINSTANCE m_hInstance;

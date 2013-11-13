@@ -13,7 +13,7 @@ namespace ACTK
 
 	}
 
-	GraphicsWindowPtr RenderDeviceOGL3x::createWindow(int width, int height, std::string title)
+	GraphicsWindowPtr RenderDeviceOGL3x::createWindow(int width, int height, const std::string& title, WindowType)
 	{
 		auto window = new GraphicsWindowOGL3x();
 
