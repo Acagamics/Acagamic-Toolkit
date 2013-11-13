@@ -25,14 +25,29 @@ namespace ACTK
 		case API::OpenGL3x:
 			{
 				#ifdef _DEBUG
-					hDLL = LoadLibraryExW(L"RendererDeviceOGL3x_d.dll", NULL, 0);
+					hDLL = LoadLibraryExW(L"RenderDeviceOGL3x_d.dll", NULL, 0);
 				#else
-					hDLL = LoadLibraryExW(L"RendererDeviceOGL3x.dll", NULL, 0);
+					hDLL = LoadLibraryExW(L"RenderDeviceOGL3x.dll", NULL, 0);
 				#endif
 				if(!hDLL)
 				{
-					LOG_ERROR("Could not find OGLRenderDevice.dll!");
-					MessageBox(NULL, "Loading 'OGLRenderDevice.dll' failed.", "LongBowEngine - error", MB_OK | MB_ICONERROR);
+					LOG_ERROR("Could not find RenderDeviceOGL3x.dll!");
+					MessageBox(NULL, "Loading 'RenderDeviceOGL3x.dll' failed.", "ACTK - error", MB_OK | MB_ICONERROR);
+					return RenderDevicePtr(nullptr);
+				}
+			}
+			break;
+		case API::Direct3D11:
+			{
+				#ifdef _DEBUG
+					hDLL = LoadLibraryExW(L"RenderDeviceD3D11_d.dll", NULL, 0);
+				#else
+					hDLL = LoadLibraryExW(L"RenderDeviceD3D11.dll", NULL, 0);
+				#endif
+				if(!hDLL)
+				{
+					LOG_ERROR("Could not find RenderDeviceD3D11.dll!");
+					MessageBox(NULL, "Loading 'RenderDeviceD3D11.dll' failed.", "ACTK - error", MB_OK | MB_ICONERROR);
 					return RenderDevicePtr(nullptr);
 				}
 			}
@@ -40,7 +55,7 @@ namespace ACTK
 		default:
 			{
 				LOG_ERROR("Renderer API is not supported!");
-				MessageBox(NULL, "API is not supported.", "LongBowEngine - error", MB_OK | MB_ICONERROR);
+				MessageBox(NULL, "API is not supported.", "ACTK - error", MB_OK | MB_ICONERROR);
 				return RenderDevicePtr(nullptr);
 			}
 			break;

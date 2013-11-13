@@ -1,3 +1,4 @@
+#include "AKLogger.h"
 #include "RenderDeviceOGL3x.h"
 #include "GraphicsWindowOGL3x.h"
 
@@ -13,13 +14,22 @@ namespace ACTK
 
 	}
 
-	GraphicsWindowPtr RenderDeviceOGL3x::createWindow(int width, int height, const std::string& title, WindowType)
+	GraphicsWindowPtr RenderDeviceOGL3x::createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowtype)
 	{
+		FN("RenderDeviceOGL3x::createWindow(width = %u, height = %u, title = %s, windowtype = %u)", width, height, title, windowtype);
+
+		LOG_INIT("Create OpenGL-Window with width: %u, height: %u.", width, height);
 		auto window = new GraphicsWindowOGL3x();
 
-		if(window->initialize(m_hInstance, width, height, title))
+		if(window->initialize(m_hInstance, width, height, title, windowtype))
+		{
+			LOG_INIT("OpenGL-Window sucessfully created.");
 			return GraphicsWindowPtr(window);
+		}
 		else
+		{
+			LOG_ERROR("ERROR while creating OpenGL-Window!");
 			return GraphicsWindowPtr(nullptr);
+		}
 	}
 }

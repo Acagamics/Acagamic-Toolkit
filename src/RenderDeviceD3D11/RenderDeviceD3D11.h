@@ -5,11 +5,11 @@
 
 namespace ACTK {
 
-	class RenderDeviceOGL3x : public IRenderDevice
+	class RenderDeviceD3D11 : public IRenderDevice
 	{
 	public:
-		RenderDeviceOGL3x(HINSTANCE hInstance);
-		~RenderDeviceOGL3x(void);
+		RenderDeviceD3D11(HINSTANCE hInstance);
+		~RenderDeviceD3D11(void);
 
 		// Creates Window and handles Resize and Destruction itselfs
 		GraphicsWindowPtr createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowType);

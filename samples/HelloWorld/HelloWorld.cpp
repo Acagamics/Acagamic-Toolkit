@@ -4,11 +4,11 @@
 
 int main()
 {
-	FN("main(%s)", "bla");
-	LOG_INIT("Dies ist ein Test: %u", 50);
+	ACTK::RenderDevicePtr	DeviceOGL = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::OpenGL3x);
+	ACTK::GraphicsWindowPtr WindowOGL = DeviceOGL->createWindow(800, 600, "HelloWorld");
 
-	ACTK::RenderDevicePtr	Device = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::OpenGL3x);
-	ACTK::GraphicsWindowPtr Window = Device->createWindow(800, 600, "HelloWorld");
+	ACTK::RenderDevicePtr	DeviceD3D = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::Direct3D11);
+	ACTK::GraphicsWindowPtr WindowD3D = DeviceD3D->createWindow(800, 600, "HelloWorld");
 
 	return 0;
 }

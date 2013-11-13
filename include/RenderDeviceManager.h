@@ -7,7 +7,7 @@ namespace ACTK
 	enum class API : char
 	{
 		OpenGL3x,
-		Direct3D11_2
+		Direct3D11
 	};
 
 	class RenderDeviceManager

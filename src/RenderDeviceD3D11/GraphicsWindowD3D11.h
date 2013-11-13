@@ -5,11 +5,11 @@
 
 namespace ACTK 
 {
-	class GraphicsWindowOGL3x : public IGraphicsWindow
+	class GraphicsWindowD3D11 : public IGraphicsWindow
 	{
 	public:
-		GraphicsWindowOGL3x() : m_hWnd(0), m_width(0), m_height(0) {}
-		~GraphicsWindowOGL3x(void) {}
+		GraphicsWindowD3D11() : m_hWnd(0), m_width(0), m_height(0) {}
+		~GraphicsWindowD3D11(void) {}
 
 		// =========================================================================
 		// INIT/RELEASE STUFF:
