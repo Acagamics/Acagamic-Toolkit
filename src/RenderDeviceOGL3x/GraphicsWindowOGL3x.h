@@ -3,7 +3,8 @@
 #include "IGraphicsWindow.h"
 #include "RenderContextOGL3x.h"
 #include <string>
-#include "GLFW\glfw3.h"
+
+struct GLFWwindow;
 
 namespace ACTK 
 {

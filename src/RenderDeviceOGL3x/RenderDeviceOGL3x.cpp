@@ -1,12 +1,15 @@
 #include "AKLogger.h"
 #include "RenderDeviceOGL3x.h"
 #include "GraphicsWindowOGL3x.h"
+#include "GLFW\glfw3.h"
 
 namespace ACTK
 {
 	RenderDeviceOGL3x::RenderDeviceOGL3x(HINSTANCE hInstance) : m_hInstance(hInstance)
 	{
 		// Do nothing important here to guarantee that the instantiation succeeds without errors
+			if(!glfwInit() )
+				LOG_ERROR("GLFW konnte nicht initialisiert werden!");
 	}
 
 	RenderDeviceOGL3x::~RenderDeviceOGL3x(void)

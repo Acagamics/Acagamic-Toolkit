@@ -3,6 +3,8 @@
 #include <Windows.h>
 #include <string>
 
+struct GLFWwindow;
+
 namespace ACTK {
 
 	class RenderContextOGL3x : public IRenderContext
@@ -14,7 +16,6 @@ namespace ACTK {
 		// =========================================================================
 		// INIT/RELEASE STUFF:
 		// =========================================================================
-		bool initialize(HWND hWnd, int width, int height);
 		void release(void);
 
 		// =========================================================================

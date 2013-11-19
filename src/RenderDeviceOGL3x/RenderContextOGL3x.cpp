@@ -1,4 +1,5 @@
 #include "RenderContextOGL3x.h"
+#include "GLFW\glfw3.h"
 
 namespace ACTK {
 
@@ -12,10 +13,6 @@ RenderContextOGL3x::~RenderContextOGL3x(void)
 
 }
 
-bool RenderContextOGL3x::initialize(HWND hWnd, int width, int height)
-{
-	return false;
-}
 
 void RenderContextOGL3x::release(void)
 {

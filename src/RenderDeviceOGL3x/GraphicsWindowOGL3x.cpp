@@ -1,6 +1,7 @@
 #define GLFW_EXPOSE_NATIVE_WGL
 #define GLFW_EXPOSE_NATIVE_WIN32
 #include "GraphicsWindowOGL3x.h"
+#include "GLFW\glfw3.h"
 #include "GLFW\glfw3native.h"
 
 namespace ACTK
@@ -11,8 +12,8 @@ namespace ACTK
 		m_width = width;
 		m_height = height;
 
-		if( !glfwInit() )
-			return false;
+
+
 
 		m_window = std::shared_ptr<GLFWwindow>(glfwCreateWindow(width, height, title.c_str(), NULL, NULL), [](GLFWwindow* ptr){ glfwDestroyWindow(ptr); });
 		
@@ -23,6 +24,8 @@ namespace ACTK
 		}
 		m_hWnd = glfwGetWin32Window(m_window.get());
 
+		m_context = RenderContextOGL3xPtr(new RenderContextOGL3x());
+		glfwMakeContextCurrent(m_window.get());
 		return true;
 	}
 
