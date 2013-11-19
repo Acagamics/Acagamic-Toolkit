@@ -30,6 +30,9 @@
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderContextOGL3x.cpp">
+      <Filter>Source Files\Device</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h">
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderContextOGL3x.h">
+      <Filter>Header Files\Device</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

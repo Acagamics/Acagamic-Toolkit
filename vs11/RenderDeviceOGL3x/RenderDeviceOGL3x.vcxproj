@@ -89,10 +89,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\DLLExport.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderContextOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h" />
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderContextOGL3x.h" />
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

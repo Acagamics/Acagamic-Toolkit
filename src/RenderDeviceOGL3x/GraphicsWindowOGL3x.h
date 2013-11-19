@@ -1,7 +1,9 @@
 #pragma once
 #include "IRenderDevice.h"
 #include "IGraphicsWindow.h"
+#include "RenderContextOGL3x.h"
 #include <string>
+#include "GLFW\glfw3.h"
 
 namespace ACTK 
 {
@@ -14,17 +16,20 @@ namespace ACTK
 		// =========================================================================
 		// INIT/RELEASE STUFF:
 		// =========================================================================
-
 		// Creates the Window and register the Windows-Callback
 		bool initialize(HINSTANCE hInstance, unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
 		void release(void);
 
+		RenderContextPtr getContext() const;
 		HWND getWindowHandle() const { return m_hWnd; }
 
-		int getWidth() const { return m_width; }
+		int getWidth() const  { return m_width; }
 		int getHeight() const { return m_height; }
 
 	private:
+		std::shared_ptr<GLFWwindow> m_window;
+		RenderContextOGL3xPtr m_context;
+
 		HWND m_hWnd;
 		int m_width;
 		int m_height;

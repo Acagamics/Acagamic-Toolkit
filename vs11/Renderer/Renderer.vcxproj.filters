@@ -33,6 +33,12 @@
     <ClInclude Include="..\..\include\IGraphicsWindow.h">
       <Filter>Interface Files\Device</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\ClearState.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\IRenderContext.h">
+      <Filter>Interface Files\Device</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Renderer\RenderDeviceManager.cpp">
