@@ -214,7 +214,7 @@ namespace ACTK
 		// Update the call stack output
 		logCallStack();
 
-		// ToDo: HIER DEN INHALT VON BUFFER IN DIE DATEI SCHREIBEN
+		//  HIER DEN INHALT VON BUFFER IN DIE DATEI SCHREIBEN
 		m_logStream << buffer << '\n';
 
 		debugOutput(buffer);

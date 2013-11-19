@@ -9,6 +9,6 @@ int main()
 
 	ACTK::RenderDevicePtr	DeviceD3D = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::Direct3D11);
 	ACTK::GraphicsWindowPtr WindowD3D = DeviceD3D->createWindow(800, 600, "HelloWorld");
-
+	
 	return 0;
 }
