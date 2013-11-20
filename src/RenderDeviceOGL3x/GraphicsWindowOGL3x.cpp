@@ -38,9 +38,22 @@ namespace ACTK
 		return m_context; 
 	}
 
+	int GraphicsWindowOGL3x::getWidth() const  
+	{
+		int width, height;
+		glfwGetWindowSize(m_window.get(), &width, &height);
+		return width; 
+	}
+	int GraphicsWindowOGL3x::getHeight() const 
+	{
+		int width, height;
+		glfwGetWindowSize(m_window.get(), &width, &height);
+		return height;
+	}
+
 	bool GraphicsWindowOGL3x::shouldClose() const
 	{
-		return glfwWindowShouldClose(m_window.get());
+		return glfwWindowShouldClose(m_window.get()) != 0;
 	}
 	
 }

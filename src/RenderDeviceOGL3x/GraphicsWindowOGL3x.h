@@ -24,8 +24,8 @@ namespace ACTK
 		RenderContextPtr getContext() const;
 		HWND getWindowHandle() const { return m_hWnd; }
 
-		int getWidth() const  { return m_width; }
-		int getHeight() const { return m_height; }
+		int getWidth() const;
+		int getHeight() const;
 		bool shouldClose() const;
 
 	private:
