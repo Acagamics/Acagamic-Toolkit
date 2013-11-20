@@ -16,35 +16,10 @@ namespace ACTK
 
 	const int MAX_DEBUG_LINE_LEN = 1024;
 
-	// Helper function designed to push and pop
-	EventLogFN::EventLogFN(const char* function, ...)
-	{
-		char buffer[MAX_DEBUG_LINE_LEN];
-		va_list args; 
-		va_start(args, function);
-
-		#if defined(WINVER) || defined(_XBOX)
-			int buf = _vsnprintf_s(buffer, MAX_DEBUG_LINE_LEN, function, args); 
-		#else
-			int buf = vsnprintf(buffer, MAX_DEBUG_LINE_LEN, function, args); 
-		#endif
-
-		va_end(args);
-
-		EventLogger::GetInstance().pushFunction(buffer);
-	}
-
-	EventLogFN::~EventLogFN()
-	{
-		EventLogger::GetInstance().popFunction();
-	}
-
 	EventLogger::EventLogger()
 	{
 		m_loggedEvent = false;
 		m_initialized = false;
-		m_previousStackLevel = 0;
-		m_callStack.reserve(32);
 	}
 
 	EventLogger::~EventLogger()
@@ -179,22 +154,6 @@ namespace ACTK
 		}
 	}
 
-	void EventLogger::pushFunction(const char* name) 
-	{
-		if(!isInitialized())
-			return;
-		m_callStack.push_back(name); 
-	}
-
-	void EventLogger::popFunction()
-	{
-		if(!isInitialized() || m_callStack.empty())
-			return;
-		m_callStack.pop_back();
-		if(m_previousStackLevel >= m_callStack.size())
-			logCallStack();
-	}
-
 
 	////////////////////////////////////
 	// Common logging functions
@@ -211,30 +170,10 @@ namespace ACTK
 		// Indicate that we have some info to print, so write the stack info
 		m_loggedEvent = true;
 
-		// Update the call stack output
-		logCallStack();
-
 		//  HIER DEN INHALT VON BUFFER IN DIE DATEI SCHREIBEN
 		m_logStream << buffer << '\n';
 
 		debugOutput(buffer);
-	}
-
-
-	void EventLogger::logCallStack()
-	{
-		unsigned int currentStackLevel = m_callStack.size();
-
-		while(m_previousStackLevel < currentStackLevel)
-		{
-			m_previousStackLevel++;
-		}
-
-		while(m_previousStackLevel > currentStackLevel)
-		{
-			m_previousStackLevel--;
-		}
-    
 	}
 
 	////////////////////////////////////

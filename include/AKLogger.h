@@ -5,7 +5,6 @@
 
 // Low Loglevel means that less important logs will be displayed
 #define LOG_LEVEL		1
-#define FN				ACTK::EventLogFN obj____unique_name
 
 #if LOG_LEVEL < 1
 	#define LOG_INFO	ACTK::EventLogger::GetInstance().logInfo
@@ -30,18 +29,6 @@
 
 namespace ACTK
 {
-	// Helper function designed to push and pop
-    class EventLogFN
-    {
-    public:
-		// EcentLogFN("Klasse::Funktion(%s, %u)", "FooBar", 50);
-        EventLogFN(const char* function, ...);
-        ~EventLogFN();
-    };
-
-	// "stack" typedef
-    typedef std::vector<const char*> CharPtrVec;
-
 	//----------------------------------------------------------------------------
     // EventLogger
     //----------------------------------------------------------------------------
@@ -65,36 +52,27 @@ namespace ACTK
 		// Initialize log file
 		void initLogFile();
 
-		// ToDo: Stream-Datei laden, die beschrieben wird
+		// Stream-Datei laden, die beschrieben wird
         bool init(const char* logName);
 
-		// ToDo: Stream-Datei freigeben
+		// Stream-Datei freigeben
         void release();
 
 		// Is the event logging system initialized?
         bool isInitialized() { return m_initialized; }
 
-		// Log an event (with or without formatting flags)
-
-		// ToDo: Log in die Datei schreiben (Die ... Notation kann man von EventLogFN übernehmen)
+		// Log in die Datei schreiben (Die ... Notation kann man von EventLogFN übernehmen)
         void logInfo(const char* text, ...);
 		void logInit(const char* text, ...);
         void logError(const char* text, ...);
 		void logAssert(bool contidion, const char* file, long line, const char* description);
 
-		// Push a function onto the call stack
-        void pushFunction(const char* name);
-        // Pop a function off the call stack
-        void popFunction();
-
 	private:
         void logOutput(char* buffer, unsigned int flags);
-        void logCallStack();
 
         // Debug output function
         void debugOutput(const char* buffer);
 
-		CharPtrVec		m_callStack;
         bool            m_loggedEvent;
         unsigned int    m_previousStackLevel;
         bool            m_initialized;
