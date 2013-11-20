@@ -1,4 +1,5 @@
 #pragma once
+#include "ACTK.h"
 #include "IRenderDevice.h"
 #include "IGraphicsWindow.h"
 #include "RenderContextOGL3x.h"
@@ -11,8 +12,8 @@ namespace ACTK
 	class GraphicsWindowOGL3x : public IGraphicsWindow
 	{
 	public:
-		GraphicsWindowOGL3x() : m_hWnd(0), m_width(0), m_height(0), m_shouldClose(false) {}
-		~GraphicsWindowOGL3x(void) {}
+		GraphicsWindowOGL3x(){}
+		~GraphicsWindowOGL3x(void) { release(); }
 
 		// =========================================================================
 		// INIT/RELEASE STUFF:
@@ -22,19 +23,18 @@ namespace ACTK
 		void release(void);
 
 		RenderContextPtr getContext() const;
-		HWND getWindowHandle() const { return m_hWnd; }
+		HWND getWindowHandle() const;
 
 		int getWidth() const;
 		int getHeight() const;
 		bool shouldClose() const;
 
 	private:
+		//you shall not copy
+		GraphicsWindowOGL3x(GraphicsWindowOGL3x&){}
+		GraphicsWindowOGL3x& operator=( const GraphicsWindowOGL3x& ) {return *this;}
+
 		std::shared_ptr<GLFWwindow> m_window;
 		RenderContextOGL3xPtr m_context;
-
-		HWND m_hWnd;
-		int m_width;
-		int m_height;
-		bool m_shouldClose;
 	};
 }

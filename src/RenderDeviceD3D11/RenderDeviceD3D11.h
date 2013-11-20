@@ -1,4 +1,5 @@
 #pragma once
+#include "ACTK.h"
 #include "IRenderDevice.h"
 #include <Windows.h>
 #include <string>
@@ -15,6 +16,10 @@ namespace ACTK {
 		GraphicsWindowPtr createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
 
 	private:
+		// you shall not copy
+		RenderDeviceD3D11(RenderDeviceD3D11&){}
+		RenderDeviceD3D11& operator=( const RenderDeviceD3D11& ) {return *this;}
+
 		HINSTANCE m_hInstance;
 	};
 

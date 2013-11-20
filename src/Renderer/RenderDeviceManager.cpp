@@ -1,5 +1,4 @@
 #include <Windows.h>
-#include "AKLogger.h"
 #include "RenderDeviceManager.h"
 #include "IRenderDevice.h"
 
@@ -32,7 +31,6 @@ namespace ACTK
 				if(!hDLL)
 				{
 					LOG_ERROR("Could not find RenderDeviceOGL3x.dll!");
-					MessageBox(NULL, "Loading 'RenderDeviceOGL3x.dll' failed.", "ACTK - error", MB_OK | MB_ICONERROR);
 					return RenderDevicePtr(nullptr);
 				}
 			}
@@ -47,7 +45,6 @@ namespace ACTK
 				if(!hDLL)
 				{
 					LOG_ERROR("Could not find RenderDeviceD3D11.dll!");
-					MessageBox(NULL, "Loading 'RenderDeviceD3D11.dll' failed.", "ACTK - error", MB_OK | MB_ICONERROR);
 					return RenderDevicePtr(nullptr);
 				}
 			}
@@ -55,7 +52,6 @@ namespace ACTK
 		default:
 			{
 				LOG_ERROR("Renderer API is not supported!");
-				MessageBox(NULL, "API is not supported.", "ACTK - error", MB_OK | MB_ICONERROR);
 				return RenderDevicePtr(nullptr);
 			}
 			break;
@@ -73,12 +69,7 @@ namespace ACTK
 		if(pDevice == nullptr)
 		{
 			LOG_ERROR("Could not create Render Device from DLL!");
-			MessageBox(NULL, "Create RenderDevice from DLL failed.", "ACTK - error", MB_OK | MB_ICONERROR);
-			return RenderDevicePtr(nullptr);
 		}
-		else
-		{
-			return RenderDevicePtr(pDevice);
-		}
+		return RenderDevicePtr(pDevice);
 	}
 }

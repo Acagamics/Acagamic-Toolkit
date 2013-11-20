@@ -82,7 +82,6 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\include\ACTK.h" />
     <ClInclude Include="..\..\include\ClearState.h" />
     <ClInclude Include="..\..\include\IGraphicsWindow.h" />
     <ClInclude Include="..\..\include\IRenderContext.h" />

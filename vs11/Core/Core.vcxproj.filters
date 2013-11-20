@@ -18,7 +18,7 @@
     <ClInclude Include="..\..\include\ACTK.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\AKLogger.h">
+    <ClInclude Include="..\..\include\Logger.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

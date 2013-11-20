@@ -8,11 +8,11 @@ struct GLFWwindow;
 
 namespace ACTK {
 
-	class RenderContextOGL3x : public IRenderContext
+	class RenderContextD3D11 : public IRenderContext
 	{
 	public:
-		RenderContextOGL3x(void){}
-		~RenderContextOGL3x(void){ release(); }
+		RenderContextD3D11(void);
+		~RenderContextD3D11(void);
 
 		// =========================================================================
 		// INIT/RELEASE STUFF:
@@ -27,11 +27,11 @@ namespace ACTK {
 		void swapBuffers(void);
 
 	private:
-		//you shall not copy
-		RenderContextOGL3x(RenderContextOGL3x&){}
-		RenderContextOGL3x& operator=( const RenderContextOGL3x& ) {return *this;}
+		// you shall not copy
+		RenderContextD3D11(RenderContextD3D11&){}
+		RenderContextD3D11& operator=( const RenderContextD3D11& ) {return *this;}
 	};
 
-	typedef std::shared_ptr<RenderContextOGL3x> RenderContextOGL3xPtr;
+	typedef std::shared_ptr<RenderContextD3D11> RenderContextD3D11Ptr;
 
 }

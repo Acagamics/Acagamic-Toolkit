@@ -80,10 +80,12 @@
   <ItemGroup>
     <ClCompile Include="..\..\src\RenderDeviceD3D11\DLLExport.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceD3D11\GraphicsWindowD3D11.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceD3D11\RenderContextD3D11.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceD3D11\RenderDeviceD3D11.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\RenderDeviceD3D11\GraphicsWindowD3D11.h" />
+    <ClInclude Include="..\..\src\RenderDeviceD3D11\RenderContextD3D11.h" />
     <ClInclude Include="..\..\src\RenderDeviceD3D11\RenderDeviceD3D11.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

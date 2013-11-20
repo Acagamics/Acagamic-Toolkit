@@ -1,4 +1,5 @@
 #pragma once
+#include "ACTK.h"
 #include "IGraphicsWindow.h"
 #include <memory>
 #include <string>
@@ -18,6 +19,7 @@ namespace ACTK
 		IRenderDevice(){}
 		virtual ~IRenderDevice(){}
 
+		// this function creates and initializes a window and a rendercontext which you can use to draw polygons
 		virtual GraphicsWindowPtr createWindow(unsigned int width = 800, unsigned int height = 600, const std::string& title = "ACTK-Engine", WindowType windowType = WindowType::Windowed) = 0;
 	};
 

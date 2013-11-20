@@ -1,4 +1,5 @@
 #pragma once
+#include "ACTK.h"
 #include <memory>
 #include <Windows.h>
 
@@ -56,7 +57,6 @@ namespace ACTK
 		}
 
 	private:
-
 		bool m_red;
 		bool m_green;
 		bool m_blue;
@@ -75,19 +75,15 @@ namespace ACTK
 	struct ClearState
 	{
 	public:
-		ClearState() : ColorMask(true, true, true, true)
+		ClearState() : ColorMask(true, true, true, true),
+						DepthMask(true),
+						FrontStencilMask(~0),
+						BackStencilMask(~0),
+						Buffers(ClearBuffers::All),
+						Color(1.0f, 1.0f, 1.0f, 1.0f),
+						Depth(1),
+						Stencil(0)
 		{
-			DepthMask			= true;
-			FrontStencilMask	= ~0;
-			BackStencilMask		= ~0;
-
-			Buffers				= ClearBuffers::All;
-			color[0]			= 1.0f;
-			color[1]			= 1.0f;
-			color[2]			= 1.0f;
-			color[3]			= 1.0f;
-			Depth				= 1;
-			Stencil				= 0;
 		}
 
 		ColorMask	ColorMask;
@@ -96,7 +92,7 @@ namespace ACTK
 		int			BackStencilMask;
         
 		ClearBuffers Buffers;
-		float		 color[4];
+		Color		 Color;
 		float		 Depth;
 		int			 Stencil;
 	};

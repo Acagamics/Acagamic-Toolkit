@@ -12,7 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\ACTK.h" />
-    <ClInclude Include="..\..\include\AKLogger.h" />
+    <ClInclude Include="..\..\include\Logger.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Core\Logger.cpp" />

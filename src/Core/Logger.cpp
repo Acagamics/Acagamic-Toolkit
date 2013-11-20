@@ -1,4 +1,4 @@
-#include "AKLogger.h"
+#include "Logger.h"
 #include <stdarg.h>
 #include <memory>
 #include <assert.h>
@@ -140,6 +140,7 @@ namespace ACTK
 
 		// Log output to debug windows and/or disk depending on options
 		logOutput(buffer, 0);
+		MessageBox(NULL, buffer, "ACTK - ERROR", MB_OK | MB_ICONERROR);
 	}
 
 	void EventLogger::logAssert(bool contidion, const char* file, long line, const char* description)
