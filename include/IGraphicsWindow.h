@@ -18,6 +18,7 @@ namespace ACTK
 
 		virtual int getWidth() const = 0;
 		virtual int getHeight() const = 0;
+		virtual bool shouldClose() const = 0;
 	};
 
 	typedef std::shared_ptr<IGraphicsWindow> GraphicsWindowPtr;

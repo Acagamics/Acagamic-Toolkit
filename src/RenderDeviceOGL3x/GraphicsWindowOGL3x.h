@@ -11,7 +11,7 @@ namespace ACTK
 	class GraphicsWindowOGL3x : public IGraphicsWindow
 	{
 	public:
-		GraphicsWindowOGL3x() : m_hWnd(0), m_width(0), m_height(0) {}
+		GraphicsWindowOGL3x() : m_hWnd(0), m_width(0), m_height(0), m_shouldClose(false) {}
 		~GraphicsWindowOGL3x(void) {}
 
 		// =========================================================================
@@ -26,6 +26,7 @@ namespace ACTK
 
 		int getWidth() const  { return m_width; }
 		int getHeight() const { return m_height; }
+		bool shouldClose() const;
 
 	private:
 		std::shared_ptr<GLFWwindow> m_window;
@@ -34,5 +35,6 @@ namespace ACTK
 		HWND m_hWnd;
 		int m_width;
 		int m_height;
+		bool m_shouldClose;
 	};
 }
