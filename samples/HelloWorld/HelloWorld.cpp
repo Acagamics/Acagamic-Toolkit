@@ -4,7 +4,7 @@
 int main()
 {
 	LOG_INIT("Starting Game");
-	auto DeviceOGL = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::Direct3D11);
+	auto DeviceOGL = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::OpenGL3x);
 	if(DeviceOGL == nullptr)
 		return 0;
 
@@ -33,8 +33,9 @@ int main()
         }
         else
         {
-			ContextOGL->clear(clearState);
-			ContextOGL->swapBuffers();
+			// ToDo: Implementiert die funktionen in RenderContextOGL3x
+			ContextOGL->clear(clearState);	// Diese Funktion wurde noch nicht implementiert.
+			ContextOGL->swapBuffers();		// Diese Funktion wurde noch nicht implementiert.
         }
 	}
 	LOG_INIT("Quitting Game");
