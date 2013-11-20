@@ -3,7 +3,13 @@
 #include <fstream>
 
 // Low Loglevel means that less important logs will be displayed
-#define LOG_LEVEL		1
+#ifndef LOG_LEVEL
+	#ifdef _DEBUG
+		#define LOG_LEVEL	0
+	#else
+		#define LOG_LEVEL	2
+	#endif
+#endif
 
 #if LOG_LEVEL < 1
 	#define LOG_INFO	ACTK::EventLogger::GetInstance().logInfo
