@@ -12,8 +12,8 @@ namespace ACTK
 		m_width = width;
 		m_height = height;
 
-		if( !glfwInit() )
-			return false;
+
+
 
 		m_window = std::shared_ptr<GLFWwindow>(glfwCreateWindow(width, height, title.c_str(), NULL, NULL), [](GLFWwindow* ptr){ glfwDestroyWindow(ptr); });
 		
@@ -25,6 +25,8 @@ namespace ACTK
 		m_hWnd = glfwGetWin32Window(m_window.get());
 		m_context = RenderContextOGL3xPtr(new RenderContextOGL3x());
 
+		m_context = RenderContextOGL3xPtr(new RenderContextOGL3x());
+		glfwMakeContextCurrent(m_window.get());
 		return true;
 	}
 
