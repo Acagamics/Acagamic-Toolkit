@@ -17,7 +17,7 @@ int main()
 		return 0;
 
 	ACTK::ClearState clearState;
-	clearState.Color = ACTK::Color(1.0f, 0.0f, 1.0f, 1.0f);
+	clearState.Color = ACTK::Color(1.0f, 0.0f, 1.0f, 1.0f); // rosa
 
 	///////////////////////////////////////////////////////////////////
 	// Gameloop
@@ -34,6 +34,7 @@ int main()
         else
         {
 			// ToDo: Implementiert die funktionen in RenderContextOGL3x
+			// Ob es funktioniert hat seht ihr daran, dass das Fenster rosa wird.
 			ContextOGL->clear(clearState);	// Diese Funktion wurde noch nicht implementiert.
 			ContextOGL->swapBuffers();		// Diese Funktion wurde noch nicht implementiert.
         }
