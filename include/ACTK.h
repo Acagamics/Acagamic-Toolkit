@@ -9,7 +9,6 @@
 
 namespace ACTK
 {
-
 	struct Color
 	{
 		union
@@ -47,5 +46,4 @@ namespace ACTK
 				alpha != other.alpha;
 		}
 	};
-
 }

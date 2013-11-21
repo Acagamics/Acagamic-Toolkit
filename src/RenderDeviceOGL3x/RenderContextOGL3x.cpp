@@ -22,6 +22,28 @@ namespace ACTK {
 		* welchen Zustand OpenGL gerade hat und bei jeder Änderung des OpenGL-State sollte die Schattenkopie mitgeändert werden, denn das Nachfragen über OpenGL-Funktionen welcher 
 		* State gerade gesetzt ist, ist genau so teuer wie es sinnlos zu ändern.
 		*/
+
+		// ToDo: Alle Einstellungen aus 'clearState' mit openGL befehlen ausführen. (Die verundung welche Buffer gecleared werden müssen habe ich schonmal gemacht)
+
+
+		// specifies which buffer needs to be cleared
+		GLbitfield clearMask = 0;
+		if ((clearState.Buffers & ClearBuffers::ColorBuffer) != 0)
+		{
+			clearMask |= GL_COLOR_BUFFER_BIT;
+		}
+
+		if ((clearState.Buffers & ClearBuffers::DepthBuffer) != 0)
+		{
+			clearMask |= GL_DEPTH_BUFFER_BIT;
+		}
+
+		if ((clearState.Buffers & ClearBuffers::StencilBuffer) != 0)
+		{
+			clearMask |= GL_STENCIL_BUFFER_BIT;
+		}
+
+		// ToDo: Buffer clearen. Jetzt muss openGL nur noch der Befehlt gegeben werden, dass der alles mit unseren neuen Einstellungen clearen muss
 	}
 
 

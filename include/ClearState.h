@@ -5,72 +5,50 @@
 
 namespace ACTK
 {
-
 	struct ColorMask
 	{
 	public:
+		bool red;
+		bool green;
+		bool blue;
+		bool alpha;
 
 		ColorMask(bool red, bool green, bool blue, bool alpha)
 		{
-			m_red = red;
-			m_green = green;
-			m_blue = blue;
-			m_alpha = alpha;
-		}
-
-		bool GetRed()
-		{
-			return m_red;
-		}
-
-		bool GetGreen()
-		{
-			return m_green;
-		}
-
-		bool GetBlue()
-		{
-			return m_blue;
-		}
-
-		bool GetAlpha()
-		{
-			return m_alpha;
+			this->red = red;
+			this->green = green;
+			this->blue = blue;
+			this->alpha = alpha;
 		}
 
 		bool operator ==(ColorMask other)
 		{
 			return 
-				m_red == other.m_red && 
-				m_green == other.m_green && 
-				m_blue == other.m_blue && 
-				m_alpha == other.m_alpha;
+				red == other.red && 
+				green == other.green && 
+				blue == other.blue && 
+				alpha == other.alpha;
 		}
 
 		bool operator !=(ColorMask other)
 		{
 			return 
-				m_red != other.m_red ||
-				m_green != other.m_green || 
-				m_blue != other.m_blue || 
-				m_alpha != other.m_alpha;
+				red != other.red ||
+				green != other.green || 
+				blue != other.blue || 
+				alpha != other.alpha;
 		}
-
-	private:
-		bool m_red;
-		bool m_green;
-		bool m_blue;
-		bool m_alpha;
 	};
 
-	enum class ClearBuffers
+	// this need to be a real enum (do not change into enum class)!
+	typedef enum TYPE_ClearBuffers
 	{
 		ColorBuffer = 1,
 		DepthBuffer = 2,
 		StencilBuffer = 4,
-		ColorAndDepthBuffer = ColorBuffer | DepthBuffer, 
+		ColorAndDepthBuffer = ColorBuffer | DepthBuffer,  
 		All = ColorBuffer | DepthBuffer | StencilBuffer
-	};
+	} ClearBuffers;
 
 	struct ClearState
 	{
