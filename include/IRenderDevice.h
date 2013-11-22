@@ -16,8 +16,8 @@ namespace ACTK
 	class IRenderDevice
 	{
 	public:
-		IRenderDevice(){}
 		virtual ~IRenderDevice(){}
+		virtual void release(void) = 0;
 
 		// this function creates and initializes a window and a rendercontext which you can use to draw polygons
 		virtual GraphicsWindowPtr createWindow(unsigned int width = 800, unsigned int height = 600, const std::string& title = "ACTK-Engine", WindowType windowType = WindowType::Windowed) = 0;

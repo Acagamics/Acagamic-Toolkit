@@ -12,9 +12,9 @@ namespace ACTK
 			LOG_INIT("GLFW sucessfully initialized.");
 	}
 
-	RenderDeviceOGL3x::~RenderDeviceOGL3x(void)
+	void RenderDeviceOGL3x::release(void)
 	{
-		LOG_INIT("OpenGL Renderdevice released.");
+		LOG_INIT("RenderDeviceOGL3x released.");
 	}
 
 	GraphicsWindowPtr RenderDeviceOGL3x::createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowtype)
