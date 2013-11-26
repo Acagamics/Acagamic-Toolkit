@@ -28,7 +28,7 @@ namespace ACTK
 			this->alpha = alpha;
 		}
 
-		bool operator ==(Color other)
+		bool operator ==(const Color& other)
 		{
 			return 
 				red == other.red && 
@@ -37,7 +37,7 @@ namespace ACTK
 				alpha == other.alpha;
 		}
 
-		bool operator !=(Color other)
+		bool operator !=(const Color& other)
 		{
 			return 
 				red != other.red ||

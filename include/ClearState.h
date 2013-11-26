@@ -55,8 +55,6 @@ namespace ACTK
 	public:
 		ClearState() : ColorMask(true, true, true, true),
 						DepthMask(true),
-						FrontStencilMask(~0),
-						BackStencilMask(~0),
 						Buffers(ClearBuffers::All),
 						Color(1.0f, 1.0f, 1.0f, 1.0f),
 						Depth(1),
@@ -66,13 +64,32 @@ namespace ACTK
 
 		ColorMask	ColorMask;
 		bool		DepthMask;
-		int			FrontStencilMask;
-		int			BackStencilMask;
         
 		ClearBuffers Buffers;
 		Color		 Color;
 		float		 Depth;
 		int			 Stencil;
-	};
 
+		bool operator ==(const ClearState& right)
+		{
+			return 
+				ColorMask == right.ColorMask && 
+				DepthMask == right.DepthMask && 
+				Buffers == right.Buffers &&
+				Color == right.Color && 
+				Depth == right.Depth &&
+				Stencil == right.Stencil;
+		}
+
+		bool operator !=(const ClearState& right)
+		{
+			return 
+				ColorMask != right.ColorMask || 
+				DepthMask != right.DepthMask || 
+				Buffers != right.Buffers ||
+				Color != right.Color || 
+				Depth != right.Depth ||
+				Stencil != right.Stencil;
+		}
+	};
 }

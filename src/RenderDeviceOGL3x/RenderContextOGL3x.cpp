@@ -3,30 +3,60 @@
 
 namespace ACTK {
 
+	RenderContextOGL3x* RenderContextOGL3x::m_currentContext;
+
 	void RenderContextOGL3x::release(void)
 	{
 		LOG_INIT("OpenGL RenderContext released");
 	}
 
-
 	void RenderContextOGL3x::clear(const ClearState& clearState)
 	{
+		if(m_currentContext != this)
+		{
+			glfwMakeContextCurrent(m_window);
+			m_currentContext = this;
+		}
 		/* ToDo: Das übergebene ClearState objekt enhält die Parameter auf die die der Context eingestellt werden muss.
 		* Wichtig ist dabei, dass man einen State nicht nochmal ändert, wenn der OpenGL-Wert bereits auf den Wert, den man haben möchte gestellt ist.
 		*
 		* Z.B.: Wenn man in einem Frame die Clearcolor auf Rosa gestellt hat, sollte man sich das merken und beim nächsten Aufruf sollte
 		* die Clearcolor nicht nochmal auf rosa gestellt werden. Die OpenGL-Clearcolor sollte nur geändert werden und die OpenGL funktion nur aufgerufen werden, wenn man tatsächlich die Farbe ändert und nicht immer wieder die selbe Farbe übergibt.
-		* Durch solche sinnlosen Aufrufe hat man nichts am OpenGL-State verändert aber kostbare Zeit verschenkt.
+		* Durch solche sinnlosen Aufrufe hat man nichts am OpenGL-State verändert, aber kostbare Zeit verschenkt.
 		* 
 		* Deshalb sollte man sich im RenderContextOGL3x den Clearstate, den man zuletzt gesetzt hat speichern oder ein eigenes Schatten ClearState-Objekt führen, das sich merkt,
 		* welchen Zustand OpenGL gerade hat und bei jeder Änderung des OpenGL-State sollte die Schattenkopie mitgeändert werden, denn das Nachfragen über OpenGL-Funktionen welcher 
 		* State gerade gesetzt ist, ist genau so teuer wie es sinnlos zu ändern.
 		*/
 
-		// ToDo: Alle Einstellungen aus 'clearState' mit openGL befehlen ausführen. (Die verundung welche Buffer gecleared werden müssen habe ich schonmal gemacht)
-
+		if(m_lastClearState.ColorMask != clearState.ColorMask)
+		{
+			m_lastClearState.ColorMask = clearState.ColorMask;
+			glColorMask(clearState.ColorMask.red, clearState.ColorMask.green, clearState.ColorMask.blue, clearState.ColorMask.alpha);
+		}
+		if(m_lastClearState.DepthMask != clearState.DepthMask)
+		{
+			m_lastClearState.DepthMask = clearState.DepthMask;
+			glDepthMask(clearState.DepthMask);
+		}
+		if(m_lastClearState.Color != clearState.Color)
+		{
+			m_lastClearState.Color = clearState.Color;
+			glClearColor(clearState.Color.red, clearState.Color.green, clearState.Color.blue, clearState.Color.alpha); 
+		}
+		if(m_lastClearState.Depth != clearState.Depth)
+		{
+			m_lastClearState.Depth = clearState.Depth;
+			glClearDepth(clearState.Depth);
+		}
+		if(m_lastClearState.Stencil != clearState.Stencil)
+		{
+			m_lastClearState.Stencil = clearState.Stencil;
+			glClearStencil(clearState.Stencil); 
+		}
 
 		// specifies which buffer needs to be cleared
+
 		GLbitfield clearMask = 0;
 		if ((clearState.Buffers & ClearBuffers::ColorBuffer) != 0)
 		{
@@ -42,14 +72,13 @@ namespace ACTK {
 		{
 			clearMask |= GL_STENCIL_BUFFER_BIT;
 		}
-
-		// ToDo: Buffer clearen. Jetzt muss openGL nur noch der Befehlt gegeben werden, dass der alles mit unseren neuen Einstellungen clearen muss
+		glClear(clearMask);
 	}
 
-
-	void RenderContextOGL3x::swapBuffers(void)
+	void RenderContextOGL3x::swapBuffers()
 	{
-		// ToDo: einfach bffer wechseln
+		// Wo ist das GLFW Window?
+		glfwSwapBuffers(m_window);
 	}
 
 }

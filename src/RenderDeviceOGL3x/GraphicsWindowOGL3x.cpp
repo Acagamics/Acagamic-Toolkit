@@ -28,7 +28,7 @@ namespace ACTK
 			return false;
 		}
 
-		m_context = RenderContextOGL3xPtr(new RenderContextOGL3x());
+		m_context = RenderContextOGL3xPtr(new RenderContextOGL3x(m_window.get()));
 		glfwMakeContextCurrent(m_window.get());
 		
 		LOG_INIT("OpenGL Window Successfully Initialized");
