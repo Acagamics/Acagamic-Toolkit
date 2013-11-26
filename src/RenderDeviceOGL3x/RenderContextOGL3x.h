@@ -3,6 +3,7 @@
 #include "IRenderDevice.h"
 #include <Windows.h>
 #include <string>
+#include "ClearState.h"
 
 struct GLFWwindow;
 
@@ -11,7 +12,7 @@ namespace ACTK {
 	class RenderContextOGL3x : public IRenderContext
 	{
 	public:
-		RenderContextOGL3x(void){}
+		RenderContextOGL3x(GLFWwindow* window) : m_window(window) {}
 		~RenderContextOGL3x(void){ release(); }
 
 		// =========================================================================
@@ -24,12 +25,17 @@ namespace ACTK {
 		// =========================================================================
 		void clear(const ClearState& clearState);
 
-		void swapBuffers(void);
+		void swapBuffers();
 
 	private:
 		//you shall not copy
 		RenderContextOGL3x(RenderContextOGL3x&){}
 		RenderContextOGL3x& operator=( const RenderContextOGL3x& ) {return *this;}
+
+		GLFWwindow* m_window;
+		ClearState m_lastClearState;
+
+		static RenderContextOGL3x* m_currentContext;
 	};
 
 	typedef std::shared_ptr<RenderContextOGL3x> RenderContextOGL3xPtr;
