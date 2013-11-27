@@ -54,11 +54,12 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\..\include;..\..\dependencies\glfw\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>Core_d.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\lib\$(Platform);..\..\dependencies\glfw\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32s.lib;Core_d.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\lib\$(Platform);..\..\dependencies\glfw\lib\$(Platform)</AdditionalLibraryDirectories>
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>..\..\lib\$(Platform);</AdditionalLibraryDirectories>
@@ -73,13 +74,14 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <AdditionalIncludeDirectories>..\..\include;..\..\dependencies\glfw\include</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>GLEW_STATIC;_WINDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <AdditionalDependencies>Core.lib;opengl32.lib;glfw3.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>..\..\lib\$(Platform);..\..\dependencies\glfw\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opengl32.lib;glfw3.lib;glew32s.lib;Core.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\..\lib\$(Platform);..\..\dependencies\glfw\lib\$(Platform)</AdditionalLibraryDirectories>
     </Link>
     <Lib>
       <AdditionalLibraryDirectories>..\..\lib\$(Platform);</AdditionalLibraryDirectories>
@@ -91,11 +93,17 @@
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderContextOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\ShaderObjectOGL3x.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\ShaderProgramNameOGL3x.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\ShaderProgramOGL3x.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h" />
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderContextOGL3x.h" />
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.h" />
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\ShaderObjectOGL3x.h" />
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\ShaderProgramNameOGL3x.h" />
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\ShaderProgramOGL3x.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -14,7 +14,7 @@ namespace ACTK
 		virtual ~IGraphicsWindow(){}
 		virtual void release(void) = 0;
 
-		virtual RenderContextPtr getContext() const = 0;
+		virtual RenderContextPtr getContext() = 0;
 		virtual HWND getWindowHandle() const = 0;
 
 		virtual int getWidth() const = 0;

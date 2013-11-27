@@ -19,6 +19,9 @@
     <Filter Include="Interface Files\Device">
       <UniqueIdentifier>{190c2b8e-3e2a-4ef4-85d2-d0990f0f52ce}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Interface Files\Device\Shader">
+      <UniqueIdentifier>{e7d0aff3-4f8c-4f9a-a8e7-b2c97b3c80fb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\RenderDeviceManager.h">
@@ -35,6 +38,9 @@
     </ClInclude>
     <ClInclude Include="..\..\include\IRenderContext.h">
       <Filter>Interface Files\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\IShaderProgram.h">
+      <Filter>Interface Files\Device\Shader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

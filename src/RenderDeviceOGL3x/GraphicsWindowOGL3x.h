@@ -12,8 +12,8 @@ namespace ACTK
 	class GraphicsWindowOGL3x : public IGraphicsWindow
 	{
 	public:
-		GraphicsWindowOGL3x(){}
-		~GraphicsWindowOGL3x(void) { release(); }
+		GraphicsWindowOGL3x();
+		~GraphicsWindowOGL3x(void);
 
 		// =========================================================================
 		// INIT/RELEASE STUFF:
@@ -22,7 +22,7 @@ namespace ACTK
 		bool initialize(HINSTANCE hInstance, unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
 		void release(void);
 
-		RenderContextPtr getContext() const;
+		RenderContextPtr getContext();
 		HWND getWindowHandle() const;
 
 		int getWidth() const;
@@ -31,10 +31,10 @@ namespace ACTK
 
 	private:
 		//you shall not copy
-		GraphicsWindowOGL3x(GraphicsWindowOGL3x&){}
+		GraphicsWindowOGL3x(GraphicsWindowOGL3x&) : m_context(nullptr){}
 		GraphicsWindowOGL3x& operator=( const GraphicsWindowOGL3x& ) {return *this;}
 
-		std::shared_ptr<GLFWwindow> m_window;
-		RenderContextOGL3xPtr m_context;
+		GLFWwindow			   *m_window;
+		RenderContextOGL3xPtr	m_context;
 	};
 }

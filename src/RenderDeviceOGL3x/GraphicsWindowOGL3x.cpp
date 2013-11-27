@@ -3,11 +3,34 @@
 // GLFW
 #define GLFW_EXPOSE_NATIVE_WGL
 #define GLFW_EXPOSE_NATIVE_WIN32
-#include "glfw3.h"
-#include "glfw3native.h"
+
+#include "GLFW\glfw3.h"
+#include "GLFW\glfw3native.h"
 
 namespace ACTK
 {
+	GraphicsWindowOGL3x::GraphicsWindowOGL3x() :
+		m_context(nullptr) 
+	{
+
+	}
+
+	GraphicsWindowOGL3x::~GraphicsWindowOGL3x(void) 
+	{ 
+		release(); 
+	}
+
+	void GraphicsWindowOGL3x::release(void)
+	{
+		m_context->release();
+
+		glfwTerminate();
+		glfwDestroyWindow(m_window);
+		m_window = nullptr;
+
+		LOG_INIT("OpenGL GraphicsWindow released");
+	}
+
 	bool GraphicsWindowOGL3x::initialize(HINSTANCE hInstance, unsigned int width, unsigned int height, const std::string& title, WindowType windowType)
 	{
 		LOG_INIT("Initializing OpenGL Window");
@@ -18,8 +41,7 @@ namespace ACTK
 			monitor = glfwGetPrimaryMonitor();
 
 		// Creating Window with a cool custom deleter
-		m_window = std::shared_ptr<GLFWwindow>(glfwCreateWindow(width, height, title.c_str(), monitor, NULL), [](GLFWwindow* ptr){ glfwDestroyWindow(ptr); });
-		
+		m_window = glfwCreateWindow(width, height, title.c_str(), monitor, NULL);
 		
 		if( !m_window )
 		{
@@ -28,44 +50,39 @@ namespace ACTK
 			return false;
 		}
 
-		m_context = RenderContextOGL3xPtr(new RenderContextOGL3x(m_window.get()));
-		glfwMakeContextCurrent(m_window.get());
+		m_context = RenderContextOGL3xPtr(new RenderContextOGL3x(m_window));
+		glfwMakeContextCurrent(m_window);
 		
 		LOG_INIT("OpenGL Window Successfully Initialized");
 		return true;
 	}
 
-	void GraphicsWindowOGL3x::release(void)
-	{
-		LOG_INIT("OpenGL GraphicsWindow released");
-	}
-
-	RenderContextPtr GraphicsWindowOGL3x::getContext() const
+	RenderContextPtr GraphicsWindowOGL3x::getContext()
 	{ 
 		return m_context; 
 	}
 
 	HWND GraphicsWindowOGL3x::getWindowHandle() const
 	{
-		return glfwGetWin32Window(m_window.get());
+		return glfwGetWin32Window(m_window);
 	}
 
 	int GraphicsWindowOGL3x::getWidth() const  
 	{
 		int width, height;
-		glfwGetWindowSize(m_window.get(), &width, &height);
+		glfwGetWindowSize(m_window, &width, &height);
 		return width; 
 	}
 	int GraphicsWindowOGL3x::getHeight() const 
 	{
 		int width, height;
-		glfwGetWindowSize(m_window.get(), &width, &height);
+		glfwGetWindowSize(m_window, &width, &height);
 		return height;
 	}
 
 	bool GraphicsWindowOGL3x::shouldClose() const
 	{
-		return glfwWindowShouldClose(m_window.get()) != 0;
+		return glfwWindowShouldClose(m_window) != 0;
 	}
 	
 }

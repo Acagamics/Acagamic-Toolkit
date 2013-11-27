@@ -1,5 +1,5 @@
 #include "RenderContextOGL3x.h"
-#include "glfw3.h"
+#include "GLFW\glfw3.h"
 
 namespace ACTK {
 
@@ -7,6 +7,7 @@ namespace ACTK {
 
 	void RenderContextOGL3x::release(void)
 	{
+		m_window = nullptr;
 		LOG_INIT("OpenGL RenderContext released");
 	}
 
@@ -34,21 +35,25 @@ namespace ACTK {
 			m_lastClearState.ColorMask = clearState.ColorMask;
 			glColorMask(clearState.ColorMask.red, clearState.ColorMask.green, clearState.ColorMask.blue, clearState.ColorMask.alpha);
 		}
+
 		if(m_lastClearState.DepthMask != clearState.DepthMask)
 		{
 			m_lastClearState.DepthMask = clearState.DepthMask;
 			glDepthMask(clearState.DepthMask);
 		}
+
 		if(m_lastClearState.Color != clearState.Color)
 		{
 			m_lastClearState.Color = clearState.Color;
 			glClearColor(clearState.Color.red, clearState.Color.green, clearState.Color.blue, clearState.Color.alpha); 
 		}
+
 		if(m_lastClearState.Depth != clearState.Depth)
 		{
 			m_lastClearState.Depth = clearState.Depth;
 			glClearDepth(clearState.Depth);
 		}
+
 		if(m_lastClearState.Stencil != clearState.Stencil)
 		{
 			m_lastClearState.Stencil = clearState.Stencil;
@@ -56,7 +61,6 @@ namespace ACTK {
 		}
 
 		// specifies which buffer needs to be cleared
-
 		GLbitfield clearMask = 0;
 		if ((clearState.Buffers & ClearBuffers::ColorBuffer) != 0)
 		{

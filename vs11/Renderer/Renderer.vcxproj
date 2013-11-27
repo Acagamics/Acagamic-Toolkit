@@ -86,6 +86,7 @@
     <ClInclude Include="..\..\include\IGraphicsWindow.h" />
     <ClInclude Include="..\..\include\IRenderContext.h" />
     <ClInclude Include="..\..\include\IRenderDevice.h" />
+    <ClInclude Include="..\..\include\IShaderProgram.h" />
     <ClInclude Include="..\..\include\RenderDeviceManager.h" />
   </ItemGroup>
   <ItemGroup>

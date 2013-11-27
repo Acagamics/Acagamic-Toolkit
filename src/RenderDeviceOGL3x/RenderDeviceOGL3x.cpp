@@ -1,6 +1,9 @@
 #include "RenderDeviceOGL3x.h"
+
 #include "GraphicsWindowOGL3x.h"
-#include "glfw3.h"
+#include "ShaderProgramOGL3x.h"
+
+#include "GLFW\glfw3.h"
 
 namespace ACTK
 {
@@ -32,5 +35,15 @@ namespace ACTK
 			LOG_ERROR("Error while creating OpenGL-Window!");
 			return GraphicsWindowPtr(nullptr);
 		}
+	}
+
+	ShaderProgramPtr RenderDeviceOGL3x::createShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource)
+	{
+		return createShaderProgram(VertexShaderSource, std::string(), FragementShaderSource);
+	}
+
+	ShaderProgramPtr RenderDeviceOGL3x::createShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource)
+	{
+		return ShaderProgramPtr(new ShaderProgramOGL3x(VertexShaderSource, GeometryShaderSource, FragementShaderSource));
 	}
 }

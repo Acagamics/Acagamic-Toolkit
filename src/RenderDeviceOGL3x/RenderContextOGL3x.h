@@ -11,6 +11,7 @@ namespace ACTK {
 
 	class RenderContextOGL3x : public IRenderContext
 	{
+		friend class GraphicsWindowOGL3x;
 	public:
 		RenderContextOGL3x(GLFWwindow* window) : m_window(window) {}
 		~RenderContextOGL3x(void){ release(); }

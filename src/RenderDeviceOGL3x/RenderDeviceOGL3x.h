@@ -14,7 +14,10 @@ namespace ACTK {
 		void release(void);
 
 		// Creates Window and handles Resize and Destruction itselfs
-		GraphicsWindowPtr createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
+		GraphicsWindowPtr	createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
+
+		ShaderProgramPtr	createShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource);
+		ShaderProgramPtr	createShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource);
 
 	private:
 		//you shall not copy
