@@ -21,4 +21,6 @@ namespace ACTK
 		unsigned int	m_shaderObject;
 		int				m_result;
 	};
+
+	typedef std::shared_ptr<ShaderObjectOGL3x> ShaderObjectOGL3xPtr;
 }

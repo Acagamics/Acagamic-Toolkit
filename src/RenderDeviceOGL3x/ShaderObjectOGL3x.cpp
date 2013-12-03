@@ -1,19 +1,23 @@
 #include "ACTK.h"
 #include "ShaderObjectOGL3x.h"
-#include <GL\glew.h>
+#include "GL\glew.h"
 
 namespace ACTK
 {
 	ShaderObjectOGL3x::ShaderObjectOGL3x(GLenum shaderType, const std::string& source)
 	{
+		int i = 1;
 		/* create shader object, set the source, and compile */
 		m_shaderObject = glCreateShader(shaderType); // Hier ein Fehler den ich nicht verstehe.
 
 		// ToDo: Shader laden und Kompilieren und Ergebnis ausgeben
 		m_result = GL_FALSE;
+
+		GLint length = strlen(source.c_str());
 		const GLchar* c_source = source.c_str();
-		if (m_shaderObject) {
-			glShaderSource(m_shaderObject, 1, &c_source, (GLint*) strlen(source.c_str()));
+		if (m_shaderObject) 
+		{
+			glShaderSource(m_shaderObject, 1, &c_source, &length);
 			glCompileShader(m_shaderObject);
 			glGetShaderiv(m_shaderObject, GL_COMPILE_STATUS, &m_result);
 			// Check if compiled.

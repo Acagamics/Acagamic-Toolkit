@@ -1,9 +1,27 @@
 #include "RenderContextOGL3x.h"
+#include "GL\glew.h"
 #include "GLFW\glfw3.h"
 
 namespace ACTK {
 
 	RenderContextOGL3x* RenderContextOGL3x::m_currentContext;
+
+	RenderContextOGL3x::RenderContextOGL3x(GLFWwindow* window) : m_window(window) 
+	{
+		if(GLEW_OK != glewInit())
+		{
+			LOG_ERROR("Could not initialize GLEW!");
+		}
+		else
+		{
+			LOG_INIT("GLFW sucessfully initialized.");
+		}
+	}
+
+	RenderContextOGL3x::~RenderContextOGL3x(void)
+	{ 
+		release(); 
+	}
 
 	void RenderContextOGL3x::release(void)
 	{

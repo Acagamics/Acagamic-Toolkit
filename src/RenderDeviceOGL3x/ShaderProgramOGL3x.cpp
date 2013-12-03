@@ -1,6 +1,6 @@
 #include "ACTK.h"
 #include "ShaderProgramOGL3x.h"
-
+#include "ShaderObjectOGL3x.h"
 #include "GL\glew.h"
 
 namespace ACTK
@@ -10,57 +10,52 @@ namespace ACTK
 		m_geometryShader(nullptr),
 		m_fragmentShader(nullptr)
 	{
+		m_ready = false;
+		m_vertexShader = ShaderObjectOGL3xPtr(new ShaderObjectOGL3x(GL_VERTEX_SHADER, vertexShaderSource));
+		if (geometryShaderSource.length() > 0)
+		{
+			m_geometryShader = ShaderObjectOGL3xPtr(new ShaderObjectOGL3x(GL_GEOMETRY_SHADER, geometryShaderSource));
+		}
+		m_fragmentShader = ShaderObjectOGL3xPtr(new ShaderObjectOGL3x(GL_FRAGMENT_SHADER, fragmentShaderSource));
+
 		m_program = glCreateProgram();
 		if(m_program == 0)
 			LOG_ERROR("Could not create ShaderProgram.");
 
 		// ToDo: Alle Shader laden und kompilieren lassen und dann zu einem Programm zusammenfügen.
-		if(vertexShaderSource.length() > 0 && fragmentShaderSource.length() > 0)
+		LOG_INIT("Vertex and fragment shader source is viable.");
+		if(m_vertexShader->IsReady() && m_fragmentShader->IsReady())
 		{
-			LOG_INIT("Vertex and fragment shader source is viable.");
-			m_vertexShader = new ShaderObjectOGL3x(GL_VERTEX_SHADER, vertexShaderSource);
-			m_fragmentShader = new ShaderObjectOGL3x(GL_VERTEX_SHADER, fragmentShaderSource);
-
-			if(m_vertexShader->IsReady() && m_fragmentShader->IsReady())
-			{
-				LOG_INIT("Vertex and fragment shaders are ready to be used.");
+			LOG_INIT("Vertex and fragment shaders are ready to be used.");
 				
-				//Attach Shaders.
-				glAttachShader(m_program, m_vertexShader->GetShaderHandle());
-				glAttachShader(m_program, m_fragmentShader->GetShaderHandle());
+			//Attach Shaders.
+			glAttachShader(m_program, m_vertexShader->GetShaderHandle());
+			glAttachShader(m_program, m_fragmentShader->GetShaderHandle());
 
-			} else
-			{
-				LOG_ERROR("Vertex and fragment shaders initialization failed.");
-			}
-
-			if(geometryShaderSource.length() > 0)
-			{
-				LOG_INIT("Geometry shader source is viable.");
-				m_geometryShader = new ShaderObjectOGL3x(GL_VERTEX_SHADER, geometryShaderSource);
-
-				if(m_geometryShader->IsReady())
-				{
-					LOG_INIT("Geometry shader is ready to be used.");
-					
-					//Attach Shader.
-					glAttachShader(m_program, m_vertexShader->GetShaderHandle());
-				} else
-				{
-					LOG_ERROR("Geometry shader initialization failed.");
-				}
-			} 
 		} else
 		{
-			LOG_ERROR("Vertex or fragment shader source is not viable or could not be loaded.");
+			LOG_ERROR("Vertex and fragment shaders initialization failed.");
 		}
+
+		if(geometryShaderSource.length() > 0)
+		{
+			LOG_INIT("Geometry shader source is viable.");
+			if(m_geometryShader->IsReady())
+			{
+				LOG_INIT("Geometry shader is ready to be used.");
+					
+				//Attach Shader.
+				glAttachShader(m_program, m_vertexShader->GetShaderHandle());
+			} else
+			{
+				LOG_ERROR("Geometry shader initialization failed.");
+			}
+		}
+		glLinkProgram(m_program);
 	}
 
 	ShaderProgramOGL3x::~ShaderProgramOGL3x()
 	{
-		delete m_vertexShader;
-		delete m_geometryShader;
-		delete m_fragmentShader;
 		glDeleteProgram(m_program);
 	}
 

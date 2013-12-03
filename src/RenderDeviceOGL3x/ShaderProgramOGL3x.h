@@ -1,8 +1,6 @@
 #pragma once
 #include "IShaderProgram.h"
-
 #include "ShaderObjectOGL3x.h"
-
 #include <string>
 
 namespace ACTK
@@ -26,10 +24,12 @@ namespace ACTK
 
 		unsigned int			m_program;
 
-		ShaderObjectOGL3x*		m_vertexShader;
-		ShaderObjectOGL3x*		m_geometryShader;
-		ShaderObjectOGL3x*		m_fragmentShader;
+		ShaderObjectOGL3xPtr	m_vertexShader;
+		ShaderObjectOGL3xPtr	m_geometryShader;
+		ShaderObjectOGL3xPtr	m_fragmentShader;
 
 		bool m_ready;
 	};
+
+	typedef std::shared_ptr<ShaderProgramOGL3x> ShaderProgramOGL3xPtr;
 }

@@ -3,16 +3,19 @@
 #include "GraphicsWindowOGL3x.h"
 #include "ShaderProgramOGL3x.h"
 
+#include "GL\glew.h"
 #include "GLFW\glfw3.h"
 
 namespace ACTK
 {
 	RenderDeviceOGL3x::RenderDeviceOGL3x(HINSTANCE hInstance) : m_hInstance(hInstance)
 	{
-		if(!glfwInit() )
+		if(GL_TRUE != glfwInit())
 			LOG_ERROR("Could not initialize GLFW!");
 		else
+		{
 			LOG_INIT("GLFW sucessfully initialized.");
+		}
 	}
 
 	void RenderDeviceOGL3x::release(void)

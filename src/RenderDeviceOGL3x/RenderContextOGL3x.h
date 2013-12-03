@@ -13,8 +13,8 @@ namespace ACTK {
 	{
 		friend class GraphicsWindowOGL3x;
 	public:
-		RenderContextOGL3x(GLFWwindow* window) : m_window(window) {}
-		~RenderContextOGL3x(void){ release(); }
+		RenderContextOGL3x(GLFWwindow* window);
+		~RenderContextOGL3x(void);
 
 		// =========================================================================
 		// INIT/RELEASE STUFF:
@@ -34,7 +34,7 @@ namespace ACTK {
 		RenderContextOGL3x& operator=( const RenderContextOGL3x& ) {return *this;}
 
 		GLFWwindow* m_window;
-		ClearState m_lastClearState;
+		ClearState	m_lastClearState;
 
 		static RenderContextOGL3x* m_currentContext;
 	};

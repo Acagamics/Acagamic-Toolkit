@@ -37,4 +37,6 @@ namespace ACTK
 		GLFWwindow			   *m_window;
 		RenderContextOGL3xPtr	m_context;
 	};
+
+	typedef std::shared_ptr<GraphicsWindowOGL3x> GraphicsWindowOGL3xPtr;
 }
