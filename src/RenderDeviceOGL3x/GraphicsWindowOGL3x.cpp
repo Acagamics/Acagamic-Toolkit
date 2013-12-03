@@ -54,7 +54,7 @@ namespace ACTK
 		glfwMakeContextCurrent(m_window);
 		
 		LOG_INIT("OpenGL Window Successfully Initialized");
-		return true;
+		return m_context != nullptr;
 	}
 
 	RenderContextPtr GraphicsWindowOGL3x::getContext()

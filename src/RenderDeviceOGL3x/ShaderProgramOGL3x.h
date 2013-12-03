@@ -1,7 +1,6 @@
 #pragma once
 #include "IShaderProgram.h"
 
-#include "ShaderProgramNameOGL3x.h"
 #include "ShaderObjectOGL3x.h"
 
 #include <string>
@@ -25,7 +24,7 @@ namespace ACTK
 
 		std::string	GetProgramInfoLog();
 
-		ShaderProgramNameOGL3x*	m_program;
+		unsigned int			m_program;
 
 		ShaderObjectOGL3x*		m_vertexShader;
 		ShaderObjectOGL3x*		m_geometryShader;

@@ -1,5 +1,4 @@
 #pragma once
-#include "ShaderObjectNameOGL3x.h"
 #include <memory>
 
 namespace ACTK

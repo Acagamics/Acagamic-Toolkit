@@ -25,12 +25,6 @@
     <Filter Include="Source Files\Device\Shader">
       <UniqueIdentifier>{c1440483-6d0a-4ec5-8a96-6014cfdcc2b9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Names">
-      <UniqueIdentifier>{e169304c-14fe-4ad6-8c3b-32ed3f6f77aa}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Names">
-      <UniqueIdentifier>{2fde282d-438a-4e90-ad5c-214461f9ce30}</UniqueIdentifier>
-    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.cpp">
@@ -51,9 +45,6 @@
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\ShaderObjectOGL3x.cpp">
       <Filter>Source Files\Device\Shader</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\src\RenderDeviceOGL3x\ShaderProgramNameOGL3x.cpp">
-      <Filter>Source Files\Names</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h">
@@ -70,9 +61,6 @@
     </ClInclude>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\ShaderObjectOGL3x.h">
       <Filter>Header Files\Device\Shader</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\src\RenderDeviceOGL3x\ShaderProgramNameOGL3x.h">
-      <Filter>Header Files\Names</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

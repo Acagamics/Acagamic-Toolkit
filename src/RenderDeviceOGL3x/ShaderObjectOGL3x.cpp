@@ -1,3 +1,4 @@
+#include "ACTK.h"
 #include "ShaderObjectOGL3x.h"
 #include <GL\glew.h>
 
@@ -6,38 +7,51 @@ namespace ACTK
 	ShaderObjectOGL3x::ShaderObjectOGL3x(GLenum shaderType, const std::string& source)
 	{
 		/* create shader object, set the source, and compile */
-		m_shaderObject = glCreateShader(shaderType);
+		m_shaderObject = glCreateShader(shaderType); // Hier ein Fehler den ich nicht verstehe.
 
 		// ToDo: Shader laden und Kompilieren und Ergebnis ausgeben
-		// mit einer wunderschönen fehlerausgabe
+		m_result = GL_FALSE;
+		const GLchar* c_source = source.c_str();
+		if (m_shaderObject) {
+			glShaderSource(m_shaderObject, 1, &c_source, (GLint*) strlen(source.c_str()));
+			glCompileShader(m_shaderObject);
+			glGetShaderiv(m_shaderObject, GL_COMPILE_STATUS, &m_result);
+			// Check if compiled.
+			if (m_result) {
+				LOG_INIT(this->GetCompileLog().c_str());
+				m_result = GL_TRUE;
+			}
+			else
+				LOG_ERROR(this->GetCompileLog().c_str());
+			}
+		}
+
+		ShaderObjectOGL3x::~ShaderObjectOGL3x()
+		{
+			glDeleteShader(m_shaderObject);
+		}
+
+		unsigned int ShaderObjectOGL3x::GetShaderHandle()
+		{
+			return m_shaderObject;
+		}
+
+		bool ShaderObjectOGL3x::IsReady()
+		{
+			return m_result != GL_FALSE;
+		}
+
+		std::string ShaderObjectOGL3x::GetCompileLog()
+		{
+			char* buffer;
+			GLint length, result;
+
+			/* get the shader info log */
+			glGetShaderiv(m_shaderObject, GL_INFO_LOG_LENGTH, &length);
+			buffer = (char*)malloc(length);
+
+			glGetShaderInfoLog(m_shaderObject, length, &result, buffer);
+
+			return std::string(buffer);
+		}
 	}
-
-	ShaderObjectOGL3x::~ShaderObjectOGL3x()
-	{
-		glDeleteShader(m_shaderObject);
-	}
-
-	unsigned int ShaderObjectOGL3x::GetShaderHandle()
-	{
-		return m_shaderObject;
-	}
-
-	bool ShaderObjectOGL3x::IsReady()
-	{
-		return m_result != GL_FALSE;
-	}
-
-	std::string ShaderObjectOGL3x::GetCompileLog()
-	{
-		char* buffer;
-		GLint length, result;
-
-		/* get the shader info log */
-		glGetShaderiv(m_shaderObject, GL_INFO_LOG_LENGTH, &length);
-		buffer = (char*)malloc(length);
-
-		glGetShaderInfoLog(m_shaderObject, length, &result, buffer);
-
-		return std::string(buffer);
-	}
-}
