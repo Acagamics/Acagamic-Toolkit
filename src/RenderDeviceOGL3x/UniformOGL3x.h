@@ -55,6 +55,9 @@ namespace ACTK
         UnsignedIntSampler2DArray
 	};
 
+	// ToDo: Uniform ableitungen definieren. Die ableitungen enthalten die Definition der Clear-Funktion und
+	// die SetValue implementierung und speichern den Wert zwischen.
+
 	class UniformOGL3x : public ICleanable
 	{
 	public:
@@ -70,6 +73,7 @@ namespace ACTK
 
 		~UniformOGL3x();
 
+		// implemented by derivative
 		virtual void clean() = 0;
 
 		const int				Location;
