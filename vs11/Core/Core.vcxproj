@@ -12,6 +12,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\ACTK.h" />
+    <ClInclude Include="..\..\include\ICleanable.h" />
+    <ClInclude Include="..\..\include\ICleanableObserver.h" />
     <ClInclude Include="..\..\include\Logger.h" />
   </ItemGroup>
   <ItemGroup>

@@ -62,5 +62,8 @@
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\ShaderObjectOGL3x.h">
       <Filter>Header Files\Device\Shader</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\UniformOGL3x.h">
+      <Filter>Header Files\Device\Shader</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
