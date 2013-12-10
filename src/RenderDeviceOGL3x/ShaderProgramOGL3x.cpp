@@ -1,6 +1,9 @@
 #include "ACTK.h"
 #include "ShaderProgramOGL3x.h"
 #include "ShaderObjectOGL3x.h"
+
+#include "TypeConverterOGL3x.h"
+
 #include "GL\glew.h"
 
 namespace ACTK
@@ -74,7 +77,7 @@ namespace ACTK
 		return m_ready;
 	}
 
-	std::string	ShaderProgramOGL3x::GetProgramInfoLog()
+	std::string	ShaderProgramOGL3x::getProgramInfoLog()
 	{
 		char* buffer;
 		GLint length, result;
@@ -86,5 +89,56 @@ namespace ACTK
 		glGetProgramInfoLog(m_program, length, &result, buffer);
 
 		return std::string(buffer);
+	}
+
+	UniformMap ShaderProgramOGL3x::findUniforms()
+	{
+		int programHandle = m_program;
+
+        int numberOfUniforms;
+		glGetProgramiv(programHandle, GL_ACTIVE_UNIFORMS, &numberOfUniforms);
+
+        int uniformNameMaxLength;
+		glGetProgramiv(programHandle, GL_ACTIVE_UNIFORM_MAX_LENGTH, &uniformNameMaxLength);
+
+		UniformMap uniforms;
+		if(numberOfUniforms > 0)
+			LOG_INIT("Uniforms:");
+
+        for (unsigned int i = 0; i < (unsigned int)numberOfUniforms; ++i)
+        {
+            int uniformNameLength;
+            int uniformSize;
+            GLenum uniformType;
+            GLchar* uniformName = new GLchar[uniformNameMaxLength];
+
+            glGetActiveUniform(programHandle, i, uniformNameMaxLength, &uniformNameLength, &uniformSize, &uniformType, uniformName);
+
+			if (strncmp(uniformName, "gl_", strlen("gl_")) == 0)
+			{
+                //
+                // Names starting with the reserved prefix of "gl_" have a location of -1.
+                //
+                continue;
+            }
+
+            //
+            // Skip uniforms in a named block
+            //
+            int uniformBlockIndex;
+			glGetActiveUniformsiv(programHandle, 1, &i, GL_UNIFORM_BLOCK_INDEX, &uniformBlockIndex);
+
+            if (uniformBlockIndex != -1)
+            {
+                continue;
+            }
+
+            int uniformLocation = glGetUniformLocation(programHandle, uniformName);
+			
+			LOG_INIT("\tName: %s, \tLocation: %d, \tArraySize: %d", uniformName, uniformLocation, uniformSize);
+			// TODO: Füge die abgeleiteten Uniforms mit switch case
+			//uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformOGL3x(uniformLocation, uniformSize, TypeConverterOGL3x::ToActiveUniformType(uniformType), this))));
+        }
+        return uniforms;
 	}
 }

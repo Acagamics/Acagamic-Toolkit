@@ -1,3 +1,4 @@
+#pragma once
 #include "ICleanable.h"
 
 namespace ACTK
@@ -7,6 +8,6 @@ namespace ACTK
 	public:
 		virtual ~ICleanableObserver(){}
 
-		virtual void notyfyDirty(ICleanable* obj) = 0;
+		virtual void notifyDirty(ICleanable* obj) = 0;
 	};
 }
