@@ -60,7 +60,6 @@ namespace ACTK
 		ShaderObjectOGL3xPtr	m_fragmentShader;
 
 		bool m_ready;
-
 	};
 
 	typedef std::shared_ptr<ShaderProgramOGL3x> ShaderProgramOGL3xPtr;

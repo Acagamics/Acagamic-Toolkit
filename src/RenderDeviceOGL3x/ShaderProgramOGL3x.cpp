@@ -138,6 +138,31 @@ namespace ACTK
 			// TODO: Füge die abgeleiteten Uniforms mit switch case
 			//uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformOGL3x(uniformLocation, uniformSize, TypeConverterOGL3x::ToActiveUniformType(uniformType), this))));
 			// Meins! (Grigori)
+
+			UniformDatatype type = TypeConverterOGL3x::ToActiveUniformType(uniformType);
+
+			switch (type)
+			{
+			case(UniformDatatype::Float):
+			case(UniformDatatype::FloatVector2):
+			case(UniformDatatype::FloatVector3):
+			case(UniformDatatype::FloatVector4):
+			case(UniformDatatype::FloatMatrix22):
+			case(UniformDatatype::FloatMatrix23):
+			case(UniformDatatype::FloatMatrix24):
+			case(UniformDatatype::FloatMatrix32):
+			case(UniformDatatype::FloatMatrix33):
+			case(UniformDatatype::FloatMatrix34):
+			case(UniformDatatype::FloatMatrix44):
+				uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformF(uniformLocation, type, uniformSize, this)));
+				break;
+			case(UniformDatatype::Int):
+			case(UniformDatatype::IntVector2):
+			case(UniformDatatype::IntVector3):
+			case(UniformDatatype::IntVector4):
+				uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformI(uniformLocation, type, uniformSize, this)));
+				break;
+			}
         }
         return uniforms;
 	}
