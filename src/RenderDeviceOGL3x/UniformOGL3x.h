@@ -57,6 +57,7 @@ namespace ACTK
 
 	// ToDo: Uniform ableitungen definieren. Die ableitungen enthalten die Definition der Clear-Funktion und
 	// die SetValue implementierung und speichern den Wert zwischen.
+	// Meins! (Grigori)
 
 	class UniformOGL3x : public ICleanable
 	{

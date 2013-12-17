@@ -39,7 +39,7 @@ namespace ACTK
 		void Bind();
 		bool IsReady();
 
-		// ToDo: Diese funktion implementieren.
+		// ToDo: Diese Funktion implementieren.
 		// Diese funktion fügt die Clearable zur m_dirtyUniforms-Liste hinzu
 		void notifyDirty(ICleanable* obj);
 

@@ -25,7 +25,6 @@ namespace ACTK
 		if(m_program == 0)
 			LOG_ERROR("Could not create ShaderProgram.");
 
-		// ToDo: Alle Shader laden und kompilieren lassen und dann zu einem Programm zusammenfügen.
 		LOG_INIT("Vertex and fragment shader source is viable.");
 		if(m_vertexShader->IsReady() && m_fragmentShader->IsReady())
 		{
@@ -138,6 +137,7 @@ namespace ACTK
 			LOG_INIT("\tName: %s, \tLocation: %d, \tArraySize: %d", uniformName, uniformLocation, uniformSize);
 			// TODO: Füge die abgeleiteten Uniforms mit switch case
 			//uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformOGL3x(uniformLocation, uniformSize, TypeConverterOGL3x::ToActiveUniformType(uniformType), this))));
+			// Meins! (Grigori)
         }
         return uniforms;
 	}

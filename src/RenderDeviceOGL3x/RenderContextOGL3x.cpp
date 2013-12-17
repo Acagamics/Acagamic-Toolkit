@@ -36,8 +36,7 @@ namespace ACTK {
 			glfwMakeContextCurrent(m_window);
 			m_currentContext = this;
 		}
-		/* ToDo: Das übergebene ClearState objekt enhält die Parameter auf die die der Context eingestellt werden muss.
-		* Wichtig ist dabei, dass man einen State nicht nochmal ändert, wenn der OpenGL-Wert bereits auf den Wert, den man haben möchte gestellt ist.
+		/*Wichtig ist dabei, dass man einen State nicht nochmal ändert, wenn der OpenGL-Wert bereits auf den Wert, den man haben möchte gestellt ist.
 		*
 		* Z.B.: Wenn man in einem Frame die Clearcolor auf Rosa gestellt hat, sollte man sich das merken und beim nächsten Aufruf sollte
 		* die Clearcolor nicht nochmal auf rosa gestellt werden. Die OpenGL-Clearcolor sollte nur geändert werden und die OpenGL funktion nur aufgerufen werden, wenn man tatsächlich die Farbe ändert und nicht immer wieder die selbe Farbe übergibt.

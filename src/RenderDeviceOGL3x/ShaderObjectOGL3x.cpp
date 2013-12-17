@@ -10,7 +10,6 @@ namespace ACTK
 		/* create shader object, set the source, and compile */
 		m_shaderObject = glCreateShader(shaderType); // Hier ein Fehler den ich nicht verstehe.
 
-		// ToDo: Shader laden und Kompilieren und Ergebnis ausgeben
 		m_result = GL_FALSE;
 
 		GLint length = strlen(source.c_str());
