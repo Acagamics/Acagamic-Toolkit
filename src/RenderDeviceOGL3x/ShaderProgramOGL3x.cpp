@@ -76,6 +76,11 @@ namespace ACTK
 		return m_ready;
 	}
 
+	void ShaderProgramOGL3x::notifyDirty(ICleanable* obj)
+	{
+		m_dirtyUniforms.push_front(obj);
+	}
+
 	std::string	ShaderProgramOGL3x::getProgramInfoLog()
 	{
 		char* buffer;
