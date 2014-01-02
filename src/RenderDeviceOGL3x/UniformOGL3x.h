@@ -7,6 +7,7 @@ namespace ACTK
 	enum class UniformDatatype : char
 	{
 		Int,
+		UnsignedInt,
         Float,
         FloatVector2,
         FloatVector3,
@@ -14,6 +15,9 @@ namespace ACTK
         IntVector2,
         IntVector3,
         IntVector4,
+		UnsignedIntVector2,
+        UnsignedIntVector3,
+        UnsignedIntVector4,
         Bool,
         BoolVector2,
         BoolVector3,
@@ -114,5 +118,19 @@ namespace ACTK
 	private:
 		int m_size;
 		float* m_val;
+	};
+
+	class UniformUI : public UniformOGL3x
+	{
+	public:
+		UniformUI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
+		~UniformUI();
+
+		void clean();
+		void setValue(int* val, int size);
+
+	private:
+		int  m_size;
+		unsigned int* m_val;
 	};
 }

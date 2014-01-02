@@ -97,6 +97,7 @@
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\ShaderProgramOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\UniformFOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\UniformIOGL3x.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\UniformUIDL3x.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h" />

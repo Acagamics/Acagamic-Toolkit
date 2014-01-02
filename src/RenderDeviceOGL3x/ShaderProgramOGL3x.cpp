@@ -167,6 +167,12 @@ namespace ACTK
 			case(UniformDatatype::IntVector4):
 				uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformI(uniformLocation, type, uniformSize, this)));
 				break;
+			case(UniformDatatype::UnsignedInt):
+			case(UniformDatatype::UnsignedIntVector2):
+			case(UniformDatatype::UnsignedIntVector3):
+			case(UniformDatatype::UnsignedIntVector4):
+				uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformUI(uniformLocation, type, uniformSize, this)));
+				break;
 			}
         }
         return uniforms;

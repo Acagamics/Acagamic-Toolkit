@@ -51,6 +51,9 @@
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\UniformIOGL3x.cpp">
       <Filter>Source Files\Device\Shader</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\UniformUIDL3x.cpp">
+      <Filter>Source Files\Device\Shader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h">
