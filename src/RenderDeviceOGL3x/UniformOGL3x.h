@@ -77,7 +77,11 @@ namespace ACTK
 		{
 		}
 
-		~UniformOGL3x();
+		// Weiﬂ nicht, ob ich das darf.
+		//~UniformOGL3x(){}//~UniformOGL3x();
+
+		//TODO: Set Value Funktion definieren
+		template <typename T> void setValue(T* val, int size);
 
 		// implemented by derivative
 		virtual void clean() = 0;
@@ -100,6 +104,8 @@ namespace ACTK
 
 		void clean();
 		void setValue(int* val, int size);
+		void setValue(unsigned int* val, int size);
+		void setValue(float* val, int size);
 
 	private:
 		int m_size;
@@ -114,6 +120,8 @@ namespace ACTK
 
 		void clean();
 		void setValue(int* val, int size);
+		void setValue(unsigned int* val, int size);
+		void setValue(float* val, int size);
 
 	private:
 		int m_size;
@@ -128,6 +136,8 @@ namespace ACTK
 
 		void clean();
 		void setValue(int* val, int size);
+		void setValue(unsigned int* val, int size);
+		void setValue(float* val, int size);
 
 	private:
 		int  m_size;

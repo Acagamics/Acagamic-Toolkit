@@ -54,20 +54,63 @@ namespace ACTK
 		}
 	}
 
+	void UniformI::setValue(float* val, int size)
+	{
+		if(m_size < size)
+		{
+			size = m_size;
+			LOG_ERROR("Uniformsize überschritten!");
+		}
+
+		if(m_dirty)
+		{
+			m_dirty = true;
+			m_observer->notifyDirty(this);
+		}
+		memset(m_val,0,m_size*sizeof(int));
+		for (int i = 0; i < size; i++)
+		{
+			m_val[i] = static_cast<int>(val[i]);
+		}
+	}
+
+	void UniformI::setValue(unsigned int* val, int size)
+	{
+		if(m_size < size)
+		{
+			size = m_size;
+			LOG_ERROR("Uniformsize überschritten!");
+		}
+
+		if(m_dirty)
+		{
+			m_dirty = true;
+			m_observer->notifyDirty(this);
+		}
+		memset(m_val,0,m_size*sizeof(int));
+		for (int i = 0; i < size; i++)
+		{
+			m_val[i] = static_cast<int>(val[i]);
+		}
+	}
+
 	void UniformI::setValue(int* val, int size)
 	{
-		if(m_size >= size)
+		if(m_size < size)
 		{
-			if(m_dirty)
-			{
-				m_dirty = true;
-				m_observer->notifyDirty(this);
-			}
-			memcpy(m_val, val, size);
+			size = m_size;
+			LOG_ERROR("Uniformsize überschritten!");
 		}
-		else
+
+		if(m_dirty)
 		{
-			LOG_FATAL("Du hast richtig scheiße gebaut!");
+			m_dirty = true;
+			m_observer->notifyDirty(this);
+		}
+		memset(m_val,0,m_size*sizeof(int));
+		for (int i = 0; i < size; i++)
+		{
+			m_val[i] = static_cast<int>(val[i]);
 		}
 	}
 }

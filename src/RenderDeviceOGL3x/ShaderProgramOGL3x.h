@@ -12,6 +12,13 @@ namespace ACTK
 
 	class ShaderProgramOGL3x : public IShaderProgram, public ICleanableObserver
 	{
+		enum class PrimitiveDatatype : char
+		{
+			Int=0,
+			Float,
+			Uint
+		};
+
 	public:
 		ShaderProgramOGL3x(const std::string& vertexShaderSource, const std::string& geometryShaderSource, const std::string& fragmentShaderSource);
 		~ShaderProgramOGL3x();
@@ -46,6 +53,11 @@ namespace ACTK
 	private:
 		ShaderProgramOGL3x(ShaderProgramOGL3x&){}
 		ShaderProgramOGL3x& operator=( const ShaderProgramOGL3x& ) {return *this;}
+
+		void setUniform(const char* name, void*, PrimitiveDatatype, size_t size);
+		void setUniformI(const char* name, int*, size_t size);
+		void setUniformUI(const char* name, unsigned int*, size_t size);
+		void setUniformF(const char* name, float*, size_t size);
 
 		std::string				getProgramInfoLog();
 		UniformMap				findUniforms();
