@@ -178,84 +178,84 @@ namespace ACTK
         return uniforms;
 	}
 
-	void ShaderProgramOGL3x::setUniformI(const char* name, int val)
+	void ShaderProgramOGL3x::setUniform(const char* name, int val)
 	{
-		setUniformI(name, val, 1);
+		setUniformI(name, &val, 1);
 	}
 	
-	void ShaderProgramOGL3x::setUniformF(const char* name, float val)
+	void ShaderProgramOGL3x::setUniform(const char* name, float val)
 	{
-		setUniformF(name, val, 2);
+		setUniformF(name, &val, 2);
 	}
 
-	void ShaderProgramOGL3x::setUniformI(const char* name, int val1, int val2)
+	void ShaderProgramOGL3x::setUniform(const char* name, int val1, int val2)
 	{
 		int val[2] = {val1,val2};
 		setUniformI(name, val, 2);
 	}
 
-	void ShaderProgramOGL3x::setUniformF(const char* name, float val1, float val2)
+	void ShaderProgramOGL3x::setUniform(const char* name, float val1, float val2)
 	{
 		float val[2] = {val1,val2};
 		setUniformF(name, val, 2);
 	}
 
-	void ShaderProgramOGL3x::setUniformI(const char* name, int val1, int val2, int val3)
+	void ShaderProgramOGL3x::setUniform(const char* name, int val1, int val2, int val3)
 	{
 		int val[3] = {val1,val2,val3};
 		setUniformI(name, val, 3);
 	}
 
-	void ShaderProgramOGL3x::setUniformF(const char* name, float val1, float val2, float val3)
+	void ShaderProgramOGL3x::setUniform(const char* name, float val1, float val2, float val3)
 	{
 		float val[3] = {val1,val2,val3};
 		setUniformF(name, val, 3);	
 	}
 
-	void ShaderProgramOGL3x::setUniformI(const char* name, int val1, int val2, int val3, int val4)
+	void ShaderProgramOGL3x::setUniform(const char* name, int val1, int val2, int val3, int val4)
 	{
 		int val[4] = {val1,val2,val3,val4};
 		setUniformI(name, val, 4);
 	}
 
-	void ShaderProgramOGL3x::setUniformF(const char* name, float val1, float val2, float val3, float val4)
+	void ShaderProgramOGL3x::setUniform(const char* name, float val1, float val2, float val3, float val4)
 	{
 		float val[4] = {val1,val2,val3,val4};
 		setUniformF(name, val, 4);	
 	}
 		
-	void ShaderProgramOGL3x::setUniformVectorI(const char* name, int* val, unsigned int array_count)
+	void ShaderProgramOGL3x::setUniformVector(const char* name, int* val, unsigned int array_count)
 	{
-		setUniformI(name, val, 4);
+		setUniformI(name, val, array_count);
 	}
-	void ShaderProgramOGL3x::setUniformVectorF(const char* name, float* val, unsigned int array_count)
+	void ShaderProgramOGL3x::setUniformVector(const char* name, float* val, unsigned int array_count)
 	{
-		setUniformF(name, val, 4);
-	}
-
-	void ShaderProgramOGL3x::setUniformMatrixI(const char* name, int* val)
-	{
-		setUniformI(name, val, 16);
+		setUniformF(name, val, array_count);
 	}
 
-	void ShaderProgramOGL3x::setUniformMatrixF(const char* name, float* val)
+	void ShaderProgramOGL3x::setUniformMatrix(const char* name, int* val, unsigned int array_count)
 	{
-		setUniformF(name, val, 16);
+		setUniformI(name, val, array_count);
+	}
+
+	void ShaderProgramOGL3x::setUniformMatrix(const char* name, float* val, unsigned int array_coun)
+	{
+		setUniformF(name, val, array_coun);
 	}
 
 	void ShaderProgramOGL3x::setUniformI(const char* name, int* val, int arrayLength)
 	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Int,arrayLength);
+		setUniform(name, val, ShaderProgramOGL3x::PrimitiveDatatype::Int, arrayLength);
 	}
 
 	void ShaderProgramOGL3x::setUniformF(const char* name, float* val, int arrayLength)
 	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Float,arrayLength);
+		setUniform(name, val, ShaderProgramOGL3x::PrimitiveDatatype::Float, arrayLength);
 	}
 
 	void ShaderProgramOGL3x::setUniformUI(const char* name, unsigned int* val, int arrayLength)
 	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Uint,arrayLength);
+		setUniform(name, val, ShaderProgramOGL3x::PrimitiveDatatype::Uint, arrayLength);
 	}
 
 	void ShaderProgramOGL3x::setUniform(const char* name, void* val, PrimitiveDatatype type, int arrayLength)

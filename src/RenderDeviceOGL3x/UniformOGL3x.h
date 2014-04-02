@@ -116,6 +116,10 @@ namespace ACTK
 				arrayLength = m_arrayLength;
 				LOG_ERROR("Uniformsize überschritten!");
 			}
+			else if(m_arrayLength > arrayLength)
+			{
+				LOG_ERROR("Übergebene Uniformsize ist als der reservierte Speicher. Der Rest wird mit Nullen aufgefüllt!");
+			}
 
 			if(m_dirty)
 			{

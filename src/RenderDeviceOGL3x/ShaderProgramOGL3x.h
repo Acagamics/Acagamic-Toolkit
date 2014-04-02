@@ -26,20 +26,23 @@ namespace ACTK
 		// TODO: Funktionen definieren:
 		// Die Funktionen müssen den Uniform in den richtigen Typ casten (Den Typ den er auf der Grafikkarte hat. Dafür hat jedes Objekt eine "UniformDatatype" variable. Nach der soll entschieden werden in welchen Typ gecastet wird)
 		// Dann müssen die Werte gekastet werden und mit mit einer "setValue" funktion an den Uniform übergeben werden
-		void setUniformI(const char* name, int);
-		void setUniformF(const char* name, float);
-		void setUniformI(const char* name, int, int);
-		void setUniformF(const char* name, float, float);
-		void setUniformI(const char* name, int, int, int);
-		void setUniformF(const char* name, float, float, float);
-		void setUniformI(const char* name, int, int, int, int);
-		void setUniformF(const char* name, float, float, float, float);
-		
-		void setUniformVectorI(const char* name, int*, unsigned int array_count);
-		void setUniformVectorF(const char* name, float*, unsigned int array_count);
+		void setUniform(const char* name, int value);
+		void setUniform(const char* name, float value);
 
-		void setUniformMatrixI(const char* name, int*);
-		void setUniformMatrixF(const char* name, float*);
+		void setUniform(const char* name, int value1, int value2);
+		void setUniform(const char* name, float value1, float value2);
+
+		void setUniform(const char* name, int value1, int value2, int value3);
+		void setUniform(const char* name, float value1, float value2, float value3);
+
+		void setUniform(const char* name, int value1, int value2, int value3, int value4);
+		void setUniform(const char* name, float value1, float value2, float value3, float value4);
+		
+		void setUniformVector(const char* name, int* vector, unsigned int vector_size);
+		void setUniformVector(const char* name, float* vector, unsigned int vector_size);
+
+		void setUniformMatrix(const char* name, int* matrix, unsigned int matrix_size);
+		void setUniformMatrix(const char* name, float* matrix, unsigned int matrix_size);
 
 		unsigned int GetPogramHandle();
 

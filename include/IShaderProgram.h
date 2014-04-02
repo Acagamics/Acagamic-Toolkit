@@ -8,20 +8,23 @@ namespace ACTK
 	public:
 		virtual ~IShaderProgram(){}
 
-		virtual void setUniformI(const char* name, int) = 0;
-		virtual void setUniformF(const char* name, float) = 0;
-		virtual void setUniformI(const char* name, int, int) = 0;
-		virtual void setUniformF(const char* name, float, float) = 0;
-		virtual void setUniformI(const char* name, int, int, int) = 0;
-		virtual void setUniformF(const char* name, float, float, float) = 0;
-		virtual void setUniformI(const char* name, int, int, int, int) = 0;
-		virtual void setUniformF(const char* name, float, float, float, float) = 0;
-		
-		virtual void setUniformVectorI(const char* name, int*, unsigned int array_count = 0) = 0;
-		virtual void setUniformVectorF(const char* name, float*, unsigned int array_count = 0) = 0;
+		virtual void setUniform(const char* name, int value) = 0;
+		virtual void setUniform(const char* name, float value) = 0;
 
-		virtual void setUniformMatrixI(const char* name, int*) = 0;
-		virtual void setUniformMatrixF(const char* name, float*) = 0;
+		virtual void setUniform(const char* name, int value1, int value2) = 0;
+		virtual void setUniform(const char* name, float value1, float value2) = 0;
+
+		virtual void setUniform(const char* name, int value1, int value2, int value3) = 0;
+		virtual void setUniform(const char* name, float value1, float value2, float value3) = 0;
+
+		virtual void setUniform(const char* name, int value1, int value2, int value3, int value4) = 0;
+		virtual void setUniform(const char* name, float value1, float value2, float value3, float value4) = 0;
+		
+		virtual void setUniformVector(const char* name, int* vector, unsigned int vector_size) = 0;
+		virtual void setUniformVector(const char* name, float* vector, unsigned int vector_size) = 0;
+
+		virtual void setUniformMatrix(const char* name, int* matrix, unsigned int matrix_size) = 0;
+		virtual void setUniformMatrix(const char* name, float* matrix, unsigned int matrix_size) = 0;
 	};
 
 	typedef std::shared_ptr<IShaderProgram> ShaderProgramPtr;
