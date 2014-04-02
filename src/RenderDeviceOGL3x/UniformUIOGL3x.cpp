@@ -27,7 +27,7 @@ namespace ACTK
 			m_val = new unsigned int[4*count];
 			break;
 		}
-		memset(m_val, 0, m_size);
+		memset(m_val, 0, m_size*sizeof(unsigned int));
 	}
 
 	UniformUI::~UniformUI()

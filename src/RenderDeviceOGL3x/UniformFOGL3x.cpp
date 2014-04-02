@@ -63,6 +63,7 @@ namespace ACTK
 			m_size = 16 * count * sizeof(float);
 			break;
 		}
+		memset(m_val, 0, m_size*sizeof(float));
 	}
 
 	UniformF::~UniformF()

@@ -27,7 +27,7 @@ namespace ACTK
 			m_val = new int[4*count];
 			break;
 		}
-		memset(m_val, 0, m_size);
+		memset(m_val, 0, m_size*sizeof(int));
 	}
 
 	UniformI::~UniformI()

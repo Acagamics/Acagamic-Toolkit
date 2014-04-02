@@ -243,6 +243,21 @@ namespace ACTK
 		setUniformF(name, val, 16);
 	}
 
+	void ShaderProgramOGL3x::setUniformI(const char* name, int* val, size_t size)
+	{
+		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Int,size);
+	}
+
+	void ShaderProgramOGL3x::setUniformF(const char* name, float* val, size_t size)
+	{
+		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Float,size);
+	}
+
+	void ShaderProgramOGL3x::setUniformUI(const char* name, unsigned int* val, size_t size)
+	{
+		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Uint,size);
+	}
+
 	void ShaderProgramOGL3x::setUniform(const char* name, void* val, PrimitiveDatatype type, size_t size)
 	{
 		auto it = m_uniforms.find( name );
@@ -268,8 +283,10 @@ namespace ACTK
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Int):
 						(dynamic_cast<UniformF*>(m_uniforms[name]))->setValue( static_cast<int*>(val), size );
+						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Uint):
 						(dynamic_cast<UniformF*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), size );
+						break;
 					break;
 				}
 				break;
@@ -284,8 +301,10 @@ namespace ACTK
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Int):
 						(dynamic_cast<UniformI*>(m_uniforms[name]))->setValue( static_cast<int*>(val), size );
+						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Uint):
 						(dynamic_cast<UniformI*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), size );
+						break;
 					break;
 				}
 				break;
@@ -300,8 +319,10 @@ namespace ACTK
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Int):
 						(dynamic_cast<UniformUI*>(m_uniforms[name]))->setValue( static_cast<int*>(val), size );
+						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Uint):
 						(dynamic_cast<UniformUI*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), size );
+						break;
 					break;
 				}
 				break;
@@ -310,20 +331,5 @@ namespace ACTK
 				break;
 			};
 		}
-	}
-
-	void ShaderProgramOGL3x::setUniformI(const char* name, int* val, size_t size)
-	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Int,size);
-	}
-
-	void ShaderProgramOGL3x::setUniformF(const char* name, float* val, size_t size)
-	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Float,size);
-	}
-
-	void ShaderProgramOGL3x::setUniformUI(const char* name, unsigned int* val, size_t size)
-	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Uint,size);
 	}
 }
