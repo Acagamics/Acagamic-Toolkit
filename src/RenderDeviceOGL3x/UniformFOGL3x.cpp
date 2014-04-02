@@ -70,16 +70,16 @@ namespace ACTK
 	{
 		switch(Datatype)
 		{
-		case(UniformDatatype::Int):
+		case(UniformDatatype::Float):
 			glUniform1fv(Location, m_count, m_val);
 			break;
-		case(UniformDatatype::IntVector2):
+		case(UniformDatatype::FloatVector2):
 			glUniform2fv(Location, m_count, m_val);
 			break;
-		case(UniformDatatype::IntVector3):
+		case(UniformDatatype::FloatVector3):
 			glUniform3fv(Location, m_count, m_val);
 			break;
-		case(UniformDatatype::IntVector4):
+		case(UniformDatatype::FloatVector4):
 			glUniform4fv(Location, m_count, m_val);
 			break;
 		case(UniformDatatype::FloatMatrix22):

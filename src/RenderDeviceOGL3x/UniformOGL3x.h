@@ -91,6 +91,8 @@ namespace ACTK
 		ICleanableObserver*	const m_observer;
 	};
 
+	typedef std::hash_map<std::string, IUniformOGL3x*> UniformMap;
+
 	template<class T> 
 	class UniformOGL3x : public IUniformOGL3x
 	{
@@ -121,7 +123,7 @@ namespace ACTK
 				LOG_ERROR("Übergebene Uniformsize ist als der reservierte Speicher. Der Rest wird mit Nullen aufgefüllt!");
 			}
 
-			if(m_dirty)
+			if(!m_dirty)
 			{
 				m_dirty = true;
 				m_observer->notifyDirty(this);

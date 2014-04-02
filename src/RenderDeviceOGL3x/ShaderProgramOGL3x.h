@@ -8,8 +8,6 @@
 
 namespace ACTK
 {
-	typedef std::hash_map<std::string, IUniformOGL3x*> UniformMap;
-
 	class ShaderProgramOGL3x : public IShaderProgram, public ICleanableObserver
 	{
 		enum class PrimitiveDatatype : char
