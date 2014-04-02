@@ -11,27 +11,23 @@ namespace ACTK
 		switch (Datatype)
 		{
 		case(UniformDatatype::Int):
-			m_val = new int[1*count];
-			m_size = 1 * count * sizeof(int);
+			m_arrayLength = 1 * count;
+			m_val = new int[m_arrayLength];
 			break;
 		case(UniformDatatype::IntVector2):
-			m_val = new int[2*count];
-			m_size = 2 * count * sizeof(int);
+			m_arrayLength = 2 * count;
+			m_val = new int[m_arrayLength];
 			break;
 		case(UniformDatatype::IntVector3):
-			m_val = new int[3*count];
-			m_size = 3 * count * sizeof(int);
+			m_arrayLength = 3 * count;
+			m_val = new int[m_arrayLength];
 			break;
 		case(UniformDatatype::IntVector4):
-			m_size = 4 * count * sizeof(int);
-			m_val = new int[4*count];
+			m_arrayLength = 4 * count;
+			m_val = new int[m_arrayLength];
 			break;
 		}
-		memset(m_val, 0, m_size*sizeof(int));
-	}
-
-	UniformI::~UniformI()
-	{
+		memset(m_val, 0, m_arrayLength*sizeof(int));
 	}
 
 	void UniformI::clean()

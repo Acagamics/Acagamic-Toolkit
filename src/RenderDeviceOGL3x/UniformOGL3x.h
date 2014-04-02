@@ -6,6 +6,7 @@ namespace ACTK
 {
 	enum class UniformDatatype : char
 	{
+		NONE,
 		Int,
 		UnsignedInt,
         Float,
@@ -98,6 +99,7 @@ namespace ACTK
 			IUniformOGL3x(location, datatype, count, observer)
 		{
 		}
+
 		~UniformOGL3x()
 		{
 			delete[] m_val;
@@ -107,11 +109,11 @@ namespace ACTK
 		virtual void clean() = 0;
 		
 		template <class A>
-		void setValue(A* val, int size)
+		void setValue(A* val, int arrayLength)
 		{
-			if(m_size < size)
+			if(m_arrayLength < arrayLength)
 			{
-				size = m_size;
+				arrayLength = m_arrayLength;
 				LOG_ERROR("Uniformsize überschritten!");
 			}
 
@@ -120,23 +122,23 @@ namespace ACTK
 				m_dirty = true;
 				m_observer->notifyDirty(this);
 			}
-			memset(m_val,0,m_size*sizeof(float));
-			for (int i = 0; i < size; i++)
+
+			memset(m_val, 0, arrayLength*sizeof(T));
+			for (int i = 0; i < arrayLength; i++)
 			{
 				m_val[i] = static_cast<T>(val[i]);
 			}
 		}
 
 	protected:
-		int  m_size;
-		T* m_val;
+		int m_arrayLength;
+		T*	m_val;
 	};
 
 	class UniformI : public UniformOGL3x<int>
 	{
 	public:
 		UniformI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
-		~UniformI();
 
 		void clean();
 	};
@@ -145,7 +147,6 @@ namespace ACTK
 	{
 	public:
 		UniformF(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
-		~UniformF();
 
 		void clean();
 	};
@@ -154,7 +155,6 @@ namespace ACTK
 	{
 	public:
 		UniformUI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
-		~UniformUI();
 
 		void clean();
 	};

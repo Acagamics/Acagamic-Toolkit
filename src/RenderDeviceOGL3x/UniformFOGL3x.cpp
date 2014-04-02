@@ -11,63 +11,59 @@ namespace ACTK
 		switch (Datatype)
 		{
 		case(UniformDatatype::Float):
-			m_val = new float[1*count];
-			m_size = 1 * count * sizeof(float);
+			m_arrayLength = 1 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatVector2):
-			m_val = new float[2*count];
-			m_size = 2 * count * sizeof(float);
+			m_arrayLength = 2 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatVector3):
-			m_val = new float[3*count];
-			m_size = 3 * count * sizeof(float);
+			m_arrayLength = 3 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatVector4):
-			m_val = new float[4*count];
-			m_size = 4 * count * sizeof(float);
+			m_arrayLength = 4 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix22):
-			m_val = new float[4*count];
-			m_size = 4 * count * sizeof(float);
+			m_arrayLength = 4 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix23):
-			m_val = new float[6*count];
-			m_size = 6 * count * sizeof(float);
+			m_arrayLength = 6 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix24):
-			m_val = new float[8*count];
-			m_size = 8 * count * sizeof(float);
+			m_arrayLength = 8 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix32):
-			m_val = new float[6*count];
-			m_size = 6 * count * sizeof(float);
+			m_arrayLength = 6 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix33):
-			m_val = new float[9*count];
-			m_size = 9 * count * sizeof(float);
+			m_arrayLength = 9 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix34):
-			m_val = new float[12*count];
-			m_size = 12 * count * sizeof(float);
+			m_arrayLength = 12 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix42):
-			m_val = new float[8*count];
-			m_size = 8 * count * sizeof(float);
+			m_arrayLength = 8 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix43):
-			m_val = new float[12*count];
-			m_size = 12 * count * sizeof(float);
+			m_arrayLength = 12 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		case(UniformDatatype::FloatMatrix44):
-			m_val = new float[16*count];
-			m_size = 16 * count * sizeof(float);
+			m_arrayLength = 16 * count;
+			m_val = new float[m_arrayLength];
 			break;
 		}
-		memset(m_val, 0, m_size*sizeof(float));
-	}
-
-	UniformF::~UniformF()
-	{
+		memset(m_val, 0, m_arrayLength*sizeof(float));
 	}
 
 	void UniformF::clean()

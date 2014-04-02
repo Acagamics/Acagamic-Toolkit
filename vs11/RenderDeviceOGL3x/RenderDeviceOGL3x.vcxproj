@@ -95,6 +95,7 @@
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\ShaderObjectOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\ShaderProgramOGL3x.cpp" />
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\TypeConverterOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\UniformFOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\UniformIOGL3x.cpp" />
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\UniformUIOGL3x.cpp" />

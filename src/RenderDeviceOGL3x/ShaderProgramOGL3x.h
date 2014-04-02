@@ -54,10 +54,10 @@ namespace ACTK
 		ShaderProgramOGL3x(ShaderProgramOGL3x&){}
 		ShaderProgramOGL3x& operator=( const ShaderProgramOGL3x& ) {return *this;}
 
-		void setUniformI(const char* name, int*, size_t size);
-		void setUniformUI(const char* name, unsigned int*, size_t size);
-		void setUniformF(const char* name, float*, size_t size);
-		void setUniform(const char* name, void*, PrimitiveDatatype, size_t size);
+		void setUniformI(const char* name, int*, int arrayLength);
+		void setUniformUI(const char* name, unsigned int*, int arrayLength);
+		void setUniformF(const char* name, float*, int arrayLength);
+		void setUniform(const char* name, void*, PrimitiveDatatype, int arrayLength);
 
 		std::string				getProgramInfoLog();
 		UniformMap				findUniforms();

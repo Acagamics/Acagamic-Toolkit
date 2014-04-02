@@ -113,10 +113,10 @@ namespace ACTK
         {
             int uniformNameLength;
             int uniformSize;
-            GLenum uniformType;
+            GLenum UniformType;
             GLchar* uniformName = new GLchar[uniformNameMaxLength];
 
-            glGetActiveUniform(programHandle, i, uniformNameMaxLength, &uniformNameLength, &uniformSize, &uniformType, uniformName);
+            glGetActiveUniform(programHandle, i, uniformNameMaxLength, &uniformNameLength, &uniformSize, &UniformType, uniformName);
 
 			if (strncmp(uniformName, "gl_", strlen("gl_")) == 0)
 			{
@@ -141,10 +141,10 @@ namespace ACTK
 			
 			LOG_INIT("\tName: %s, \tLocation: %d, \tArraySize: %d", uniformName, uniformLocation, uniformSize);
 			// TODO: Füge die abgeleiteten Uniforms mit switch case
-			// uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformOGL3x(uniformLocation, uniformSize, TypeConverterOGL3x::ToActiveUniformType(uniformType), this))));
+			// uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformOGL3x(uniformLocation, uniformSize, TypeConverterOGL3x::ToActiveUniformDatatype(UniformDatatype), this))));
 			// Meins! (Grigori)
 
-			UniformDatatype type = TypeConverterOGL3x::ToActiveUniformType(uniformType);
+			UniformDatatype type = TypeConverterOGL3x::ToActiveUniformDatatype(UniformType);
 
 			switch (type)
 			{
@@ -243,22 +243,22 @@ namespace ACTK
 		setUniformF(name, val, 16);
 	}
 
-	void ShaderProgramOGL3x::setUniformI(const char* name, int* val, size_t size)
+	void ShaderProgramOGL3x::setUniformI(const char* name, int* val, int arrayLength)
 	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Int,size);
+		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Int,arrayLength);
 	}
 
-	void ShaderProgramOGL3x::setUniformF(const char* name, float* val, size_t size)
+	void ShaderProgramOGL3x::setUniformF(const char* name, float* val, int arrayLength)
 	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Float,size);
+		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Float,arrayLength);
 	}
 
-	void ShaderProgramOGL3x::setUniformUI(const char* name, unsigned int* val, size_t size)
+	void ShaderProgramOGL3x::setUniformUI(const char* name, unsigned int* val, int arrayLength)
 	{
-		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Uint,size);
+		setUniform(name,val,ShaderProgramOGL3x::PrimitiveDatatype::Uint,arrayLength);
 	}
 
-	void ShaderProgramOGL3x::setUniform(const char* name, void* val, PrimitiveDatatype type, size_t size)
+	void ShaderProgramOGL3x::setUniform(const char* name, void* val, PrimitiveDatatype type, int arrayLength)
 	{
 		auto it = m_uniforms.find( name );
 		if(it != m_uniforms.end())
@@ -279,13 +279,13 @@ namespace ACTK
 				switch(type)
 				{
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Float):
-						(dynamic_cast<UniformF*>(m_uniforms[name]))->setValue( static_cast<float*>(val), size );
+						(dynamic_cast<UniformF*>(m_uniforms[name]))->setValue( static_cast<float*>(val), arrayLength );
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Int):
-						(dynamic_cast<UniformF*>(m_uniforms[name]))->setValue( static_cast<int*>(val), size );
+						(dynamic_cast<UniformF*>(m_uniforms[name]))->setValue( static_cast<int*>(val), arrayLength );
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Uint):
-						(dynamic_cast<UniformF*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), size );
+						(dynamic_cast<UniformF*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), arrayLength );
 						break;
 					break;
 				}
@@ -297,13 +297,13 @@ namespace ACTK
 				switch(type)
 				{
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Float):
-						(dynamic_cast<UniformI*>(m_uniforms[name]))->setValue( static_cast<float*>(val), size );
+						(dynamic_cast<UniformI*>(m_uniforms[name]))->setValue( static_cast<float*>(val), arrayLength );
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Int):
-						(dynamic_cast<UniformI*>(m_uniforms[name]))->setValue( static_cast<int*>(val), size );
+						(dynamic_cast<UniformI*>(m_uniforms[name]))->setValue( static_cast<int*>(val), arrayLength );
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Uint):
-						(dynamic_cast<UniformI*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), size );
+						(dynamic_cast<UniformI*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), arrayLength );
 						break;
 					break;
 				}
@@ -315,13 +315,13 @@ namespace ACTK
 				switch(type)
 				{
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Float):
-						(dynamic_cast<UniformUI*>(m_uniforms[name]))->setValue( static_cast<float*>(val), size );
+						(dynamic_cast<UniformUI*>(m_uniforms[name]))->setValue( static_cast<float*>(val), arrayLength );
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Int):
-						(dynamic_cast<UniformUI*>(m_uniforms[name]))->setValue( static_cast<int*>(val), size );
+						(dynamic_cast<UniformUI*>(m_uniforms[name]))->setValue( static_cast<int*>(val), arrayLength );
 						break;
 					case(ShaderProgramOGL3x::PrimitiveDatatype::Uint):
-						(dynamic_cast<UniformUI*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), size );
+						(dynamic_cast<UniformUI*>(m_uniforms[name]))->setValue( static_cast<unsigned int*>(val), arrayLength );
 						break;
 					break;
 				}

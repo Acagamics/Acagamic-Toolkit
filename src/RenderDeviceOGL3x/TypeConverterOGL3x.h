@@ -11,7 +11,7 @@ namespace ACTK
 		// ClearState
 		//static unsigned int				To(ClearBuffers mask);
 		//static ShaderVertexAttributeType	ToActiveAttribType(GLenum type);
-		static UniformDatatype				ToActiveUniformType(GLenum type);
+		static UniformDatatype				ToActiveUniformDatatype(GLenum type);
 
 		//// Index and Vertex Buffer
 		//static BufferHint					ToBufferHint(GLenum hint);
