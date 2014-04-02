@@ -6,7 +6,7 @@
 
 namespace ACTK
 {
-	UniformUI::UniformUI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer) : UniformOGL3x(location, datatype, count, observer)
+	UniformUI::UniformUI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer) : UniformOGL3x<unsigned int>(location, datatype, count, observer)
 	{
 		switch (Datatype)
 		{
@@ -32,7 +32,6 @@ namespace ACTK
 
 	UniformUI::~UniformUI()
 	{
-		delete[] m_val;
 	}
 
 	void UniformUI::clean()
@@ -47,66 +46,6 @@ namespace ACTK
 			break;
 		case(UniformDatatype::UnsignedIntVector4): glUniform4uiv(Location, m_count, m_val);
 			break;
-		}
-	}
-
-	void UniformUI::setValue(float* val, int size)
-	{
-		if(m_size < size)
-		{
-			size = m_size;
-			LOG_ERROR("Uniformsize überschritten!");
-		}
-
-		if(m_dirty)
-		{
-			m_dirty = true;
-			m_observer->notifyDirty(this);
-		}
-		memset(m_val,0,m_size*sizeof(unsigned int));
-		for (int i = 0; i < size; i++)
-		{
-			m_val[i] = static_cast<unsigned int>(val[i]);
-		}
-	}
-
-	void UniformUI::setValue(unsigned int* val, int size)
-	{
-		if(m_size < size)
-		{
-			size = m_size;
-			LOG_ERROR("Uniformsize überschritten!");
-		}
-
-		if(m_dirty)
-		{
-			m_dirty = true;
-			m_observer->notifyDirty(this);
-		}
-		memset(m_val,0,m_size*sizeof(unsigned int));
-		for (int i = 0; i < size; i++)
-		{
-			m_val[i] = static_cast<unsigned int>(val[i]);
-		}
-	}
-
-	void UniformUI::setValue(int* val, int size)
-	{
-		if(m_size < size)
-		{
-			size = m_size;
-			LOG_ERROR("Uniformsize überschritten!");
-		}
-
-		if(m_dirty)
-		{
-			m_dirty = true;
-			m_observer->notifyDirty(this);
-		}
-		memset(m_val,0,m_size*sizeof(unsigned int));
-		for (int i = 0; i < size; i++)
-		{
-			m_val[i] = static_cast<unsigned int>(val[i]);
 		}
 	}
 };

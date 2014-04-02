@@ -159,19 +159,19 @@ namespace ACTK
 			case(UniformDatatype::FloatMatrix33):
 			case(UniformDatatype::FloatMatrix34):
 			case(UniformDatatype::FloatMatrix44):
-				uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformF(uniformLocation, type, uniformSize, this)));
+				uniforms.insert(std::pair<std::string, IUniformOGL3x*>(uniformName, new UniformF(uniformLocation, type, uniformSize, this)));
 				break;
 			case(UniformDatatype::Int):
 			case(UniformDatatype::IntVector2):
 			case(UniformDatatype::IntVector3):
 			case(UniformDatatype::IntVector4):
-				uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformI(uniformLocation, type, uniformSize, this)));
+				uniforms.insert(std::pair<std::string, IUniformOGL3x*>(uniformName, new UniformI(uniformLocation, type, uniformSize, this)));
 				break;
 			case(UniformDatatype::UnsignedInt):
 			case(UniformDatatype::UnsignedIntVector2):
 			case(UniformDatatype::UnsignedIntVector3):
 			case(UniformDatatype::UnsignedIntVector4):
-				uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformUI(uniformLocation, type, uniformSize, this)));
+				uniforms.insert(std::pair<std::string, IUniformOGL3x*>(uniformName, new UniformUI(uniformLocation, type, uniformSize, this)));
 				break;
 			}
         }
@@ -196,8 +196,8 @@ namespace ACTK
 
 	void ShaderProgramOGL3x::setUniformF(const char* name, float val1, float val2)
 	{
-		int val[2] = {val1,val2};
-		setUniformI(name, val, 2);
+		float val[2] = {val1,val2};
+		setUniformF(name, val, 2);
 	}
 
 	void ShaderProgramOGL3x::setUniformI(const char* name, int val1, int val2, int val3)

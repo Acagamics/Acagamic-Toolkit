@@ -8,7 +8,7 @@
 
 namespace ACTK
 {
-	typedef std::hash_map<std::string, UniformOGL3x*> UniformMap;
+	typedef std::hash_map<std::string, IUniformOGL3x*> UniformMap;
 
 	class ShaderProgramOGL3x : public IShaderProgram, public ICleanableObserver
 	{

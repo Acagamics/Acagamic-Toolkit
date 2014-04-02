@@ -64,11 +64,11 @@ namespace ACTK
 	// ToDo: Uniform Ableitung für unsigned definieren.
 	// Meins! (Grigori)
 
-	class UniformOGL3x : public ICleanable
+	class IUniformOGL3x : public ICleanable
 	{
 	public:
 		// Update method
-		UniformOGL3x(int location, UniformDatatype datatype, int count, ICleanableObserver* observer) : 
+		IUniformOGL3x(int location, UniformDatatype datatype, int count, ICleanableObserver* observer) : 
 			m_dirty(false),
 			Location(location),
 			Datatype(datatype),
@@ -76,12 +76,6 @@ namespace ACTK
 			m_observer(observer)
 		{
 		}
-
-		// Weiß nicht, ob ich das darf.
-		//~UniformOGL3x(){}//~UniformOGL3x();
-
-		//TODO: Set Value Funktion definieren
-		template <typename T> void setValue(T* val, int size);
 
 		// implemented by derivative
 		virtual void clean() = 0;
@@ -96,51 +90,72 @@ namespace ACTK
 		ICleanableObserver*	const m_observer;
 	};
 
-	class UniformI : public UniformOGL3x
+	template<class T> 
+	class UniformOGL3x : public IUniformOGL3x
+	{
+	public:
+		UniformOGL3x(int location, UniformDatatype datatype, int count, ICleanableObserver* observer) :
+			IUniformOGL3x(location, datatype, count, observer)
+		{
+		}
+		~UniformOGL3x()
+		{
+			delete[] m_val;
+		}
+
+		// implemented by derivative
+		virtual void clean() = 0;
+		
+		template <class A>
+		void setValue(A* val, int size)
+		{
+			if(m_size < size)
+			{
+				size = m_size;
+				LOG_ERROR("Uniformsize überschritten!");
+			}
+
+			if(m_dirty)
+			{
+				m_dirty = true;
+				m_observer->notifyDirty(this);
+			}
+			memset(m_val,0,m_size*sizeof(float));
+			for (int i = 0; i < size; i++)
+			{
+				m_val[i] = static_cast<T>(val[i]);
+			}
+		}
+
+	protected:
+		int  m_size;
+		T* m_val;
+	};
+
+	class UniformI : public UniformOGL3x<int>
 	{
 	public:
 		UniformI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
 		~UniformI();
 
 		void clean();
-		void setValue(int* val, int size);
-		void setValue(unsigned int* val, int size);
-		void setValue(float* val, int size);
-
-	private:
-		int m_size;
-		int* m_val;
 	};
 
-	class UniformF : public UniformOGL3x
+	class UniformF : public UniformOGL3x<float>
 	{
 	public:
 		UniformF(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
 		~UniformF();
 
 		void clean();
-		void setValue(int* val, int size);
-		void setValue(unsigned int* val, int size);
-		void setValue(float* val, int size);
-
-	private:
-		int m_size;
-		float* m_val;
 	};
 
-	class UniformUI : public UniformOGL3x
+	class UniformUI : public UniformOGL3x<unsigned int>
 	{
 	public:
 		UniformUI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
 		~UniformUI();
 
 		void clean();
-		void setValue(int* val, int size);
-		void setValue(unsigned int* val, int size);
-		void setValue(float* val, int size);
-
-	private:
-		int  m_size;
-		unsigned int* m_val;
 	};
 }

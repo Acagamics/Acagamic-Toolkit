@@ -67,7 +67,6 @@ namespace ACTK
 
 	UniformF::~UniformF()
 	{
-		delete[] m_val;
 	}
 
 	void UniformF::clean()
@@ -113,66 +112,6 @@ namespace ACTK
 		case(UniformDatatype::FloatMatrix44):
 			glUniformMatrix4fv(Location, m_count, GL_FALSE, m_val);
 			break;
-		}
-	}
-
-	void UniformF::setValue(int* val, int size)
-	{
-		if(m_size < size)
-		{
-			size = m_size;
-			LOG_ERROR("Uniformsize überschritten!");
-		}
-
-		if(m_dirty)
-		{
-			m_dirty = true;
-			m_observer->notifyDirty(this);
-		}
-		memset(m_val,0,m_size*sizeof(float));
-		for (int i = 0; i < size; i++)
-		{
-			m_val[i] = static_cast<float>(val[i]);
-		}
-	}
-
-	void UniformF::setValue(float* val, int size)
-	{
-		if(m_size < size)
-		{
-			size = m_size;
-			LOG_ERROR("Uniformsize überschritten!");
-		}
-
-		if(m_dirty)
-		{
-			m_dirty = true;
-			m_observer->notifyDirty(this);
-		}
-		memset(m_val,0,m_size*sizeof(float));
-		for (int i = 0; i < size; i++)
-		{
-			m_val[i] = static_cast<float>(val[i]);
-		}
-	}
-
-	void UniformF::setValue(unsigned int* val, int size)
-	{
-		if(m_size < size)
-		{
-			size = m_size;
-			LOG_ERROR("Uniformsize überschritten!");
-		}
-
-		if(m_dirty)
-		{
-			m_dirty = true;
-			m_observer->notifyDirty(this);
-		}
-		memset(m_val,0,m_size*sizeof(float));
-		for (int i = 0; i < size; i++)
-		{
-			m_val[i] = static_cast<float>(val[i]);
 		}
 	}
 }
