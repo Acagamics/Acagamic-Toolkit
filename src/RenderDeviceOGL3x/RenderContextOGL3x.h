@@ -26,6 +26,8 @@ namespace ACTK {
 		// =========================================================================
 		void clear(const ClearState& clearState);
 
+		void draw(PrimitiveType type ,float* vertices, unsigned int count);
+
 		void swapBuffers();
 
 	private:

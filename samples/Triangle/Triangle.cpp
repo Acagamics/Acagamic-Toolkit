@@ -48,7 +48,7 @@ int main()
 	vertices[6] = 0.2f; vertices[7] =-0.5f; vertices[8]= -1.0f;
 
 	// TODO: Buffer erstellen und mit Dreieckinformationen füllen
-
+	
 
 	///////////////////////////////////////////////////////////////////
 	// Uniforms
@@ -81,7 +81,7 @@ int main()
         else
         {
 			ContextOGL->clear(cornflowerBlue);
-
+			
 			// TODO: Dreieck zeichnen mit dem Context
 				
 				// So ungefähr muss der Aufruf aussehen. Ändere dafür das Interface entsprechend und implementiere die Funktion in der DLL
@@ -101,6 +101,7 @@ int main()
 				// 5. Schritt: ContextOGL->draw( PrimitiveType, Offset, Count, VertexArray, ShaderProgram, RenderState );	// RenderState einstellen
 
 				// 6. Schritt: Das selbe mit VertexArrayObject
+			ContextOGL->draw(ACTK::PrimitiveType::TRIANGLES,vertices,1);
 
 			ContextOGL->swapBuffers();
         }

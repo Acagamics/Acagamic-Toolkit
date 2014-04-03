@@ -110,4 +110,35 @@ namespace ACTK
 		LOG_ASSERT(false, "ActiveAttribType does not exist.");
 		return UniformDatatype::NONE;
 	}
+
+	GLenum TypeConverterOGL3x::To(PrimitiveType type)
+	{
+		switch (type)
+		{
+			case PrimitiveType::LINE:
+				return GL_LINE;
+			case PrimitiveType::LINES:
+				return GL_LINES;
+			case PrimitiveType::LINE_LOOP:
+				return GL_LINE_LOOP;
+			case PrimitiveType::LINE_STRIP:
+				return GL_LINE_STRIP;
+			case PrimitiveType::POINTS:
+				return GL_POINTS;
+			case PrimitiveType::POLYGON:
+				return GL_POLYGON;
+			case PrimitiveType::QUADS:
+				return GL_QUADS;
+			case PrimitiveType::QUAD_STRIP:
+				return GL_QUAD_STRIP;
+			case PrimitiveType::TRIANGLES: 
+				return GL_TRIANGLES;
+			case PrimitiveType::TRIANGLE_FAN: 
+				return GL_TRIANGLE_FAN;
+			case PrimitiveType::TRIANGLE_STRIP: 
+				return GL_TRIANGLE_STRIP;
+		}
+		LOG_ASSERT(false, "ActiveAttribType does not exist.");
+		return GL_INVALID_ENUM;
+	}
 };
