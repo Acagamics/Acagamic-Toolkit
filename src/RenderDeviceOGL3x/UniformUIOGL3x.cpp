@@ -26,8 +26,10 @@ namespace ACTK
 			m_arrayLength = 4 * count;
 			m_val = new unsigned int[m_arrayLength];
 			break;
+		default:
+			LOG_FATAL("UniformDatatype does not exist");
+			break;
 		}
-		memset(m_val, 0, m_arrayLength*sizeof(unsigned int));
 	}
 
 	void UniformUI::clean()
@@ -41,6 +43,9 @@ namespace ACTK
 		case(UniformDatatype::UnsignedIntVector3): glUniform3uiv(Location, m_count, m_val);
 			break;
 		case(UniformDatatype::UnsignedIntVector4): glUniform4uiv(Location, m_count, m_val);
+			break;
+		default:
+			LOG_FATAL("UniformDatatype does not exist");
 			break;
 		}
 	}

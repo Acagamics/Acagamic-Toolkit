@@ -62,8 +62,10 @@ namespace ACTK
 			m_arrayLength = 16 * count;
 			m_val = new float[m_arrayLength];
 			break;
+		default:
+			LOG_FATAL("UniformDatatype does not exist");
+			break;
 		}
-		memset(m_val, 0, m_arrayLength*sizeof(float));
 	}
 
 	void UniformF::clean()
@@ -108,6 +110,9 @@ namespace ACTK
 			break;
 		case(UniformDatatype::FloatMatrix44):
 			glUniformMatrix4fv(Location, m_count, GL_FALSE, m_val);
+			break;
+		default:
+			LOG_FATAL("UniformDatatype does not exist");
 			break;
 		}
 	}

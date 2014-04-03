@@ -35,6 +35,10 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RenderDeviceD3D11", "Render
 	EndProjectSection
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Triangle", "..\samples\Triangle\Triangle.vcxproj", "{115D0547-70B9-4943-9850-F3A62E381DDB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{AE4F7AC6-0890-43BC-8EF4-2CAF4C53F576} = {AE4F7AC6-0890-43BC-8EF4-2CAF4C53F576}
+		{6366FAF9-D6C9-470E-BA33-9F4B6755A76F} = {6366FAF9-D6C9-470E-BA33-9F4B6755A76F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

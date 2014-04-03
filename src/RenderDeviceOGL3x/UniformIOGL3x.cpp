@@ -26,8 +26,10 @@ namespace ACTK
 			m_arrayLength = 4 * count;
 			m_val = new int[m_arrayLength];
 			break;
+		default:
+			LOG_FATAL("UniformDatatype does not exist");
+			break;
 		}
-		memset(m_val, 0, m_arrayLength*sizeof(int));
 	}
 
 	void UniformI::clean()
@@ -45,6 +47,9 @@ namespace ACTK
 			break;
 		case(UniformDatatype::IntVector4):
 			glUniform4iv(Location, m_count, m_val);
+			break;
+		default:
+			LOG_FATAL("UniformDatatype does not exist");
 			break;
 		}
 	}

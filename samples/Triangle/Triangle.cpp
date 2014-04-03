@@ -94,6 +94,14 @@ int main()
 				// Shader Program	= Das ShaderProgramm (Vertex und Pixelshader) mit dem die Dreiecke gezeichnet werden sollen
 				// RenderState		= Die RenderState Einstellungen die für das Zeichnen dieses Dreiecks vorgenommen werden sollen
 
+				// Das machen wir schrittweise: (Dreiecke mit GlBegin() und GLEnd() zeichnen;
+				// 1. Schritt: ContextOGL->draw( VertexArray, ShaderProgram );												// alle dreiecke zeichnen
+				// 2. Schritt: ContextOGL->draw( Offset, Count, VertexArray, ShaderProgram );								// nickt alle dreiecke zeichnen
+				// 3. Schritt: ContextOGL->draw( PrimitiveType, Offset, Count, VertexArray, ShaderProgram );				// Dreieck als Linie oder Punkte zeichnen
+				// 5. Schritt: ContextOGL->draw( PrimitiveType, Offset, Count, VertexArray, ShaderProgram, RenderState );	// RenderState einstellen
+
+				// 6. Schritt: Das selbe mit VertexArrayObject
+
 			ContextOGL->swapBuffers();
         }
 	}
