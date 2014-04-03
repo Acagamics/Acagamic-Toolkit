@@ -7,7 +7,7 @@ int main()
 {
 	uint32_t integer;
 
-	LOG_INIT("Starting Game");
+	LOG_DEBUG("Starting Game");
 
 	// Creating Render Device
 	auto DeviceOGL = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::OpenGL3x);
@@ -32,7 +32,7 @@ int main()
 	auto ContextOGL = WindowOGL->getContext();
 
 	MSG msg = { 0 };
-	LOG_INIT("Running Game");
+	LOG_DEBUG("Running Game");
 	while(!WindowOGL->shouldClose())
 	{
 		if(PeekMessage( &msg, NULL, 0, 0, PM_REMOVE ))
@@ -48,6 +48,6 @@ int main()
 			ContextOGL->swapBuffers();
         }
 	}
-	LOG_INIT("Quitting Game");
+	LOG_DEBUG("Quitting Game");
 	return (int) msg.wParam;
 }

@@ -20,8 +20,8 @@ namespace ACTK
 			glCompileShader(m_shaderObject);
 			glGetShaderiv(m_shaderObject, GL_COMPILE_STATUS, &m_result);
 			// Check if compiled.
-			if (m_result) {
-				LOG_INIT(this->GetCompileLog().c_str());
+			if (m_result) 
+			{
 				m_result = GL_TRUE;
 			}
 			else

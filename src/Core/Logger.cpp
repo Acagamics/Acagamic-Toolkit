@@ -78,11 +78,13 @@ namespace ACTK
 		m_initialized = false;
 	}
 
-	void EventLogger::logInfo(const char* text, ...)
+	void EventLogger::logDebug(const char* text, ...)
 	{
 		if(!isInitialized())
 			return;
+
 		char buffer[MAX_DEBUG_LINE_LEN];
+
 		va_list args; 
 		va_start(args, text);
 
@@ -94,16 +96,20 @@ namespace ACTK
 
 		assert((buf >= 0) && (buf < MAX_DEBUG_LINE_LEN)); 
 		va_end(args);
-
+		
 		// Log output to debug windows and/or disk depending on options
-		logOutput(buffer, 0);
+		char buffer2[MAX_DEBUG_LINE_LEN];
+		strcpy_s(buffer2, MAX_DEBUG_LINE_LEN, "DEBUG: ");
+		strcpy_s(buffer2+7, MAX_DEBUG_LINE_LEN-7, buffer);
+		logOutput(buffer2, 0);
 	}
 
 
-    void EventLogger::logInit(const char* text, ...)
+    void EventLogger::logWarning(const char* text, ...)
 	{
 		if(!isInitialized())
 			return;
+
 		char buffer[MAX_DEBUG_LINE_LEN];
 		va_list args; 
 		va_start(args, text);
@@ -118,13 +124,17 @@ namespace ACTK
 		va_end(args);
 
 		// Log output to debug windows and/or disk depending on options
-		logOutput(buffer, 0);
+		char buffer2[MAX_DEBUG_LINE_LEN];
+		strcpy_s(buffer2, MAX_DEBUG_LINE_LEN, "WARNING: ");
+		strcpy_s(buffer2+9, MAX_DEBUG_LINE_LEN-9, buffer);
+		logOutput(buffer2, 0);
 	}
 
     void EventLogger::logError(const char* text, ...)
 	{
 		if(!isInitialized())
 			return;
+
 		char buffer[MAX_DEBUG_LINE_LEN];
 		va_list args; 
 		va_start(args, text);
@@ -139,8 +149,11 @@ namespace ACTK
 		va_end(args);
 
 		// Log output to debug windows and/or disk depending on options
-		logOutput(buffer, 0);
-		MessageBox(NULL, buffer, "ACTK - ERROR", MB_OK | MB_ICONERROR);
+		char buffer2[MAX_DEBUG_LINE_LEN];
+		strcpy_s(buffer2, MAX_DEBUG_LINE_LEN, "ERROR: ");
+		strcpy_s(buffer2+7, MAX_DEBUG_LINE_LEN-7, buffer);
+		logOutput(buffer2, 0);
+		MessageBox(NULL, buffer2, "ACTK - ERROR", MB_OK | MB_ICONERROR);
 	}
 
 	void EventLogger::logAssert(bool contidion, const char* file, long line, const char* description)
@@ -154,7 +167,6 @@ namespace ACTK
 			#endif
 		}
 	}
-
 
 	////////////////////////////////////
 	// Common logging functions

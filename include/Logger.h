@@ -2,28 +2,35 @@
 #include <vector>
 #include <fstream>
 
+// Chose one of this LogLevels to define LOG_LEVEL
+#define LOG_LEVEL_ALL 0
+#define LOG_LEVEL_DEBUG 1
+#define LOG_LEVEL_WARNING 2
+#define LOG_LEVEL_ERROR 3
+#define LOG_LEVEL_OFF 5
+
 // Low Loglevel means that less important logs will be displayed
 #ifndef LOG_LEVEL
 	#ifdef _DEBUG
-		#define LOG_LEVEL	0
+		#define LOG_LEVEL	LOG_LEVEL_DEBUG
 	#else
-		#define LOG_LEVEL	2
+		#define LOG_LEVEL	LOG_LEVEL_ERROR
 	#endif
 #endif
 
-#if LOG_LEVEL < 1
-	#define LOG_INFO	ACTK::EventLogger::GetInstance().logInfo
+#if LOG_LEVEL <= LOG_LEVEL_DEBUG
+	#define LOG_DEBUG	ACTK::EventLogger::GetInstance().logDebug
 #else
-	#define LOG_INFO
+	#define LOG_DEBUG
 #endif
 
-#if LOG_LEVEL < 2
-	#define LOG_INIT	ACTK::EventLogger::GetInstance().logInit
+#if LOG_LEVEL <= LOG_LEVEL_WARNING
+	#define LOG_WARNING	ACTK::EventLogger::GetInstance().logWarning
 #else
-	#define LOG_INIT
+	#define LOG_WARNING
 #endif
 
-#if LOG_LEVEL < 3
+#if LOG_LEVEL <= LOG_LEVEL_ERROR
 	#define LOG_ERROR	ACTK::EventLogger::GetInstance().logError
 #else
 	#define LOG_ERROR
@@ -67,8 +74,8 @@ namespace ACTK
         bool isInitialized() { return m_initialized; }
 
 		// Log in die Datei schreiben (Die ... Notation kann man von EventLogFN übernehmen)
-        void logInfo(const char* text, ...);
-		void logInit(const char* text, ...);
+        void logDebug(const char* text, ...);
+		void logWarning(const char* text, ...);
         void logError(const char* text, ...);
 		void logAssert(bool contidion, const char* file, long line, const char* description);
 

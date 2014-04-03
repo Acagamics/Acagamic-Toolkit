@@ -14,23 +14,23 @@ namespace ACTK
 			LOG_ERROR("Could not initialize GLFW!");
 		else
 		{
-			LOG_INIT("GLFW sucessfully initialized.");
+			LOG_DEBUG("GLFW sucessfully initialized.");
 		}
 	}
 
 	void RenderDeviceOGL3x::release(void)
 	{
-		LOG_INIT("RenderDeviceOGL3x released.");
+		LOG_DEBUG("RenderDeviceOGL3x released.");
 	}
 
 	GraphicsWindowPtr RenderDeviceOGL3x::createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowtype)
 	{
-		LOG_INIT("Create OpenGL-Window with width: %u, height: %u.", width, height);
+		LOG_DEBUG("Create OpenGL-Window with width: %u, height: %u.", width, height);
 		auto window = std::shared_ptr<GraphicsWindowOGL3x>(new GraphicsWindowOGL3x());
 
 		if(window->initialize(m_hInstance, width, height, title, windowtype))
 		{
-			LOG_INIT("OpenGL-Window sucessfully created.");
+			LOG_DEBUG("OpenGL-Window sucessfully created.");
 			return window;
 		}
 		else

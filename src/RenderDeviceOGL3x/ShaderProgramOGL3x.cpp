@@ -13,6 +13,7 @@ namespace ACTK
 		m_geometryShader(nullptr),
 		m_fragmentShader(nullptr)
 	{
+		LOG_DEBUG("Creating Shader Program...");
 		m_ready = false;
 		m_vertexShader = ShaderObjectOGL3xPtr(new ShaderObjectOGL3x(GL_VERTEX_SHADER, vertexShaderSource));
 		if (geometryShaderSource.length() > 0)
@@ -25,26 +26,26 @@ namespace ACTK
 		if(m_program == 0)
 			LOG_ERROR("Could not create ShaderProgram.");
 
-		LOG_INIT("Vertex and fragment shader source is viable.");
 		if(m_vertexShader->IsReady() && m_fragmentShader->IsReady())
 		{
-			LOG_INIT("Vertex and fragment shaders are ready to be used.");
+			LOG_DEBUG("Vertex and fragment shaders are ready to be used.");
 				
 			//Attach Shaders.
 			glAttachShader(m_program, m_vertexShader->GetShaderHandle());
 			glAttachShader(m_program, m_fragmentShader->GetShaderHandle());
 
-		} else
+		} 
+		else
 		{
 			LOG_ERROR("Vertex and fragment shaders initialization failed.");
 		}
 
 		if(geometryShaderSource.length() > 0)
 		{
-			LOG_INIT("Geometry shader source is viable.");
+			LOG_DEBUG("Geometry shader source is viable.");
 			if(m_geometryShader->IsReady())
 			{
-				LOG_INIT("Geometry shader is ready to be used.");
+				LOG_DEBUG("Geometry shader is ready to be used.");
 					
 				//Attach Shader.
 				glAttachShader(m_program, m_vertexShader->GetShaderHandle());
@@ -54,6 +55,21 @@ namespace ACTK
 			}
 		}
 		glLinkProgram(m_program);
+
+		int linkStatus;
+		glGetProgramiv(m_program, GL_LINK_STATUS, &linkStatus);
+
+		if (linkStatus == 0)
+		{
+			LOG_ERROR(getProgramInfoLog().c_str());
+			m_ready = false;
+		}
+		else
+		{
+			LOG_DEBUG("Shader successfully  linked!");
+			m_ready = true;
+		}
+		m_uniforms = findUniforms();
 	}
 
 	ShaderProgramOGL3x::~ShaderProgramOGL3x()
@@ -107,7 +123,7 @@ namespace ACTK
 
 		UniformMap uniforms;
 		if(numberOfUniforms > 0)
-			LOG_INIT("Uniforms:");
+			LOG_DEBUG("Uniforms:");
 
         for (unsigned int i = 0; i < (unsigned int)numberOfUniforms; ++i)
         {
@@ -139,7 +155,7 @@ namespace ACTK
 
             int uniformLocation = glGetUniformLocation(programHandle, uniformName);
 			
-			LOG_INIT("\tName: %s, \tLocation: %d, \tArraySize: %d", uniformName, uniformLocation, uniformSize);
+			LOG_DEBUG("\tName: %s, \tLocation: %d, \tArraySize: %d", uniformName, uniformLocation, uniformSize);
 			// TODO: Füge die abgeleiteten Uniforms mit switch case
 			// uniforms.insert(std::pair<std::string, UniformOGL3x*>(uniformName, new UniformOGL3x(uniformLocation, uniformSize, TypeConverterOGL3x::ToActiveUniformDatatype(UniformDatatype), this))));
 			// Meins! (Grigori)

@@ -17,9 +17,7 @@ std::string LoadShader(int name)
 
 int main()
 {
-	uint32_t integer;
-
-	LOG_INIT("Starting Game");
+	LOG_DEBUG("Starting Game");
 	auto DeviceOGL = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::OpenGL3x);
 	if(DeviceOGL == nullptr)
 	{
@@ -70,7 +68,7 @@ int main()
 	auto ContextOGL = WindowOGL->getContext();
 
 	MSG msg = { 0 };
-	LOG_INIT("Running Game");
+	LOG_DEBUG("Running Game");
 	while(!WindowOGL->shouldClose())
 	{
 		if(PeekMessage( &msg, NULL, 0, 0, PM_REMOVE ))
@@ -100,11 +98,11 @@ int main()
 				// 3. Schritt: ContextOGL->draw( PrimitiveType, Offset, Count, VertexArray, ShaderProgram );				// Dreieck als Linie oder Punkte zeichnen
 				// 5. Schritt: ContextOGL->draw( PrimitiveType, Offset, Count, VertexArray, ShaderProgram, RenderState );	// RenderState einstellen
 
-				// 6. Schritt: Das selbe mit VertexArrayObject
+				// 6. Schritt: Das selbe mit Vertex Buffern
 
 			ContextOGL->swapBuffers();
         }
 	}
-	LOG_INIT("Quitting Game");
+	LOG_DEBUG("Quitting Game");
 	return (int) msg.wParam;
 }
