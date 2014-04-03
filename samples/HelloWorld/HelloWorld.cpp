@@ -2,18 +2,6 @@
 #include "RenderDeviceManager.h"
 #include <cstdint>
 
-#include "resource.h"
-
-std::string LoadShader(int name)
-{
-	DWORD size = 0;
-    const char* data = NULL;
-    HMODULE handle = ::GetModuleHandle(NULL);
-    HRSRC rc = ::FindResource(handle, MAKEINTRESOURCE(name), MAKEINTRESOURCE(SHADER));
-    HGLOBAL rcData = ::LoadResource(handle, rc);
-    size = ::SizeofResource(handle, rc);
-	return std::string(static_cast<const char*>(::LockResource(rcData)));
-}
 
 int main()
 {
@@ -35,9 +23,6 @@ int main()
 		return 0;
 	}
 
-	// Creating Shader from Source
-	auto ShaderProgram = DeviceOGL->createShaderProgram(LoadShader(IDS_VERTEXSHADER), LoadShader(IDS_FRAGMENTSHADER));
-
 	// Change ClearColor
 	ACTK::ClearState cornflowerBlue;
 	cornflowerBlue.Color = ACTK::Color(0.392f, 0.584f, 0.929f, 1.0f);
@@ -57,7 +42,9 @@ int main()
         }
         else
         {
+			// Clear Backbuffer to our ClearState
 			ContextOGL->clear(cornflowerBlue);
+
 			ContextOGL->swapBuffers();
         }
 	}
