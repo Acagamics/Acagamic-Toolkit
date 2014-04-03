@@ -2,7 +2,7 @@
 
 // Low Loglevel means that less important logs will be displayed
 #ifndef LOG_LEVEL
-	#define LOG_LEVEL 0
+	#define LOG_LEVEL LOG_LEVEL_ALL
 #endif
 
 #include "Logger.h"

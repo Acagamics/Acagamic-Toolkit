@@ -28,12 +28,12 @@ namespace ACTK
 		glfwDestroyWindow(m_window);
 		m_window = nullptr;
 
-		LOG_INIT("OpenGL GraphicsWindow released");
+		LOG_DEBUG("OpenGL GraphicsWindow released");
 	}
 
 	bool GraphicsWindowOGL3x::initialize(HINSTANCE hInstance, unsigned int width, unsigned int height, const std::string& title, WindowType windowType)
 	{
-		LOG_INIT("Initializing OpenGL Window");
+		LOG_DEBUG("Initializing OpenGL Window");
 
 		// Create a fullscrenn window?
 		GLFWmonitor* monitor = nullptr;

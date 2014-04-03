@@ -45,6 +45,8 @@ namespace ACTK
 		unsigned int GetPogramHandle();
 
 		void Bind();
+		void CleanUniforms();
+
 		bool IsReady();
 
 		//Diese Funktion implementieren.

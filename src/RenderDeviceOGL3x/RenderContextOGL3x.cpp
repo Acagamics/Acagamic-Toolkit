@@ -15,7 +15,7 @@ namespace ACTK {
 		}
 		else
 		{
-			LOG_INIT("GLFW sucessfully initialized.");
+			LOG_DEBUG("GLFW sucessfully initialized.");
 		}
 	}
 
@@ -27,7 +27,7 @@ namespace ACTK {
 	void RenderContextOGL3x::release(void)
 	{
 		m_window = nullptr;
-		LOG_INIT("OpenGL RenderContext released");
+		LOG_DEBUG("OpenGL RenderContext released");
 	}
 
 	void RenderContextOGL3x::clear(const ClearState& clearState)
