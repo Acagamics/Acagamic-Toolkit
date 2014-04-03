@@ -66,7 +66,7 @@ namespace ACTK
 		}
 		else
 		{
-			LOG_DEBUG("Shader successfully  linked!");
+			LOG_DEBUG("Shader successfully linked!");
 			m_ready = true;
 		}
 		m_uniforms = findUniforms();
@@ -81,6 +81,16 @@ namespace ACTK
 	{
 		glUseProgram(m_program);
 	}
+
+	void ShaderProgramOGL3x::CleanUniforms()
+    {
+		for (auto it = m_dirtyUniforms.begin(); it != m_dirtyUniforms.end(); it++)
+        {
+			(*it)->clean();
+        }
+		m_dirtyUniforms.clear();
+    }
+
 
 	unsigned int ShaderProgramOGL3x::GetPogramHandle()
 	{
