@@ -2,6 +2,8 @@
 #include "ICleanableObserver.h"
 #include "GL\glew.h"
 
+#include <hash_map>
+
 namespace ACTK
 {
 	enum class UniformDatatype : char
@@ -100,11 +102,13 @@ namespace ACTK
 		UniformOGL3x(int location, UniformDatatype datatype, int count, ICleanableObserver* observer) :
 			IUniformOGL3x(location, datatype, count, observer)
 		{
+			m_val = nullptr;
 		}
 
 		~UniformOGL3x()
 		{
-			delete[] m_val;
+			if(m_val != nullptr)
+				delete[] m_val;
 		}
 
 		// implemented by derivative
