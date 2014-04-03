@@ -91,7 +91,6 @@ namespace ACTK
 		m_dirtyUniforms.clear();
     }
 
-
 	unsigned int ShaderProgramOGL3x::GetPogramHandle()
 	{
 		return m_program;
