@@ -1,5 +1,6 @@
 #pragma once
 #include "UniformOGL3x.h"
+#include "RenderContextOGL3x.h"
 
 #include <GL/glew.h>
 
@@ -17,7 +18,7 @@ namespace ACTK
 		//static BufferHint					ToBufferHint(GLenum hint);
 		//static GLenum						To(BufferHint hint);
 		//static GLenum						To(ComponentDatatype type);
-		//static GLenum						To(PrimitiveType type);
+		static GLenum						To(PrimitiveType type);
 
 		//// RenderState
 		//static GLenum						To(BlendEquation equation);
