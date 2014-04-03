@@ -1,4 +1,5 @@
 #pragma once
+
 #include "ICleanableObserver.h"
 #include "GL\glew.h"
 
@@ -6,6 +7,8 @@
 
 namespace ACTK
 {
+	using namespace Core;
+
 	enum class UniformDatatype : char
 	{
 		NONE,
@@ -81,7 +84,7 @@ namespace ACTK
 		}
 
 		// implemented by derivative
-		virtual void clean() = 0;
+		virtual void Clean() = 0;
 
 		const int				Location;
 		const UniformDatatype	Datatype;
@@ -112,10 +115,10 @@ namespace ACTK
 		}
 
 		// implemented by derivative
-		virtual void clean() = 0;
+		virtual void Clean() = 0;
 		
 		template <class A>
-		void setValue(A* val, int arrayLength)
+		void SetValue(A* val, int arrayLength)
 		{
 			if(m_arrayLength < arrayLength)
 			{
@@ -130,7 +133,7 @@ namespace ACTK
 			if(!m_dirty)
 			{
 				m_dirty = true;
-				m_observer->notifyDirty(this);
+				m_observer->NotifyDirty(this);
 			}
 
 			memset(m_val, 0, arrayLength*sizeof(T));
@@ -150,7 +153,7 @@ namespace ACTK
 	public:
 		UniformI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
 
-		void clean();
+		void Clean();
 	};
 
 	class UniformF : public UniformOGL3x<float>
@@ -158,7 +161,7 @@ namespace ACTK
 	public:
 		UniformF(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
 
-		void clean();
+		void Clean();
 	};
 
 	class UniformUI : public UniformOGL3x<unsigned int>
@@ -166,6 +169,6 @@ namespace ACTK
 	public:
 		UniformUI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer);
 
-		void clean();
+		void Clean();
 	};
 }

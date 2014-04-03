@@ -3,11 +3,13 @@
 
 namespace ACTK
 {
+namespace Core
+{
 	class ICleanableObserver
 	{
 	public:
 		virtual ~ICleanableObserver(){}
 
-		virtual void notifyDirty(ICleanable* obj) = 0;
+		virtual void NotifyDirty(ICleanable* obj) = 0;
 	};
-}
+}}

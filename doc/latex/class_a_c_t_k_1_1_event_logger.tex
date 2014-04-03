@@ -1,0 +1,222 @@
+\hypertarget{class_a_c_t_k_1_1_event_logger}{\section{A\-C\-T\-K\-:\-:Event\-Logger Class Reference}
+\label{class_a_c_t_k_1_1_event_logger}\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}}
+}
+
+
+\hyperlink{class_a_c_t_k_1_1_event_logger}{Event\-Logger} writes logs into the console and a textfile and handles assertions and error\-Message\-Boxes.  
+
+
+
+
+{\ttfamily \#include $<$Logger.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_c_t_k_1_1_event_logger_ab196e054dc39ba8be643f20a09c90312}{$\sim$\-Event\-Logger} ()
+\item 
+void \hyperlink{class_a_c_t_k_1_1_event_logger_a74c318afde84d96d04a3e471109be44f}{init\-Log\-File} ()
+\begin{DoxyCompactList}\small\item\em Initialize log file. \end{DoxyCompactList}\item 
+bool \hyperlink{class_a_c_t_k_1_1_event_logger_a4561072a0270a26e4c36f7625f2c522c}{init} (const char $\ast$log\-Name)
+\begin{DoxyCompactList}\small\item\em Load File to stream into. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_t_k_1_1_event_logger_ad62f786e5c37f393588baf7f2eac34a4}{release} ()
+\begin{DoxyCompactList}\small\item\em Release stream logfile. \end{DoxyCompactList}\item 
+bool \hyperlink{class_a_c_t_k_1_1_event_logger_a015baed5588155a09acc162287a9c554}{is\-Initialized} ()
+\begin{DoxyCompactList}\small\item\em Is the event logging system initialized. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_t_k_1_1_event_logger_a5519a737d2f63b1a741e041edb579e19}{log\-Debug} (const char $\ast$text,...)
+\begin{DoxyCompactList}\small\item\em writes debug log into console and into the Logfile. You should use debug log if you want to present informations for debugging purposes \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_t_k_1_1_event_logger_a1e8e13e51f833526657233f1f84c0d65}{log\-Warning} (const char $\ast$text,...)
+\begin{DoxyCompactList}\small\item\em Informations which are not lead into a crash but maybe result in semantic errors. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_t_k_1_1_event_logger_aaf5784b73cb4af44de9ef42f07e83dfb}{log\-Error} (const char $\ast$text,...)
+\begin{DoxyCompactList}\small\item\em An errormessage will be written into the log and into the console and also will be shown in a messagebox. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_c_t_k_1_1_event_logger_a41d10974ec383480e476a7cad2eecb7a}{log\-Assert} (bool contidion, const char $\ast$file, long line, const char $\ast$description)
+\begin{DoxyCompactList}\small\item\em An error which will do the same actions as log\-Error but also triggers an assertion in debug. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_a_c_t_k_1_1_event_logger_aa9ce6de9b431dfcc5c6ebd65c4c6302c}{Set\-Instance} (\hyperlink{class_a_c_t_k_1_1_event_logger}{Event\-Logger} \&)
+\begin{DoxyCompactList}\small\item\em This avoids the creations of a new instance If you are using the logger inside a dll, each module will create his own instance of the logger. You have to give an instance of the logger into every dll. \end{DoxyCompactList}\item 
+static \hyperlink{class_a_c_t_k_1_1_event_logger}{Event\-Logger} \& \hyperlink{class_a_c_t_k_1_1_event_logger_acf848cde8431d19d8b39d56807276f39}{Get\-Instance} ()
+\begin{DoxyCompactList}\small\item\em Singleton instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_c_t_k_1_1_event_logger_a7667792998154478abe36a568b80496c}{Event\-Logger} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_a_c_t_k_1_1_event_logger}{Event\-Logger} writes logs into the console and a textfile and handles assertions and error\-Message\-Boxes. 
+
+Definition at line 45 of file Logger.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_a_c_t_k_1_1_event_logger_ab196e054dc39ba8be643f20a09c90312}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!$\sim$\-Event\-Logger@{$\sim$\-Event\-Logger}}
+\index{$\sim$\-Event\-Logger@{$\sim$\-Event\-Logger}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{$\sim$\-Event\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}A\-C\-T\-K\-::\-Event\-Logger\-::$\sim$\-Event\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_t_k_1_1_event_logger_ab196e054dc39ba8be643f20a09c90312}
+\hypertarget{class_a_c_t_k_1_1_event_logger_a7667792998154478abe36a568b80496c}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!Event\-Logger@{Event\-Logger}}
+\index{Event\-Logger@{Event\-Logger}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{Event\-Logger}]{\setlength{\rightskip}{0pt plus 5cm}A\-C\-T\-K\-::\-Event\-Logger\-::\-Event\-Logger (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [protected]}}}\label{class_a_c_t_k_1_1_event_logger_a7667792998154478abe36a568b80496c}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_a_c_t_k_1_1_event_logger_acf848cde8431d19d8b39d56807276f39}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!Get\-Instance@{Get\-Instance}}
+\index{Get\-Instance@{Get\-Instance}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{Get\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Event\-Logger}\& A\-C\-T\-K\-::\-Event\-Logger\-::\-Get\-Instance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_a_c_t_k_1_1_event_logger_acf848cde8431d19d8b39d56807276f39}
+
+
+Singleton instance. 
+
+\begin{DoxyReturn}{Returns}
+returns an instance or creates a new one 
+\end{DoxyReturn}
+\hypertarget{class_a_c_t_k_1_1_event_logger_a4561072a0270a26e4c36f7625f2c522c}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!init@{init}}
+\index{init@{init}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}bool A\-C\-T\-K\-::\-Event\-Logger\-::init (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{log\-Name}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_t_k_1_1_event_logger_a4561072a0270a26e4c36f7625f2c522c}
+
+
+Load File to stream into. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em log\-Name} & Path to new logfile which will be created \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if initialization succeeded 
+\end{DoxyReturn}
+\hypertarget{class_a_c_t_k_1_1_event_logger_a74c318afde84d96d04a3e471109be44f}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!init\-Log\-File@{init\-Log\-File}}
+\index{init\-Log\-File@{init\-Log\-File}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{init\-Log\-File}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-T\-K\-::\-Event\-Logger\-::init\-Log\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_t_k_1_1_event_logger_a74c318afde84d96d04a3e471109be44f}
+
+
+Initialize log file. 
+
+\hypertarget{class_a_c_t_k_1_1_event_logger_a015baed5588155a09acc162287a9c554}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!is\-Initialized@{is\-Initialized}}
+\index{is\-Initialized@{is\-Initialized}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{is\-Initialized}]{\setlength{\rightskip}{0pt plus 5cm}bool A\-C\-T\-K\-::\-Event\-Logger\-::is\-Initialized (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}}\label{class_a_c_t_k_1_1_event_logger_a015baed5588155a09acc162287a9c554}
+
+
+Is the event logging system initialized. 
+
+\begin{DoxyReturn}{Returns}
+true if the logfile is initialized 
+\end{DoxyReturn}
+
+
+Definition at line 72 of file Logger.\-h.
+
+\hypertarget{class_a_c_t_k_1_1_event_logger_a41d10974ec383480e476a7cad2eecb7a}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!log\-Assert@{log\-Assert}}
+\index{log\-Assert@{log\-Assert}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{log\-Assert}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-T\-K\-::\-Event\-Logger\-::log\-Assert (
+\begin{DoxyParamCaption}
+\item[{bool}]{contidion, }
+\item[{const char $\ast$}]{file, }
+\item[{long}]{line, }
+\item[{const char $\ast$}]{description}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_t_k_1_1_event_logger_a41d10974ec383480e476a7cad2eecb7a}
+
+
+An error which will do the same actions as log\-Error but also triggers an assertion in debug. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em contidion} & \\
+\hline
+{\em file} & \\
+\hline
+{\em line} & \\
+\hline
+{\em description} & \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_a_c_t_k_1_1_event_logger_a5519a737d2f63b1a741e041edb579e19}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!log\-Debug@{log\-Debug}}
+\index{log\-Debug@{log\-Debug}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{log\-Debug}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-T\-K\-::\-Event\-Logger\-::log\-Debug (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_t_k_1_1_event_logger_a5519a737d2f63b1a741e041edb579e19}
+
+
+writes debug log into console and into the Logfile. You should use debug log if you want to present informations for debugging purposes 
+
+\hypertarget{class_a_c_t_k_1_1_event_logger_aaf5784b73cb4af44de9ef42f07e83dfb}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!log\-Error@{log\-Error}}
+\index{log\-Error@{log\-Error}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{log\-Error}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-T\-K\-::\-Event\-Logger\-::log\-Error (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_t_k_1_1_event_logger_aaf5784b73cb4af44de9ef42f07e83dfb}
+
+
+An errormessage will be written into the log and into the console and also will be shown in a messagebox. 
+
+\hypertarget{class_a_c_t_k_1_1_event_logger_a1e8e13e51f833526657233f1f84c0d65}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!log\-Warning@{log\-Warning}}
+\index{log\-Warning@{log\-Warning}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{log\-Warning}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-T\-K\-::\-Event\-Logger\-::log\-Warning (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{text, }
+\item[{}]{...}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_t_k_1_1_event_logger_a1e8e13e51f833526657233f1f84c0d65}
+
+
+Informations which are not lead into a crash but maybe result in semantic errors. 
+
+\hypertarget{class_a_c_t_k_1_1_event_logger_ad62f786e5c37f393588baf7f2eac34a4}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!release@{release}}
+\index{release@{release}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}void A\-C\-T\-K\-::\-Event\-Logger\-::release (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_c_t_k_1_1_event_logger_ad62f786e5c37f393588baf7f2eac34a4}
+
+
+Release stream logfile. 
+
+\hypertarget{class_a_c_t_k_1_1_event_logger_aa9ce6de9b431dfcc5c6ebd65c4c6302c}{\index{A\-C\-T\-K\-::\-Event\-Logger@{A\-C\-T\-K\-::\-Event\-Logger}!Set\-Instance@{Set\-Instance}}
+\index{Set\-Instance@{Set\-Instance}!ACTK::EventLogger@{A\-C\-T\-K\-::\-Event\-Logger}}
+\subsubsection[{Set\-Instance}]{\setlength{\rightskip}{0pt plus 5cm}static void A\-C\-T\-K\-::\-Event\-Logger\-::\-Set\-Instance (
+\begin{DoxyParamCaption}
+\item[{{\bf Event\-Logger} \&}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_a_c_t_k_1_1_event_logger_aa9ce6de9b431dfcc5c6ebd65c4c6302c}
+
+
+This avoids the creations of a new instance If you are using the logger inside a dll, each module will create his own instance of the logger. You have to give an instance of the logger into every dll. 
+
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Artur/\-Documents/\-Visual Studio 2012/\-Projects/\-Games/\-Acagamic-\/\-Toolkit/include/\hyperlink{_logger_8h}{Logger.\-h}\end{DoxyCompactItemize}

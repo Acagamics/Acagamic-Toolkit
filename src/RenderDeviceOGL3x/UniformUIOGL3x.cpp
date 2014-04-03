@@ -6,6 +6,8 @@
 
 namespace ACTK
 {
+	using namespace Core;
+
 	UniformUI::UniformUI(int location, UniformDatatype datatype, int count, ICleanableObserver* observer) : UniformOGL3x<unsigned int>(location, datatype, count, observer)
 	{
 		switch (Datatype)
@@ -32,7 +34,7 @@ namespace ACTK
 		}
 	}
 
-	void UniformUI::clean()
+	void UniformUI::Clean()
 	{
 		switch(Datatype)
 		{

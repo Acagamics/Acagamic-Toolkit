@@ -8,6 +8,9 @@
 
 namespace ACTK
 {
+	using namespace Core;
+	using namespace Renderer;
+
 	class ShaderProgramOGL3x : public IShaderProgram, public ICleanableObserver
 	{
 		enum class PrimitiveDatatype : char
@@ -24,23 +27,23 @@ namespace ACTK
 		// TODO: Funktionen definieren:
 		// Die Funktionen müssen den Uniform in den richtigen Typ casten (Den Typ den er auf der Grafikkarte hat. Dafür hat jedes Objekt eine "UniformDatatype" variable. Nach der soll entschieden werden in welchen Typ gecastet wird)
 		// Dann müssen die Werte gekastet werden und mit mit einer "setValue" funktion an den Uniform übergeben werden
-		void setUniform(const char* name, int value);
-		void setUniform(const char* name, float value);
+		void VSetUniform(const char* name, int value);
+		void VSetUniform(const char* name, float value);
 
-		void setUniform(const char* name, int value1, int value2);
-		void setUniform(const char* name, float value1, float value2);
+		void VSetUniform(const char* name, int value1, int value2);
+		void VSetUniform(const char* name, float value1, float value2);
 
-		void setUniform(const char* name, int value1, int value2, int value3);
-		void setUniform(const char* name, float value1, float value2, float value3);
+		void VSetUniform(const char* name, int value1, int value2, int value3);
+		void VSetUniform(const char* name, float value1, float value2, float value3);
 
-		void setUniform(const char* name, int value1, int value2, int value3, int value4);
-		void setUniform(const char* name, float value1, float value2, float value3, float value4);
+		void VSetUniform(const char* name, int value1, int value2, int value3, int value4);
+		void VSetUniform(const char* name, float value1, float value2, float value3, float value4);
 		
-		void setUniformVector(const char* name, int* vector, unsigned int vector_size);
-		void setUniformVector(const char* name, float* vector, unsigned int vector_size);
+		void VSetUniformVector(const char* name, int* vector, unsigned int vector_size);
+		void VSetUniformVector(const char* name, float* vector, unsigned int vector_size);
 
-		void setUniformMatrix(const char* name, int* matrix, unsigned int matrix_size);
-		void setUniformMatrix(const char* name, float* matrix, unsigned int matrix_size);
+		void VSetUniformMatrix(const char* name, int* matrix, unsigned int matrix_size);
+		void VSetUniformMatrix(const char* name, float* matrix, unsigned int matrix_size);
 
 		unsigned int GetPogramHandle();
 
@@ -51,19 +54,19 @@ namespace ACTK
 
 		//Diese Funktion implementieren.
 		// Diese funktion fügt die Clearable zur m_dirtyUniforms-Liste hinzu
-		void notifyDirty(ICleanable* obj);
+		void NotifyDirty(ICleanable* obj);
 
 	private:
 		ShaderProgramOGL3x(ShaderProgramOGL3x&){}
 		ShaderProgramOGL3x& operator=( const ShaderProgramOGL3x& ) {return *this;}
 
-		void setUniformI(const char* name, int*, int arrayLength);
-		void setUniformUI(const char* name, unsigned int*, int arrayLength);
-		void setUniformF(const char* name, float*, int arrayLength);
-		void setUniform(const char* name, void*, PrimitiveDatatype, int arrayLength);
+		void SetUniformI(const char* name, int*, int arrayLength);
+		void SetUniformUI(const char* name, unsigned int*, int arrayLength);
+		void SetUniformF(const char* name, float*, int arrayLength);
+		void SetUniform(const char* name, void*, PrimitiveDatatype, int arrayLength);
 
-		std::string				getProgramInfoLog();
-		UniformMap				findUniforms();
+		std::string				GetProgramInfoLog();
+		UniformMap				FindUniforms();
 		
 		UniformMap				m_uniforms;
 		std::list<ICleanable*>	m_dirtyUniforms;

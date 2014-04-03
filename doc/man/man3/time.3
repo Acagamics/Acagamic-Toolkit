@@ -1,0 +1,62 @@
+.TH "Time input" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Time input \- 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGLFWAPI\fP double \fBglfwGetTime\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns the value of the GLFW timer\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetTime\fP (double time)"
+.br
+.RI "\fISets the GLFW timer\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBGLFWAPI\fP double glfwGetTime (\fBvoid\fP)"
+
+.PP
+Returns the value of the GLFW timer\&. This function returns the value of the GLFW timer\&. Unless the timer has been set using \fBglfwSetTime\fP, the timer measures time elapsed since GLFW was initialized\&.
+.PP
+\fBReturns:\fP
+.RS 4
+The current value, in seconds, or zero if an error occurred\&.
+.RE
+.PP
+\fBRemarks:\fP
+.RS 4
+This function may be called from secondary threads\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The resolution of the timer is system dependent, but is usually on the order of a few micro- or nanoseconds\&. It uses the highest-resolution monotonic time source on each supported platform\&. 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBvoid\fP glfwSetTime (doubletime)"
+
+.PP
+Sets the GLFW timer\&. This function sets the value of the GLFW timer\&. It then continues to count up from that value\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fItime\fP The new value, in seconds\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The resolution of the timer is system dependent, but is usually on the order of a few micro- or nanoseconds\&. It uses the highest-resolution monotonic time source on each supported platform\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

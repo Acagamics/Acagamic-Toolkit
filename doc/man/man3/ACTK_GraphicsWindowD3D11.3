@@ -1,0 +1,114 @@
+.TH "ACTK::GraphicsWindowD3D11" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::GraphicsWindowD3D11 \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GraphicsWindowD3D11\&.h>\fP
+.PP
+Inherits \fBACTK::IGraphicsWindow\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGraphicsWindowD3D11\fP ()"
+.br
+.ti -1c
+.RI "\fB~GraphicsWindowD3D11\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "bool \fBinitialize\fP (ID3D11Device *device, HINSTANCE hInstance, unsigned \fBint\fP \fBwidth\fP, unsigned \fBint\fP \fBheight\fP, const \fBstd::string\fP &title, \fBWindowType\fP windowType)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBrelease\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBRenderContextPtr\fP \fBgetContext\fP () const "
+.br
+.ti -1c
+.RI "HWND \fBgetWindowHandle\fP () const "
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetWidth\fP () const "
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetHeight\fP () const "
+.br
+.ti -1c
+.RI "bool \fBshouldClose\fP () const "
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBcloseWindow\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBupdateSize\fP (\fBvoid\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file GraphicsWindowD3D11\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ACTK::GraphicsWindowD3D11::GraphicsWindowD3D11 ()"
+
+.PP
+Definition at line 51 of file GraphicsWindowD3D11\&.cpp\&.
+.SS "ACTK::GraphicsWindowD3D11::~GraphicsWindowD3D11 (\fBvoid\fP)"
+
+.PP
+Definition at line 56 of file GraphicsWindowD3D11\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBvoid\fP ACTK::GraphicsWindowD3D11::closeWindow (\fBvoid\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 32 of file GraphicsWindowD3D11\&.h\&.
+.SS "\fBRenderContextPtr\fP ACTK::GraphicsWindowD3D11::getContext () const"
+
+.PP
+Definition at line 129 of file GraphicsWindowD3D11\&.cpp\&.
+.SS "\fBint\fP ACTK::GraphicsWindowD3D11::getHeight () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 29 of file GraphicsWindowD3D11\&.h\&.
+.SS "\fBint\fP ACTK::GraphicsWindowD3D11::getWidth () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 28 of file GraphicsWindowD3D11\&.h\&.
+.SS "HWND ACTK::GraphicsWindowD3D11::getWindowHandle () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 27 of file GraphicsWindowD3D11\&.h\&.
+.SS "bool ACTK::GraphicsWindowD3D11::initialize (ID3D11Device *device, HINSTANCEhInstance, unsigned \fBint\fPwidth, unsigned \fBint\fPheight, const \fBstd::string\fP &title, \fBWindowType\fPwindowType)"
+
+.PP
+Definition at line 62 of file GraphicsWindowD3D11\&.cpp\&.
+.SS "\fBvoid\fP ACTK::GraphicsWindowD3D11::release (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 118 of file GraphicsWindowD3D11\&.cpp\&.
+.SS "bool ACTK::GraphicsWindowD3D11::shouldClose () const\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 30 of file GraphicsWindowD3D11\&.h\&.
+.SS "\fBvoid\fP ACTK::GraphicsWindowD3D11::updateSize (\fBvoid\fP)"
+
+.PP
+Definition at line 134 of file GraphicsWindowD3D11\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

@@ -6,8 +6,10 @@
 #include "ClearState.h"
 
 struct GLFWwindow;
-
 namespace ACTK {
+
+	using namespace Core;
+	using namespace Renderer;
 
 	class RenderContextOGL3x : public IRenderContext
 	{
@@ -19,16 +21,16 @@ namespace ACTK {
 		// =========================================================================
 		// INIT/RELEASE STUFF:
 		// =========================================================================
-		void release(void);
+		void VRelease(void);
 
 		// =========================================================================
 		// RENDERING STUFF:
 		// =========================================================================
-		void clear(const ClearState& clearState);
+		void VClear(const ClearState& clearState);
 
-		void draw(PrimitiveType type ,float* vertices, unsigned int count);
+		void VDraw(PrimitiveType type ,float* vertices, unsigned int count);
 
-		void swapBuffers();
+		void VSwapBuffers();
 
 	private:
 		//you shall not copy

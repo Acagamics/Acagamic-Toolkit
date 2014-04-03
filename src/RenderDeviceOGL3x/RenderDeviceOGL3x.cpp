@@ -8,6 +8,10 @@
 
 namespace ACTK
 {
+	using namespace Core;
+	using namespace Renderer;
+
+
 	RenderDeviceOGL3x::RenderDeviceOGL3x(HINSTANCE hInstance) : m_hInstance(hInstance)
 	{
 		if(GL_TRUE != glfwInit())
@@ -18,17 +22,18 @@ namespace ACTK
 		}
 	}
 
-	void RenderDeviceOGL3x::release(void)
+
+	void RenderDeviceOGL3x::VRelease(void)
 	{
 		LOG_DEBUG("RenderDeviceOGL3x released.");
 	}
 
-	GraphicsWindowPtr RenderDeviceOGL3x::createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowtype)
+	GraphicsWindowPtr RenderDeviceOGL3x::VCreateWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowtype)
 	{
 		LOG_DEBUG("Create OpenGL-Window with width: %u, height: %u.", width, height);
 		auto window = std::shared_ptr<GraphicsWindowOGL3x>(new GraphicsWindowOGL3x());
 
-		if(window->initialize(m_hInstance, width, height, title, windowtype))
+		if(window->Initialize(m_hInstance, width, height, title, windowtype))
 		{
 			LOG_DEBUG("OpenGL-Window sucessfully created.");
 			return window;
@@ -40,12 +45,12 @@ namespace ACTK
 		}
 	}
 
-	ShaderProgramPtr RenderDeviceOGL3x::createShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource)
+	ShaderProgramPtr RenderDeviceOGL3x::VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource)
 	{
-		return createShaderProgram(VertexShaderSource, std::string(), FragementShaderSource);
+		return VCreateShaderProgram(VertexShaderSource, std::string(), FragementShaderSource);
 	}
 
-	ShaderProgramPtr RenderDeviceOGL3x::createShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource)
+	ShaderProgramPtr RenderDeviceOGL3x::VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource)
 	{
 		return ShaderProgramPtr(new ShaderProgramOGL3x(VertexShaderSource, GeometryShaderSource, FragementShaderSource));
 	}

@@ -4,6 +4,8 @@
 
 namespace ACTK
 {
+	using namespace Core;
+
 	ShaderObjectOGL3x::ShaderObjectOGL3x(GLenum shaderType, const std::string& source)
 	{
 		int i = 1;

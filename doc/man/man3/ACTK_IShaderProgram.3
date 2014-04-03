@@ -1,0 +1,92 @@
+.TH "ACTK::IShaderProgram" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::IShaderProgram \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IShaderProgram\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IShaderProgram\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniform\fP (const char *name, int value)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniform\fP (const char *name, float value)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniform\fP (const char *name, int value1, int value2)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniform\fP (const char *name, float value1, float value2)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniform\fP (const char *name, int value1, int value2, int value3)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniform\fP (const char *name, float value1, float value2, float value3)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniform\fP (const char *name, int value1, int value2, int value3, int value4)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniform\fP (const char *name, float value1, float value2, float value3, float value4)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniformVector\fP (const char *name, int *vector, unsigned int vector_size)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniformVector\fP (const char *name, float *vector, unsigned int vector_size)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniformMatrix\fP (const char *name, int *matrix, unsigned int matrix_size)=0"
+.br
+.ti -1c
+.RI "virtual void \fBsetUniformMatrix\fP (const char *name, float *matrix, unsigned int matrix_size)=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 6 of file IShaderProgram\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual ACTK::IShaderProgram::~IShaderProgram ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 9 of file IShaderProgram\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void ACTK::IShaderProgram::setUniform (const char *name, intvalue)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniform (const char *name, floatvalue)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniform (const char *name, intvalue1, intvalue2)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniform (const char *name, floatvalue1, floatvalue2)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniform (const char *name, intvalue1, intvalue2, intvalue3)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniform (const char *name, floatvalue1, floatvalue2, floatvalue3)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniform (const char *name, intvalue1, intvalue2, intvalue3, intvalue4)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniform (const char *name, floatvalue1, floatvalue2, floatvalue3, floatvalue4)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniformMatrix (const char *name, int *matrix, unsigned intmatrix_size)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniformMatrix (const char *name, float *matrix, unsigned intmatrix_size)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniformVector (const char *name, int *vector, unsigned intvector_size)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IShaderProgram::setUniformVector (const char *name, float *vector, unsigned intvector_size)\fC [pure virtual]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

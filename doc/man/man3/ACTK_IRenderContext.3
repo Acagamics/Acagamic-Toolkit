@@ -1,0 +1,52 @@
+.TH "ACTK::IRenderContext" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::IRenderContext \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IRenderContext\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IRenderContext\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBrelease\fP (void)=0"
+.br
+.ti -1c
+.RI "virtual void \fBclear\fP (const \fBClearState\fP &clearState)=0"
+.br
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBPrimitiveType\fP type, float *vertices, unsigned int count)=0"
+.br
+.ti -1c
+.RI "virtual void \fBswapBuffers\fP (void)=0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 24 of file IRenderContext\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual ACTK::IRenderContext::~IRenderContext ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 27 of file IRenderContext\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void ACTK::IRenderContext::clear (const \fBClearState\fP &clearState)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IRenderContext::draw (\fBPrimitiveType\fPtype, float *vertices, unsigned intcount)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IRenderContext::release (void)\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IRenderContext::swapBuffers (void)\fC [pure virtual]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

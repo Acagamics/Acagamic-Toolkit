@@ -1,0 +1,365 @@
+.TH "Monitor handling" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Monitor handling \- 
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGLFWvidmode\fP"
+.br
+.RI "\fIVideo mode type\&. \fP"
+.ti -1c
+.RI "struct \fBGLFWgammaramp\fP"
+.br
+.RI "\fIGamma ramp\&. \fP"
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef struct \fBGLFWmonitor\fP \fBGLFWmonitor\fP"
+.br
+.RI "\fIOpaque monitor object\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWmonitorfun\fP )(\fBGLFWmonitor\fP *, \fBint\fP)"
+.br
+.RI "\fIThe function signature for monitor configuration callbacks\&. \fP"
+.ti -1c
+.RI "typedef struct \fBGLFWvidmode\fP \fBGLFWvidmode\fP"
+.br
+.RI "\fIVideo mode type\&. \fP"
+.ti -1c
+.RI "typedef struct \fBGLFWgammaramp\fP \fBGLFWgammaramp\fP"
+.br
+.RI "\fIGamma ramp\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWmonitor\fP ** \fBglfwGetMonitors\fP (\fBint\fP *\fBcount\fP)"
+.br
+.RI "\fIReturns the currently connected monitors\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWmonitor\fP * \fBglfwGetPrimaryMonitor\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns the primary monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetMonitorPos\fP (\fBGLFWmonitor\fP *monitor, \fBint\fP *xpos, \fBint\fP *ypos)"
+.br
+.RI "\fIReturns the position of the monitor's viewport on the virtual screen\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetMonitorPhysicalSize\fP (\fBGLFWmonitor\fP *monitor, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP)"
+.br
+.RI "\fIReturns the physical size of the monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const char * \fBglfwGetMonitorName\fP (\fBGLFWmonitor\fP *monitor)"
+.br
+.RI "\fIReturns the name of the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWmonitorfun\fP \fBglfwSetMonitorCallback\fP (\fBGLFWmonitorfun\fP cbfun)"
+.br
+.RI "\fISets the monitor configuration callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const \fBGLFWvidmode\fP * \fBglfwGetVideoModes\fP (\fBGLFWmonitor\fP *monitor, \fBint\fP *\fBcount\fP)"
+.br
+.RI "\fIReturns the available video modes for the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const \fBGLFWvidmode\fP * \fBglfwGetVideoMode\fP (\fBGLFWmonitor\fP *monitor)"
+.br
+.RI "\fIReturns the current mode of the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetGamma\fP (\fBGLFWmonitor\fP *monitor, float gamma)"
+.br
+.RI "\fIGenerates a gamma ramp and sets it for the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const \fBGLFWgammaramp\fP * \fBglfwGetGammaRamp\fP (\fBGLFWmonitor\fP *monitor)"
+.br
+.RI "\fIRetrieves the current gamma ramp for the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetGammaRamp\fP (\fBGLFWmonitor\fP *monitor, const \fBGLFWgammaramp\fP *ramp)"
+.br
+.RI "\fISets the current gamma ramp for the specified monitor\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+This is the reference documentation for monitor related functions and types\&. For more information, see the \fBMonitor handling\fP\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct \fBGLFWgammaramp\fP  \fBGLFWgammaramp\fP"
+
+.PP
+Gamma ramp\&. This describes the gamma ramp for a monitor\&.
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwGetGammaRamp\fP \fBglfwSetGammaRamp\fP 
+.RE
+.PP
+
+.SS "typedef struct \fBGLFWmonitor\fP \fBGLFWmonitor\fP"
+
+.PP
+Opaque monitor object\&. Opaque monitor object\&. 
+.PP
+Definition at line 566 of file glfw3\&.h\&.
+.SS "typedef \fBvoid\fP(*  GLFWmonitorfun)(\fBGLFWmonitor\fP *, \fBint\fP)"
+
+.PP
+The function signature for monitor configuration callbacks\&. This is the function signature for monitor configuration callback functions\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor that was connected or disconnected\&. 
+.br
+\fIevent\fP One of \fCGLFW_CONNECTED\fP or \fCGLFW_DISCONNECTED\fP\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwSetMonitorCallback\fP 
+.RE
+.PP
+
+.PP
+Definition at line 787 of file glfw3\&.h\&.
+.SS "typedef struct \fBGLFWvidmode\fP  \fBGLFWvidmode\fP"
+
+.PP
+Video mode type\&. This describes a single video mode\&. 
+.SH "Function Documentation"
+.PP 
+.SS "\fBGLFWAPI\fP const \fBGLFWgammaramp\fP* glfwGetGammaRamp (\fBGLFWmonitor\fP *monitor)"
+
+.PP
+Retrieves the current gamma ramp for the specified monitor\&. This function retrieves the current gamma ramp of the specified monitor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor to query\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The current gamma ramp, or \fCNULL\fP if an error occurred\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The value arrays of the returned ramp are allocated and freed by GLFW\&. You should not free them yourself\&. 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP const char* glfwGetMonitorName (\fBGLFWmonitor\fP *monitor)"
+
+.PP
+Returns the name of the specified monitor\&. This function returns a human-readable name, encoded as UTF-8, of the specified monitor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor to query\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The UTF-8 encoded name of the monitor, or \fCNULL\fP if an error occurred\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The returned string is allocated and freed by GLFW\&. You should not free it yourself\&. 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBvoid\fP glfwGetMonitorPhysicalSize (\fBGLFWmonitor\fP *monitor, \fBint\fP *width, \fBint\fP *height)"
+
+.PP
+Returns the physical size of the monitor\&. This function returns the size, in millimetres, of the display area of the specified monitor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor to query\&. 
+.br
+\fIwidth\fP Where to store the width, in mm, of the monitor's display area, or \fCNULL\fP\&. 
+.br
+\fIheight\fP Where to store the height, in mm, of the monitor's display area, or \fCNULL\fP\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+Some operating systems do not provide accurate information, either because the monitor's EDID data is incorrect, or because the driver does not report it accurately\&. 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBvoid\fP glfwGetMonitorPos (\fBGLFWmonitor\fP *monitor, \fBint\fP *xpos, \fBint\fP *ypos)"
+
+.PP
+Returns the position of the monitor's viewport on the virtual screen\&. This function returns the position, in screen coordinates, of the upper-left corner of the specified monitor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor to query\&. 
+.br
+\fIxpos\fP Where to store the monitor x-coordinate, or \fCNULL\fP\&. 
+.br
+\fIypos\fP Where to store the monitor y-coordinate, or \fCNULL\fP\&. 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBGLFWmonitor\fP** glfwGetMonitors (\fBint\fP *count)"
+
+.PP
+Returns the currently connected monitors\&. This function returns an array of handles for all currently connected monitors\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcount\fP Where to store the size of the returned array\&. This is set to zero if an error occurred\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An array of monitor handles, or \fCNULL\fP if an error occurred\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The returned array is allocated and freed by GLFW\&. You should not free it yourself\&.
+.PP
+The returned array is valid only until the monitor configuration changes\&. See \fBglfwSetMonitorCallback\fP to receive notifications of configuration changes\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwGetPrimaryMonitor\fP 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBGLFWmonitor\fP* glfwGetPrimaryMonitor (\fBvoid\fP)"
+
+.PP
+Returns the primary monitor\&. This function returns the primary monitor\&. This is usually the monitor where elements like the Windows task bar or the OS X menu bar is located\&.
+.PP
+\fBReturns:\fP
+.RS 4
+The primary monitor, or \fCNULL\fP if an error occurred\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwGetMonitors\fP 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP const \fBGLFWvidmode\fP* glfwGetVideoMode (\fBGLFWmonitor\fP *monitor)"
+
+.PP
+Returns the current mode of the specified monitor\&. This function returns the current video mode of the specified monitor\&. If you are using a full screen window, the return value will therefore depend on whether it is focused\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor to query\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The current mode of the monitor, or \fCNULL\fP if an error occurred\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The returned struct is allocated and freed by GLFW\&. You should not free it yourself\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwGetVideoModes\fP 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP const \fBGLFWvidmode\fP* glfwGetVideoModes (\fBGLFWmonitor\fP *monitor, \fBint\fP *count)"
+
+.PP
+Returns the available video modes for the specified monitor\&. This function returns an array of all video modes supported by the specified monitor\&. The returned array is sorted in ascending order, first by color bit depth (the sum of all channel depths) and then by resolution area (the product of width and height)\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor to query\&. 
+.br
+\fIcount\fP Where to store the number of video modes in the returned array\&. This is set to zero if an error occurred\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+An array of video modes, or \fCNULL\fP if an error occurred\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The returned array is allocated and freed by GLFW\&. You should not free it yourself\&.
+.PP
+The returned array is valid only until this function is called again for the specified monitor\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwGetVideoMode\fP 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBvoid\fP glfwSetGamma (\fBGLFWmonitor\fP *monitor, floatgamma)"
+
+.PP
+Generates a gamma ramp and sets it for the specified monitor\&. This function generates a 256-element gamma ramp from the specified exponent and then calls \fBglfwSetGammaRamp\fP with it\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor whose gamma ramp to set\&. 
+.br
+\fIgamma\fP The desired exponent\&. 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBvoid\fP glfwSetGammaRamp (\fBGLFWmonitor\fP *monitor, const \fBGLFWgammaramp\fP *ramp)"
+
+.PP
+Sets the current gamma ramp for the specified monitor\&. This function sets the current gamma ramp for the specified monitor\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImonitor\fP The monitor whose gamma ramp to set\&. 
+.br
+\fIramp\fP The gamma ramp to use\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+Gamma ramp sizes other than 256 are not supported by all hardware\&. 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBGLFWmonitorfun\fP glfwSetMonitorCallback (\fBGLFWmonitorfun\fPcbfun)"
+
+.PP
+Sets the monitor configuration callback\&. This function sets the monitor configuration callback, or removes the currently set callback\&. This is called when a monitor is connected to or disconnected from the system\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcbfun\fP The new callback, or \fCNULL\fP to remove the currently set callback\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The previously set callback, or \fCNULL\fP if no callback was set or an error occurred\&.
+.RE
+.PP
+\fBBug\fP
+.RS 4
+\fBX11:\fP This callback is not yet called on monitor configuration changes\&.
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

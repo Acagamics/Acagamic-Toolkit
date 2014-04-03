@@ -5,38 +5,42 @@
 
 namespace ACTK
 {
+namespace Renderer
+{
+	using namespace Core;
+
 	struct ColorMask
 	{
 	public:
-		bool red;
-		bool green;
-		bool blue;
-		bool alpha;
+		bool Red;
+		bool Green;
+		bool Blue;
+		bool Alpha;
 
 		ColorMask(bool red, bool green, bool blue, bool alpha)
 		{
-			this->red = red;
-			this->green = green;
-			this->blue = blue;
-			this->alpha = alpha;
+			this->Red = red;
+			this->Green = green;
+			this->Blue = blue;
+			this->Alpha = alpha;
 		}
 
 		bool operator ==(ColorMask other)
 		{
 			return 
-				red == other.red && 
-				green == other.green && 
-				blue == other.blue && 
-				alpha == other.alpha;
+				Red == other.Red && 
+				Green == other.Green && 
+				Blue == other.Blue && 
+				Alpha == other.Alpha;
 		}
 
 		bool operator !=(ColorMask other)
 		{
 			return 
-				red != other.red ||
-				green != other.green || 
-				blue != other.blue || 
-				alpha != other.alpha;
+				Red != other.Red ||
+				Green != other.Green || 
+				Blue != other.Blue || 
+				Alpha != other.Alpha;
 		}
 	};
 
@@ -92,4 +96,4 @@ namespace ACTK
 				Stencil != right.Stencil;
 		}
 	};
-}
+}}

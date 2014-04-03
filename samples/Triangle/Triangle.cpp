@@ -18,23 +18,23 @@ std::string LoadShader(int name)
 int main()
 {
 	LOG_DEBUG("Starting Game");
-	auto DeviceOGL = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::OpenGL3x);
+	auto DeviceOGL = ACTK::Renderer::RenderDeviceManager::GetInstance().CreateDevice(ACTK::Renderer::API::OpenGL3x);
 	if(DeviceOGL == nullptr)
 	{
 		return 0;
 	}
-	auto WindowOGL = DeviceOGL->createWindow(800, 600, "HelloWorld", ACTK::WindowType::Windowed);
+	auto WindowOGL = DeviceOGL->VCreateWindow(800, 600, "HelloWorld", ACTK::Renderer::WindowType::Windowed);
 	if(WindowOGL == nullptr)
 	{
 		return 0;
 	}
-	auto ShaderProgram = DeviceOGL->createShaderProgram(LoadShader(IDS_VERTEXSHADER), LoadShader(IDS_FRAGMENTSHADER));
+	auto ShaderProgram = DeviceOGL->VCreateShaderProgram(LoadShader(IDS_VERTEXSHADER), LoadShader(IDS_FRAGMENTSHADER));
 
 	///////////////////////////////////////////////////////////////////
 	// ClearState and Color
 
-	ACTK::ClearState cornflowerBlue;
-	cornflowerBlue.Color = ACTK::Color(0.392f, 0.584f, 0.929f, 1.0f);
+	ACTK::Renderer::ClearState cornflowerBlue;
+	cornflowerBlue.Color = ACTK::Renderer::Color(0.392f, 0.584f, 0.929f, 1.0f);
 
 	///////////////////////////////////////////////////////////////////
 	// Vertex Array
@@ -51,7 +51,7 @@ int main()
 	///////////////////////////////////////////////////////////////////
 	// Uniforms
 	float rosa[] = {1.0f, 0.0f, 1.0f};
-	ShaderProgram->setUniformVector("u_color", rosa, 3);
+	ShaderProgram->VSetUniformVector("u_color", rosa, 3);
 
 	///////////////////////////////////////////////////////////////////
 	// RenderState
@@ -65,11 +65,11 @@ int main()
 
 	///////////////////////////////////////////////////////////////////
 	// Gameloop
-	auto ContextOGL = WindowOGL->getContext();
+	auto ContextOGL = WindowOGL->VGetContext();
 
 	MSG msg = { 0 };
 	LOG_DEBUG("Running Game");
-	while(!WindowOGL->shouldClose())
+	while(!WindowOGL->VShouldClose())
 	{
 		if(PeekMessage( &msg, NULL, 0, 0, PM_REMOVE ))
         {
@@ -78,7 +78,7 @@ int main()
         }
         else
         {
-			ContextOGL->clear(cornflowerBlue);
+			ContextOGL->VClear(cornflowerBlue);
 			
 			// TODO: Dreieck zeichnen mit dem Context
 				
@@ -99,9 +99,8 @@ int main()
 				// 5. Schritt: ContextOGL->draw( PrimitiveType, Offset, Count, VertexArray, ShaderProgram, RenderState );	// RenderState einstellen
 
 				// 6. Schritt: Das selbe mit Vertex Buffern
-			ContextOGL->draw(ACTK::PrimitiveType::TRIANGLES,vertices,1);
-
-			ContextOGL->swapBuffers();
+			ContextOGL->VDraw(ACTK::Renderer::PrimitiveType::TRIANGLES,vertices,1);
+			ContextOGL->VSwapBuffers();
         }
 	}
 	LOG_DEBUG("Quitting Game");

@@ -6,6 +6,9 @@
 
 namespace ACTK
 {
+	using namespace Core;
+	using namespace Renderer;
+
 	class TypeConverterOGL3x
 	{
 	public:

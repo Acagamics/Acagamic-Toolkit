@@ -1,0 +1,1273 @@
+.TH "dependencies/glfw/include/GLFW/glfw3.h" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dependencies/glfw/include/GLFW/glfw3.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <stddef\&.h>\fP
+.br
+\fC#include <GL/gl\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGLFWvidmode\fP"
+.br
+.RI "\fIVideo mode type\&. \fP"
+.ti -1c
+.RI "struct \fBGLFWgammaramp\fP"
+.br
+.RI "\fIGamma ramp\&. \fP"
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBAPIENTRY\fP"
+.br
+.ti -1c
+.RI "#define \fBGLFWAPI\fP"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_UNKNOWN\fP   -1"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_SPACE\fP   32"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_APOSTROPHE\fP   39  /* ' */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_COMMA\fP   44  /* , */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_MINUS\fP   45  /* - */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PERIOD\fP   46  /* \&. */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_SLASH\fP   47  /* / */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_0\fP   48"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_1\fP   49"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_2\fP   50"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_3\fP   51"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_4\fP   52"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_5\fP   53"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_6\fP   54"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_7\fP   55"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_8\fP   56"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_9\fP   57"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_SEMICOLON\fP   59  /* ; */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_EQUAL\fP   61  /* = */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_A\fP   65"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_B\fP   66"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_C\fP   67"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_D\fP   68"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_E\fP   69"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F\fP   70"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_G\fP   71"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_H\fP   72"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_I\fP   73"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_J\fP   74"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_K\fP   75"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_L\fP   76"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_M\fP   77"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_N\fP   78"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_O\fP   79"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_P\fP   80"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_Q\fP   81"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_R\fP   82"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_S\fP   83"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_T\fP   84"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_U\fP   85"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_V\fP   86"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_W\fP   87"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_X\fP   88"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_Y\fP   89"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_Z\fP   90"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_BRACKET\fP   91  /* [ */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_BACKSLASH\fP   92  /* \\ */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_BRACKET\fP   93  /* ] */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_GRAVE_ACCENT\fP   96  /* ` */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_WORLD_1\fP   161 /* non-US #1 */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_WORLD_2\fP   162 /* non-US #2 */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_ESCAPE\fP   256"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_ENTER\fP   257"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_TAB\fP   258"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_BACKSPACE\fP   259"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_INSERT\fP   260"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_DELETE\fP   261"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT\fP   262"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT\fP   263"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_DOWN\fP   264"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_UP\fP   265"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PAGE_UP\fP   266"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PAGE_DOWN\fP   267"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_HOME\fP   268"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_END\fP   269"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_CAPS_LOCK\fP   280"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_SCROLL_LOCK\fP   281"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_NUM_LOCK\fP   282"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PRINT_SCREEN\fP   283"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PAUSE\fP   284"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F1\fP   290"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F2\fP   291"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F3\fP   292"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F4\fP   293"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F5\fP   294"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F6\fP   295"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F7\fP   296"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F8\fP   297"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F9\fP   298"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F10\fP   299"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F11\fP   300"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F12\fP   301"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F13\fP   302"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F14\fP   303"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F15\fP   304"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F16\fP   305"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F17\fP   306"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F18\fP   307"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F19\fP   308"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F20\fP   309"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F21\fP   310"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F22\fP   311"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F23\fP   312"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F24\fP   313"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F25\fP   314"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_0\fP   320"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_1\fP   321"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_2\fP   322"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_3\fP   323"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_4\fP   324"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_5\fP   325"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_6\fP   326"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_7\fP   327"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_8\fP   328"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_9\fP   329"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_DECIMAL\fP   330"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_DIVIDE\fP   331"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_MULTIPLY\fP   332"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_SUBTRACT\fP   333"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_ADD\fP   334"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_ENTER\fP   335"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_EQUAL\fP   336"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_SHIFT\fP   340"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_CONTROL\fP   341"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_ALT\fP   342"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_SUPER\fP   343"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_SHIFT\fP   344"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_CONTROL\fP   345"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_ALT\fP   346"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_SUPER\fP   347"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_MENU\fP   348"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LAST\fP   \fBGLFW_KEY_MENU\fP"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOD_SHIFT\fP   0x0001"
+.br
+.RI "\fIIf this bit is set one or more Shift keys were held down\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_MOD_CONTROL\fP   0x0002"
+.br
+.RI "\fIIf this bit is set one or more Control keys were held down\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_MOD_ALT\fP   0x0004"
+.br
+.RI "\fIIf this bit is set one or more Alt keys were held down\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_MOD_SUPER\fP   0x0008"
+.br
+.RI "\fIIf this bit is set one or more Super keys were held down\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_1\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_3\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_4\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_5\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_6\fP   5"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_7\fP   6"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_8\fP   7"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_LAST\fP   \fBGLFW_MOUSE_BUTTON_8\fP"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_LEFT\fP   \fBGLFW_MOUSE_BUTTON_1\fP"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_RIGHT\fP   \fBGLFW_MOUSE_BUTTON_2\fP"
+.br
+.ti -1c
+.RI "#define \fBGLFW_MOUSE_BUTTON_MIDDLE\fP   \fBGLFW_MOUSE_BUTTON_3\fP"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_1\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_3\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_4\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_5\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_6\fP   5"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_7\fP   6"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_8\fP   7"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_9\fP   8"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_10\fP   9"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_11\fP   10"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_12\fP   11"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_13\fP   12"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_14\fP   13"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_15\fP   14"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_16\fP   15"
+.br
+.ti -1c
+.RI "#define \fBGLFW_JOYSTICK_LAST\fP   \fBGLFW_JOYSTICK_16\fP"
+.br
+.ti -1c
+.RI "#define \fBGLFW_NOT_INITIALIZED\fP   0x00010001"
+.br
+.RI "\fIGLFW has not been initialized\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_NO_CURRENT_CONTEXT\fP   0x00010002"
+.br
+.RI "\fINo context is current for this thread\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_INVALID_ENUM\fP   0x00010003"
+.br
+.RI "\fIOne of the enum parameters for the function was given an invalid enum\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_INVALID_VALUE\fP   0x00010004"
+.br
+.RI "\fIOne of the parameters for the function was given an invalid value\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_OUT_OF_MEMORY\fP   0x00010005"
+.br
+.RI "\fIA memory allocation failed\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_API_UNAVAILABLE\fP   0x00010006"
+.br
+.RI "\fIGLFW could not find support for the requested client API on the system\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_VERSION_UNAVAILABLE\fP   0x00010007"
+.br
+.RI "\fIThe requested client API version is not available\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_PLATFORM_ERROR\fP   0x00010008"
+.br
+.RI "\fIA platform-specific error occurred that does not match any of the more specific categories\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_FORMAT_UNAVAILABLE\fP   0x00010009"
+.br
+.RI "\fIThe clipboard did not contain data in the requested format\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_FOCUSED\fP   0x00020001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_ICONIFIED\fP   0x00020002"
+.br
+.ti -1c
+.RI "#define \fBGLFW_RESIZABLE\fP   0x00020003"
+.br
+.ti -1c
+.RI "#define \fBGLFW_VISIBLE\fP   0x00020004"
+.br
+.ti -1c
+.RI "#define \fBGLFW_DECORATED\fP   0x00020005"
+.br
+.ti -1c
+.RI "#define \fBGLFW_RED_BITS\fP   0x00021001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_GREEN_BITS\fP   0x00021002"
+.br
+.ti -1c
+.RI "#define \fBGLFW_BLUE_BITS\fP   0x00021003"
+.br
+.ti -1c
+.RI "#define \fBGLFW_ALPHA_BITS\fP   0x00021004"
+.br
+.ti -1c
+.RI "#define \fBGLFW_DEPTH_BITS\fP   0x00021005"
+.br
+.ti -1c
+.RI "#define \fBGLFW_STENCIL_BITS\fP   0x00021006"
+.br
+.ti -1c
+.RI "#define \fBGLFW_ACCUM_RED_BITS\fP   0x00021007"
+.br
+.ti -1c
+.RI "#define \fBGLFW_ACCUM_GREEN_BITS\fP   0x00021008"
+.br
+.ti -1c
+.RI "#define \fBGLFW_ACCUM_BLUE_BITS\fP   0x00021009"
+.br
+.ti -1c
+.RI "#define \fBGLFW_ACCUM_ALPHA_BITS\fP   0x0002100A"
+.br
+.ti -1c
+.RI "#define \fBGLFW_AUX_BUFFERS\fP   0x0002100B"
+.br
+.ti -1c
+.RI "#define \fBGLFW_STEREO\fP   0x0002100C"
+.br
+.ti -1c
+.RI "#define \fBGLFW_SAMPLES\fP   0x0002100D"
+.br
+.ti -1c
+.RI "#define \fBGLFW_SRGB_CAPABLE\fP   0x0002100E"
+.br
+.ti -1c
+.RI "#define \fBGLFW_REFRESH_RATE\fP   0x0002100F"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CLIENT_API\fP   0x00022001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CONTEXT_VERSION_MAJOR\fP   0x00022002"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CONTEXT_VERSION_MINOR\fP   0x00022003"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CONTEXT_REVISION\fP   0x00022004"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CONTEXT_ROBUSTNESS\fP   0x00022005"
+.br
+.ti -1c
+.RI "#define \fBGLFW_OPENGL_FORWARD_COMPAT\fP   0x00022006"
+.br
+.ti -1c
+.RI "#define \fBGLFW_OPENGL_DEBUG_CONTEXT\fP   0x00022007"
+.br
+.ti -1c
+.RI "#define \fBGLFW_OPENGL_PROFILE\fP   0x00022008"
+.br
+.ti -1c
+.RI "#define \fBGLFW_OPENGL_API\fP   0x00030001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_OPENGL_ES_API\fP   0x00030002"
+.br
+.ti -1c
+.RI "#define \fBGLFW_NO_ROBUSTNESS\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLFW_NO_RESET_NOTIFICATION\fP   0x00031001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_LOSE_CONTEXT_ON_RESET\fP   0x00031002"
+.br
+.ti -1c
+.RI "#define \fBGLFW_OPENGL_ANY_PROFILE\fP   0"
+.br
+.ti -1c
+.RI "#define \fBGLFW_OPENGL_CORE_PROFILE\fP   0x00032001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_OPENGL_COMPAT_PROFILE\fP   0x00032002"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CURSOR\fP   0x00033001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_STICKY_KEYS\fP   0x00033002"
+.br
+.ti -1c
+.RI "#define \fBGLFW_STICKY_MOUSE_BUTTONS\fP   0x00033003"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CURSOR_NORMAL\fP   0x00034001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CURSOR_HIDDEN\fP   0x00034002"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CURSOR_DISABLED\fP   0x00034003"
+.br
+.ti -1c
+.RI "#define \fBGLFW_CONNECTED\fP   0x00040001"
+.br
+.ti -1c
+.RI "#define \fBGLFW_DISCONNECTED\fP   0x00040002"
+.br
+.in -1c
+.PP
+.RI "\fBGLFW version macros\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBGLFW_VERSION_MAJOR\fP   3"
+.br
+.RI "\fIThe major version number of the GLFW library\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_VERSION_MINOR\fP   0"
+.br
+.RI "\fIThe minor version number of the GLFW library\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_VERSION_REVISION\fP   3"
+.br
+.RI "\fIThe revision number of the GLFW library\&. \fP"
+.in -1c
+.in -1c
+.PP
+.RI "\fBKey and button actions\fP"
+.br
+
+.in +1c
+.in +1c
+.ti -1c
+.RI "#define \fBGLFW_RELEASE\fP   0"
+.br
+.RI "\fIThe key or button was released\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_PRESS\fP   1"
+.br
+.RI "\fIThe key or button was pressed\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_REPEAT\fP   2"
+.br
+.RI "\fIThe key was held down until it repeated\&. \fP"
+.in -1c
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWglproc\fP )(\fBvoid\fP)"
+.br
+.RI "\fIClient API function pointer type\&. \fP"
+.ti -1c
+.RI "typedef struct \fBGLFWmonitor\fP \fBGLFWmonitor\fP"
+.br
+.RI "\fIOpaque monitor object\&. \fP"
+.ti -1c
+.RI "typedef struct \fBGLFWwindow\fP \fBGLFWwindow\fP"
+.br
+.RI "\fIOpaque window object\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWerrorfun\fP )(\fBint\fP, const char *)"
+.br
+.RI "\fIThe function signature for error callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWwindowposfun\fP )(\fBGLFWwindow\fP *, \fBint\fP, \fBint\fP)"
+.br
+.RI "\fIThe function signature for window position callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWwindowsizefun\fP )(\fBGLFWwindow\fP *, \fBint\fP, \fBint\fP)"
+.br
+.RI "\fIThe function signature for window resize callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWwindowclosefun\fP )(\fBGLFWwindow\fP *)"
+.br
+.RI "\fIThe function signature for window close callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWwindowrefreshfun\fP )(\fBGLFWwindow\fP *)"
+.br
+.RI "\fIThe function signature for window content refresh callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWwindowfocusfun\fP )(\fBGLFWwindow\fP *, \fBint\fP)"
+.br
+.RI "\fIThe function signature for window focus/defocus callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWwindowiconifyfun\fP )(\fBGLFWwindow\fP *, \fBint\fP)"
+.br
+.RI "\fIThe function signature for window iconify/restore callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWframebuffersizefun\fP )(\fBGLFWwindow\fP *, \fBint\fP, \fBint\fP)"
+.br
+.RI "\fIThe function signature for framebuffer resize callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWmousebuttonfun\fP )(\fBGLFWwindow\fP *, \fBint\fP, \fBint\fP, \fBint\fP)"
+.br
+.RI "\fIThe function signature for mouse button callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWcursorposfun\fP )(\fBGLFWwindow\fP *, double, double)"
+.br
+.RI "\fIThe function signature for cursor position callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWcursorenterfun\fP )(\fBGLFWwindow\fP *, \fBint\fP)"
+.br
+.RI "\fIThe function signature for cursor enter/leave callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWscrollfun\fP )(\fBGLFWwindow\fP *, double, double)"
+.br
+.RI "\fIThe function signature for scroll callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWkeyfun\fP )(\fBGLFWwindow\fP *, \fBint\fP, \fBint\fP, \fBint\fP, \fBint\fP)"
+.br
+.RI "\fIThe function signature for keyboard key callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWcharfun\fP )(\fBGLFWwindow\fP *, unsigned \fBint\fP)"
+.br
+.RI "\fIThe function signature for Unicode character callbacks\&. \fP"
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWmonitorfun\fP )(\fBGLFWmonitor\fP *, \fBint\fP)"
+.br
+.RI "\fIThe function signature for monitor configuration callbacks\&. \fP"
+.ti -1c
+.RI "typedef struct \fBGLFWvidmode\fP \fBGLFWvidmode\fP"
+.br
+.RI "\fIVideo mode type\&. \fP"
+.ti -1c
+.RI "typedef struct \fBGLFWgammaramp\fP \fBGLFWgammaramp\fP"
+.br
+.RI "\fIGamma ramp\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwInit\fP (\fBvoid\fP)"
+.br
+.RI "\fIInitializes the GLFW library\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwTerminate\fP (\fBvoid\fP)"
+.br
+.RI "\fITerminates the GLFW library\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetVersion\fP (\fBint\fP *major, \fBint\fP *minor, \fBint\fP *rev)"
+.br
+.RI "\fIRetrieves the version of the GLFW library\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const char * \fBglfwGetVersionString\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns a string describing the compile-time configuration\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWerrorfun\fP \fBglfwSetErrorCallback\fP (\fBGLFWerrorfun\fP cbfun)"
+.br
+.RI "\fISets the error callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWmonitor\fP ** \fBglfwGetMonitors\fP (\fBint\fP *\fBcount\fP)"
+.br
+.RI "\fIReturns the currently connected monitors\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWmonitor\fP * \fBglfwGetPrimaryMonitor\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns the primary monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetMonitorPos\fP (\fBGLFWmonitor\fP *monitor, \fBint\fP *xpos, \fBint\fP *ypos)"
+.br
+.RI "\fIReturns the position of the monitor's viewport on the virtual screen\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetMonitorPhysicalSize\fP (\fBGLFWmonitor\fP *monitor, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP)"
+.br
+.RI "\fIReturns the physical size of the monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const char * \fBglfwGetMonitorName\fP (\fBGLFWmonitor\fP *monitor)"
+.br
+.RI "\fIReturns the name of the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWmonitorfun\fP \fBglfwSetMonitorCallback\fP (\fBGLFWmonitorfun\fP cbfun)"
+.br
+.RI "\fISets the monitor configuration callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const \fBGLFWvidmode\fP * \fBglfwGetVideoModes\fP (\fBGLFWmonitor\fP *monitor, \fBint\fP *\fBcount\fP)"
+.br
+.RI "\fIReturns the available video modes for the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const \fBGLFWvidmode\fP * \fBglfwGetVideoMode\fP (\fBGLFWmonitor\fP *monitor)"
+.br
+.RI "\fIReturns the current mode of the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetGamma\fP (\fBGLFWmonitor\fP *monitor, float gamma)"
+.br
+.RI "\fIGenerates a gamma ramp and sets it for the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const \fBGLFWgammaramp\fP * \fBglfwGetGammaRamp\fP (\fBGLFWmonitor\fP *monitor)"
+.br
+.RI "\fIRetrieves the current gamma ramp for the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetGammaRamp\fP (\fBGLFWmonitor\fP *monitor, const \fBGLFWgammaramp\fP *ramp)"
+.br
+.RI "\fISets the current gamma ramp for the specified monitor\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwDefaultWindowHints\fP (\fBvoid\fP)"
+.br
+.RI "\fIResets all window hints to their default values\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwWindowHint\fP (\fBint\fP \fBtarget\fP, \fBint\fP hint)"
+.br
+.RI "\fISets the specified window hint to the desired value\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWwindow\fP * \fBglfwCreateWindow\fP (\fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP, const char *title, \fBGLFWmonitor\fP *monitor, \fBGLFWwindow\fP *share)"
+.br
+.RI "\fICreates a window and its associated context\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwDestroyWindow\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIDestroys the specified window and its context\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwWindowShouldClose\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIChecks the close flag of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetWindowShouldClose\fP (\fBGLFWwindow\fP *window, \fBint\fP \fBvalue\fP)"
+.br
+.RI "\fISets the close flag of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetWindowTitle\fP (\fBGLFWwindow\fP *window, const char *title)"
+.br
+.RI "\fISets the title of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetWindowPos\fP (\fBGLFWwindow\fP *window, \fBint\fP *xpos, \fBint\fP *ypos)"
+.br
+.RI "\fIRetrieves the position of the client area of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetWindowPos\fP (\fBGLFWwindow\fP *window, \fBint\fP xpos, \fBint\fP ypos)"
+.br
+.RI "\fISets the position of the client area of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetWindowSize\fP (\fBGLFWwindow\fP *window, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP)"
+.br
+.RI "\fIRetrieves the size of the client area of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetWindowSize\fP (\fBGLFWwindow\fP *window, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP)"
+.br
+.RI "\fISets the size of the client area of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetFramebufferSize\fP (\fBGLFWwindow\fP *window, \fBint\fP *\fBwidth\fP, \fBint\fP *\fBheight\fP)"
+.br
+.RI "\fIRetrieves the size of the framebuffer of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwIconifyWindow\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIIconifies the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwRestoreWindow\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIRestores the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwShowWindow\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIMakes the specified window visible\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwHideWindow\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIHides the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWmonitor\fP * \fBglfwGetWindowMonitor\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIReturns the monitor that the window uses for full screen mode\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwGetWindowAttrib\fP (\fBGLFWwindow\fP *window, \fBint\fP attrib)"
+.br
+.RI "\fIReturns an attribute of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetWindowUserPointer\fP (\fBGLFWwindow\fP *window, \fBvoid\fP *\fBpointer\fP)"
+.br
+.RI "\fISets the user pointer of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP * \fBglfwGetWindowUserPointer\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIReturns the user pointer of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWwindowposfun\fP \fBglfwSetWindowPosCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWwindowposfun\fP cbfun)"
+.br
+.RI "\fISets the position callback for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWwindowsizefun\fP \fBglfwSetWindowSizeCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWwindowsizefun\fP cbfun)"
+.br
+.RI "\fISets the size callback for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWwindowclosefun\fP \fBglfwSetWindowCloseCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWwindowclosefun\fP cbfun)"
+.br
+.RI "\fISets the close callback for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWwindowrefreshfun\fP \fBglfwSetWindowRefreshCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWwindowrefreshfun\fP cbfun)"
+.br
+.RI "\fISets the refresh callback for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWwindowfocusfun\fP \fBglfwSetWindowFocusCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWwindowfocusfun\fP cbfun)"
+.br
+.RI "\fISets the focus callback for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWwindowiconifyfun\fP \fBglfwSetWindowIconifyCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWwindowiconifyfun\fP cbfun)"
+.br
+.RI "\fISets the iconify callback for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWframebuffersizefun\fP \fBglfwSetFramebufferSizeCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWframebuffersizefun\fP cbfun)"
+.br
+.RI "\fISets the framebuffer resize callback for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwPollEvents\fP (\fBvoid\fP)"
+.br
+.RI "\fIProcesses all pending events\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwWaitEvents\fP (\fBvoid\fP)"
+.br
+.RI "\fIWaits until events are pending and processes them\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwGetInputMode\fP (\fBGLFWwindow\fP *window, \fBint\fP \fBmode\fP)"
+.br
+.RI "\fIReturns the value of an input option for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetInputMode\fP (\fBGLFWwindow\fP *window, \fBint\fP \fBmode\fP, \fBint\fP \fBvalue\fP)"
+.br
+.RI "\fISets an input option for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwGetKey\fP (\fBGLFWwindow\fP *window, \fBint\fP key)"
+.br
+.RI "\fIReturns the last reported state of a keyboard key for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwGetMouseButton\fP (\fBGLFWwindow\fP *window, \fBint\fP button)"
+.br
+.RI "\fIReturns the last reported state of a mouse button for the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetCursorPos\fP (\fBGLFWwindow\fP *window, double *xpos, double *ypos)"
+.br
+.RI "\fIRetrieves the last reported cursor position, relative to the client area of the window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetCursorPos\fP (\fBGLFWwindow\fP *window, double xpos, double ypos)"
+.br
+.RI "\fISets the position of the cursor, relative to the client area of the window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWkeyfun\fP \fBglfwSetKeyCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWkeyfun\fP cbfun)"
+.br
+.RI "\fISets the key callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWcharfun\fP \fBglfwSetCharCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWcharfun\fP cbfun)"
+.br
+.RI "\fISets the Unicode character callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWmousebuttonfun\fP \fBglfwSetMouseButtonCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWmousebuttonfun\fP cbfun)"
+.br
+.RI "\fISets the mouse button callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWcursorposfun\fP \fBglfwSetCursorPosCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWcursorposfun\fP cbfun)"
+.br
+.RI "\fISets the cursor position callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWcursorenterfun\fP \fBglfwSetCursorEnterCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWcursorenterfun\fP cbfun)"
+.br
+.RI "\fISets the cursor enter/exit callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWscrollfun\fP \fBglfwSetScrollCallback\fP (\fBGLFWwindow\fP *window, \fBGLFWscrollfun\fP cbfun)"
+.br
+.RI "\fISets the scroll callback\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwJoystickPresent\fP (\fBint\fP joy)"
+.br
+.RI "\fIReturns whether the specified joystick is present\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const float * \fBglfwGetJoystickAxes\fP (\fBint\fP joy, \fBint\fP *\fBcount\fP)"
+.br
+.RI "\fIReturns the values of all axes of the specified joystick\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const unsigned char * \fBglfwGetJoystickButtons\fP (\fBint\fP joy, \fBint\fP *\fBcount\fP)"
+.br
+.RI "\fIReturns the state of all buttons of the specified joystick\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const char * \fBglfwGetJoystickName\fP (\fBint\fP joy)"
+.br
+.RI "\fIReturns the name of the specified joystick\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetClipboardString\fP (\fBGLFWwindow\fP *window, const char *\fBstring\fP)"
+.br
+.RI "\fISets the clipboard to the specified string\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const char * \fBglfwGetClipboardString\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIRetrieves the contents of the clipboard as a string\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP double \fBglfwGetTime\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns the value of the GLFW timer\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetTime\fP (double time)"
+.br
+.RI "\fISets the GLFW timer\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwMakeContextCurrent\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIMakes the context of the specified window current for the calling thread\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWwindow\fP * \fBglfwGetCurrentContext\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns the window whose context is current on the calling thread\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSwapBuffers\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fISwaps the front and back buffers of the specified window\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSwapInterval\fP (\fBint\fP interval)"
+.br
+.RI "\fISets the swap interval for the current context\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwExtensionSupported\fP (const char *extension)"
+.br
+.RI "\fIReturns whether the specified extension is available\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWglproc\fP \fBglfwGetProcAddress\fP (const char *procname)"
+.br
+.RI "\fIReturns the address of the specified function for the current context\&. \fP"
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define APIENTRY"
+
+.PP
+Definition at line 94 of file glfw3\&.h\&.
+.SS "#define GLFW_ACCUM_ALPHA_BITS   0x0002100A"
+
+.PP
+Definition at line 508 of file glfw3\&.h\&.
+.SS "#define GLFW_ACCUM_BLUE_BITS   0x00021009"
+
+.PP
+Definition at line 507 of file glfw3\&.h\&.
+.SS "#define GLFW_ACCUM_GREEN_BITS   0x00021008"
+
+.PP
+Definition at line 506 of file glfw3\&.h\&.
+.SS "#define GLFW_ACCUM_RED_BITS   0x00021007"
+
+.PP
+Definition at line 505 of file glfw3\&.h\&.
+.SS "#define GLFW_ALPHA_BITS   0x00021004"
+
+.PP
+Definition at line 502 of file glfw3\&.h\&.
+.SS "#define GLFW_AUX_BUFFERS   0x0002100B"
+
+.PP
+Definition at line 509 of file glfw3\&.h\&.
+.SS "#define GLFW_BLUE_BITS   0x00021003"
+
+.PP
+Definition at line 501 of file glfw3\&.h\&.
+.SS "#define GLFW_CLIENT_API   0x00022001"
+
+.PP
+Definition at line 515 of file glfw3\&.h\&.
+.SS "#define GLFW_CONNECTED   0x00040001"
+
+.PP
+Definition at line 543 of file glfw3\&.h\&.
+.SS "#define GLFW_CONTEXT_REVISION   0x00022004"
+
+.PP
+Definition at line 518 of file glfw3\&.h\&.
+.SS "#define GLFW_CONTEXT_ROBUSTNESS   0x00022005"
+
+.PP
+Definition at line 519 of file glfw3\&.h\&.
+.SS "#define GLFW_CONTEXT_VERSION_MAJOR   0x00022002"
+
+.PP
+Definition at line 516 of file glfw3\&.h\&.
+.SS "#define GLFW_CONTEXT_VERSION_MINOR   0x00022003"
+
+.PP
+Definition at line 517 of file glfw3\&.h\&.
+.SS "#define GLFW_CURSOR   0x00033001"
+
+.PP
+Definition at line 535 of file glfw3\&.h\&.
+.SS "#define GLFW_CURSOR_DISABLED   0x00034003"
+
+.PP
+Definition at line 541 of file glfw3\&.h\&.
+.SS "#define GLFW_CURSOR_HIDDEN   0x00034002"
+
+.PP
+Definition at line 540 of file glfw3\&.h\&.
+.SS "#define GLFW_CURSOR_NORMAL   0x00034001"
+
+.PP
+Definition at line 539 of file glfw3\&.h\&.
+.SS "#define GLFW_DECORATED   0x00020005"
+
+.PP
+Definition at line 497 of file glfw3\&.h\&.
+.SS "#define GLFW_DEPTH_BITS   0x00021005"
+
+.PP
+Definition at line 503 of file glfw3\&.h\&.
+.SS "#define GLFW_DISCONNECTED   0x00040002"
+
+.PP
+Definition at line 544 of file glfw3\&.h\&.
+.SS "#define GLFW_FOCUSED   0x00020001"
+
+.PP
+Definition at line 493 of file glfw3\&.h\&.
+.SS "#define GLFW_GREEN_BITS   0x00021002"
+
+.PP
+Definition at line 500 of file glfw3\&.h\&.
+.SS "#define GLFW_ICONIFIED   0x00020002"
+
+.PP
+Definition at line 494 of file glfw3\&.h\&.
+.SS "#define GLFW_LOSE_CONTEXT_ON_RESET   0x00031002"
+
+.PP
+Definition at line 529 of file glfw3\&.h\&.
+.SS "#define GLFW_NO_RESET_NOTIFICATION   0x00031001"
+
+.PP
+Definition at line 528 of file glfw3\&.h\&.
+.SS "#define GLFW_NO_ROBUSTNESS   0"
+
+.PP
+Definition at line 527 of file glfw3\&.h\&.
+.SS "#define GLFW_OPENGL_ANY_PROFILE   0"
+
+.PP
+Definition at line 531 of file glfw3\&.h\&.
+.SS "#define GLFW_OPENGL_API   0x00030001"
+
+.PP
+Definition at line 524 of file glfw3\&.h\&.
+.SS "#define GLFW_OPENGL_COMPAT_PROFILE   0x00032002"
+
+.PP
+Definition at line 533 of file glfw3\&.h\&.
+.SS "#define GLFW_OPENGL_CORE_PROFILE   0x00032001"
+
+.PP
+Definition at line 532 of file glfw3\&.h\&.
+.SS "#define GLFW_OPENGL_DEBUG_CONTEXT   0x00022007"
+
+.PP
+Definition at line 521 of file glfw3\&.h\&.
+.SS "#define GLFW_OPENGL_ES_API   0x00030002"
+
+.PP
+Definition at line 525 of file glfw3\&.h\&.
+.SS "#define GLFW_OPENGL_FORWARD_COMPAT   0x00022006"
+
+.PP
+Definition at line 520 of file glfw3\&.h\&.
+.SS "#define GLFW_OPENGL_PROFILE   0x00022008"
+
+.PP
+Definition at line 522 of file glfw3\&.h\&.
+.SS "#define GLFW_RED_BITS   0x00021001"
+
+.PP
+Definition at line 499 of file glfw3\&.h\&.
+.SS "#define GLFW_REFRESH_RATE   0x0002100F"
+
+.PP
+Definition at line 513 of file glfw3\&.h\&.
+.SS "#define GLFW_RESIZABLE   0x00020003"
+
+.PP
+Definition at line 495 of file glfw3\&.h\&.
+.SS "#define GLFW_SAMPLES   0x0002100D"
+
+.PP
+Definition at line 511 of file glfw3\&.h\&.
+.SS "#define GLFW_SRGB_CAPABLE   0x0002100E"
+
+.PP
+Definition at line 512 of file glfw3\&.h\&.
+.SS "#define GLFW_STENCIL_BITS   0x00021006"
+
+.PP
+Definition at line 504 of file glfw3\&.h\&.
+.SS "#define GLFW_STEREO   0x0002100C"
+
+.PP
+Definition at line 510 of file glfw3\&.h\&.
+.SS "#define GLFW_STICKY_KEYS   0x00033002"
+
+.PP
+Definition at line 536 of file glfw3\&.h\&.
+.SS "#define GLFW_STICKY_MOUSE_BUTTONS   0x00033003"
+
+.PP
+Definition at line 537 of file glfw3\&.h\&.
+.SS "#define GLFW_VISIBLE   0x00020004"
+
+.PP
+Definition at line 496 of file glfw3\&.h\&.
+.SS "#define GLFWAPI"
+
+.PP
+Definition at line 198 of file glfw3\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

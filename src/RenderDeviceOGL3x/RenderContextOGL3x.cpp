@@ -3,7 +3,10 @@
 #include "GLFW\glfw3.h"
 #include "TypeConverterOGL3x.h"
 
-namespace ACTK {
+namespace ACTK 
+{
+	using namespace Core;
+	using namespace Renderer;
 
 	RenderContextOGL3x* RenderContextOGL3x::m_currentContext;
 
@@ -21,16 +24,16 @@ namespace ACTK {
 
 	RenderContextOGL3x::~RenderContextOGL3x(void)
 	{ 
-		release(); 
+		VRelease(); 
 	}
 
-	void RenderContextOGL3x::release(void)
+	void RenderContextOGL3x::VRelease(void)
 	{
 		m_window = nullptr;
 		LOG_DEBUG("OpenGL RenderContext released");
 	}
 
-	void RenderContextOGL3x::clear(const ClearState& clearState)
+	void RenderContextOGL3x::VClear(const ClearState& clearState)
 	{
 		if(m_currentContext != this)
 		{
@@ -51,7 +54,7 @@ namespace ACTK {
 		if(m_lastClearState.ColorMask != clearState.ColorMask)
 		{
 			m_lastClearState.ColorMask = clearState.ColorMask;
-			glColorMask(clearState.ColorMask.red, clearState.ColorMask.green, clearState.ColorMask.blue, clearState.ColorMask.alpha);
+			glColorMask(clearState.ColorMask.Red, clearState.ColorMask.Green, clearState.ColorMask.Blue, clearState.ColorMask.Alpha);
 		}
 
 		if(m_lastClearState.DepthMask != clearState.DepthMask)
@@ -97,7 +100,7 @@ namespace ACTK {
 		glClear(clearMask);
 	}
 
-	void RenderContextOGL3x::draw(PrimitiveType type ,float* vertices, unsigned int count)
+	void RenderContextOGL3x::VDraw(PrimitiveType type ,float* vertices, unsigned int count)
 	{
 		for (int i = 0; i < count; i++)
 		{
@@ -113,7 +116,7 @@ namespace ACTK {
 		}
 	}
 
-	void RenderContextOGL3x::swapBuffers()
+	void RenderContextOGL3x::VSwapBuffers()
 	{
 		// Wo ist das GLFW Window?
 		glfwSwapBuffers(m_window);

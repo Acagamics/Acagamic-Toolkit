@@ -4,20 +4,23 @@
 #include <Windows.h>
 #include <string>
 
-namespace ACTK {
+namespace ACTK
+{
+	using namespace Core;
+	using namespace Renderer;
 
 	class RenderDeviceOGL3x : public IRenderDevice
 	{
 	public:
 		RenderDeviceOGL3x(HINSTANCE hInstance);
-		~RenderDeviceOGL3x(void){ release(); }
-		void release(void);
+		~RenderDeviceOGL3x(void){ VRelease(); }
+		void VRelease(void);
 
 		// Creates Window and handles Resize and Destruction itselfs
-		GraphicsWindowPtr	createWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
+		GraphicsWindowPtr	VCreateWindow(unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
 
-		ShaderProgramPtr	createShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource);
-		ShaderProgramPtr	createShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource);
+		ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource);
+		ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource);
 
 	private:
 		//you shall not copy

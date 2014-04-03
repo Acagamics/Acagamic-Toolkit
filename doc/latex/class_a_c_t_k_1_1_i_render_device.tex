@@ -1,0 +1,88 @@
+\hypertarget{class_a_c_t_k_1_1_i_render_device}{\section{A\-C\-T\-K\-:\-:I\-Render\-Device Class Reference}
+\label{class_a_c_t_k_1_1_i_render_device}\index{A\-C\-T\-K\-::\-I\-Render\-Device@{A\-C\-T\-K\-::\-I\-Render\-Device}}
+}
+
+
+Renderer\-Device represents the Graphics Server.  
+
+
+
+
+{\ttfamily \#include $<$I\-Render\-Device.\-h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \hyperlink{class_a_c_t_k_1_1_i_render_device_a971cec72693671984693e2f255e98fc4}{$\sim$\-I\-Render\-Device} ()
+\item 
+virtual void \hyperlink{class_a_c_t_k_1_1_i_render_device_aa3b875c7f072e701e703d97b3fb4db44}{release} (void)=0
+\item 
+virtual \hyperlink{namespace_a_c_t_k_a73ab07fc6a568d003d19f3ed14ea7143}{Graphics\-Window\-Ptr} \hyperlink{class_a_c_t_k_1_1_i_render_device_a231ddea8df6e409d8fddd225ec92494f}{create\-Window} (unsigned int width=800, unsigned int height=600, const std\-::string \&title=\char`\"{}A\-C\-T\-K-\/Engine\char`\"{}, Window\-Type window\-Type=\hyperlink{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5bab13311ab51c4c34757f67f26580018dd}{Window\-Type\-::\-Windowed})=0
+\item 
+virtual \hyperlink{namespace_a_c_t_k_a34512c71be222dc06a2906d6c00d2c4f}{Shader\-Program\-Ptr} \hyperlink{class_a_c_t_k_1_1_i_render_device_a77ac05354c165206bfbfe1b43976174a}{create\-Shader\-Program} (const std\-::string \&Vertex\-Shader\-Source, const std\-::string \&Fragement\-Shader\-Source)=0
+\item 
+virtual \hyperlink{namespace_a_c_t_k_a34512c71be222dc06a2906d6c00d2c4f}{Shader\-Program\-Ptr} \hyperlink{class_a_c_t_k_1_1_i_render_device_a7fd79a2018650f1581b926871028c4e4}{create\-Shader\-Program} (const std\-::string \&Vertex\-Shader\-Source, const std\-::string \&Geometry\-Shader\-Source, const std\-::string \&Fragement\-Shader\-Source)=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Renderer\-Device represents the Graphics Server. 
+
+Definition at line 17 of file I\-Render\-Device.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_a_c_t_k_1_1_i_render_device_a971cec72693671984693e2f255e98fc4}{\index{A\-C\-T\-K\-::\-I\-Render\-Device@{A\-C\-T\-K\-::\-I\-Render\-Device}!$\sim$\-I\-Render\-Device@{$\sim$\-I\-Render\-Device}}
+\index{$\sim$\-I\-Render\-Device@{$\sim$\-I\-Render\-Device}!ACTK::IRenderDevice@{A\-C\-T\-K\-::\-I\-Render\-Device}}
+\subsubsection[{$\sim$\-I\-Render\-Device}]{\setlength{\rightskip}{0pt plus 5cm}virtual A\-C\-T\-K\-::\-I\-Render\-Device\-::$\sim$\-I\-Render\-Device (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}}\label{class_a_c_t_k_1_1_i_render_device_a971cec72693671984693e2f255e98fc4}
+
+
+Definition at line 20 of file I\-Render\-Device.\-h.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_a_c_t_k_1_1_i_render_device_a77ac05354c165206bfbfe1b43976174a}{\index{A\-C\-T\-K\-::\-I\-Render\-Device@{A\-C\-T\-K\-::\-I\-Render\-Device}!create\-Shader\-Program@{create\-Shader\-Program}}
+\index{create\-Shader\-Program@{create\-Shader\-Program}!ACTK::IRenderDevice@{A\-C\-T\-K\-::\-I\-Render\-Device}}
+\subsubsection[{create\-Shader\-Program}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Shader\-Program\-Ptr} A\-C\-T\-K\-::\-I\-Render\-Device\-::create\-Shader\-Program (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{Vertex\-Shader\-Source, }
+\item[{const std\-::string \&}]{Fragement\-Shader\-Source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_a_c_t_k_1_1_i_render_device_a77ac05354c165206bfbfe1b43976174a}
+\hypertarget{class_a_c_t_k_1_1_i_render_device_a7fd79a2018650f1581b926871028c4e4}{\index{A\-C\-T\-K\-::\-I\-Render\-Device@{A\-C\-T\-K\-::\-I\-Render\-Device}!create\-Shader\-Program@{create\-Shader\-Program}}
+\index{create\-Shader\-Program@{create\-Shader\-Program}!ACTK::IRenderDevice@{A\-C\-T\-K\-::\-I\-Render\-Device}}
+\subsubsection[{create\-Shader\-Program}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Shader\-Program\-Ptr} A\-C\-T\-K\-::\-I\-Render\-Device\-::create\-Shader\-Program (
+\begin{DoxyParamCaption}
+\item[{const std\-::string \&}]{Vertex\-Shader\-Source, }
+\item[{const std\-::string \&}]{Geometry\-Shader\-Source, }
+\item[{const std\-::string \&}]{Fragement\-Shader\-Source}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_a_c_t_k_1_1_i_render_device_a7fd79a2018650f1581b926871028c4e4}
+\hypertarget{class_a_c_t_k_1_1_i_render_device_a231ddea8df6e409d8fddd225ec92494f}{\index{A\-C\-T\-K\-::\-I\-Render\-Device@{A\-C\-T\-K\-::\-I\-Render\-Device}!create\-Window@{create\-Window}}
+\index{create\-Window@{create\-Window}!ACTK::IRenderDevice@{A\-C\-T\-K\-::\-I\-Render\-Device}}
+\subsubsection[{create\-Window}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf Graphics\-Window\-Ptr} A\-C\-T\-K\-::\-I\-Render\-Device\-::create\-Window (
+\begin{DoxyParamCaption}
+\item[{unsigned int}]{width = {\ttfamily 800}, }
+\item[{unsigned int}]{height = {\ttfamily 600}, }
+\item[{const std\-::string \&}]{title = {\ttfamily \char`\"{}ACTK-\/Engine\char`\"{}}, }
+\item[{{\bf Window\-Type}}]{window\-Type = {\ttfamily {\bf Window\-Type\-::\-Windowed}}}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_a_c_t_k_1_1_i_render_device_a231ddea8df6e409d8fddd225ec92494f}
+\hypertarget{class_a_c_t_k_1_1_i_render_device_aa3b875c7f072e701e703d97b3fb4db44}{\index{A\-C\-T\-K\-::\-I\-Render\-Device@{A\-C\-T\-K\-::\-I\-Render\-Device}!release@{release}}
+\index{release@{release}!ACTK::IRenderDevice@{A\-C\-T\-K\-::\-I\-Render\-Device}}
+\subsubsection[{release}]{\setlength{\rightskip}{0pt plus 5cm}virtual void A\-C\-T\-K\-::\-I\-Render\-Device\-::release (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [pure virtual]}}}\label{class_a_c_t_k_1_1_i_render_device_aa3b875c7f072e701e703d97b3fb4db44}
+
+
+The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+C\-:/\-Users/\-Artur/\-Documents/\-Visual Studio 2012/\-Projects/\-Games/\-Acagamic-\/\-Toolkit/include/\hyperlink{_i_render_device_8h}{I\-Render\-Device.\-h}\end{DoxyCompactItemize}

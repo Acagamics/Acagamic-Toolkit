@@ -3,6 +3,9 @@
 
 namespace ACTK
 {
+	using namespace Core;
+	using namespace Renderer;
+
 	extern "C" __declspec(dllexport) IRenderDevice* CreateRenderDevice(HINSTANCE hInstance, EventLogger& logger)
 	{
 		// set the new instance of the logger to prevent the creation of a new one inside this dll

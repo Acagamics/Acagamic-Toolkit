@@ -10,30 +10,30 @@ int main()
 	LOG_DEBUG("Starting Game");
 
 	// Creating Render Device
-	auto DeviceOGL = ACTK::RenderDeviceManager::getInstance().createDevice(ACTK::API::OpenGL3x);
+	auto DeviceOGL = ACTK::Renderer::RenderDeviceManager::GetInstance().CreateDevice(ACTK::Renderer::API::OpenGL3x);
 	if(DeviceOGL == nullptr)
 	{
 		return 0;
 	}
 
 	// Creating Window
-	auto WindowOGL = DeviceOGL->createWindow(800, 600, "HelloWorld", ACTK::WindowType::Windowed);
+	auto WindowOGL = DeviceOGL->VCreateWindow(800, 600, "HelloWorld", ACTK::Renderer::WindowType::Windowed);
 	if(WindowOGL == nullptr)
 	{
 		return 0;
 	}
 
 	// Change ClearColor
-	ACTK::ClearState cornflowerBlue;
-	cornflowerBlue.Color = ACTK::Color(0.392f, 0.584f, 0.929f, 1.0f);
+	ACTK::Renderer::ClearState cornflowerBlue;
+	cornflowerBlue.Color = ACTK::Core::Color(0.392f, 0.584f, 0.929f, 1.0f);
 
 	///////////////////////////////////////////////////////////////////
 	// Gameloop
-	auto ContextOGL = WindowOGL->getContext();
+	auto ContextOGL = WindowOGL->VGetContext();
 
 	MSG msg = { 0 };
 	LOG_DEBUG("Running Game");
-	while(!WindowOGL->shouldClose())
+	while(!WindowOGL->VShouldClose())
 	{
 		if(PeekMessage( &msg, NULL, 0, 0, PM_REMOVE ))
         {
@@ -43,9 +43,9 @@ int main()
         else
         {
 			// Clear Backbuffer to our ClearState
-			ContextOGL->clear(cornflowerBlue);
+			ContextOGL->VClear(cornflowerBlue);
 
-			ContextOGL->swapBuffers();
+			ContextOGL->VSwapBuffers();
         }
 	}
 	LOG_DEBUG("Quitting Game");

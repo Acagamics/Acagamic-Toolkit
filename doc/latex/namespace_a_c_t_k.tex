@@ -1,0 +1,207 @@
+\hypertarget{namespace_a_c_t_k}{\section{A\-C\-T\-K Namespace Reference}
+\label{namespace_a_c_t_k}\index{A\-C\-T\-K@{A\-C\-T\-K}}
+}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_a_c_t_k_1_1_color}{Color}
+\item 
+struct \hyperlink{struct_a_c_t_k_1_1_color_mask}{Color\-Mask}
+\item 
+struct \hyperlink{struct_a_c_t_k_1_1_clear_state}{Clear\-State}
+\item 
+class \hyperlink{class_a_c_t_k_1_1_i_cleanable}{I\-Cleanable}
+\item 
+class \hyperlink{class_a_c_t_k_1_1_i_cleanable_observer}{I\-Cleanable\-Observer}
+\item 
+class \hyperlink{class_a_c_t_k_1_1_i_graphics_window}{I\-Graphics\-Window}
+\item 
+class \hyperlink{class_a_c_t_k_1_1_i_render_context}{I\-Render\-Context}
+\item 
+class \hyperlink{class_a_c_t_k_1_1_i_render_device}{I\-Render\-Device}
+\begin{DoxyCompactList}\small\item\em Renderer\-Device represents the Graphics Server. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_c_t_k_1_1_i_shader_program}{I\-Shader\-Program}
+\item 
+class \hyperlink{class_a_c_t_k_1_1_event_logger}{Event\-Logger}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_c_t_k_1_1_event_logger}{Event\-Logger} writes logs into the console and a textfile and handles assertions and error\-Message\-Boxes. \end{DoxyCompactList}\item 
+class \hyperlink{class_a_c_t_k_1_1_render_device_manager}{Render\-Device\-Manager}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \\*
+\hyperlink{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4}{A\-C\-T\-K\-::\-T\-Y\-P\-E\-\_\-\-Clear\-Buffers} \hyperlink{namespace_a_c_t_k_ac7a4b20bfb9290a45d05a8086fd0e81e}{Clear\-Buffers}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_a_c_t_k_1_1_i_graphics_window}{I\-Graphics\-Window} $>$ \hyperlink{namespace_a_c_t_k_a73ab07fc6a568d003d19f3ed14ea7143}{Graphics\-Window\-Ptr}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_a_c_t_k_1_1_i_render_context}{I\-Render\-Context} $>$ \hyperlink{namespace_a_c_t_k_a7030f603b6015e2f7c08ab1cc584d084}{Render\-Context\-Ptr}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_a_c_t_k_1_1_i_render_device}{I\-Render\-Device} $>$ \hyperlink{namespace_a_c_t_k_a456b9e135a6c2d4a753f35fe9b5ac009}{Render\-Device\-Ptr}
+\item 
+typedef std\-::shared\-\_\-ptr\\*
+$<$ \hyperlink{class_a_c_t_k_1_1_i_shader_program}{I\-Shader\-Program} $>$ \hyperlink{namespace_a_c_t_k_a34512c71be222dc06a2906d6c00d2c4f}{Shader\-Program\-Ptr}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4}{T\-Y\-P\-E\-\_\-\-Clear\-Buffers} \{ \\*
+\hyperlink{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a8812187b753282c0fba74053938e05f5}{Color\-Buffer} = 1, 
+\hyperlink{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a1b721cb1aae1a12ee2b4aba064d1b607}{Depth\-Buffer} = 2, 
+\hyperlink{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a9769b87ecd44c48dc2096f97dfaf2147}{Stencil\-Buffer} = 4, 
+\hyperlink{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a9161f8afa87135b08c8dd0473db4e8a9}{Color\-And\-Depth\-Buffer} = Color\-Buffer $|$ Depth\-Buffer, 
+\\*
+\hyperlink{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a4d518c1e8938e0242690845b36453d66}{All} = Color\-Buffer $|$ Depth\-Buffer $|$ Stencil\-Buffer
+ \}
+\item 
+enum \hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8}{Primitive\-Type} \-: char \{ \\*
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a70b71cabeeaf8c2bf473c896d5442ddb}{Primitive\-Type\-::\-P\-O\-I\-N\-T\-S}, 
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a17b8ef2c330f1430e00c9de5469fc7e7}{Primitive\-Type\-::\-L\-I\-N\-E}, 
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8ae585142391f356c60bcfe68279ec2727}{Primitive\-Type\-::\-L\-I\-N\-E\-S}, 
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8ae64a4d2159ed46d077e21a505575c814}{Primitive\-Type\-::\-L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P}, 
+\\*
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a8e0df0247f66bd2cac06f16abb562134}{Primitive\-Type\-::\-L\-I\-N\-E\-\_\-\-L\-O\-O\-P}, 
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8add3bfee8042d1b85c224f08b42a3fc2e}{Primitive\-Type\-::\-T\-R\-I\-A\-N\-G\-L\-E\-S}, 
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a708de017e3b83ccba21dfc9f6367d46f}{Primitive\-Type\-::\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P}, 
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8aa9f047dff7e4cd4d8d3bdeafc4029d47}{Primitive\-Type\-::\-T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N}, 
+\\*
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a23d5348dd7bef544d6341bec3480287f}{Primitive\-Type\-::\-Q\-U\-A\-D\-S}, 
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a015958f9763c19119864b58b1e13eae4}{Primitive\-Type\-::\-Q\-U\-A\-D\-\_\-\-S\-T\-R\-I\-P}, 
+\hyperlink{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8aecdc92bf56d960b73b02ee40125758bc}{Primitive\-Type\-::\-P\-O\-L\-Y\-G\-O\-N}
+ \}
+\item 
+enum \hyperlink{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5b}{Window\-Type} \-: char \{ \hyperlink{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5bab13311ab51c4c34757f67f26580018dd}{Window\-Type\-::\-Windowed}, 
+\hyperlink{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5ba0829ea6734059d66e6bf87096b215dc1}{Window\-Type\-::\-Fullscreen}
+ \}
+\item 
+enum \hyperlink{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011af}{A\-P\-I} \-: char \{ \hyperlink{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011afa2cf68778043c0002134b393c93dc029d}{A\-P\-I\-::\-Open\-G\-L3x}, 
+\hyperlink{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011afa4f8b2c89cfd217fc6a442a2e62b625d1}{A\-P\-I\-::\-Direct3\-D11}
+ \}
+\end{DoxyCompactItemize}
+
+
+\subsection{Typedef Documentation}
+\hypertarget{namespace_a_c_t_k_ac7a4b20bfb9290a45d05a8086fd0e81e}{\index{A\-C\-T\-K@{A\-C\-T\-K}!Clear\-Buffers@{Clear\-Buffers}}
+\index{Clear\-Buffers@{Clear\-Buffers}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{Clear\-Buffers}]{\setlength{\rightskip}{0pt plus 5cm}typedef enum {\bf A\-C\-T\-K\-::\-T\-Y\-P\-E\-\_\-\-Clear\-Buffers}  {\bf A\-C\-T\-K\-::\-Clear\-Buffers}}}\label{namespace_a_c_t_k_ac7a4b20bfb9290a45d05a8086fd0e81e}
+\hypertarget{namespace_a_c_t_k_a73ab07fc6a568d003d19f3ed14ea7143}{\index{A\-C\-T\-K@{A\-C\-T\-K}!Graphics\-Window\-Ptr@{Graphics\-Window\-Ptr}}
+\index{Graphics\-Window\-Ptr@{Graphics\-Window\-Ptr}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{Graphics\-Window\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf I\-Graphics\-Window}$>$ {\bf A\-C\-T\-K\-::\-Graphics\-Window\-Ptr}}}\label{namespace_a_c_t_k_a73ab07fc6a568d003d19f3ed14ea7143}
+
+
+Definition at line 25 of file I\-Graphics\-Window.\-h.
+
+\hypertarget{namespace_a_c_t_k_a7030f603b6015e2f7c08ab1cc584d084}{\index{A\-C\-T\-K@{A\-C\-T\-K}!Render\-Context\-Ptr@{Render\-Context\-Ptr}}
+\index{Render\-Context\-Ptr@{Render\-Context\-Ptr}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{Render\-Context\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf I\-Render\-Context}$>$ {\bf A\-C\-T\-K\-::\-Render\-Context\-Ptr}}}\label{namespace_a_c_t_k_a7030f603b6015e2f7c08ab1cc584d084}
+
+
+Definition at line 44 of file I\-Render\-Context.\-h.
+
+\hypertarget{namespace_a_c_t_k_a456b9e135a6c2d4a753f35fe9b5ac009}{\index{A\-C\-T\-K@{A\-C\-T\-K}!Render\-Device\-Ptr@{Render\-Device\-Ptr}}
+\index{Render\-Device\-Ptr@{Render\-Device\-Ptr}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{Render\-Device\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf I\-Render\-Device}$>$ {\bf A\-C\-T\-K\-::\-Render\-Device\-Ptr}}}\label{namespace_a_c_t_k_a456b9e135a6c2d4a753f35fe9b5ac009}
+
+
+Definition at line 30 of file I\-Render\-Device.\-h.
+
+\hypertarget{namespace_a_c_t_k_a34512c71be222dc06a2906d6c00d2c4f}{\index{A\-C\-T\-K@{A\-C\-T\-K}!Shader\-Program\-Ptr@{Shader\-Program\-Ptr}}
+\index{Shader\-Program\-Ptr@{Shader\-Program\-Ptr}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{Shader\-Program\-Ptr}]{\setlength{\rightskip}{0pt plus 5cm}typedef std\-::shared\-\_\-ptr$<${\bf I\-Shader\-Program}$>$ {\bf A\-C\-T\-K\-::\-Shader\-Program\-Ptr}}}\label{namespace_a_c_t_k_a34512c71be222dc06a2906d6c00d2c4f}
+
+
+Definition at line 30 of file I\-Shader\-Program.\-h.
+
+
+
+\subsection{Enumeration Type Documentation}
+\hypertarget{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011af}{\index{A\-C\-T\-K@{A\-C\-T\-K}!A\-P\-I@{A\-P\-I}}
+\index{A\-P\-I@{A\-P\-I}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{A\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\-C\-T\-K\-::\-A\-P\-I} \-: char\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011af}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Open\-G\-L3x@{Open\-G\-L3x}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Open\-G\-L3x@{Open\-G\-L3x}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011afa2cf68778043c0002134b393c93dc029d}{Open\-G\-L3x}\label{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011afa2cf68778043c0002134b393c93dc029d}
+}]\index{Direct3\-D11@{Direct3\-D11}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Direct3\-D11@{Direct3\-D11}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011afa4f8b2c89cfd217fc6a442a2e62b625d1}{Direct3\-D11}\label{namespace_a_c_t_k_a774b0600420b8e9981d6a7d9879011afa4f8b2c89cfd217fc6a442a2e62b625d1}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 8 of file Render\-Device\-Manager.\-h.
+
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8}{\index{A\-C\-T\-K@{A\-C\-T\-K}!Primitive\-Type@{Primitive\-Type}}
+\index{Primitive\-Type@{Primitive\-Type}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{Primitive\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\-C\-T\-K\-::\-Primitive\-Type} \-: char\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{P\-O\-I\-N\-T\-S@{P\-O\-I\-N\-T\-S}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!P\-O\-I\-N\-T\-S@{P\-O\-I\-N\-T\-S}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a70b71cabeeaf8c2bf473c896d5442ddb}{P\-O\-I\-N\-T\-S}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a70b71cabeeaf8c2bf473c896d5442ddb}
+}]\index{L\-I\-N\-E@{L\-I\-N\-E}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!L\-I\-N\-E@{L\-I\-N\-E}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a17b8ef2c330f1430e00c9de5469fc7e7}{L\-I\-N\-E}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a17b8ef2c330f1430e00c9de5469fc7e7}
+}]\index{L\-I\-N\-E\-S@{L\-I\-N\-E\-S}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!L\-I\-N\-E\-S@{L\-I\-N\-E\-S}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8ae585142391f356c60bcfe68279ec2727}{L\-I\-N\-E\-S}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8ae585142391f356c60bcfe68279ec2727}
+}]\index{L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P@{L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P@{L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8ae64a4d2159ed46d077e21a505575c814}{L\-I\-N\-E\-\_\-\-S\-T\-R\-I\-P}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8ae64a4d2159ed46d077e21a505575c814}
+}]\index{L\-I\-N\-E\-\_\-\-L\-O\-O\-P@{L\-I\-N\-E\-\_\-\-L\-O\-O\-P}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!L\-I\-N\-E\-\_\-\-L\-O\-O\-P@{L\-I\-N\-E\-\_\-\-L\-O\-O\-P}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a8e0df0247f66bd2cac06f16abb562134}{L\-I\-N\-E\-\_\-\-L\-O\-O\-P}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a8e0df0247f66bd2cac06f16abb562134}
+}]\index{T\-R\-I\-A\-N\-G\-L\-E\-S@{T\-R\-I\-A\-N\-G\-L\-E\-S}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!T\-R\-I\-A\-N\-G\-L\-E\-S@{T\-R\-I\-A\-N\-G\-L\-E\-S}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8add3bfee8042d1b85c224f08b42a3fc2e}{T\-R\-I\-A\-N\-G\-L\-E\-S}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8add3bfee8042d1b85c224f08b42a3fc2e}
+}]\index{T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P@{T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P@{T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a708de017e3b83ccba21dfc9f6367d46f}{T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-S\-T\-R\-I\-P}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a708de017e3b83ccba21dfc9f6367d46f}
+}]\index{T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N@{T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N@{T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8aa9f047dff7e4cd4d8d3bdeafc4029d47}{T\-R\-I\-A\-N\-G\-L\-E\-\_\-\-F\-A\-N}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8aa9f047dff7e4cd4d8d3bdeafc4029d47}
+}]\index{Q\-U\-A\-D\-S@{Q\-U\-A\-D\-S}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Q\-U\-A\-D\-S@{Q\-U\-A\-D\-S}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a23d5348dd7bef544d6341bec3480287f}{Q\-U\-A\-D\-S}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a23d5348dd7bef544d6341bec3480287f}
+}]\index{Q\-U\-A\-D\-\_\-\-S\-T\-R\-I\-P@{Q\-U\-A\-D\-\_\-\-S\-T\-R\-I\-P}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Q\-U\-A\-D\-\_\-\-S\-T\-R\-I\-P@{Q\-U\-A\-D\-\_\-\-S\-T\-R\-I\-P}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a015958f9763c19119864b58b1e13eae4}{Q\-U\-A\-D\-\_\-\-S\-T\-R\-I\-P}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8a015958f9763c19119864b58b1e13eae4}
+}]\index{P\-O\-L\-Y\-G\-O\-N@{P\-O\-L\-Y\-G\-O\-N}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!P\-O\-L\-Y\-G\-O\-N@{P\-O\-L\-Y\-G\-O\-N}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8aecdc92bf56d960b73b02ee40125758bc}{P\-O\-L\-Y\-G\-O\-N}\label{namespace_a_c_t_k_ac879d5bd28581fddd1c876d2103156b8aecdc92bf56d960b73b02ee40125758bc}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 9 of file I\-Render\-Context.\-h.
+
+\hypertarget{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4}{\index{A\-C\-T\-K@{A\-C\-T\-K}!T\-Y\-P\-E\-\_\-\-Clear\-Buffers@{T\-Y\-P\-E\-\_\-\-Clear\-Buffers}}
+\index{T\-Y\-P\-E\-\_\-\-Clear\-Buffers@{T\-Y\-P\-E\-\_\-\-Clear\-Buffers}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{T\-Y\-P\-E\-\_\-\-Clear\-Buffers}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\-C\-T\-K\-::\-T\-Y\-P\-E\-\_\-\-Clear\-Buffers}}}\label{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Color\-Buffer@{Color\-Buffer}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Color\-Buffer@{Color\-Buffer}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a8812187b753282c0fba74053938e05f5}{Color\-Buffer}\label{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a8812187b753282c0fba74053938e05f5}
+}]\index{Depth\-Buffer@{Depth\-Buffer}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Depth\-Buffer@{Depth\-Buffer}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a1b721cb1aae1a12ee2b4aba064d1b607}{Depth\-Buffer}\label{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a1b721cb1aae1a12ee2b4aba064d1b607}
+}]\index{Stencil\-Buffer@{Stencil\-Buffer}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Stencil\-Buffer@{Stencil\-Buffer}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a9769b87ecd44c48dc2096f97dfaf2147}{Stencil\-Buffer}\label{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a9769b87ecd44c48dc2096f97dfaf2147}
+}]\index{Color\-And\-Depth\-Buffer@{Color\-And\-Depth\-Buffer}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Color\-And\-Depth\-Buffer@{Color\-And\-Depth\-Buffer}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a9161f8afa87135b08c8dd0473db4e8a9}{Color\-And\-Depth\-Buffer}\label{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a9161f8afa87135b08c8dd0473db4e8a9}
+}]\index{All@{All}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!All@{All}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a4d518c1e8938e0242690845b36453d66}{All}\label{namespace_a_c_t_k_ac45d1ac10b65556ebdc2e3651faf0ac4a4d518c1e8938e0242690845b36453d66}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 44 of file Clear\-State.\-h.
+
+\hypertarget{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5b}{\index{A\-C\-T\-K@{A\-C\-T\-K}!Window\-Type@{Window\-Type}}
+\index{Window\-Type@{Window\-Type}!ACTK@{A\-C\-T\-K}}
+\subsubsection[{Window\-Type}]{\setlength{\rightskip}{0pt plus 5cm}enum {\bf A\-C\-T\-K\-::\-Window\-Type} \-: char\hspace{0.3cm}{\ttfamily [strong]}}}\label{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5b}
+\begin{Desc}
+\item[Enumerator]\par
+\begin{description}
+\index{Windowed@{Windowed}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Windowed@{Windowed}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5bab13311ab51c4c34757f67f26580018dd}{Windowed}\label{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5bab13311ab51c4c34757f67f26580018dd}
+}]\index{Fullscreen@{Fullscreen}!A\-C\-T\-K@{A\-C\-T\-K}}\index{A\-C\-T\-K@{A\-C\-T\-K}!Fullscreen@{Fullscreen}}\item[{\em 
+\hypertarget{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5ba0829ea6734059d66e6bf87096b215dc1}{Fullscreen}\label{namespace_a_c_t_k_a5cb71db6f350f73a1acaf41781bffb5ba0829ea6734059d66e6bf87096b215dc1}
+}]\end{description}
+\end{Desc}
+
+
+Definition at line 10 of file I\-Render\-Device.\-h.
+

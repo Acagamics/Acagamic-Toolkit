@@ -12,38 +12,41 @@
 
 namespace ACTK
 {
+namespace Core
+{
 	static std::shared_ptr<EventLogger> Instance;
-
 	const int MAX_DEBUG_LINE_LEN = 1024;
 
 	EventLogger::EventLogger()
 	{
-		m_loggedEvent = false;
 		m_initialized = false;
 	}
 
+
 	EventLogger::~EventLogger()
 	{
-		release();
+		Release();
 	}
+
 
 	void EventLogger::SetInstance(EventLogger& logger)
 	{
 		Instance = std::shared_ptr<EventLogger>(&logger, [](EventLogger* ptr){});
 	}
 
+
 	EventLogger& EventLogger::GetInstance()
 	{
 		if(Instance.get() == nullptr)
 		{
 			Instance = std::shared_ptr<EventLogger>(new EventLogger());
-			Instance->init(std::string("Log.txt").c_str());
+			Instance->Init(std::string("Log.txt").c_str());
 		}
 		return *Instance.get();
 	}
 
-	// Initialize stereaming file
-	void EventLogger::initLogFile()
+	//! \brief Initialize log file.
+	void EventLogger::InitLogFile()
 	{
 		m_logStream.open("Log.txt", std::fstream::out);
 
@@ -54,33 +57,30 @@ namespace ACTK
 	}
 
 
-	// Initialize and shut down the event logging system
-	bool EventLogger::init(const char* logName)
+	bool EventLogger::Init(const char* logName)
 	{
-		if(isInitialized())
+		if(IsInitialized())
 			return false;
 
-		// ToDo: STREAMING DATEI ÖFFNEN UND LEEREN
-		initLogFile();
+		InitLogFile();
 
 		m_initialized = true;
-		m_loggedEvent = true;
-		m_previousStackLevel = 0;
 
 		return true;
 	}
 
-	void EventLogger::release()
+
+	void EventLogger::Release()
 	{
-		// ToDo: DATEI SCHLIEßEN UND FREIGEBEN
 		m_logStream.close();
 
 		m_initialized = false;
 	}
 
-	void EventLogger::logDebug(const char* text, ...)
+
+	void EventLogger::LogDebug(const char* text, ...)
 	{
-		if(!isInitialized())
+		if(!IsInitialized())
 			return;
 
 		char buffer[MAX_DEBUG_LINE_LEN];
@@ -101,13 +101,13 @@ namespace ACTK
 		char buffer2[MAX_DEBUG_LINE_LEN];
 		strcpy_s(buffer2, MAX_DEBUG_LINE_LEN, "DEBUG: ");
 		strcpy_s(buffer2+7, MAX_DEBUG_LINE_LEN-7, buffer);
-		logOutput(buffer2, 0);
+		LogOutput(buffer2);
 	}
 
 
-    void EventLogger::logWarning(const char* text, ...)
+    void EventLogger::LogWarning(const char* text, ...)
 	{
-		if(!isInitialized())
+		if(!IsInitialized())
 			return;
 
 		char buffer[MAX_DEBUG_LINE_LEN];
@@ -127,12 +127,13 @@ namespace ACTK
 		char buffer2[MAX_DEBUG_LINE_LEN];
 		strcpy_s(buffer2, MAX_DEBUG_LINE_LEN, "WARNING: ");
 		strcpy_s(buffer2+9, MAX_DEBUG_LINE_LEN-9, buffer);
-		logOutput(buffer2, 0);
+		LogOutput(buffer2);
 	}
 
-    void EventLogger::logError(const char* text, ...)
+
+    void EventLogger::LogError(const char* text, ...)
 	{
-		if(!isInitialized())
+		if(!IsInitialized())
 			return;
 
 		char buffer[MAX_DEBUG_LINE_LEN];
@@ -152,15 +153,15 @@ namespace ACTK
 		char buffer2[MAX_DEBUG_LINE_LEN];
 		strcpy_s(buffer2, MAX_DEBUG_LINE_LEN, "ERROR: ");
 		strcpy_s(buffer2+7, MAX_DEBUG_LINE_LEN-7, buffer);
-		logOutput(buffer2, 0);
+		LogOutput(buffer2);
 		MessageBox(NULL, buffer2, "ACTK - ERROR", MB_OK | MB_ICONERROR);
 	}
 
-	void EventLogger::logAssert(bool contidion, const char* file, long line, const char* description)
+	void EventLogger::LogAssert(bool contidion, const char* file, long line, const char* description)
 	{
 		if(!contidion)
 		{
-			logError(std::string(std::string(description) + std::string(" - in file %s at line %u.")).c_str(), file, line);
+			LogError(std::string(std::string(description) + std::string(" - in file %s at line %u.")).c_str(), file, line);
 			
 			#ifdef _DEBUG
 				assert(contidion);
@@ -168,9 +169,7 @@ namespace ACTK
 		}
 	}
 
-	////////////////////////////////////
-	// Common logging functions
-	void EventLogger::logOutput(char* buffer, unsigned int flags)
+	void EventLogger::LogOutput(char* buffer)
 	{
 		// Strip any unnecessary newline characters at the end of the buffer
         int i = strlen(buffer);
@@ -179,19 +178,12 @@ namespace ACTK
 		if(buffer[i - 1] == '\n')
 			buffer[i - 1] = 0;
 
-
-		// Indicate that we have some info to print, so write the stack info
-		m_loggedEvent = true;
-
-		//  HIER DEN INHALT VON BUFFER IN DIE DATEI SCHREIBEN
 		m_logStream << buffer << '\n';
 
-		debugOutput(buffer);
+		DebugOutput(buffer);
 	}
 
-	////////////////////////////////////
-	// Debug output functions
-	void EventLogger::debugOutput(const char* buffer)
+	void EventLogger::DebugOutput(const char* buffer)
 	{
 #ifdef _WIN32
 		char buf[MAX_DEBUG_LINE_LEN];
@@ -201,4 +193,4 @@ namespace ACTK
 #endif
 	}
 
-}
+}}

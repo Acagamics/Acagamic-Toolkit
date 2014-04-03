@@ -4,19 +4,23 @@
 
 namespace ACTK
 {
+namespace Renderer
+{
+	using namespace Core;
+
 	// Function inside the DLL we want to call to create our Device-Object
 	extern "C"
 	{
 		typedef IRenderDevice* (*CREATERENDERDEVICE)(HINSTANCE hInstance, EventLogger& logger);
 	}
 
-	RenderDeviceManager& RenderDeviceManager::getInstance()
+	RenderDeviceManager& RenderDeviceManager::GetInstance()
 	{
 		static RenderDeviceManager instance;
 		return instance;
 	}
 
-	RenderDevicePtr RenderDeviceManager::createDevice(API api)
+	RenderDevicePtr RenderDeviceManager::CreateDevice(API api)
 	{
 		HMODULE hDLL = NULL;
 		switch(api)
@@ -63,7 +67,7 @@ namespace ACTK
 		_CreateRenderDevice = (CREATERENDERDEVICE) GetProcAddress(hDLL, "CreateRenderDevice");
 		
 		GetWindowLong(GetActiveWindow(),0);
-		IRenderDevice* pDevice = _CreateRenderDevice(GetModuleHandle(NULL), ACTK::EventLogger::GetInstance());
+		IRenderDevice* pDevice = _CreateRenderDevice(GetModuleHandle(NULL), EventLogger::GetInstance());
 
 		// aufruf der dll Create-Funktionc
 		if(pDevice == nullptr)
@@ -72,4 +76,4 @@ namespace ACTK
 		}
 		return RenderDevicePtr(pDevice);
 	}
-}
+}}

@@ -1,0 +1,90 @@
+.TH "ACTK::IUniformOGL3x" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::IUniformOGL3x \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <UniformOGL3x\&.h>\fP
+.PP
+Inherits \fBACTK::ICleanable\fP\&.
+.PP
+Inherited by \fBACTK::UniformOGL3x< T >\fP, \fBACTK::UniformOGL3x< float >\fP, \fBACTK::UniformOGL3x< int >\fP, and \fBACTK::UniformOGL3x< unsigned int >\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBIUniformOGL3x\fP (\fBint\fP \fBlocation\fP, \fBUniformDatatype\fP datatype, \fBint\fP \fBcount\fP, \fBICleanableObserver\fP *observer)"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBclean\fP ()=0"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBint\fP \fBLocation\fP"
+.br
+.ti -1c
+.RI "const \fBUniformDatatype\fP \fBDatatype\fP"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const \fBint\fP \fBm_count\fP"
+.br
+.ti -1c
+.RI "bool \fBm_dirty\fP"
+.br
+.ti -1c
+.RI "\fBICleanableObserver\fP *const \fBm_observer\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 70 of file UniformOGL3x\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ACTK::IUniformOGL3x::IUniformOGL3x (\fBint\fPlocation, \fBUniformDatatype\fPdatatype, \fBint\fPcount, \fBICleanableObserver\fP *observer)\fC [inline]\fP"
+
+.PP
+Definition at line 74 of file UniformOGL3x\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBvoid\fP ACTK::IUniformOGL3x::clean ()\fC [pure virtual]\fP"
+
+.PP
+Implements \fBACTK::ICleanable\fP\&.
+.PP
+Implemented in \fBACTK::UniformUI\fP, \fBACTK::UniformF\fP, \fBACTK::UniformI\fP, \fBACTK::UniformOGL3x< T >\fP, \fBACTK::UniformOGL3x< float >\fP, \fBACTK::UniformOGL3x< int >\fP, and \fBACTK::UniformOGL3x< unsigned int >\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "const \fBUniformDatatype\fP ACTK::IUniformOGL3x::Datatype"
+
+.PP
+Definition at line 87 of file UniformOGL3x\&.h\&.
+.SS "const \fBint\fP ACTK::IUniformOGL3x::Location"
+
+.PP
+Definition at line 86 of file UniformOGL3x\&.h\&.
+.SS "const \fBint\fP ACTK::IUniformOGL3x::m_count\fC [protected]\fP"
+
+.PP
+Definition at line 90 of file UniformOGL3x\&.h\&.
+.SS "bool ACTK::IUniformOGL3x::m_dirty\fC [protected]\fP"
+
+.PP
+Definition at line 92 of file UniformOGL3x\&.h\&.
+.SS "\fBICleanableObserver\fP* const ACTK::IUniformOGL3x::m_observer\fC [protected]\fP"
+
+.PP
+Definition at line 93 of file UniformOGL3x\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

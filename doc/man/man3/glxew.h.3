@@ -1,0 +1,6283 @@
+.TH "dependencies/glfw/include/GL/glxew.h" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dependencies/glfw/include/GL/glxew.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <X11/Xlib\&.h>\fP
+.br
+\fC#include <X11/Xutil\&.h>\fP
+.br
+\fC#include <X11/Xmd\&.h>\fP
+.br
+\fC#include <GL/glew\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBGLXPbufferClobberEvent\fP"
+.br
+.ti -1c
+.RI "union \fB__GLXEvent\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXHyperpipeNetworkSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXPipeRectLimits\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXHyperpipeConfigSGIX\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXPipeRect\fP"
+.br
+.ti -1c
+.RI "struct \fBGLXBufferClobberEventSGIX\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__GLXEW_H__\fP"
+.br
+.ti -1c
+.RI "#define \fB__glxext_h_\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_H\fP"
+.br
+.ti -1c
+.RI "#define \fB__GLX_glx_h__\fP"
+.br
+.ti -1c
+.RI "#define \fB__glx_h__\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_0\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_USE_GL\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BUFFER_SIZE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLX_LEVEL\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLX_DOUBLEBUFFER\fP   5"
+.br
+.ti -1c
+.RI "#define \fBGLX_STEREO\fP   6"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX_BUFFERS\fP   7"
+.br
+.ti -1c
+.RI "#define \fBGLX_RED_SIZE\fP   8"
+.br
+.ti -1c
+.RI "#define \fBGLX_GREEN_SIZE\fP   9"
+.br
+.ti -1c
+.RI "#define \fBGLX_BLUE_SIZE\fP   10"
+.br
+.ti -1c
+.RI "#define \fBGLX_ALPHA_SIZE\fP   11"
+.br
+.ti -1c
+.RI "#define \fBGLX_DEPTH_SIZE\fP   12"
+.br
+.ti -1c
+.RI "#define \fBGLX_STENCIL_SIZE\fP   13"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_RED_SIZE\fP   14"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_GREEN_SIZE\fP   15"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_BLUE_SIZE\fP   16"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_ALPHA_SIZE\fP   17"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_SCREEN\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_ATTRIBUTE\fP   2"
+.br
+.ti -1c
+.RI "#define \fBGLX_NO_EXTENSION\fP   3"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_VISUAL\fP   4"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_CONTEXT\fP   5"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_VALUE\fP   6"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_ENUM\fP   7"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_VERSION_1_0\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_0\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_1\fP"
+.br
+.ti -1c
+.RI "#define \fBGLX_VENDOR\fP   0x1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION\fP   0x2"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXTENSIONS\fP   0x3"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_VERSION_1_1\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_1\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXGetCurrentDisplay\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetCurrentDisplay\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_VERSION_1_2\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_2\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_3\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_LEFT_BUFFER_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW_BIT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_INDEX_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_PIXMAP_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_RIGHT_BUFFER_BIT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_LEFT_BUFFER_BIT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_BIT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_RIGHT_BUFFER_BIT\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX_BUFFERS_BIT\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONFIG_CAVEAT\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBGLX_DEPTH_BUFFER_BIT\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_VISUAL_TYPE\fP   0x22"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_TYPE\fP   0x23"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX_VALUE\fP   0x24"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RED_VALUE\fP   0x25"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_GREEN_VALUE\fP   0x26"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_BLUE_VALUE\fP   0x27"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_ALPHA_VALUE\fP   0x28"
+.br
+.ti -1c
+.RI "#define \fBGLX_STENCIL_BUFFER_BIT\fP   0x00000040"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_BUFFER_BIT\fP   0x00000080"
+.br
+.ti -1c
+.RI "#define \fBGLX_NONE\fP   0x8000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SLOW_CONFIG\fP   0x8001"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRUE_COLOR\fP   0x8002"
+.br
+.ti -1c
+.RI "#define \fBGLX_DIRECT_COLOR\fP   0x8003"
+.br
+.ti -1c
+.RI "#define \fBGLX_PSEUDO_COLOR\fP   0x8004"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_COLOR\fP   0x8005"
+.br
+.ti -1c
+.RI "#define \fBGLX_GRAY_SCALE\fP   0x8006"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_GRAY\fP   0x8007"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RGB\fP   0x8008"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX\fP   0x8009"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_ID\fP   0x800B"
+.br
+.ti -1c
+.RI "#define \fBGLX_SCREEN\fP   0x800C"
+.br
+.ti -1c
+.RI "#define \fBGLX_NON_CONFORMANT_CONFIG\fP   0x800D"
+.br
+.ti -1c
+.RI "#define \fBGLX_DRAWABLE_TYPE\fP   0x8010"
+.br
+.ti -1c
+.RI "#define \fBGLX_RENDER_TYPE\fP   0x8011"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_RENDERABLE\fP   0x8012"
+.br
+.ti -1c
+.RI "#define \fBGLX_FBCONFIG_ID\fP   0x8013"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_TYPE\fP   0x8014"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_INDEX_TYPE\fP   0x8015"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_WIDTH\fP   0x8016"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_HEIGHT\fP   0x8017"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_PIXELS\fP   0x8018"
+.br
+.ti -1c
+.RI "#define \fBGLX_PRESERVED_CONTENTS\fP   0x801B"
+.br
+.ti -1c
+.RI "#define \fBGLX_LARGEST_PBUFFER\fP   0x801C"
+.br
+.ti -1c
+.RI "#define \fBGLX_WIDTH\fP   0x801D"
+.br
+.ti -1c
+.RI "#define \fBGLX_HEIGHT\fP   0x801E"
+.br
+.ti -1c
+.RI "#define \fBGLX_EVENT_MASK\fP   0x801F"
+.br
+.ti -1c
+.RI "#define \fBGLX_DAMAGED\fP   0x8020"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAVED\fP   0x8021"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW\fP   0x8022"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER\fP   0x8023"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_HEIGHT\fP   0x8040"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_WIDTH\fP   0x8041"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_CLOBBER_MASK\fP   0x08000000"
+.br
+.ti -1c
+.RI "#define \fBGLX_DONT_CARE\fP   0xFFFFFFFF"
+.br
+.ti -1c
+.RI "#define \fBglXChooseFBConfig\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXChooseFBConfig\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXCreateNewContext\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateNewContext\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXCreatePbuffer\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreatePbuffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXCreatePixmap\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreatePixmap\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXCreateWindow\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateWindow\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXDestroyPbuffer\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyPbuffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXDestroyPixmap\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyPixmap\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXDestroyWindow\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyWindow\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetCurrentReadDrawable\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetCurrentReadDrawable\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetFBConfigAttrib\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetFBConfigAttrib\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetFBConfigs\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetFBConfigs\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetSelectedEvent\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetSelectedEvent\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetVisualFromFBConfig\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVisualFromFBConfig\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXMakeContextCurrent\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXMakeContextCurrent\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryContext\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryContext\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryDrawable\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryDrawable\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXSelectEvent\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXSelectEvent\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_VERSION_1_3\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_3\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_VERSION_1_4\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLE_BUFFERS\fP   100000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLES\fP   100001"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_VERSION_1_4\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_4\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_3DFX_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLE_BUFFERS_3DFX\fP   0x8050"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLES_3DFX\fP   0x8051"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_3DFX_multisample\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_3DFX_multisample\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_AMD_gpu_association\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_VENDOR_AMD\fP   0x1F00"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_RENDERER_STRING_AMD\fP   0x1F01"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_OPENGL_VERSION_STRING_AMD\fP   0x1F02"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_FASTEST_TARGET_GPUS_AMD\fP   0x21A2"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_RAM_AMD\fP   0x21A3"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_CLOCK_AMD\fP   0x21A4"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_NUM_PIPES_AMD\fP   0x21A5"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_NUM_SIMD_AMD\fP   0x21A6"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_NUM_RB_AMD\fP   0x21A7"
+.br
+.ti -1c
+.RI "#define \fBGLX_GPU_NUM_SPI_AMD\fP   0x21A8"
+.br
+.ti -1c
+.RI "#define \fBglXBlitContextFramebufferAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBlitContextFramebufferAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXCreateAssociatedContextAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateAssociatedContextAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXCreateAssociatedContextAttribsAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateAssociatedContextAttribsAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXDeleteAssociatedContextAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXDeleteAssociatedContextAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetContextGPUIDAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetContextGPUIDAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetCurrentAssociatedContextAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetCurrentAssociatedContextAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetGPUIDsAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetGPUIDsAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetGPUInfoAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetGPUInfoAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXMakeAssociatedContextCurrentAMD\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXMakeAssociatedContextCurrentAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_AMD_gpu_association\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_AMD_gpu_association\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_create_context\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_DEBUG_BIT_ARB\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_MAJOR_VERSION_ARB\fP   0x2091"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_MINOR_VERSION_ARB\fP   0x2092"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_FLAGS_ARB\fP   0x2094"
+.br
+.ti -1c
+.RI "#define \fBglXCreateContextAttribsARB\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateContextAttribsARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_create_context\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_create_context\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_create_context_profile\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_CORE_PROFILE_BIT_ARB\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_PROFILE_MASK_ARB\fP   0x9126"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_create_context_profile\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_create_context_profile\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_create_context_robustness\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_ROBUST_ACCESS_BIT_ARB\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_LOSE_CONTEXT_ON_RESET_ARB\fP   0x8252"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB\fP   0x8256"
+.br
+.ti -1c
+.RI "#define \fBGLX_NO_RESET_NOTIFICATION_ARB\fP   0x8261"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_create_context_robustness\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_create_context_robustness\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_fbconfig_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_FLOAT_BIT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_FLOAT_TYPE\fP   0x20B9"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_fbconfig_float\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_fbconfig_float\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_framebuffer_sRGB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRAMEBUFFER_SRGB_CAPABLE_ARB\fP   0x20B2"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_framebuffer_sRGB\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_framebuffer_sRGB\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_get_proc_address\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_get_proc_address\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_get_proc_address\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLE_BUFFERS_ARB\fP   100000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLES_ARB\fP   100001"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_multisample\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_multisample\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_robustness_application_isolation\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_RESET_ISOLATION_BIT_ARB\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_robustness_application_isolation\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_robustness_application_isolation\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_robustness_share_group_isolation\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_RESET_ISOLATION_BIT_ARB\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_robustness_share_group_isolation\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_robustness_share_group_isolation\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ARB_vertex_buffer_object\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_ALLOW_BUFFER_BYTE_ORDER_MISMATCH_ARB\fP   0x2095"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ARB_vertex_buffer_object\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_vertex_buffer_object\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ATI_pixel_format_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_FLOAT_ATI_BIT\fP   0x00000100"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ATI_pixel_format_float\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ATI_pixel_format_float\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_ATI_render_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_RGB_ATI\fP   0x9800"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_RGBA_ATI\fP   0x9801"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_ATI\fP   0x9802"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_TARGET_ATI\fP   0x9803"
+.br
+.ti -1c
+.RI "#define \fBGLX_MIPMAP_TEXTURE_ATI\fP   0x9804"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_RGB_ATI\fP   0x9805"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_RGBA_ATI\fP   0x9806"
+.br
+.ti -1c
+.RI "#define \fBGLX_NO_TEXTURE_ATI\fP   0x9807"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_CUBE_MAP_ATI\fP   0x9808"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_1D_ATI\fP   0x9809"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_2D_ATI\fP   0x980A"
+.br
+.ti -1c
+.RI "#define \fBGLX_MIPMAP_LEVEL_ATI\fP   0x980B"
+.br
+.ti -1c
+.RI "#define \fBGLX_CUBE_MAP_FACE_ATI\fP   0x980C"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_CUBE_MAP_POSITIVE_X_ATI\fP   0x980D"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_CUBE_MAP_NEGATIVE_X_ATI\fP   0x980E"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_CUBE_MAP_POSITIVE_Y_ATI\fP   0x980F"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_CUBE_MAP_NEGATIVE_Y_ATI\fP   0x9810"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_CUBE_MAP_POSITIVE_Z_ATI\fP   0x9811"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_CUBE_MAP_NEGATIVE_Z_ATI\fP   0x9812"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_LEFT_ATI\fP   0x9813"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_RIGHT_ATI\fP   0x9814"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_LEFT_ATI\fP   0x9815"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_RIGHT_ATI\fP   0x9816"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX0_ATI\fP   0x9817"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX1_ATI\fP   0x9818"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX2_ATI\fP   0x9819"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX3_ATI\fP   0x981A"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX4_ATI\fP   0x981B"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX5_ATI\fP   0x981C"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX6_ATI\fP   0x981D"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX7_ATI\fP   0x981E"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX8_ATI\fP   0x981F"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX9_ATI\fP   0x9820"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_LUMINANCE_ATI\fP   0x9821"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_INTENSITY_ATI\fP   0x9822"
+.br
+.ti -1c
+.RI "#define \fBglXBindTexImageATI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindTexImageATI\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXDrawableAttribATI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXDrawableAttribATI\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXReleaseTexImageATI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseTexImageATI\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_ATI_render_texture\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ATI_render_texture\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_buffer_age\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_BUFFER_AGE_EXT\fP   0x20F4"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_buffer_age\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_buffer_age\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_create_context_es2_profile\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_ES2_PROFILE_BIT_EXT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_create_context_es2_profile\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_create_context_es2_profile\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_create_context_es_profile\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_CONTEXT_ES_PROFILE_BIT_EXT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_create_context_es_profile\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_create_context_es_profile\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_fbconfig_packed_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_UNSIGNED_FLOAT_BIT_EXT\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_UNSIGNED_FLOAT_TYPE_EXT\fP   0x20B1"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_fbconfig_packed_float\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_fbconfig_packed_float\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_framebuffer_sRGB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRAMEBUFFER_SRGB_CAPABLE_EXT\fP   0x20B2"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_framebuffer_sRGB\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_framebuffer_sRGB\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_import_context\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_SHARE_CONTEXT_EXT\fP   0x800A"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_ID_EXT\fP   0x800B"
+.br
+.ti -1c
+.RI "#define \fBGLX_SCREEN_EXT\fP   0x800C"
+.br
+.ti -1c
+.RI "#define \fBglXFreeContextEXT\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXFreeContextEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetContextIDEXT\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetContextIDEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXImportContextEXT\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXImportContextEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryContextInfoEXT\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryContextInfoEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_import_context\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_import_context\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_scene_marker\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_scene_marker\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_scene_marker\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_swap_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_INTERVAL_EXT\fP   0x20F1"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_SWAP_INTERVAL_EXT\fP   0x20F2"
+.br
+.ti -1c
+.RI "#define \fBglXSwapIntervalEXT\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXSwapIntervalEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_swap_control\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_swap_control\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_swap_control_tear\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_LATE_SWAPS_TEAR_EXT\fP   0x20F3"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_swap_control_tear\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_swap_control_tear\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_texture_from_pixmap\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_1D_BIT_EXT\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_2D_BIT_EXT\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_RECTANGLE_BIT_EXT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_RGB_EXT\fP   0x20D0"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_RGBA_EXT\fP   0x20D1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_MIPMAP_TEXTURE_EXT\fP   0x20D2"
+.br
+.ti -1c
+.RI "#define \fBGLX_BIND_TO_TEXTURE_TARGETS_EXT\fP   0x20D3"
+.br
+.ti -1c
+.RI "#define \fBGLX_Y_INVERTED_EXT\fP   0x20D4"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_EXT\fP   0x20D5"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_TARGET_EXT\fP   0x20D6"
+.br
+.ti -1c
+.RI "#define \fBGLX_MIPMAP_TEXTURE_EXT\fP   0x20D7"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_NONE_EXT\fP   0x20D8"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_RGB_EXT\fP   0x20D9"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_FORMAT_RGBA_EXT\fP   0x20DA"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_1D_EXT\fP   0x20DB"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_2D_EXT\fP   0x20DC"
+.br
+.ti -1c
+.RI "#define \fBGLX_TEXTURE_RECTANGLE_EXT\fP   0x20DD"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_LEFT_EXT\fP   0x20DE"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_RIGHT_EXT\fP   0x20DF"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_LEFT_EXT\fP   0x20E0"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_RIGHT_EXT\fP   0x20E1"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX0_EXT\fP   0x20E2"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX1_EXT\fP   0x20E3"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX2_EXT\fP   0x20E4"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX3_EXT\fP   0x20E5"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX4_EXT\fP   0x20E6"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX5_EXT\fP   0x20E7"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX6_EXT\fP   0x20E8"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX7_EXT\fP   0x20E9"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX8_EXT\fP   0x20EA"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX9_EXT\fP   0x20EB"
+.br
+.ti -1c
+.RI "#define \fBglXBindTexImageEXT\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindTexImageEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXReleaseTexImageEXT\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseTexImageEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_texture_from_pixmap\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_texture_from_pixmap\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_visual_info\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_VISUAL_TYPE_EXT\fP   0x22"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_TYPE_EXT\fP   0x23"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX_VALUE_EXT\fP   0x24"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RED_VALUE_EXT\fP   0x25"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_GREEN_VALUE_EXT\fP   0x26"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_BLUE_VALUE_EXT\fP   0x27"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_ALPHA_VALUE_EXT\fP   0x28"
+.br
+.ti -1c
+.RI "#define \fBGLX_NONE_EXT\fP   0x8000"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRUE_COLOR_EXT\fP   0x8002"
+.br
+.ti -1c
+.RI "#define \fBGLX_DIRECT_COLOR_EXT\fP   0x8003"
+.br
+.ti -1c
+.RI "#define \fBGLX_PSEUDO_COLOR_EXT\fP   0x8004"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_COLOR_EXT\fP   0x8005"
+.br
+.ti -1c
+.RI "#define \fBGLX_GRAY_SCALE_EXT\fP   0x8006"
+.br
+.ti -1c
+.RI "#define \fBGLX_STATIC_GRAY_EXT\fP   0x8007"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_RGB_EXT\fP   0x8008"
+.br
+.ti -1c
+.RI "#define \fBGLX_TRANSPARENT_INDEX_EXT\fP   0x8009"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_visual_info\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_visual_info\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXT_visual_rating\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_CAVEAT_EXT\fP   0x20"
+.br
+.ti -1c
+.RI "#define \fBGLX_SLOW_VISUAL_EXT\fP   0x8001"
+.br
+.ti -1c
+.RI "#define \fBGLX_NON_CONFORMANT_VISUAL_EXT\fP   0x800D"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_EXT_visual_rating\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_visual_rating\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_INTEL_swap_event\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_EXCHANGE_COMPLETE_INTEL\fP   0x8180"
+.br
+.ti -1c
+.RI "#define \fBGLX_COPY_COMPLETE_INTEL\fP   0x8181"
+.br
+.ti -1c
+.RI "#define \fBGLX_FLIP_COMPLETE_INTEL\fP   0x8182"
+.br
+.ti -1c
+.RI "#define \fBGLX_BUFFER_SWAP_COMPLETE_INTEL_MASK\fP   0x04000000"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_INTEL_swap_event\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_INTEL_swap_event\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_MESA_agp_offset\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXGetAGPOffsetMESA\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetAGPOffsetMESA\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_MESA_agp_offset\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_agp_offset\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_MESA_copy_sub_buffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXCopySubBufferMESA\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCopySubBufferMESA\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_MESA_copy_sub_buffer\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_copy_sub_buffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_MESA_pixmap_colormap\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXCreateGLXPixmapMESA\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateGLXPixmapMESA\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_MESA_pixmap_colormap\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_pixmap_colormap\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_MESA_release_buffers\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXReleaseBuffersMESA\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseBuffersMESA\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_MESA_release_buffers\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_release_buffers\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_MESA_set_3dfx_mode\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_3DFX_WINDOW_MODE_MESA\fP   0x1"
+.br
+.ti -1c
+.RI "#define \fBGLX_3DFX_FULLSCREEN_MODE_MESA\fP   0x2"
+.br
+.ti -1c
+.RI "#define \fBglXSet3DfxModeMESA\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXSet3DfxModeMESA\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_MESA_set_3dfx_mode\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_set_3dfx_mode\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_MESA_swap_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXGetSwapIntervalMESA\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetSwapIntervalMESA\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXSwapIntervalMESA\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXSwapIntervalMESA\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_MESA_swap_control\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_swap_control\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_copy_image\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXCopyImageSubDataNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCopyImageSubDataNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_NV_copy_image\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_copy_image\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_float_buffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_FLOAT_COMPONENTS_NV\fP   0x20B0"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_NV_float_buffer\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_float_buffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_multisample_coverage\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_SAMPLES_NV\fP   0x20B3"
+.br
+.ti -1c
+.RI "#define \fBGLX_COVERAGE_SAMPLES_NV\fP   100001"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_NV_multisample_coverage\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_multisample_coverage\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_present_video\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_NUM_VIDEO_SLOTS_NV\fP   0x20F0"
+.br
+.ti -1c
+.RI "#define \fBglXBindVideoDeviceNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindVideoDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXEnumerateVideoDevicesNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXEnumerateVideoDevicesNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_NV_present_video\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_present_video\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_swap_group\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXBindSwapBarrierNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindSwapBarrierNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXJoinSwapGroupNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXJoinSwapGroupNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryFrameCountNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryFrameCountNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryMaxSwapGroupsNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryMaxSwapGroupsNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQuerySwapGroupNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQuerySwapGroupNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXResetFrameCountNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXResetFrameCountNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_NV_swap_group\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_swap_group\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_vertex_array_range\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXAllocateMemoryNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXAllocateMemoryNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXFreeMemoryNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXFreeMemoryNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_NV_vertex_array_range\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_vertex_array_range\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_video_capture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_DEVICE_ID_NV\fP   0x20CD"
+.br
+.ti -1c
+.RI "#define \fBGLX_UNIQUE_ID_NV\fP   0x20CE"
+.br
+.ti -1c
+.RI "#define \fBGLX_NUM_VIDEO_CAPTURE_SLOTS_NV\fP   0x20CF"
+.br
+.ti -1c
+.RI "#define \fBglXBindVideoCaptureDeviceNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindVideoCaptureDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXEnumerateVideoCaptureDevicesNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXEnumerateVideoCaptureDevicesNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXLockVideoCaptureDeviceNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXLockVideoCaptureDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryVideoCaptureDeviceNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryVideoCaptureDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXReleaseVideoCaptureDeviceNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseVideoCaptureDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_NV_video_capture\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_video_capture\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_NV_video_output\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_COLOR_NV\fP   0x20C3"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_ALPHA_NV\fP   0x20C4"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_DEPTH_NV\fP   0x20C5"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_COLOR_AND_ALPHA_NV\fP   0x20C6"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_COLOR_AND_DEPTH_NV\fP   0x20C7"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_FRAME_NV\fP   0x20C8"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_FIELD_1_NV\fP   0x20C9"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_FIELD_2_NV\fP   0x20CA"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_STACKED_FIELDS_1_2_NV\fP   0x20CB"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_OUT_STACKED_FIELDS_2_1_NV\fP   0x20CC"
+.br
+.ti -1c
+.RI "#define \fBglXBindVideoImageNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindVideoImageNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetVideoDeviceNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVideoDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetVideoInfoNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVideoInfoNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXReleaseVideoDeviceNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseVideoDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXReleaseVideoImageNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseVideoImageNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXSendPbufferToVideoNV\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXSendPbufferToVideoNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_NV_video_output\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_video_output\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_OML_swap_method\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_METHOD_OML\fP   0x8060"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_EXCHANGE_OML\fP   0x8061"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_COPY_OML\fP   0x8062"
+.br
+.ti -1c
+.RI "#define \fBGLX_SWAP_UNDEFINED_OML\fP   0x8063"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_OML_swap_method\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_OML_swap_method\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_OML_sync_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXGetMscRateOML\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetMscRateOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetSyncValuesOML\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetSyncValuesOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXSwapBuffersMscOML\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXSwapBuffersMscOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXWaitForMscOML\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXWaitForMscOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXWaitForSbcOML\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXWaitForSbcOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_OML_sync_control\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_OML_sync_control\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIS_blended_overlay\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_BLENDED_RGBA_SGIS\fP   0x8025"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIS_blended_overlay\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIS_blended_overlay\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIS_color_range\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIS_color_range\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIS_color_range\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIS_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLE_BUFFERS_SGIS\fP   100000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLES_SGIS\fP   100001"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIS_multisample\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIS_multisample\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIS_shared_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_MULTISAMPLE_SUB_RECT_WIDTH_SGIS\fP   0x8026"
+.br
+.ti -1c
+.RI "#define \fBGLX_MULTISAMPLE_SUB_RECT_HEIGHT_SGIS\fP   0x8027"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIS_shared_multisample\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIS_shared_multisample\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIX_fbconfig\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW_BIT_SGIX\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_BIT_SGIX\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_PIXMAP_BIT_SGIX\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_INDEX_BIT_SGIX\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_SCREEN_EXT\fP   0x800C"
+.br
+.ti -1c
+.RI "#define \fBGLX_DRAWABLE_TYPE_SGIX\fP   0x8010"
+.br
+.ti -1c
+.RI "#define \fBGLX_RENDER_TYPE_SGIX\fP   0x8011"
+.br
+.ti -1c
+.RI "#define \fBGLX_X_RENDERABLE_SGIX\fP   0x8012"
+.br
+.ti -1c
+.RI "#define \fBGLX_FBCONFIG_ID_SGIX\fP   0x8013"
+.br
+.ti -1c
+.RI "#define \fBGLX_RGBA_TYPE_SGIX\fP   0x8014"
+.br
+.ti -1c
+.RI "#define \fBGLX_COLOR_INDEX_TYPE_SGIX\fP   0x8015"
+.br
+.ti -1c
+.RI "#define \fBglXChooseFBConfigSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXChooseFBConfigSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXCreateContextWithConfigSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateContextWithConfigSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXCreateGLXPixmapWithConfigSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateGLXPixmapWithConfigSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetFBConfigAttribSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetFBConfigAttribSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetFBConfigFromVisualSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetFBConfigFromVisualSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetVisualFromFBConfigSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVisualFromFBConfigSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIX_fbconfig\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_fbconfig\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIX_hyperpipe\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_HYPERPIPE_DISPLAY_PIPE_SGIX\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_PIPE_RECT_SGIX\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_PIPE_RECT_LIMITS_SGIX\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_HYPERPIPE_RENDER_PIPE_SGIX\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_HYPERPIPE_STEREO_SGIX\fP   0x00000003"
+.br
+.ti -1c
+.RI "#define \fBGLX_HYPERPIPE_PIXEL_AVERAGE_SGIX\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_HYPERPIPE_PIPE_NAME_LENGTH_SGIX\fP   80"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_HYPERPIPE_CONFIG_SGIX\fP   91"
+.br
+.ti -1c
+.RI "#define \fBGLX_BAD_HYPERPIPE_SGIX\fP   92"
+.br
+.ti -1c
+.RI "#define \fBGLX_HYPERPIPE_ID_SGIX\fP   0x8030"
+.br
+.ti -1c
+.RI "#define \fBglXBindHyperpipeSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindHyperpipeSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXDestroyHyperpipeConfigSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyHyperpipeConfigSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXHyperpipeAttribSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXHyperpipeAttribSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXHyperpipeConfigSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXHyperpipeConfigSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryHyperpipeAttribSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryHyperpipeAttribSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryHyperpipeBestAttribSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryHyperpipeBestAttribSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryHyperpipeConfigSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryHyperpipeConfigSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryHyperpipeNetworkSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryHyperpipeNetworkSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIX_hyperpipe\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_hyperpipe\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIX_pbuffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_LEFT_BUFFER_BIT_SGIX\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBGLX_FRONT_RIGHT_BUFFER_BIT_SGIX\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_BIT_SGIX\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_LEFT_BUFFER_BIT_SGIX\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBGLX_BACK_RIGHT_BUFFER_BIT_SGIX\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBGLX_AUX_BUFFERS_BIT_SGIX\fP   0x00000010"
+.br
+.ti -1c
+.RI "#define \fBGLX_DEPTH_BUFFER_BIT_SGIX\fP   0x00000020"
+.br
+.ti -1c
+.RI "#define \fBGLX_STENCIL_BUFFER_BIT_SGIX\fP   0x00000040"
+.br
+.ti -1c
+.RI "#define \fBGLX_ACCUM_BUFFER_BIT_SGIX\fP   0x00000080"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAMPLE_BUFFERS_BIT_SGIX\fP   0x00000100"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_WIDTH_SGIX\fP   0x8016"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_HEIGHT_SGIX\fP   0x8017"
+.br
+.ti -1c
+.RI "#define \fBGLX_MAX_PBUFFER_PIXELS_SGIX\fP   0x8018"
+.br
+.ti -1c
+.RI "#define \fBGLX_OPTIMAL_PBUFFER_WIDTH_SGIX\fP   0x8019"
+.br
+.ti -1c
+.RI "#define \fBGLX_OPTIMAL_PBUFFER_HEIGHT_SGIX\fP   0x801A"
+.br
+.ti -1c
+.RI "#define \fBGLX_PRESERVED_CONTENTS_SGIX\fP   0x801B"
+.br
+.ti -1c
+.RI "#define \fBGLX_LARGEST_PBUFFER_SGIX\fP   0x801C"
+.br
+.ti -1c
+.RI "#define \fBGLX_WIDTH_SGIX\fP   0x801D"
+.br
+.ti -1c
+.RI "#define \fBGLX_HEIGHT_SGIX\fP   0x801E"
+.br
+.ti -1c
+.RI "#define \fBGLX_EVENT_MASK_SGIX\fP   0x801F"
+.br
+.ti -1c
+.RI "#define \fBGLX_DAMAGED_SGIX\fP   0x8020"
+.br
+.ti -1c
+.RI "#define \fBGLX_SAVED_SGIX\fP   0x8021"
+.br
+.ti -1c
+.RI "#define \fBGLX_WINDOW_SGIX\fP   0x8022"
+.br
+.ti -1c
+.RI "#define \fBGLX_PBUFFER_SGIX\fP   0x8023"
+.br
+.ti -1c
+.RI "#define \fBGLX_BUFFER_CLOBBER_MASK_SGIX\fP   0x08000000"
+.br
+.ti -1c
+.RI "#define \fBglXCreateGLXPbufferSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateGLXPbufferSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXDestroyGLXPbufferSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyGLXPbufferSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXGetSelectedEventSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetSelectedEventSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryGLXPbufferSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryGLXPbufferSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXSelectEventSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXSelectEventSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIX_pbuffer\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_pbuffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIX_swap_barrier\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXBindSwapBarrierSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindSwapBarrierSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryMaxSwapBarriersSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryMaxSwapBarriersSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIX_swap_barrier\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_swap_barrier\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIX_swap_group\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXJoinSwapGroupSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXJoinSwapGroupSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIX_swap_group\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_swap_group\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIX_video_resize\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_SYNC_FRAME_SGIX\fP   0x00000000"
+.br
+.ti -1c
+.RI "#define \fBGLX_SYNC_SWAP_SGIX\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBglXBindChannelToWindowSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXBindChannelToWindowSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXChannelRectSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXChannelRectSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXChannelRectSyncSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXChannelRectSyncSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryChannelDeltasSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryChannelDeltasSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXQueryChannelRectSGIX\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryChannelRectSGIX\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIX_video_resize\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_video_resize\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGIX_visual_select_group\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VISUAL_SELECT_GROUP_SGIX\fP   0x8028"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGIX_visual_select_group\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_visual_select_group\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGI_cushion\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXCushionSGI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXCushionSGI\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGI_cushion\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGI_cushion\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGI_make_current_read\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXGetCurrentReadDrawableSGI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetCurrentReadDrawableSGI\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXMakeCurrentReadSGI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXMakeCurrentReadSGI\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGI_make_current_read\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGI_make_current_read\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGI_swap_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXSwapIntervalSGI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXSwapIntervalSGI\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGI_swap_control\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGI_swap_control\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SGI_video_sync\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXGetVideoSyncSGI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVideoSyncSGI\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXWaitVideoSyncSGI\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXWaitVideoSyncSGI\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SGI_video_sync\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGI_video_sync\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SUN_get_transparent_index\fP   1"
+.br
+.ti -1c
+.RI "#define \fBglXGetTransparentIndexSUN\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetTransparentIndexSUN\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SUN_get_transparent_index\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SUN_get_transparent_index\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLX_SUN_video_resize\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLX_VIDEO_RESIZE_SUN\fP   0x8171"
+.br
+.ti -1c
+.RI "#define \fBGL_VIDEO_RESIZE_COMPENSATION_SUN\fP   0x85CD"
+.br
+.ti -1c
+.RI "#define \fBglXGetVideoResizeSUN\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVideoResizeSUN\fP)"
+.br
+.ti -1c
+.RI "#define \fBglXVideoResizeSUN\fP   \fBGLXEW_GET_FUN\fP(\fB__glewXVideoResizeSUN\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_SUN_video_resize\fP   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SUN_video_resize\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_FUN_EXPORT\fP   \fBGLEW_FUN_EXPORT\fP"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_VAR_EXPORT\fP   \fBGLEW_VAR_EXPORT\fP"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_GET_VAR\fP(\fBx\fP)   (*(const \fBGLboolean\fP*)&\fBx\fP)"
+.br
+.ti -1c
+.RI "#define \fBGLXEW_GET_FUN\fP(\fBx\fP)   \fBx\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef XID \fBGLXDrawable\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXPixmap\fP"
+.br
+.ti -1c
+.RI "typedef struct __GLXcontextRec * \fBGLXContext\fP"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP \fBGLXVideoDeviceNV\fP"
+.br
+.ti -1c
+.RI "typedef Display *(* \fBPFNGLXGETCURRENTDISPLAYPROC\fP )(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXFBConfigID\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXWindow\fP"
+.br
+.ti -1c
+.RI "typedef struct __GLXFBConfigRec * \fBGLXFBConfig\fP"
+.br
+.ti -1c
+.RI "typedef union \fB__GLXEvent\fP \fBGLXEvent\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLXFBConfig\fP *(* \fBPFNGLXCHOOSEFBCONFIGPROC\fP )(Display *dpy, \fBint\fP screen, const \fBint\fP *attrib_list, \fBint\fP *nelements)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContext\fP(* \fBPFNGLXCREATENEWCONTEXTPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP render_type, \fBGLXContext\fP share_list, Bool direct)"
+.br
+.ti -1c
+.RI "typedef \fBGLXPbuffer\fP(* \fBPFNGLXCREATEPBUFFERPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, const \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBGLXPixmap\fP(* \fBPFNGLXCREATEPIXMAPPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, Pixmap pixmap, const \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBGLXWindow\fP(* \fBPFNGLXCREATEWINDOWPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, Window win, const \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXDESTROYPBUFFERPROC\fP )(Display *dpy, \fBGLXPbuffer\fP pbuf)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXDESTROYPIXMAPPROC\fP )(Display *dpy, \fBGLXPixmap\fP pixmap)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXDESTROYWINDOWPROC\fP )(Display *dpy, \fBGLXWindow\fP win)"
+.br
+.ti -1c
+.RI "typedef \fBGLXDrawable\fP(* \fBPFNGLXGETCURRENTREADDRAWABLEPROC\fP )(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETFBCONFIGATTRIBPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBGLXFBConfig\fP *(* \fBPFNGLXGETFBCONFIGSPROC\fP )(Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXGETSELECTEDEVENTPROC\fP )(Display *dpy, \fBGLXDrawable\fP draw, unsigned long *event_mask)"
+.br
+.ti -1c
+.RI "typedef XVisualInfo *(* \fBPFNGLXGETVISUALFROMFBCONFIGPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXMAKECONTEXTCURRENTPROC\fP )(Display *display, \fBGLXDrawable\fP draw, \fBGLXDrawable\fP read, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYCONTEXTPROC\fP )(Display *dpy, \fBGLXContext\fP ctx, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXQUERYDRAWABLEPROC\fP )(Display *dpy, \fBGLXDrawable\fP draw, \fBint\fP attribute, unsigned \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXSELECTEVENTPROC\fP )(Display *dpy, \fBGLXDrawable\fP draw, unsigned long event_mask)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXBLITCONTEXTFRAMEBUFFERAMDPROC\fP )(\fBGLXContext\fP dstCtx, \fBGLint\fP \fBsrcX0\fP, \fBGLint\fP \fBsrcY0\fP, \fBGLint\fP \fBsrcX1\fP, \fBGLint\fP \fBsrcY1\fP, \fBGLint\fP \fBdstX0\fP, \fBGLint\fP \fBdstY0\fP, \fBGLint\fP \fBdstX1\fP, \fBGLint\fP \fBdstY1\fP, \fBGLbitfield\fP \fBmask\fP, \fBGLenum\fP \fBfilter\fP)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContext\fP(* \fBPFNGLXCREATEASSOCIATEDCONTEXTAMDPROC\fP )(unsigned \fBint\fP \fBid\fP, \fBGLXContext\fP share_list)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContext\fP(* \fBPFNGLXCREATEASSOCIATEDCONTEXTATTRIBSAMDPROC\fP )(unsigned \fBint\fP \fBid\fP, \fBGLXContext\fP share_context, const \fBint\fP *\fBattribList\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXDELETEASSOCIATEDCONTEXTAMDPROC\fP )(\fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP(* \fBPFNGLXGETCONTEXTGPUIDAMDPROC\fP )(\fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContext\fP(* \fBPFNGLXGETCURRENTASSOCIATEDCONTEXTAMDPROC\fP )(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP(* \fBPFNGLXGETGPUIDSAMDPROC\fP )(unsigned \fBint\fP \fBmaxCount\fP, unsigned \fBint\fP *\fBids\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETGPUINFOAMDPROC\fP )(unsigned \fBint\fP \fBid\fP, \fBint\fP \fBproperty\fP, \fBGLenum\fP \fBdataType\fP, unsigned \fBint\fP \fBsize\fP, \fBvoid\fP *\fBdata\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXMAKEASSOCIATEDCONTEXTCURRENTAMDPROC\fP )(\fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContext\fP(* \fBPFNGLXCREATECONTEXTATTRIBSARBPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, \fBGLXContext\fP share_context, Bool direct, const \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXBINDTEXIMAGEATIPROC\fP )(Display *dpy, \fBGLXPbuffer\fP pbuf, \fBint\fP \fBbuffer\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXDRAWABLEATTRIBATIPROC\fP )(Display *dpy, \fBGLXDrawable\fP draw, const \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXRELEASETEXIMAGEATIPROC\fP )(Display *dpy, \fBGLXPbuffer\fP pbuf, \fBint\fP \fBbuffer\fP)"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXContextID\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXFREECONTEXTEXTPROC\fP )(Display *dpy, \fBGLXContext\fP context)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContextID\fP(* \fBPFNGLXGETCONTEXTIDEXTPROC\fP )(const \fBGLXContext\fP context)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContext\fP(* \fBPFNGLXIMPORTCONTEXTEXTPROC\fP )(Display *dpy, \fBGLXContextID\fP contextID)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYCONTEXTINFOEXTPROC\fP )(Display *dpy, \fBGLXContext\fP context, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXSWAPINTERVALEXTPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, \fBint\fP interval)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXBINDTEXIMAGEEXTPROC\fP )(Display *display, \fBGLXDrawable\fP drawable, \fBint\fP \fBbuffer\fP, const \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXRELEASETEXIMAGEEXTPROC\fP )(Display *display, \fBGLXDrawable\fP drawable, \fBint\fP \fBbuffer\fP)"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP(* \fBPFNGLXGETAGPOFFSETMESAPROC\fP )(const \fBvoid\fP *\fBpointer\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXCOPYSUBBUFFERMESAPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP)"
+.br
+.ti -1c
+.RI "typedef \fBGLXPixmap\fP(* \fBPFNGLXCREATEGLXPIXMAPMESAPROC\fP )(Display *dpy, XVisualInfo *visual, Pixmap pixmap, Colormap cmap)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXRELEASEBUFFERSMESAPROC\fP )(Display *dpy, \fBGLXDrawable\fP d)"
+.br
+.ti -1c
+.RI "typedef \fBGLboolean\fP(* \fBPFNGLXSET3DFXMODEMESAPROC\fP )(\fBGLint\fP \fBmode\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETSWAPINTERVALMESAPROC\fP )(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXSWAPINTERVALMESAPROC\fP )(unsigned \fBint\fP interval)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXCOPYIMAGESUBDATANVPROC\fP )(Display *dpy, \fBGLXContext\fP srcCtx, \fBGLuint\fP \fBsrcName\fP, \fBGLenum\fP \fBsrcTarget\fP, \fBGLint\fP \fBsrcLevel\fP, \fBGLint\fP \fBsrcX\fP, \fBGLint\fP \fBsrcY\fP, \fBGLint\fP \fBsrcZ\fP, \fBGLXContext\fP dstCtx, \fBGLuint\fP \fBdstName\fP, \fBGLenum\fP \fBdstTarget\fP, \fBGLint\fP \fBdstLevel\fP, \fBGLint\fP \fBdstX\fP, \fBGLint\fP \fBdstY\fP, \fBGLint\fP \fBdstZ\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLsizei\fP \fBheight\fP, \fBGLsizei\fP \fBdepth\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXBINDVIDEODEVICENVPROC\fP )(Display *dpy, unsigned \fBint\fP video_slot, unsigned \fBint\fP video_device, const \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP *(* \fBPFNGLXENUMERATEVIDEODEVICESNVPROC\fP )(Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXBINDSWAPBARRIERNVPROC\fP )(Display *dpy, \fBGLuint\fP \fBgroup\fP, \fBGLuint\fP \fBbarrier\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXJOINSWAPGROUPNVPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, \fBGLuint\fP \fBgroup\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXQUERYFRAMECOUNTNVPROC\fP )(Display *dpy, \fBint\fP screen, \fBGLuint\fP *\fBcount\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXQUERYMAXSWAPGROUPSNVPROC\fP )(Display *dpy, \fBint\fP screen, \fBGLuint\fP *\fBmaxGroups\fP, \fBGLuint\fP *\fBmaxBarriers\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXQUERYSWAPGROUPNVPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, \fBGLuint\fP *\fBgroup\fP, \fBGLuint\fP *\fBbarrier\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXRESETFRAMECOUNTNVPROC\fP )(Display *dpy, \fBint\fP screen)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP *(* \fBPFNGLXALLOCATEMEMORYNVPROC\fP )(\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readFrequency, \fBGLfloat\fP writeFrequency, \fBGLfloat\fP priority)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXFREEMEMORYNVPROC\fP )(\fBvoid\fP *\fBpointer\fP)"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXBINDVIDEOCAPTUREDEVICENVPROC\fP )(Display *dpy, unsigned \fBint\fP video_capture_slot, \fBGLXVideoCaptureDeviceNV\fP device)"
+.br
+.ti -1c
+.RI "typedef \fBGLXVideoCaptureDeviceNV\fP *(* \fBPFNGLXENUMERATEVIDEOCAPTUREDEVICESNVPROC\fP )(Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXLOCKVIDEOCAPTUREDEVICENVPROC\fP )(Display *dpy, \fBGLXVideoCaptureDeviceNV\fP device)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYVIDEOCAPTUREDEVICENVPROC\fP )(Display *dpy, \fBGLXVideoCaptureDeviceNV\fP device, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXRELEASEVIDEOCAPTUREDEVICENVPROC\fP )(Display *dpy, \fBGLXVideoCaptureDeviceNV\fP device)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXBINDVIDEOIMAGENVPROC\fP )(Display *dpy, \fBGLXVideoDeviceNV\fP VideoDevice, \fBGLXPbuffer\fP pbuf, \fBint\fP \fBiVideoBuffer\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETVIDEODEVICENVPROC\fP )(Display *dpy, \fBint\fP screen, \fBint\fP numVideoDevices, \fBGLXVideoDeviceNV\fP *pVideoDevice)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETVIDEOINFONVPROC\fP )(Display *dpy, \fBint\fP screen, \fBGLXVideoDeviceNV\fP VideoDevice, unsigned long *\fBpulCounterOutputPbuffer\fP, unsigned long *\fBpulCounterOutputVideo\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXRELEASEVIDEODEVICENVPROC\fP )(Display *dpy, \fBint\fP screen, \fBGLXVideoDeviceNV\fP VideoDevice)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXRELEASEVIDEOIMAGENVPROC\fP )(Display *dpy, \fBGLXPbuffer\fP pbuf)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXSENDPBUFFERTOVIDEONVPROC\fP )(Display *dpy, \fBGLXPbuffer\fP pbuf, \fBint\fP \fBiBufferType\fP, unsigned long *\fBpulCounterPbuffer\fP, \fBGLboolean\fP \fBbBlock\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXGETMSCRATEOMLPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, int32_t *\fBnumerator\fP, int32_t *\fBdenominator\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXGETSYNCVALUESOMLPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, int64_t *\fBust\fP, int64_t *\fBmsc\fP, int64_t *\fBsbc\fP)"
+.br
+.ti -1c
+.RI "typedef int64_t(* \fBPFNGLXSWAPBUFFERSMSCOMLPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, int64_t \fBtarget_msc\fP, int64_t \fBdivisor\fP, int64_t \fBremainder\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXWAITFORMSCOMLPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, int64_t \fBtarget_msc\fP, int64_t \fBdivisor\fP, int64_t \fBremainder\fP, int64_t *\fBust\fP, int64_t *\fBmsc\fP, int64_t *\fBsbc\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXWAITFORSBCOMLPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, int64_t \fBtarget_sbc\fP, int64_t *\fBust\fP, int64_t *\fBmsc\fP, int64_t *\fBsbc\fP)"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXFBConfigIDSGIX\fP"
+.br
+.ti -1c
+.RI "typedef struct __GLXFBConfigRec * \fBGLXFBConfigSGIX\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLXFBConfigSGIX\fP *(* \fBPFNGLXCHOOSEFBCONFIGSGIXPROC\fP )(Display *dpy, \fBint\fP screen, const \fBint\fP *attrib_list, \fBint\fP *nelements)"
+.br
+.ti -1c
+.RI "typedef \fBGLXContext\fP(* \fBPFNGLXCREATECONTEXTWITHCONFIGSGIXPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP render_type, \fBGLXContext\fP share_list, Bool direct)"
+.br
+.ti -1c
+.RI "typedef \fBGLXPixmap\fP(* \fBPFNGLXCREATEGLXPIXMAPWITHCONFIGSGIXPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, Pixmap pixmap)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETFBCONFIGATTRIBSGIXPROC\fP )(Display *dpy, \fBGLXFBConfigSGIX\fP config, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBGLXFBConfigSGIX\fP(* \fBPFNGLXGETFBCONFIGFROMVISUALSGIXPROC\fP )(Display *dpy, XVisualInfo *vis)"
+.br
+.ti -1c
+.RI "typedef XVisualInfo *(* \fBPFNGLXGETVISUALFROMFBCONFIGSGIXPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXBINDHYPERPIPESGIXPROC\fP )(Display *dpy, \fBint\fP hpId)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXDESTROYHYPERPIPECONFIGSGIXPROC\fP )(Display *dpy, \fBint\fP hpId)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXHYPERPIPEATTRIBSGIXPROC\fP )(Display *dpy, \fBint\fP timeSlice, \fBint\fP attrib, \fBint\fP \fBsize\fP, \fBvoid\fP *\fBattribList\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXHYPERPIPECONFIGSGIXPROC\fP )(Display *dpy, \fBint\fP networkId, \fBint\fP npipes, \fBGLXHyperpipeConfigSGIX\fP *cfg, \fBint\fP *hpId)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYHYPERPIPEATTRIBSGIXPROC\fP )(Display *dpy, \fBint\fP timeSlice, \fBint\fP attrib, \fBint\fP \fBsize\fP, \fBvoid\fP *returnAttribList)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYHYPERPIPEBESTATTRIBSGIXPROC\fP )(Display *dpy, \fBint\fP timeSlice, \fBint\fP attrib, \fBint\fP \fBsize\fP, \fBvoid\fP *\fBattribList\fP, \fBvoid\fP *returnAttribList)"
+.br
+.ti -1c
+.RI "typedef \fBGLXHyperpipeConfigSGIX\fP *(* \fBPFNGLXQUERYHYPERPIPECONFIGSGIXPROC\fP )(Display *dpy, \fBint\fP hpId, \fBint\fP *npipes)"
+.br
+.ti -1c
+.RI "typedef \fBGLXHyperpipeNetworkSGIX\fP *(* \fBPFNGLXQUERYHYPERPIPENETWORKSGIXPROC\fP )(Display *dpy, \fBint\fP *npipes)"
+.br
+.ti -1c
+.RI "typedef XID \fBGLXPbufferSGIX\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLXPbuffer\fP(* \fBPFNGLXCREATEGLXPBUFFERSGIXPROC\fP )(Display *dpy, \fBGLXFBConfig\fP config, unsigned \fBint\fP \fBwidth\fP, unsigned \fBint\fP \fBheight\fP, \fBint\fP *attrib_list)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXDESTROYGLXPBUFFERSGIXPROC\fP )(Display *dpy, \fBGLXPbuffer\fP pbuf)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXGETSELECTEDEVENTSGIXPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, unsigned long *\fBmask\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXQUERYGLXPBUFFERSGIXPROC\fP )(Display *dpy, \fBGLXPbuffer\fP pbuf, \fBint\fP attribute, unsigned \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXSELECTEVENTSGIXPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, unsigned long \fBmask\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXBINDSWAPBARRIERSGIXPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, \fBint\fP \fBbarrier\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXQUERYMAXSWAPBARRIERSSGIXPROC\fP )(Display *dpy, \fBint\fP screen, \fBint\fP *max)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXJOINSWAPGROUPSGIXPROC\fP )(Display *dpy, \fBGLXDrawable\fP drawable, \fBGLXDrawable\fP member)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXBINDCHANNELTOWINDOWSGIXPROC\fP )(Display *display, \fBint\fP screen, \fBint\fP channel, Window window)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXCHANNELRECTSGIXPROC\fP )(Display *display, \fBint\fP screen, \fBint\fP channel, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBint\fP \fBw\fP, \fBint\fP \fBh\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXCHANNELRECTSYNCSGIXPROC\fP )(Display *display, \fBint\fP screen, \fBint\fP channel, \fBGLenum\fP synctype)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYCHANNELDELTASSGIXPROC\fP )(Display *display, \fBint\fP screen, \fBint\fP channel, \fBint\fP *\fBx\fP, \fBint\fP *\fBy\fP, \fBint\fP *\fBw\fP, \fBint\fP *\fBh\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXQUERYCHANNELRECTSGIXPROC\fP )(Display *display, \fBint\fP screen, \fBint\fP channel, \fBint\fP *dx, \fBint\fP *dy, \fBint\fP *dw, \fBint\fP *dh)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBPFNGLXCUSHIONSGIPROC\fP )(Display *dpy, Window window, float cushion)"
+.br
+.ti -1c
+.RI "typedef \fBGLXDrawable\fP(* \fBPFNGLXGETCURRENTREADDRAWABLESGIPROC\fP )(\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef Bool(* \fBPFNGLXMAKECURRENTREADSGIPROC\fP )(Display *dpy, \fBGLXDrawable\fP draw, \fBGLXDrawable\fP read, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXSWAPINTERVALSGIPROC\fP )(\fBint\fP interval)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETVIDEOSYNCSGIPROC\fP )(unsigned \fBint\fP *\fBcount\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXWAITVIDEOSYNCSGIPROC\fP )(\fBint\fP \fBdivisor\fP, \fBint\fP \fBremainder\fP, unsigned \fBint\fP *\fBcount\fP)"
+.br
+.ti -1c
+.RI "typedef Status(* \fBPFNGLXGETTRANSPARENTINDEXSUNPROC\fP )(Display *dpy, Window overlay, Window underlay, unsigned long *pTransparentIndex)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXGETVIDEORESIZESUNPROC\fP )(Display *display, \fBGLXDrawable\fP window, float *factor)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP(* \fBPFNGLXVIDEORESIZESUNPROC\fP )(Display *display, \fBGLXDrawable\fP window, float factor)"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "Bool \fBglXQueryExtension\fP (Display *dpy, \fBint\fP *errorBase, \fBint\fP *eventBase)"
+.br
+.ti -1c
+.RI "Bool \fBglXQueryVersion\fP (Display *dpy, \fBint\fP *major, \fBint\fP *minor)"
+.br
+.ti -1c
+.RI "\fBint\fP \fBglXGetConfig\fP (Display *dpy, XVisualInfo *vis, \fBint\fP attrib, \fBint\fP *\fBvalue\fP)"
+.br
+.ti -1c
+.RI "XVisualInfo * \fBglXChooseVisual\fP (Display *dpy, \fBint\fP screen, \fBint\fP *\fBattribList\fP)"
+.br
+.ti -1c
+.RI "\fBGLXPixmap\fP \fBglXCreateGLXPixmap\fP (Display *dpy, XVisualInfo *vis, Pixmap pixmap)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXDestroyGLXPixmap\fP (Display *dpy, \fBGLXPixmap\fP pix)"
+.br
+.ti -1c
+.RI "\fBGLXContext\fP \fBglXCreateContext\fP (Display *dpy, XVisualInfo *vis, \fBGLXContext\fP shareList, Bool direct)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXDestroyContext\fP (Display *dpy, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "Bool \fBglXIsDirect\fP (Display *dpy, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXCopyContext\fP (Display *dpy, \fBGLXContext\fP \fBsrc\fP, \fBGLXContext\fP \fBdst\fP, \fBGLulong\fP \fBmask\fP)"
+.br
+.ti -1c
+.RI "Bool \fBglXMakeCurrent\fP (Display *dpy, \fBGLXDrawable\fP drawable, \fBGLXContext\fP ctx)"
+.br
+.ti -1c
+.RI "\fBGLXContext\fP \fBglXGetCurrentContext\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBGLXDrawable\fP \fBglXGetCurrentDrawable\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXWaitGL\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXWaitX\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXSwapBuffers\fP (Display *dpy, \fBGLXDrawable\fP drawable)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBglXUseXFont\fP (Font font, \fBint\fP \fBfirst\fP, \fBint\fP \fBcount\fP, \fBint\fP listBase)"
+.br
+.ti -1c
+.RI "const char * \fBglXQueryExtensionsString\fP (Display *dpy, \fBint\fP screen)"
+.br
+.ti -1c
+.RI "const char * \fBglXGetClientString\fP (Display *dpy, \fBint\fP \fBname\fP)"
+.br
+.ti -1c
+.RI "const char * \fBglXQueryServerString\fP (Display *dpy, \fBint\fP screen, \fBint\fP \fBname\fP)"
+.br
+.ti -1c
+.RI "\fBGLEWAPI\fP \fBGLboolean\fP \fBGLEWAPIENTRY\fP \fBglxewIsSupported\fP (const char *\fBname\fP)"
+.br
+.ti -1c
+.RI "\fBGLEWAPI\fP \fBGLboolean\fP \fBGLEWAPIENTRY\fP \fBglxewGetExtension\fP (const char *\fBname\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBvoid\fP(*)(\fBvoid\fP) \fBglXGetProcAddress\fP (const \fBGLubyte\fP *procName)"
+.br
+.ti -1c
+.RI "\fBvoid\fP(*)(\fBvoid\fP) \fBglXGetProcAddressARB\fP (const \fBGLubyte\fP *procName)"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETCURRENTDISPLAYPROC\fP \fB__glewXGetCurrentDisplay\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCHOOSEFBCONFIGPROC\fP \fB__glewXChooseFBConfig\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATENEWCONTEXTPROC\fP \fB__glewXCreateNewContext\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATEPBUFFERPROC\fP \fB__glewXCreatePbuffer\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATEPIXMAPPROC\fP \fB__glewXCreatePixmap\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATEWINDOWPROC\fP \fB__glewXCreateWindow\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXDESTROYPBUFFERPROC\fP \fB__glewXDestroyPbuffer\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXDESTROYPIXMAPPROC\fP \fB__glewXDestroyPixmap\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXDESTROYWINDOWPROC\fP \fB__glewXDestroyWindow\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETCURRENTREADDRAWABLEPROC\fP \fB__glewXGetCurrentReadDrawable\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETFBCONFIGATTRIBPROC\fP \fB__glewXGetFBConfigAttrib\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETFBCONFIGSPROC\fP \fB__glewXGetFBConfigs\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETSELECTEDEVENTPROC\fP \fB__glewXGetSelectedEvent\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETVISUALFROMFBCONFIGPROC\fP \fB__glewXGetVisualFromFBConfig\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXMAKECONTEXTCURRENTPROC\fP \fB__glewXMakeContextCurrent\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYCONTEXTPROC\fP \fB__glewXQueryContext\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYDRAWABLEPROC\fP \fB__glewXQueryDrawable\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXSELECTEVENTPROC\fP \fB__glewXSelectEvent\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBLITCONTEXTFRAMEBUFFERAMDPROC\fP \fB__glewXBlitContextFramebufferAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATEASSOCIATEDCONTEXTAMDPROC\fP \fB__glewXCreateAssociatedContextAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATEASSOCIATEDCONTEXTATTRIBSAMDPROC\fP \fB__glewXCreateAssociatedContextAttribsAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXDELETEASSOCIATEDCONTEXTAMDPROC\fP \fB__glewXDeleteAssociatedContextAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETCONTEXTGPUIDAMDPROC\fP \fB__glewXGetContextGPUIDAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETCURRENTASSOCIATEDCONTEXTAMDPROC\fP \fB__glewXGetCurrentAssociatedContextAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETGPUIDSAMDPROC\fP \fB__glewXGetGPUIDsAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETGPUINFOAMDPROC\fP \fB__glewXGetGPUInfoAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXMAKEASSOCIATEDCONTEXTCURRENTAMDPROC\fP \fB__glewXMakeAssociatedContextCurrentAMD\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATECONTEXTATTRIBSARBPROC\fP \fB__glewXCreateContextAttribsARB\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDTEXIMAGEATIPROC\fP \fB__glewXBindTexImageATI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXDRAWABLEATTRIBATIPROC\fP \fB__glewXDrawableAttribATI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXRELEASETEXIMAGEATIPROC\fP \fB__glewXReleaseTexImageATI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXFREECONTEXTEXTPROC\fP \fB__glewXFreeContextEXT\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETCONTEXTIDEXTPROC\fP \fB__glewXGetContextIDEXT\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXIMPORTCONTEXTEXTPROC\fP \fB__glewXImportContextEXT\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYCONTEXTINFOEXTPROC\fP \fB__glewXQueryContextInfoEXT\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXSWAPINTERVALEXTPROC\fP \fB__glewXSwapIntervalEXT\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDTEXIMAGEEXTPROC\fP \fB__glewXBindTexImageEXT\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXRELEASETEXIMAGEEXTPROC\fP \fB__glewXReleaseTexImageEXT\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETAGPOFFSETMESAPROC\fP \fB__glewXGetAGPOffsetMESA\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCOPYSUBBUFFERMESAPROC\fP \fB__glewXCopySubBufferMESA\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATEGLXPIXMAPMESAPROC\fP \fB__glewXCreateGLXPixmapMESA\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXRELEASEBUFFERSMESAPROC\fP \fB__glewXReleaseBuffersMESA\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXSET3DFXMODEMESAPROC\fP \fB__glewXSet3DfxModeMESA\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETSWAPINTERVALMESAPROC\fP \fB__glewXGetSwapIntervalMESA\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXSWAPINTERVALMESAPROC\fP \fB__glewXSwapIntervalMESA\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCOPYIMAGESUBDATANVPROC\fP \fB__glewXCopyImageSubDataNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDVIDEODEVICENVPROC\fP \fB__glewXBindVideoDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXENUMERATEVIDEODEVICESNVPROC\fP \fB__glewXEnumerateVideoDevicesNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDSWAPBARRIERNVPROC\fP \fB__glewXBindSwapBarrierNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXJOINSWAPGROUPNVPROC\fP \fB__glewXJoinSwapGroupNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYFRAMECOUNTNVPROC\fP \fB__glewXQueryFrameCountNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYMAXSWAPGROUPSNVPROC\fP \fB__glewXQueryMaxSwapGroupsNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYSWAPGROUPNVPROC\fP \fB__glewXQuerySwapGroupNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXRESETFRAMECOUNTNVPROC\fP \fB__glewXResetFrameCountNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXALLOCATEMEMORYNVPROC\fP \fB__glewXAllocateMemoryNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXFREEMEMORYNVPROC\fP \fB__glewXFreeMemoryNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDVIDEOCAPTUREDEVICENVPROC\fP \fB__glewXBindVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXENUMERATEVIDEOCAPTUREDEVICESNVPROC\fP \fB__glewXEnumerateVideoCaptureDevicesNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXLOCKVIDEOCAPTUREDEVICENVPROC\fP \fB__glewXLockVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYVIDEOCAPTUREDEVICENVPROC\fP \fB__glewXQueryVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXRELEASEVIDEOCAPTUREDEVICENVPROC\fP \fB__glewXReleaseVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDVIDEOIMAGENVPROC\fP \fB__glewXBindVideoImageNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETVIDEODEVICENVPROC\fP \fB__glewXGetVideoDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETVIDEOINFONVPROC\fP \fB__glewXGetVideoInfoNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXRELEASEVIDEODEVICENVPROC\fP \fB__glewXReleaseVideoDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXRELEASEVIDEOIMAGENVPROC\fP \fB__glewXReleaseVideoImageNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXSENDPBUFFERTOVIDEONVPROC\fP \fB__glewXSendPbufferToVideoNV\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETMSCRATEOMLPROC\fP \fB__glewXGetMscRateOML\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETSYNCVALUESOMLPROC\fP \fB__glewXGetSyncValuesOML\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXSWAPBUFFERSMSCOMLPROC\fP \fB__glewXSwapBuffersMscOML\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXWAITFORMSCOMLPROC\fP \fB__glewXWaitForMscOML\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXWAITFORSBCOMLPROC\fP \fB__glewXWaitForSbcOML\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCHOOSEFBCONFIGSGIXPROC\fP \fB__glewXChooseFBConfigSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATECONTEXTWITHCONFIGSGIXPROC\fP \fB__glewXCreateContextWithConfigSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATEGLXPIXMAPWITHCONFIGSGIXPROC\fP \fB__glewXCreateGLXPixmapWithConfigSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETFBCONFIGATTRIBSGIXPROC\fP \fB__glewXGetFBConfigAttribSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETFBCONFIGFROMVISUALSGIXPROC\fP \fB__glewXGetFBConfigFromVisualSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETVISUALFROMFBCONFIGSGIXPROC\fP \fB__glewXGetVisualFromFBConfigSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDHYPERPIPESGIXPROC\fP \fB__glewXBindHyperpipeSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXDESTROYHYPERPIPECONFIGSGIXPROC\fP \fB__glewXDestroyHyperpipeConfigSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXHYPERPIPEATTRIBSGIXPROC\fP \fB__glewXHyperpipeAttribSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXHYPERPIPECONFIGSGIXPROC\fP \fB__glewXHyperpipeConfigSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYHYPERPIPEATTRIBSGIXPROC\fP \fB__glewXQueryHyperpipeAttribSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYHYPERPIPEBESTATTRIBSGIXPROC\fP \fB__glewXQueryHyperpipeBestAttribSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYHYPERPIPECONFIGSGIXPROC\fP \fB__glewXQueryHyperpipeConfigSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYHYPERPIPENETWORKSGIXPROC\fP \fB__glewXQueryHyperpipeNetworkSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCREATEGLXPBUFFERSGIXPROC\fP \fB__glewXCreateGLXPbufferSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXDESTROYGLXPBUFFERSGIXPROC\fP \fB__glewXDestroyGLXPbufferSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETSELECTEDEVENTSGIXPROC\fP \fB__glewXGetSelectedEventSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYGLXPBUFFERSGIXPROC\fP \fB__glewXQueryGLXPbufferSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXSELECTEVENTSGIXPROC\fP \fB__glewXSelectEventSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDSWAPBARRIERSGIXPROC\fP \fB__glewXBindSwapBarrierSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYMAXSWAPBARRIERSSGIXPROC\fP \fB__glewXQueryMaxSwapBarriersSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXJOINSWAPGROUPSGIXPROC\fP \fB__glewXJoinSwapGroupSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXBINDCHANNELTOWINDOWSGIXPROC\fP \fB__glewXBindChannelToWindowSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCHANNELRECTSGIXPROC\fP \fB__glewXChannelRectSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCHANNELRECTSYNCSGIXPROC\fP \fB__glewXChannelRectSyncSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYCHANNELDELTASSGIXPROC\fP \fB__glewXQueryChannelDeltasSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXQUERYCHANNELRECTSGIXPROC\fP \fB__glewXQueryChannelRectSGIX\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXCUSHIONSGIPROC\fP \fB__glewXCushionSGI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETCURRENTREADDRAWABLESGIPROC\fP \fB__glewXGetCurrentReadDrawableSGI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXMAKECURRENTREADSGIPROC\fP \fB__glewXMakeCurrentReadSGI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXSWAPINTERVALSGIPROC\fP \fB__glewXSwapIntervalSGI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETVIDEOSYNCSGIPROC\fP \fB__glewXGetVideoSyncSGI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXWAITVIDEOSYNCSGIPROC\fP \fB__glewXWaitVideoSyncSGI\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETTRANSPARENTINDEXSUNPROC\fP \fB__glewXGetTransparentIndexSUN\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXGETVIDEORESIZESUNPROC\fP \fB__glewXGetVideoResizeSUN\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_FUN_EXPORT\fP 
+.br
+\fBPFNGLXVIDEORESIZESUNPROC\fP \fB__glewXVideoResizeSUN\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_VERSION_1_0\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_VERSION_1_1\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_VERSION_1_2\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_VERSION_1_3\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_VERSION_1_4\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_3DFX_multisample\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_AMD_gpu_association\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_create_context\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_create_context_profile\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_create_context_robustness\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_fbconfig_float\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_framebuffer_sRGB\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_get_proc_address\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_multisample\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_robustness_application_isolation\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_robustness_share_group_isolation\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ARB_vertex_buffer_object\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ATI_pixel_format_float\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_ATI_render_texture\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_buffer_age\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_create_context_es2_profile\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_create_context_es_profile\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_fbconfig_packed_float\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_framebuffer_sRGB\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_import_context\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_scene_marker\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_swap_control\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_swap_control_tear\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_texture_from_pixmap\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_visual_info\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_EXT_visual_rating\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_INTEL_swap_event\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_MESA_agp_offset\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_MESA_copy_sub_buffer\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_MESA_pixmap_colormap\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_MESA_release_buffers\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_MESA_set_3dfx_mode\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_MESA_swap_control\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_NV_copy_image\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_NV_float_buffer\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_NV_multisample_coverage\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_NV_present_video\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_NV_swap_group\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_NV_vertex_array_range\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_NV_video_capture\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_NV_video_output\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_OML_swap_method\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_OML_sync_control\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIS_blended_overlay\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIS_color_range\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIS_multisample\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIS_shared_multisample\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIX_fbconfig\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIX_hyperpipe\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIX_pbuffer\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIX_swap_barrier\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIX_swap_group\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIX_video_resize\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGIX_visual_select_group\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGI_cushion\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGI_make_current_read\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGI_swap_control\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SGI_video_sync\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SUN_get_transparent_index\fP"
+.br
+.ti -1c
+.RI "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__GLXEW_SUN_video_resize\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __GLX_glx_h__"
+
+.PP
+Definition at line 94 of file glxew\&.h\&.
+.SS "#define __glx_h__"
+
+.PP
+Definition at line 95 of file glxew\&.h\&.
+.SS "#define __GLXEW_H__"
+
+.PP
+Definition at line 81 of file glxew\&.h\&.
+.SS "#define __glxext_h_"
+
+.PP
+Definition at line 91 of file glxew\&.h\&.
+.SS "#define GL_VIDEO_RESIZE_COMPENSATION_SUN   0x85CD"
+
+.PP
+Definition at line 1402 of file glxew\&.h\&.
+.SS "#define GLX_3DFX_FULLSCREEN_MODE_MESA   0x2"
+
+.PP
+Definition at line 853 of file glxew\&.h\&.
+.SS "#define GLX_3DFX_multisample   1"
+
+.PP
+Definition at line 340 of file glxew\&.h\&.
+.SS "#define GLX_3DFX_WINDOW_MODE_MESA   0x1"
+
+.PP
+Definition at line 852 of file glxew\&.h\&.
+.SS "#define GLX_ACCUM_ALPHA_SIZE   17"
+
+.PP
+Definition at line 127 of file glxew\&.h\&.
+.SS "#define GLX_ACCUM_BLUE_SIZE   16"
+
+.PP
+Definition at line 126 of file glxew\&.h\&.
+.SS "#define GLX_ACCUM_BUFFER_BIT   0x00000080"
+
+.PP
+Definition at line 223 of file glxew\&.h\&.
+.SS "#define GLX_ACCUM_BUFFER_BIT_SGIX   0x00000080"
+
+.PP
+Definition at line 1227 of file glxew\&.h\&.
+.SS "#define GLX_ACCUM_GREEN_SIZE   15"
+
+.PP
+Definition at line 125 of file glxew\&.h\&.
+.SS "#define GLX_ACCUM_RED_SIZE   14"
+
+.PP
+Definition at line 124 of file glxew\&.h\&.
+.SS "#define GLX_ALPHA_SIZE   11"
+
+.PP
+Definition at line 121 of file glxew\&.h\&.
+.SS "#define GLX_AMD_gpu_association   1"
+
+.PP
+Definition at line 352 of file glxew\&.h\&.
+.SS "#define GLX_ARB_create_context   1"
+
+.PP
+Definition at line 392 of file glxew\&.h\&.
+.SS "#define GLX_ARB_create_context_profile   1"
+
+.PP
+Definition at line 411 of file glxew\&.h\&.
+.SS "#define GLX_ARB_create_context_robustness   1"
+
+.PP
+Definition at line 424 of file glxew\&.h\&.
+.SS "#define GLX_ARB_fbconfig_float   1"
+
+.PP
+Definition at line 438 of file glxew\&.h\&.
+.SS "#define GLX_ARB_framebuffer_sRGB   1"
+
+.PP
+Definition at line 450 of file glxew\&.h\&.
+.SS "#define GLX_ARB_get_proc_address   1"
+
+.PP
+Definition at line 461 of file glxew\&.h\&.
+.SS "#define GLX_ARB_multisample   1"
+
+.PP
+Definition at line 472 of file glxew\&.h\&.
+.SS "#define GLX_ARB_robustness_application_isolation   1"
+
+.PP
+Definition at line 484 of file glxew\&.h\&.
+.SS "#define GLX_ARB_robustness_share_group_isolation   1"
+
+.PP
+Definition at line 495 of file glxew\&.h\&.
+.SS "#define GLX_ARB_vertex_buffer_object   1"
+
+.PP
+Definition at line 506 of file glxew\&.h\&.
+.SS "#define GLX_ATI_pixel_format_float   1"
+
+.PP
+Definition at line 517 of file glxew\&.h\&.
+.SS "#define GLX_ATI_render_texture   1"
+
+.PP
+Definition at line 528 of file glxew\&.h\&.
+.SS "#define GLX_AUX0_ATI   0x9817"
+
+.PP
+Definition at line 553 of file glxew\&.h\&.
+.SS "#define GLX_AUX0_EXT   0x20E2"
+
+.PP
+Definition at line 721 of file glxew\&.h\&.
+.SS "#define GLX_AUX1_ATI   0x9818"
+
+.PP
+Definition at line 554 of file glxew\&.h\&.
+.SS "#define GLX_AUX1_EXT   0x20E3"
+
+.PP
+Definition at line 722 of file glxew\&.h\&.
+.SS "#define GLX_AUX2_ATI   0x9819"
+
+.PP
+Definition at line 555 of file glxew\&.h\&.
+.SS "#define GLX_AUX2_EXT   0x20E4"
+
+.PP
+Definition at line 723 of file glxew\&.h\&.
+.SS "#define GLX_AUX3_ATI   0x981A"
+
+.PP
+Definition at line 556 of file glxew\&.h\&.
+.SS "#define GLX_AUX3_EXT   0x20E5"
+
+.PP
+Definition at line 724 of file glxew\&.h\&.
+.SS "#define GLX_AUX4_ATI   0x981B"
+
+.PP
+Definition at line 557 of file glxew\&.h\&.
+.SS "#define GLX_AUX4_EXT   0x20E6"
+
+.PP
+Definition at line 725 of file glxew\&.h\&.
+.SS "#define GLX_AUX5_ATI   0x981C"
+
+.PP
+Definition at line 558 of file glxew\&.h\&.
+.SS "#define GLX_AUX5_EXT   0x20E7"
+
+.PP
+Definition at line 726 of file glxew\&.h\&.
+.SS "#define GLX_AUX6_ATI   0x981D"
+
+.PP
+Definition at line 559 of file glxew\&.h\&.
+.SS "#define GLX_AUX6_EXT   0x20E8"
+
+.PP
+Definition at line 727 of file glxew\&.h\&.
+.SS "#define GLX_AUX7_ATI   0x981E"
+
+.PP
+Definition at line 560 of file glxew\&.h\&.
+.SS "#define GLX_AUX7_EXT   0x20E9"
+
+.PP
+Definition at line 728 of file glxew\&.h\&.
+.SS "#define GLX_AUX8_ATI   0x981F"
+
+.PP
+Definition at line 561 of file glxew\&.h\&.
+.SS "#define GLX_AUX8_EXT   0x20EA"
+
+.PP
+Definition at line 729 of file glxew\&.h\&.
+.SS "#define GLX_AUX9_ATI   0x9820"
+
+.PP
+Definition at line 562 of file glxew\&.h\&.
+.SS "#define GLX_AUX9_EXT   0x20EB"
+
+.PP
+Definition at line 730 of file glxew\&.h\&.
+.SS "#define GLX_AUX_BUFFERS   7"
+
+.PP
+Definition at line 117 of file glxew\&.h\&.
+.SS "#define GLX_AUX_BUFFERS_BIT   0x00000010"
+
+.PP
+Definition at line 212 of file glxew\&.h\&.
+.SS "#define GLX_AUX_BUFFERS_BIT_SGIX   0x00000010"
+
+.PP
+Definition at line 1224 of file glxew\&.h\&.
+.SS "#define GLX_BACK_BUFFER_AGE_EXT   0x20F4"
+
+.PP
+Definition at line 583 of file glxew\&.h\&.
+.SS "#define GLX_BACK_LEFT_ATI   0x9815"
+
+.PP
+Definition at line 551 of file glxew\&.h\&.
+.SS "#define GLX_BACK_LEFT_BUFFER_BIT   0x00000004"
+
+.PP
+Definition at line 209 of file glxew\&.h\&.
+.SS "#define GLX_BACK_LEFT_BUFFER_BIT_SGIX   0x00000004"
+
+.PP
+Definition at line 1222 of file glxew\&.h\&.
+.SS "#define GLX_BACK_LEFT_EXT   0x20E0"
+
+.PP
+Definition at line 719 of file glxew\&.h\&.
+.SS "#define GLX_BACK_RIGHT_ATI   0x9816"
+
+.PP
+Definition at line 552 of file glxew\&.h\&.
+.SS "#define GLX_BACK_RIGHT_BUFFER_BIT   0x00000008"
+
+.PP
+Definition at line 211 of file glxew\&.h\&.
+.SS "#define GLX_BACK_RIGHT_BUFFER_BIT_SGIX   0x00000008"
+
+.PP
+Definition at line 1223 of file glxew\&.h\&.
+.SS "#define GLX_BACK_RIGHT_EXT   0x20E1"
+
+.PP
+Definition at line 720 of file glxew\&.h\&.
+.SS "#define GLX_BAD_ATTRIBUTE   2"
+
+.PP
+Definition at line 129 of file glxew\&.h\&.
+.SS "#define GLX_BAD_CONTEXT   5"
+
+.PP
+Definition at line 132 of file glxew\&.h\&.
+.SS "#define GLX_BAD_ENUM   7"
+
+.PP
+Definition at line 134 of file glxew\&.h\&.
+.SS "#define GLX_BAD_HYPERPIPE_CONFIG_SGIX   91"
+
+.PP
+Definition at line 1159 of file glxew\&.h\&.
+.SS "#define GLX_BAD_HYPERPIPE_SGIX   92"
+
+.PP
+Definition at line 1160 of file glxew\&.h\&.
+.SS "#define GLX_BAD_SCREEN   1"
+
+.PP
+Definition at line 128 of file glxew\&.h\&.
+.SS "#define GLX_BAD_VALUE   6"
+
+.PP
+Definition at line 133 of file glxew\&.h\&.
+.SS "#define GLX_BAD_VISUAL   4"
+
+.PP
+Definition at line 131 of file glxew\&.h\&.
+.SS "#define GLX_BIND_TO_MIPMAP_TEXTURE_EXT   0x20D2"
+
+.PP
+Definition at line 705 of file glxew\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_INTENSITY_ATI   0x9822"
+
+.PP
+Definition at line 564 of file glxew\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_LUMINANCE_ATI   0x9821"
+
+.PP
+Definition at line 563 of file glxew\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_RGB_ATI   0x9800"
+
+.PP
+Definition at line 530 of file glxew\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_RGB_EXT   0x20D0"
+
+.PP
+Definition at line 703 of file glxew\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_RGBA_ATI   0x9801"
+
+.PP
+Definition at line 531 of file glxew\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_RGBA_EXT   0x20D1"
+
+.PP
+Definition at line 704 of file glxew\&.h\&.
+.SS "#define GLX_BIND_TO_TEXTURE_TARGETS_EXT   0x20D3"
+
+.PP
+Definition at line 706 of file glxew\&.h\&.
+.SS "#define GLX_BLENDED_RGBA_SGIS   0x8025"
+
+.PP
+Definition at line 1070 of file glxew\&.h\&.
+.SS "#define GLX_BLUE_SIZE   10"
+
+.PP
+Definition at line 120 of file glxew\&.h\&.
+.SS "#define GLX_BUFFER_CLOBBER_MASK_SGIX   0x08000000"
+
+.PP
+Definition at line 1243 of file glxew\&.h\&.
+.SS "#define GLX_BUFFER_SIZE   2"
+
+.PP
+Definition at line 112 of file glxew\&.h\&.
+.SS "#define GLX_BUFFER_SWAP_COMPLETE_INTEL_MASK   0x04000000"
+
+.PP
+Definition at line 789 of file glxew\&.h\&.
+.SS "#define GLX_COLOR_INDEX_BIT   0x00000002"
+
+.PP
+Definition at line 206 of file glxew\&.h\&.
+.SS "#define GLX_COLOR_INDEX_BIT_SGIX   0x00000002"
+
+.PP
+Definition at line 1117 of file glxew\&.h\&.
+.SS "#define GLX_COLOR_INDEX_TYPE   0x8015"
+
+.PP
+Definition at line 242 of file glxew\&.h\&.
+.SS "#define GLX_COLOR_INDEX_TYPE_SGIX   0x8015"
+
+.PP
+Definition at line 1124 of file glxew\&.h\&.
+.SS "#define GLX_COLOR_SAMPLES_NV   0x20B3"
+
+.PP
+Definition at line 907 of file glxew\&.h\&.
+.SS "#define GLX_CONFIG_CAVEAT   0x20"
+
+.PP
+Definition at line 213 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_ALLOW_BUFFER_BYTE_ORDER_MISMATCH_ARB   0x2095"
+
+.PP
+Definition at line 508 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB   0x00000002"
+
+.PP
+Definition at line 414 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_CORE_PROFILE_BIT_ARB   0x00000001"
+
+.PP
+Definition at line 413 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_DEBUG_BIT_ARB   0x0001"
+
+.PP
+Definition at line 394 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_ES2_PROFILE_BIT_EXT   0x00000004"
+
+.PP
+Definition at line 594 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_ES_PROFILE_BIT_EXT   0x00000004"
+
+.PP
+Definition at line 605 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_FLAGS_ARB   0x2094"
+
+.PP
+Definition at line 398 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB   0x0002"
+
+.PP
+Definition at line 395 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_MAJOR_VERSION_ARB   0x2091"
+
+.PP
+Definition at line 396 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_MINOR_VERSION_ARB   0x2092"
+
+.PP
+Definition at line 397 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_PROFILE_MASK_ARB   0x9126"
+
+.PP
+Definition at line 415 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_RESET_ISOLATION_BIT_ARB   0x00000008"
+
+.PP
+Definition at line 497 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_RESET_ISOLATION_BIT_ARB   0x00000008"
+
+.PP
+Definition at line 497 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB   0x8256"
+
+.PP
+Definition at line 428 of file glxew\&.h\&.
+.SS "#define GLX_CONTEXT_ROBUST_ACCESS_BIT_ARB   0x00000004"
+
+.PP
+Definition at line 426 of file glxew\&.h\&.
+.SS "#define GLX_COPY_COMPLETE_INTEL   0x8181"
+
+.PP
+Definition at line 787 of file glxew\&.h\&.
+.SS "#define GLX_COVERAGE_SAMPLES_NV   100001"
+
+.PP
+Definition at line 908 of file glxew\&.h\&.
+.SS "#define GLX_CUBE_MAP_FACE_ATI   0x980C"
+
+.PP
+Definition at line 542 of file glxew\&.h\&.
+.SS "#define GLX_DAMAGED   0x8020"
+
+.PP
+Definition at line 251 of file glxew\&.h\&.
+.SS "#define GLX_DAMAGED_SGIX   0x8020"
+
+.PP
+Definition at line 1239 of file glxew\&.h\&.
+.SS "#define GLX_DEPTH_BUFFER_BIT   0x00000020"
+
+.PP
+Definition at line 214 of file glxew\&.h\&.
+.SS "#define GLX_DEPTH_BUFFER_BIT_SGIX   0x00000020"
+
+.PP
+Definition at line 1225 of file glxew\&.h\&.
+.SS "#define GLX_DEPTH_SIZE   12"
+
+.PP
+Definition at line 122 of file glxew\&.h\&.
+.SS "#define GLX_DEVICE_ID_NV   0x20CD"
+
+.PP
+Definition at line 974 of file glxew\&.h\&.
+.SS "#define GLX_DIRECT_COLOR   0x8003"
+
+.PP
+Definition at line 227 of file glxew\&.h\&.
+.SS "#define GLX_DIRECT_COLOR_EXT   0x8003"
+
+.PP
+Definition at line 756 of file glxew\&.h\&.
+.SS "#define GLX_DONT_CARE   0xFFFFFFFF"
+
+.PP
+Definition at line 258 of file glxew\&.h\&.
+.SS "#define GLX_DOUBLEBUFFER   5"
+
+.PP
+Definition at line 115 of file glxew\&.h\&.
+.SS "#define GLX_DRAWABLE_TYPE   0x8010"
+
+.PP
+Definition at line 237 of file glxew\&.h\&.
+.SS "#define GLX_DRAWABLE_TYPE_SGIX   0x8010"
+
+.PP
+Definition at line 1119 of file glxew\&.h\&.
+.SS "#define GLX_EVENT_MASK   0x801F"
+
+.PP
+Definition at line 250 of file glxew\&.h\&.
+.SS "#define GLX_EVENT_MASK_SGIX   0x801F"
+
+.PP
+Definition at line 1238 of file glxew\&.h\&.
+.SS "#define GLX_EXCHANGE_COMPLETE_INTEL   0x8180"
+
+.PP
+Definition at line 786 of file glxew\&.h\&.
+.SS "#define GLX_EXT_buffer_age   1"
+
+.PP
+Definition at line 581 of file glxew\&.h\&.
+.SS "#define GLX_EXT_create_context_es2_profile   1"
+
+.PP
+Definition at line 592 of file glxew\&.h\&.
+.SS "#define GLX_EXT_create_context_es_profile   1"
+
+.PP
+Definition at line 603 of file glxew\&.h\&.
+.SS "#define GLX_EXT_fbconfig_packed_float   1"
+
+.PP
+Definition at line 614 of file glxew\&.h\&.
+.SS "#define GLX_EXT_framebuffer_sRGB   1"
+
+.PP
+Definition at line 626 of file glxew\&.h\&.
+.SS "#define GLX_EXT_import_context   1"
+
+.PP
+Definition at line 637 of file glxew\&.h\&.
+.SS "#define GLX_EXT_scene_marker   1"
+
+.PP
+Definition at line 662 of file glxew\&.h\&.
+.SS "#define GLX_EXT_swap_control   1"
+
+.PP
+Definition at line 671 of file glxew\&.h\&.
+.SS "#define GLX_EXT_swap_control_tear   1"
+
+.PP
+Definition at line 687 of file glxew\&.h\&.
+.SS "#define GLX_EXT_texture_from_pixmap   1"
+
+.PP
+Definition at line 698 of file glxew\&.h\&.
+.SS "#define GLX_EXT_visual_info   1"
+
+.PP
+Definition at line 745 of file glxew\&.h\&.
+.SS "#define GLX_EXT_visual_rating   1"
+
+.PP
+Definition at line 771 of file glxew\&.h\&.
+.SS "#define GLX_EXTENSIONS   0x3"
+
+.PP
+Definition at line 175 of file glxew\&.h\&.
+.SS "#define GLX_FBCONFIG_ID   0x8013"
+
+.PP
+Definition at line 240 of file glxew\&.h\&.
+.SS "#define GLX_FBCONFIG_ID_SGIX   0x8013"
+
+.PP
+Definition at line 1122 of file glxew\&.h\&.
+.SS "#define GLX_FLIP_COMPLETE_INTEL   0x8182"
+
+.PP
+Definition at line 788 of file glxew\&.h\&.
+.SS "#define GLX_FLOAT_COMPONENTS_NV   0x20B0"
+
+.PP
+Definition at line 896 of file glxew\&.h\&.
+.SS "#define GLX_FRAMEBUFFER_SRGB_CAPABLE_ARB   0x20B2"
+
+.PP
+Definition at line 452 of file glxew\&.h\&.
+.SS "#define GLX_FRAMEBUFFER_SRGB_CAPABLE_EXT   0x20B2"
+
+.PP
+Definition at line 628 of file glxew\&.h\&.
+.SS "#define GLX_FRONT_LEFT_ATI   0x9813"
+
+.PP
+Definition at line 549 of file glxew\&.h\&.
+.SS "#define GLX_FRONT_LEFT_BUFFER_BIT   0x00000001"
+
+.PP
+Definition at line 204 of file glxew\&.h\&.
+.SS "#define GLX_FRONT_LEFT_BUFFER_BIT_SGIX   0x00000001"
+
+.PP
+Definition at line 1219 of file glxew\&.h\&.
+.SS "#define GLX_FRONT_LEFT_EXT   0x20DE"
+
+.PP
+Definition at line 717 of file glxew\&.h\&.
+.SS "#define GLX_FRONT_RIGHT_ATI   0x9814"
+
+.PP
+Definition at line 550 of file glxew\&.h\&.
+.SS "#define GLX_FRONT_RIGHT_BUFFER_BIT   0x00000002"
+
+.PP
+Definition at line 208 of file glxew\&.h\&.
+.SS "#define GLX_FRONT_RIGHT_BUFFER_BIT_SGIX   0x00000002"
+
+.PP
+Definition at line 1220 of file glxew\&.h\&.
+.SS "#define GLX_FRONT_RIGHT_EXT   0x20DF"
+
+.PP
+Definition at line 718 of file glxew\&.h\&.
+.SS "#define GLX_GPU_CLOCK_AMD   0x21A4"
+
+.PP
+Definition at line 359 of file glxew\&.h\&.
+.SS "#define GLX_GPU_FASTEST_TARGET_GPUS_AMD   0x21A2"
+
+.PP
+Definition at line 357 of file glxew\&.h\&.
+.SS "#define GLX_GPU_NUM_PIPES_AMD   0x21A5"
+
+.PP
+Definition at line 360 of file glxew\&.h\&.
+.SS "#define GLX_GPU_NUM_RB_AMD   0x21A7"
+
+.PP
+Definition at line 362 of file glxew\&.h\&.
+.SS "#define GLX_GPU_NUM_SIMD_AMD   0x21A6"
+
+.PP
+Definition at line 361 of file glxew\&.h\&.
+.SS "#define GLX_GPU_NUM_SPI_AMD   0x21A8"
+
+.PP
+Definition at line 363 of file glxew\&.h\&.
+.SS "#define GLX_GPU_OPENGL_VERSION_STRING_AMD   0x1F02"
+
+.PP
+Definition at line 356 of file glxew\&.h\&.
+.SS "#define GLX_GPU_RAM_AMD   0x21A3"
+
+.PP
+Definition at line 358 of file glxew\&.h\&.
+.SS "#define GLX_GPU_RENDERER_STRING_AMD   0x1F01"
+
+.PP
+Definition at line 355 of file glxew\&.h\&.
+.SS "#define GLX_GPU_VENDOR_AMD   0x1F00"
+
+.PP
+Definition at line 354 of file glxew\&.h\&.
+.SS "#define GLX_GRAY_SCALE   0x8006"
+
+.PP
+Definition at line 230 of file glxew\&.h\&.
+.SS "#define GLX_GRAY_SCALE_EXT   0x8006"
+
+.PP
+Definition at line 759 of file glxew\&.h\&.
+.SS "#define GLX_GREEN_SIZE   9"
+
+.PP
+Definition at line 119 of file glxew\&.h\&.
+.SS "#define GLX_H"
+
+.PP
+Definition at line 93 of file glxew\&.h\&.
+.SS "#define GLX_HEIGHT   0x801E"
+
+.PP
+Definition at line 249 of file glxew\&.h\&.
+.SS "#define GLX_HEIGHT_SGIX   0x801E"
+
+.PP
+Definition at line 1237 of file glxew\&.h\&.
+.SS "#define GLX_HYPERPIPE_DISPLAY_PIPE_SGIX   0x00000001"
+
+.PP
+Definition at line 1152 of file glxew\&.h\&.
+.SS "#define GLX_HYPERPIPE_ID_SGIX   0x8030"
+
+.PP
+Definition at line 1161 of file glxew\&.h\&.
+.SS "#define GLX_HYPERPIPE_PIPE_NAME_LENGTH_SGIX   80"
+
+.PP
+Definition at line 1158 of file glxew\&.h\&.
+.SS "#define GLX_HYPERPIPE_PIXEL_AVERAGE_SGIX   0x00000004"
+
+.PP
+Definition at line 1157 of file glxew\&.h\&.
+.SS "#define GLX_HYPERPIPE_RENDER_PIPE_SGIX   0x00000002"
+
+.PP
+Definition at line 1155 of file glxew\&.h\&.
+.SS "#define GLX_HYPERPIPE_STEREO_SGIX   0x00000003"
+
+.PP
+Definition at line 1156 of file glxew\&.h\&.
+.SS "#define GLX_INTEL_swap_event   1"
+
+.PP
+Definition at line 784 of file glxew\&.h\&.
+.SS "#define GLX_LARGEST_PBUFFER   0x801C"
+
+.PP
+Definition at line 247 of file glxew\&.h\&.
+.SS "#define GLX_LARGEST_PBUFFER_SGIX   0x801C"
+
+.PP
+Definition at line 1235 of file glxew\&.h\&.
+.SS "#define GLX_LATE_SWAPS_TEAR_EXT   0x20F3"
+
+.PP
+Definition at line 689 of file glxew\&.h\&.
+.SS "#define GLX_LEVEL   3"
+
+.PP
+Definition at line 113 of file glxew\&.h\&.
+.SS "#define GLX_LOSE_CONTEXT_ON_RESET_ARB   0x8252"
+
+.PP
+Definition at line 427 of file glxew\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_HEIGHT   0x8017"
+
+.PP
+Definition at line 244 of file glxew\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_HEIGHT_SGIX   0x8017"
+
+.PP
+Definition at line 1230 of file glxew\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_PIXELS   0x8018"
+
+.PP
+Definition at line 245 of file glxew\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_PIXELS_SGIX   0x8018"
+
+.PP
+Definition at line 1231 of file glxew\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_WIDTH   0x8016"
+
+.PP
+Definition at line 243 of file glxew\&.h\&.
+.SS "#define GLX_MAX_PBUFFER_WIDTH_SGIX   0x8016"
+
+.PP
+Definition at line 1229 of file glxew\&.h\&.
+.SS "#define GLX_MAX_SWAP_INTERVAL_EXT   0x20F2"
+
+.PP
+Definition at line 674 of file glxew\&.h\&.
+.SS "#define GLX_MESA_agp_offset   1"
+
+.PP
+Definition at line 798 of file glxew\&.h\&.
+.SS "#define GLX_MESA_copy_sub_buffer   1"
+
+.PP
+Definition at line 811 of file glxew\&.h\&.
+.SS "#define GLX_MESA_pixmap_colormap   1"
+
+.PP
+Definition at line 824 of file glxew\&.h\&.
+.SS "#define GLX_MESA_release_buffers   1"
+
+.PP
+Definition at line 837 of file glxew\&.h\&.
+.SS "#define GLX_MESA_set_3dfx_mode   1"
+
+.PP
+Definition at line 850 of file glxew\&.h\&.
+.SS "#define GLX_MESA_swap_control   1"
+
+.PP
+Definition at line 866 of file glxew\&.h\&.
+.SS "#define GLX_MIPMAP_LEVEL_ATI   0x980B"
+
+.PP
+Definition at line 541 of file glxew\&.h\&.
+.SS "#define GLX_MIPMAP_TEXTURE_ATI   0x9804"
+
+.PP
+Definition at line 534 of file glxew\&.h\&.
+.SS "#define GLX_MIPMAP_TEXTURE_EXT   0x20D7"
+
+.PP
+Definition at line 710 of file glxew\&.h\&.
+.SS "#define GLX_MULTISAMPLE_SUB_RECT_HEIGHT_SGIS   0x8027"
+
+.PP
+Definition at line 1103 of file glxew\&.h\&.
+.SS "#define GLX_MULTISAMPLE_SUB_RECT_WIDTH_SGIS   0x8026"
+
+.PP
+Definition at line 1102 of file glxew\&.h\&.
+.SS "#define GLX_NO_EXTENSION   3"
+
+.PP
+Definition at line 130 of file glxew\&.h\&.
+.SS "#define GLX_NO_RESET_NOTIFICATION_ARB   0x8261"
+
+.PP
+Definition at line 429 of file glxew\&.h\&.
+.SS "#define GLX_NO_TEXTURE_ATI   0x9807"
+
+.PP
+Definition at line 537 of file glxew\&.h\&.
+.SS "#define GLX_NON_CONFORMANT_CONFIG   0x800D"
+
+.PP
+Definition at line 236 of file glxew\&.h\&.
+.SS "#define GLX_NON_CONFORMANT_VISUAL_EXT   0x800D"
+
+.PP
+Definition at line 775 of file glxew\&.h\&.
+.SS "#define GLX_NONE   0x8000"
+
+.PP
+Definition at line 224 of file glxew\&.h\&.
+.SS "#define GLX_NONE_EXT   0x8000"
+
+.PP
+Definition at line 754 of file glxew\&.h\&.
+.SS "#define GLX_NUM_VIDEO_CAPTURE_SLOTS_NV   0x20CF"
+
+.PP
+Definition at line 976 of file glxew\&.h\&.
+.SS "#define GLX_NUM_VIDEO_SLOTS_NV   0x20F0"
+
+.PP
+Definition at line 919 of file glxew\&.h\&.
+.SS "#define GLX_NV_copy_image   1"
+
+.PP
+Definition at line 881 of file glxew\&.h\&.
+.SS "#define GLX_NV_float_buffer   1"
+
+.PP
+Definition at line 894 of file glxew\&.h\&.
+.SS "#define GLX_NV_multisample_coverage   1"
+
+.PP
+Definition at line 905 of file glxew\&.h\&.
+.SS "#define GLX_NV_present_video   1"
+
+.PP
+Definition at line 917 of file glxew\&.h\&.
+.SS "#define GLX_NV_swap_group   1"
+
+.PP
+Definition at line 934 of file glxew\&.h\&.
+.SS "#define GLX_NV_vertex_array_range   1"
+
+.PP
+Definition at line 957 of file glxew\&.h\&.
+.SS "#define GLX_NV_video_capture   1"
+
+.PP
+Definition at line 972 of file glxew\&.h\&.
+.SS "#define GLX_NV_video_output   1"
+
+.PP
+Definition at line 999 of file glxew\&.h\&.
+.SS "#define GLX_OML_swap_method   1"
+
+.PP
+Definition at line 1033 of file glxew\&.h\&.
+.SS "#define GLX_OML_sync_control   1"
+
+.PP
+Definition at line 1047 of file glxew\&.h\&.
+.SS "#define GLX_OPTIMAL_PBUFFER_HEIGHT_SGIX   0x801A"
+
+.PP
+Definition at line 1233 of file glxew\&.h\&.
+.SS "#define GLX_OPTIMAL_PBUFFER_WIDTH_SGIX   0x8019"
+
+.PP
+Definition at line 1232 of file glxew\&.h\&.
+.SS "#define GLX_PBUFFER   0x8023"
+
+.PP
+Definition at line 254 of file glxew\&.h\&.
+.SS "#define GLX_PBUFFER_BIT   0x00000004"
+
+.PP
+Definition at line 210 of file glxew\&.h\&.
+.SS "#define GLX_PBUFFER_BIT_SGIX   0x00000004"
+
+.PP
+Definition at line 1221 of file glxew\&.h\&.
+.SS "#define GLX_PBUFFER_CLOBBER_MASK   0x08000000"
+
+.PP
+Definition at line 257 of file glxew\&.h\&.
+.SS "#define GLX_PBUFFER_HEIGHT   0x8040"
+
+.PP
+Definition at line 255 of file glxew\&.h\&.
+.SS "#define GLX_PBUFFER_SGIX   0x8023"
+
+.PP
+Definition at line 1242 of file glxew\&.h\&.
+.SS "#define GLX_PBUFFER_WIDTH   0x8041"
+
+.PP
+Definition at line 256 of file glxew\&.h\&.
+.SS "#define GLX_PIPE_RECT_LIMITS_SGIX   0x00000002"
+
+.PP
+Definition at line 1154 of file glxew\&.h\&.
+.SS "#define GLX_PIPE_RECT_SGIX   0x00000001"
+
+.PP
+Definition at line 1153 of file glxew\&.h\&.
+.SS "#define GLX_PIXMAP_BIT   0x00000002"
+
+.PP
+Definition at line 207 of file glxew\&.h\&.
+.SS "#define GLX_PIXMAP_BIT_SGIX   0x00000002"
+
+.PP
+Definition at line 1116 of file glxew\&.h\&.
+.SS "#define GLX_PRESERVED_CONTENTS   0x801B"
+
+.PP
+Definition at line 246 of file glxew\&.h\&.
+.SS "#define GLX_PRESERVED_CONTENTS_SGIX   0x801B"
+
+.PP
+Definition at line 1234 of file glxew\&.h\&.
+.SS "#define GLX_PSEUDO_COLOR   0x8004"
+
+.PP
+Definition at line 228 of file glxew\&.h\&.
+.SS "#define GLX_PSEUDO_COLOR_EXT   0x8004"
+
+.PP
+Definition at line 757 of file glxew\&.h\&.
+.SS "#define GLX_RED_SIZE   8"
+
+.PP
+Definition at line 118 of file glxew\&.h\&.
+.SS "#define GLX_RENDER_TYPE   0x8011"
+
+.PP
+Definition at line 238 of file glxew\&.h\&.
+.SS "#define GLX_RENDER_TYPE_SGIX   0x8011"
+
+.PP
+Definition at line 1120 of file glxew\&.h\&.
+.SS "#define GLX_RGBA   4"
+
+.PP
+Definition at line 114 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_BIT   0x00000001"
+
+.PP
+Definition at line 203 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_BIT_SGIX   0x00000001"
+
+.PP
+Definition at line 1115 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_FLOAT_ATI_BIT   0x00000100"
+
+.PP
+Definition at line 519 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_FLOAT_BIT   0x00000004"
+
+.PP
+Definition at line 440 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_FLOAT_TYPE   0x20B9"
+
+.PP
+Definition at line 441 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_TYPE   0x8014"
+
+.PP
+Definition at line 241 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_TYPE_SGIX   0x8014"
+
+.PP
+Definition at line 1123 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_UNSIGNED_FLOAT_BIT_EXT   0x00000008"
+
+.PP
+Definition at line 616 of file glxew\&.h\&.
+.SS "#define GLX_RGBA_UNSIGNED_FLOAT_TYPE_EXT   0x20B1"
+
+.PP
+Definition at line 617 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLE_BUFFERS   100000"
+
+.PP
+Definition at line 328 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLE_BUFFERS_3DFX   0x8050"
+
+.PP
+Definition at line 342 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLE_BUFFERS_ARB   100000"
+
+.PP
+Definition at line 474 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLE_BUFFERS_BIT_SGIX   0x00000100"
+
+.PP
+Definition at line 1228 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLE_BUFFERS_SGIS   100000"
+
+.PP
+Definition at line 1090 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLES   100001"
+
+.PP
+Definition at line 329 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLES_3DFX   0x8051"
+
+.PP
+Definition at line 343 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLES_ARB   100001"
+
+.PP
+Definition at line 475 of file glxew\&.h\&.
+.SS "#define GLX_SAMPLES_SGIS   100001"
+
+.PP
+Definition at line 1091 of file glxew\&.h\&.
+.SS "#define GLX_SAVED   0x8021"
+
+.PP
+Definition at line 252 of file glxew\&.h\&.
+.SS "#define GLX_SAVED_SGIX   0x8021"
+
+.PP
+Definition at line 1240 of file glxew\&.h\&.
+.SS "#define GLX_SCREEN   0x800C"
+
+.PP
+Definition at line 235 of file glxew\&.h\&.
+.SS "#define GLX_SCREEN_EXT   0x800C"
+
+.PP
+Definition at line 1118 of file glxew\&.h\&.
+.SS "#define GLX_SCREEN_EXT   0x800C"
+
+.PP
+Definition at line 1118 of file glxew\&.h\&.
+.SS "#define GLX_SGI_cushion   1"
+
+.PP
+Definition at line 1330 of file glxew\&.h\&.
+.SS "#define GLX_SGI_make_current_read   1"
+
+.PP
+Definition at line 1343 of file glxew\&.h\&.
+.SS "#define GLX_SGI_swap_control   1"
+
+.PP
+Definition at line 1358 of file glxew\&.h\&.
+.SS "#define GLX_SGI_video_sync   1"
+
+.PP
+Definition at line 1371 of file glxew\&.h\&.
+.SS "#define GLX_SGIS_blended_overlay   1"
+
+.PP
+Definition at line 1068 of file glxew\&.h\&.
+.SS "#define GLX_SGIS_color_range   1"
+
+.PP
+Definition at line 1079 of file glxew\&.h\&.
+.SS "#define GLX_SGIS_multisample   1"
+
+.PP
+Definition at line 1088 of file glxew\&.h\&.
+.SS "#define GLX_SGIS_shared_multisample   1"
+
+.PP
+Definition at line 1100 of file glxew\&.h\&.
+.SS "#define GLX_SGIX_fbconfig   1"
+
+.PP
+Definition at line 1112 of file glxew\&.h\&.
+.SS "#define GLX_SGIX_hyperpipe   1"
+
+.PP
+Definition at line 1150 of file glxew\&.h\&.
+.SS "#define GLX_SGIX_pbuffer   1"
+
+.PP
+Definition at line 1217 of file glxew\&.h\&.
+.SS "#define GLX_SGIX_swap_barrier   1"
+
+.PP
+Definition at line 1267 of file glxew\&.h\&.
+.SS "#define GLX_SGIX_swap_group   1"
+
+.PP
+Definition at line 1282 of file glxew\&.h\&.
+.SS "#define GLX_SGIX_video_resize   1"
+
+.PP
+Definition at line 1295 of file glxew\&.h\&.
+.SS "#define GLX_SGIX_visual_select_group   1"
+
+.PP
+Definition at line 1319 of file glxew\&.h\&.
+.SS "#define GLX_SHARE_CONTEXT_EXT   0x800A"
+
+.PP
+Definition at line 639 of file glxew\&.h\&.
+.SS "#define GLX_SLOW_CONFIG   0x8001"
+
+.PP
+Definition at line 225 of file glxew\&.h\&.
+.SS "#define GLX_SLOW_VISUAL_EXT   0x8001"
+
+.PP
+Definition at line 774 of file glxew\&.h\&.
+.SS "#define GLX_STATIC_COLOR   0x8005"
+
+.PP
+Definition at line 229 of file glxew\&.h\&.
+.SS "#define GLX_STATIC_COLOR_EXT   0x8005"
+
+.PP
+Definition at line 758 of file glxew\&.h\&.
+.SS "#define GLX_STATIC_GRAY   0x8007"
+
+.PP
+Definition at line 231 of file glxew\&.h\&.
+.SS "#define GLX_STATIC_GRAY_EXT   0x8007"
+
+.PP
+Definition at line 760 of file glxew\&.h\&.
+.SS "#define GLX_STENCIL_BUFFER_BIT   0x00000040"
+
+.PP
+Definition at line 222 of file glxew\&.h\&.
+.SS "#define GLX_STENCIL_BUFFER_BIT_SGIX   0x00000040"
+
+.PP
+Definition at line 1226 of file glxew\&.h\&.
+.SS "#define GLX_STENCIL_SIZE   13"
+
+.PP
+Definition at line 123 of file glxew\&.h\&.
+.SS "#define GLX_STEREO   6"
+
+.PP
+Definition at line 116 of file glxew\&.h\&.
+.SS "#define GLX_SUN_get_transparent_index   1"
+
+.PP
+Definition at line 1386 of file glxew\&.h\&.
+.SS "#define GLX_SUN_video_resize   1"
+
+.PP
+Definition at line 1399 of file glxew\&.h\&.
+.SS "#define GLX_SWAP_COPY_OML   0x8062"
+
+.PP
+Definition at line 1037 of file glxew\&.h\&.
+.SS "#define GLX_SWAP_EXCHANGE_OML   0x8061"
+
+.PP
+Definition at line 1036 of file glxew\&.h\&.
+.SS "#define GLX_SWAP_INTERVAL_EXT   0x20F1"
+
+.PP
+Definition at line 673 of file glxew\&.h\&.
+.SS "#define GLX_SWAP_METHOD_OML   0x8060"
+
+.PP
+Definition at line 1035 of file glxew\&.h\&.
+.SS "#define GLX_SWAP_UNDEFINED_OML   0x8063"
+
+.PP
+Definition at line 1038 of file glxew\&.h\&.
+.SS "#define GLX_SYNC_FRAME_SGIX   0x00000000"
+
+.PP
+Definition at line 1297 of file glxew\&.h\&.
+.SS "#define GLX_SYNC_SWAP_SGIX   0x00000001"
+
+.PP
+Definition at line 1298 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_1D_ATI   0x9809"
+
+.PP
+Definition at line 539 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_1D_BIT_EXT   0x00000001"
+
+.PP
+Definition at line 700 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_1D_EXT   0x20DB"
+
+.PP
+Definition at line 714 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_2D_ATI   0x980A"
+
+.PP
+Definition at line 540 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_2D_BIT_EXT   0x00000002"
+
+.PP
+Definition at line 701 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_2D_EXT   0x20DC"
+
+.PP
+Definition at line 715 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_CUBE_MAP_ATI   0x9808"
+
+.PP
+Definition at line 538 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_CUBE_MAP_NEGATIVE_X_ATI   0x980E"
+
+.PP
+Definition at line 544 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_CUBE_MAP_NEGATIVE_Y_ATI   0x9810"
+
+.PP
+Definition at line 546 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_CUBE_MAP_NEGATIVE_Z_ATI   0x9812"
+
+.PP
+Definition at line 548 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_CUBE_MAP_POSITIVE_X_ATI   0x980D"
+
+.PP
+Definition at line 543 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_CUBE_MAP_POSITIVE_Y_ATI   0x980F"
+
+.PP
+Definition at line 545 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_CUBE_MAP_POSITIVE_Z_ATI   0x9811"
+
+.PP
+Definition at line 547 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_ATI   0x9802"
+
+.PP
+Definition at line 532 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_EXT   0x20D5"
+
+.PP
+Definition at line 708 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_NONE_EXT   0x20D8"
+
+.PP
+Definition at line 711 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_RGB_EXT   0x20D9"
+
+.PP
+Definition at line 712 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_FORMAT_RGBA_EXT   0x20DA"
+
+.PP
+Definition at line 713 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_RECTANGLE_BIT_EXT   0x00000004"
+
+.PP
+Definition at line 702 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_RECTANGLE_EXT   0x20DD"
+
+.PP
+Definition at line 716 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_RGB_ATI   0x9805"
+
+.PP
+Definition at line 535 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_RGBA_ATI   0x9806"
+
+.PP
+Definition at line 536 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_TARGET_ATI   0x9803"
+
+.PP
+Definition at line 533 of file glxew\&.h\&.
+.SS "#define GLX_TEXTURE_TARGET_EXT   0x20D6"
+
+.PP
+Definition at line 709 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_ALPHA_VALUE   0x28"
+
+.PP
+Definition at line 221 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_ALPHA_VALUE_EXT   0x28"
+
+.PP
+Definition at line 753 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_BLUE_VALUE   0x27"
+
+.PP
+Definition at line 220 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_BLUE_VALUE_EXT   0x27"
+
+.PP
+Definition at line 752 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_GREEN_VALUE   0x26"
+
+.PP
+Definition at line 219 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_GREEN_VALUE_EXT   0x26"
+
+.PP
+Definition at line 751 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX   0x8009"
+
+.PP
+Definition at line 233 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX_EXT   0x8009"
+
+.PP
+Definition at line 762 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX_VALUE   0x24"
+
+.PP
+Definition at line 217 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_INDEX_VALUE_EXT   0x24"
+
+.PP
+Definition at line 749 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_RED_VALUE   0x25"
+
+.PP
+Definition at line 218 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_RED_VALUE_EXT   0x25"
+
+.PP
+Definition at line 750 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_RGB   0x8008"
+
+.PP
+Definition at line 232 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_RGB_EXT   0x8008"
+
+.PP
+Definition at line 761 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_TYPE   0x23"
+
+.PP
+Definition at line 216 of file glxew\&.h\&.
+.SS "#define GLX_TRANSPARENT_TYPE_EXT   0x23"
+
+.PP
+Definition at line 748 of file glxew\&.h\&.
+.SS "#define GLX_TRUE_COLOR   0x8002"
+
+.PP
+Definition at line 226 of file glxew\&.h\&.
+.SS "#define GLX_TRUE_COLOR_EXT   0x8002"
+
+.PP
+Definition at line 755 of file glxew\&.h\&.
+.SS "#define GLX_UNIQUE_ID_NV   0x20CE"
+
+.PP
+Definition at line 975 of file glxew\&.h\&.
+.SS "#define GLX_USE_GL   1"
+
+.PP
+Definition at line 111 of file glxew\&.h\&.
+.SS "#define GLX_VENDOR   0x1"
+
+.PP
+Definition at line 173 of file glxew\&.h\&.
+.SS "#define GLX_VERSION   0x2"
+
+.PP
+Definition at line 174 of file glxew\&.h\&.
+.SS "#define GLX_VERSION_1_0   1"
+
+.PP
+Definition at line 109 of file glxew\&.h\&.
+.SS "#define GLX_VERSION_1_1"
+
+.PP
+Definition at line 171 of file glxew\&.h\&.
+.SS "#define GLX_VERSION_1_2   1"
+
+.PP
+Definition at line 188 of file glxew\&.h\&.
+.SS "#define GLX_VERSION_1_3   1"
+
+.PP
+Definition at line 201 of file glxew\&.h\&.
+.SS "#define GLX_VERSION_1_4   1"
+
+.PP
+Definition at line 326 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_ALPHA_NV   0x20C4"
+
+.PP
+Definition at line 1002 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_COLOR_AND_ALPHA_NV   0x20C6"
+
+.PP
+Definition at line 1004 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_COLOR_AND_DEPTH_NV   0x20C7"
+
+.PP
+Definition at line 1005 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_COLOR_NV   0x20C3"
+
+.PP
+Definition at line 1001 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_DEPTH_NV   0x20C5"
+
+.PP
+Definition at line 1003 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_FIELD_1_NV   0x20C9"
+
+.PP
+Definition at line 1007 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_FIELD_2_NV   0x20CA"
+
+.PP
+Definition at line 1008 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_FRAME_NV   0x20C8"
+
+.PP
+Definition at line 1006 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_STACKED_FIELDS_1_2_NV   0x20CB"
+
+.PP
+Definition at line 1009 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_OUT_STACKED_FIELDS_2_1_NV   0x20CC"
+
+.PP
+Definition at line 1010 of file glxew\&.h\&.
+.SS "#define GLX_VIDEO_RESIZE_SUN   0x8171"
+
+.PP
+Definition at line 1401 of file glxew\&.h\&.
+.SS "#define GLX_VISUAL_CAVEAT_EXT   0x20"
+
+.PP
+Definition at line 773 of file glxew\&.h\&.
+.SS "#define GLX_VISUAL_ID   0x800B"
+
+.PP
+Definition at line 234 of file glxew\&.h\&.
+.SS "#define GLX_VISUAL_ID_EXT   0x800B"
+
+.PP
+Definition at line 640 of file glxew\&.h\&.
+.SS "#define GLX_VISUAL_SELECT_GROUP_SGIX   0x8028"
+
+.PP
+Definition at line 1321 of file glxew\&.h\&.
+.SS "#define GLX_WIDTH   0x801D"
+
+.PP
+Definition at line 248 of file glxew\&.h\&.
+.SS "#define GLX_WIDTH_SGIX   0x801D"
+
+.PP
+Definition at line 1236 of file glxew\&.h\&.
+.SS "#define GLX_WINDOW   0x8022"
+
+.PP
+Definition at line 253 of file glxew\&.h\&.
+.SS "#define GLX_WINDOW_BIT   0x00000001"
+
+.PP
+Definition at line 205 of file glxew\&.h\&.
+.SS "#define GLX_WINDOW_BIT_SGIX   0x00000001"
+
+.PP
+Definition at line 1114 of file glxew\&.h\&.
+.SS "#define GLX_WINDOW_SGIX   0x8022"
+
+.PP
+Definition at line 1241 of file glxew\&.h\&.
+.SS "#define GLX_X_RENDERABLE   0x8012"
+
+.PP
+Definition at line 239 of file glxew\&.h\&.
+.SS "#define GLX_X_RENDERABLE_SGIX   0x8012"
+
+.PP
+Definition at line 1121 of file glxew\&.h\&.
+.SS "#define GLX_X_VISUAL_TYPE   0x22"
+
+.PP
+Definition at line 215 of file glxew\&.h\&.
+.SS "#define GLX_X_VISUAL_TYPE_EXT   0x22"
+
+.PP
+Definition at line 747 of file glxew\&.h\&.
+.SS "#define GLX_Y_INVERTED_EXT   0x20D4"
+
+.PP
+Definition at line 707 of file glxew\&.h\&.
+.SS "#define glXAllocateMemoryNV   \fBGLXEW_GET_FUN\fP(\fB__glewXAllocateMemoryNV\fP)"
+
+.PP
+Definition at line 962 of file glxew\&.h\&.
+.SS "#define glXBindChannelToWindowSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXBindChannelToWindowSGIX\fP)"
+
+.PP
+Definition at line 1306 of file glxew\&.h\&.
+.SS "#define glXBindHyperpipeSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXBindHyperpipeSGIX\fP)"
+
+.PP
+Definition at line 1201 of file glxew\&.h\&.
+.SS "#define glXBindSwapBarrierNV   \fBGLXEW_GET_FUN\fP(\fB__glewXBindSwapBarrierNV\fP)"
+
+.PP
+Definition at line 943 of file glxew\&.h\&.
+.SS "#define glXBindSwapBarrierSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXBindSwapBarrierSGIX\fP)"
+
+.PP
+Definition at line 1272 of file glxew\&.h\&.
+.SS "#define glXBindTexImageATI   \fBGLXEW_GET_FUN\fP(\fB__glewXBindTexImageATI\fP)"
+
+.PP
+Definition at line 570 of file glxew\&.h\&.
+.SS "#define glXBindTexImageEXT   \fBGLXEW_GET_FUN\fP(\fB__glewXBindTexImageEXT\fP)"
+
+.PP
+Definition at line 735 of file glxew\&.h\&.
+.SS "#define glXBindVideoCaptureDeviceNV   \fBGLXEW_GET_FUN\fP(\fB__glewXBindVideoCaptureDeviceNV\fP)"
+
+.PP
+Definition at line 986 of file glxew\&.h\&.
+.SS "#define glXBindVideoDeviceNV   \fBGLXEW_GET_FUN\fP(\fB__glewXBindVideoDeviceNV\fP)"
+
+.PP
+Definition at line 924 of file glxew\&.h\&.
+.SS "#define glXBindVideoImageNV   \fBGLXEW_GET_FUN\fP(\fB__glewXBindVideoImageNV\fP)"
+
+.PP
+Definition at line 1019 of file glxew\&.h\&.
+.SS "#define glXBlitContextFramebufferAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXBlitContextFramebufferAMD\fP)"
+
+.PP
+Definition at line 375 of file glxew\&.h\&.
+.SS "#define glXChannelRectSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXChannelRectSGIX\fP)"
+
+.PP
+Definition at line 1307 of file glxew\&.h\&.
+.SS "#define glXChannelRectSyncSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXChannelRectSyncSGIX\fP)"
+
+.PP
+Definition at line 1308 of file glxew\&.h\&.
+.SS "#define glXChooseFBConfig   \fBGLXEW_GET_FUN\fP(\fB__glewXChooseFBConfig\fP)"
+
+.PP
+Definition at line 301 of file glxew\&.h\&.
+.SS "#define glXChooseFBConfigSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXChooseFBConfigSGIX\fP)"
+
+.PP
+Definition at line 1136 of file glxew\&.h\&.
+.SS "#define glXCopyImageSubDataNV   \fBGLXEW_GET_FUN\fP(\fB__glewXCopyImageSubDataNV\fP)"
+
+.PP
+Definition at line 885 of file glxew\&.h\&.
+.SS "#define glXCopySubBufferMESA   \fBGLXEW_GET_FUN\fP(\fB__glewXCopySubBufferMESA\fP)"
+
+.PP
+Definition at line 815 of file glxew\&.h\&.
+.SS "#define glXCreateAssociatedContextAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateAssociatedContextAMD\fP)"
+
+.PP
+Definition at line 376 of file glxew\&.h\&.
+.SS "#define glXCreateAssociatedContextAttribsAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateAssociatedContextAttribsAMD\fP)"
+
+.PP
+Definition at line 377 of file glxew\&.h\&.
+.SS "#define glXCreateContextAttribsARB   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateContextAttribsARB\fP)"
+
+.PP
+Definition at line 402 of file glxew\&.h\&.
+.SS "#define glXCreateContextWithConfigSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateContextWithConfigSGIX\fP)"
+
+.PP
+Definition at line 1137 of file glxew\&.h\&.
+.SS "#define glXCreateGLXPbufferSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateGLXPbufferSGIX\fP)"
+
+.PP
+Definition at line 1254 of file glxew\&.h\&.
+.SS "#define glXCreateGLXPixmapMESA   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateGLXPixmapMESA\fP)"
+
+.PP
+Definition at line 828 of file glxew\&.h\&.
+.SS "#define glXCreateGLXPixmapWithConfigSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateGLXPixmapWithConfigSGIX\fP)"
+
+.PP
+Definition at line 1138 of file glxew\&.h\&.
+.SS "#define glXCreateNewContext   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateNewContext\fP)"
+
+.PP
+Definition at line 302 of file glxew\&.h\&.
+.SS "#define glXCreatePbuffer   \fBGLXEW_GET_FUN\fP(\fB__glewXCreatePbuffer\fP)"
+
+.PP
+Definition at line 303 of file glxew\&.h\&.
+.SS "#define glXCreatePixmap   \fBGLXEW_GET_FUN\fP(\fB__glewXCreatePixmap\fP)"
+
+.PP
+Definition at line 304 of file glxew\&.h\&.
+.SS "#define glXCreateWindow   \fBGLXEW_GET_FUN\fP(\fB__glewXCreateWindow\fP)"
+
+.PP
+Definition at line 305 of file glxew\&.h\&.
+.SS "#define glXCushionSGI   \fBGLXEW_GET_FUN\fP(\fB__glewXCushionSGI\fP)"
+
+.PP
+Definition at line 1334 of file glxew\&.h\&.
+.SS "#define glXDeleteAssociatedContextAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXDeleteAssociatedContextAMD\fP)"
+
+.PP
+Definition at line 378 of file glxew\&.h\&.
+.SS "#define glXDestroyGLXPbufferSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyGLXPbufferSGIX\fP)"
+
+.PP
+Definition at line 1255 of file glxew\&.h\&.
+.SS "#define glXDestroyHyperpipeConfigSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyHyperpipeConfigSGIX\fP)"
+
+.PP
+Definition at line 1202 of file glxew\&.h\&.
+.SS "#define glXDestroyPbuffer   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyPbuffer\fP)"
+
+.PP
+Definition at line 306 of file glxew\&.h\&.
+.SS "#define glXDestroyPixmap   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyPixmap\fP)"
+
+.PP
+Definition at line 307 of file glxew\&.h\&.
+.SS "#define glXDestroyWindow   \fBGLXEW_GET_FUN\fP(\fB__glewXDestroyWindow\fP)"
+
+.PP
+Definition at line 308 of file glxew\&.h\&.
+.SS "#define glXDrawableAttribATI   \fBGLXEW_GET_FUN\fP(\fB__glewXDrawableAttribATI\fP)"
+
+.PP
+Definition at line 571 of file glxew\&.h\&.
+.SS "#define glXEnumerateVideoCaptureDevicesNV   \fBGLXEW_GET_FUN\fP(\fB__glewXEnumerateVideoCaptureDevicesNV\fP)"
+
+.PP
+Definition at line 987 of file glxew\&.h\&.
+.SS "#define glXEnumerateVideoDevicesNV   \fBGLXEW_GET_FUN\fP(\fB__glewXEnumerateVideoDevicesNV\fP)"
+
+.PP
+Definition at line 925 of file glxew\&.h\&.
+.SS "#define GLXEW_3DFX_multisample   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_3DFX_multisample\fP)"
+
+.PP
+Definition at line 345 of file glxew\&.h\&.
+.SS "#define GLXEW_AMD_gpu_association   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_AMD_gpu_association\fP)"
+
+.PP
+Definition at line 385 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_create_context   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_create_context\fP)"
+
+.PP
+Definition at line 404 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_create_context_profile   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_create_context_profile\fP)"
+
+.PP
+Definition at line 417 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_create_context_robustness   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_create_context_robustness\fP)"
+
+.PP
+Definition at line 431 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_fbconfig_float   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_fbconfig_float\fP)"
+
+.PP
+Definition at line 443 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_framebuffer_sRGB   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_framebuffer_sRGB\fP)"
+
+.PP
+Definition at line 454 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_get_proc_address   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_get_proc_address\fP)"
+
+.PP
+Definition at line 465 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_multisample   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_multisample\fP)"
+
+.PP
+Definition at line 477 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_robustness_application_isolation   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_robustness_application_isolation\fP)"
+
+.PP
+Definition at line 488 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_robustness_share_group_isolation   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_robustness_share_group_isolation\fP)"
+
+.PP
+Definition at line 499 of file glxew\&.h\&.
+.SS "#define GLXEW_ARB_vertex_buffer_object   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ARB_vertex_buffer_object\fP)"
+
+.PP
+Definition at line 510 of file glxew\&.h\&.
+.SS "#define GLXEW_ATI_pixel_format_float   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ATI_pixel_format_float\fP)"
+
+.PP
+Definition at line 521 of file glxew\&.h\&.
+.SS "#define GLXEW_ATI_render_texture   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_ATI_render_texture\fP)"
+
+.PP
+Definition at line 574 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_buffer_age   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_buffer_age\fP)"
+
+.PP
+Definition at line 585 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_create_context_es2_profile   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_create_context_es2_profile\fP)"
+
+.PP
+Definition at line 596 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_create_context_es_profile   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_create_context_es_profile\fP)"
+
+.PP
+Definition at line 607 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_fbconfig_packed_float   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_fbconfig_packed_float\fP)"
+
+.PP
+Definition at line 619 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_framebuffer_sRGB   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_framebuffer_sRGB\fP)"
+
+.PP
+Definition at line 630 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_import_context   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_import_context\fP)"
+
+.PP
+Definition at line 655 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_scene_marker   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_scene_marker\fP)"
+
+.PP
+Definition at line 664 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_swap_control   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_swap_control\fP)"
+
+.PP
+Definition at line 680 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_swap_control_tear   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_swap_control_tear\fP)"
+
+.PP
+Definition at line 691 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_texture_from_pixmap   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_texture_from_pixmap\fP)"
+
+.PP
+Definition at line 738 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_visual_info   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_visual_info\fP)"
+
+.PP
+Definition at line 764 of file glxew\&.h\&.
+.SS "#define GLXEW_EXT_visual_rating   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_EXT_visual_rating\fP)"
+
+.PP
+Definition at line 777 of file glxew\&.h\&.
+.SS "#define GLXEW_FUN_EXPORT   \fBGLEW_FUN_EXPORT\fP"
+
+.PP
+Definition at line 1420 of file glxew\&.h\&.
+.SS "#define GLXEW_GET_FUN(\fBx\fP)   \fBx\fP"
+
+.PP
+Definition at line 1657 of file glxew\&.h\&.
+.SS "#define GLXEW_GET_VAR(\fBx\fP)   (*(const \fBGLboolean\fP*)&\fBx\fP)"
+
+.PP
+Definition at line 1656 of file glxew\&.h\&.
+.SS "#define GLXEW_INTEL_swap_event   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_INTEL_swap_event\fP)"
+
+.PP
+Definition at line 791 of file glxew\&.h\&.
+.SS "#define GLXEW_MESA_agp_offset   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_agp_offset\fP)"
+
+.PP
+Definition at line 804 of file glxew\&.h\&.
+.SS "#define GLXEW_MESA_copy_sub_buffer   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_copy_sub_buffer\fP)"
+
+.PP
+Definition at line 817 of file glxew\&.h\&.
+.SS "#define GLXEW_MESA_pixmap_colormap   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_pixmap_colormap\fP)"
+
+.PP
+Definition at line 830 of file glxew\&.h\&.
+.SS "#define GLXEW_MESA_release_buffers   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_release_buffers\fP)"
+
+.PP
+Definition at line 843 of file glxew\&.h\&.
+.SS "#define GLXEW_MESA_set_3dfx_mode   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_set_3dfx_mode\fP)"
+
+.PP
+Definition at line 859 of file glxew\&.h\&.
+.SS "#define GLXEW_MESA_swap_control   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_MESA_swap_control\fP)"
+
+.PP
+Definition at line 874 of file glxew\&.h\&.
+.SS "#define GLXEW_NV_copy_image   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_copy_image\fP)"
+
+.PP
+Definition at line 887 of file glxew\&.h\&.
+.SS "#define GLXEW_NV_float_buffer   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_float_buffer\fP)"
+
+.PP
+Definition at line 898 of file glxew\&.h\&.
+.SS "#define GLXEW_NV_multisample_coverage   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_multisample_coverage\fP)"
+
+.PP
+Definition at line 910 of file glxew\&.h\&.
+.SS "#define GLXEW_NV_present_video   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_present_video\fP)"
+
+.PP
+Definition at line 927 of file glxew\&.h\&.
+.SS "#define GLXEW_NV_swap_group   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_swap_group\fP)"
+
+.PP
+Definition at line 950 of file glxew\&.h\&.
+.SS "#define GLXEW_NV_vertex_array_range   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_vertex_array_range\fP)"
+
+.PP
+Definition at line 965 of file glxew\&.h\&.
+.SS "#define GLXEW_NV_video_capture   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_video_capture\fP)"
+
+.PP
+Definition at line 992 of file glxew\&.h\&.
+.SS "#define GLXEW_NV_video_output   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_NV_video_output\fP)"
+
+.PP
+Definition at line 1026 of file glxew\&.h\&.
+.SS "#define GLXEW_OML_swap_method   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_OML_swap_method\fP)"
+
+.PP
+Definition at line 1040 of file glxew\&.h\&.
+.SS "#define GLXEW_OML_sync_control   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_OML_sync_control\fP)"
+
+.PP
+Definition at line 1061 of file glxew\&.h\&.
+.SS "#define GLXEW_SGI_cushion   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGI_cushion\fP)"
+
+.PP
+Definition at line 1336 of file glxew\&.h\&.
+.SS "#define GLXEW_SGI_make_current_read   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGI_make_current_read\fP)"
+
+.PP
+Definition at line 1351 of file glxew\&.h\&.
+.SS "#define GLXEW_SGI_swap_control   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGI_swap_control\fP)"
+
+.PP
+Definition at line 1364 of file glxew\&.h\&.
+.SS "#define GLXEW_SGI_video_sync   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGI_video_sync\fP)"
+
+.PP
+Definition at line 1379 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIS_blended_overlay   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIS_blended_overlay\fP)"
+
+.PP
+Definition at line 1072 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIS_color_range   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIS_color_range\fP)"
+
+.PP
+Definition at line 1081 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIS_multisample   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIS_multisample\fP)"
+
+.PP
+Definition at line 1093 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIS_shared_multisample   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIS_shared_multisample\fP)"
+
+.PP
+Definition at line 1105 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIX_fbconfig   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_fbconfig\fP)"
+
+.PP
+Definition at line 1143 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIX_hyperpipe   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_hyperpipe\fP)"
+
+.PP
+Definition at line 1210 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIX_pbuffer   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_pbuffer\fP)"
+
+.PP
+Definition at line 1260 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIX_swap_barrier   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_swap_barrier\fP)"
+
+.PP
+Definition at line 1275 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIX_swap_group   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_swap_group\fP)"
+
+.PP
+Definition at line 1288 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIX_video_resize   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_video_resize\fP)"
+
+.PP
+Definition at line 1312 of file glxew\&.h\&.
+.SS "#define GLXEW_SGIX_visual_select_group   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SGIX_visual_select_group\fP)"
+
+.PP
+Definition at line 1323 of file glxew\&.h\&.
+.SS "#define GLXEW_SUN_get_transparent_index   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SUN_get_transparent_index\fP)"
+
+.PP
+Definition at line 1392 of file glxew\&.h\&.
+.SS "#define GLXEW_SUN_video_resize   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_SUN_video_resize\fP)"
+
+.PP
+Definition at line 1410 of file glxew\&.h\&.
+.SS "#define GLXEW_VAR_EXPORT   \fBGLEW_VAR_EXPORT\fP"
+
+.PP
+Definition at line 1421 of file glxew\&.h\&.
+.SS "#define GLXEW_VERSION_1_0   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_0\fP)"
+
+.PP
+Definition at line 164 of file glxew\&.h\&.
+.SS "#define GLXEW_VERSION_1_1   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_1\fP)"
+
+.PP
+Definition at line 181 of file glxew\&.h\&.
+.SS "#define GLXEW_VERSION_1_2   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_2\fP)"
+
+.PP
+Definition at line 194 of file glxew\&.h\&.
+.SS "#define GLXEW_VERSION_1_3   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_3\fP)"
+
+.PP
+Definition at line 319 of file glxew\&.h\&.
+.SS "#define GLXEW_VERSION_1_4   \fBGLXEW_GET_VAR\fP(\fB__GLXEW_VERSION_1_4\fP)"
+
+.PP
+Definition at line 333 of file glxew\&.h\&.
+.SS "#define glXFreeContextEXT   \fBGLXEW_GET_FUN\fP(\fB__glewXFreeContextEXT\fP)"
+
+.PP
+Definition at line 650 of file glxew\&.h\&.
+.SS "#define glXFreeMemoryNV   \fBGLXEW_GET_FUN\fP(\fB__glewXFreeMemoryNV\fP)"
+
+.PP
+Definition at line 963 of file glxew\&.h\&.
+.SS "#define glXGetAGPOffsetMESA   \fBGLXEW_GET_FUN\fP(\fB__glewXGetAGPOffsetMESA\fP)"
+
+.PP
+Definition at line 802 of file glxew\&.h\&.
+.SS "#define glXGetContextGPUIDAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXGetContextGPUIDAMD\fP)"
+
+.PP
+Definition at line 379 of file glxew\&.h\&.
+.SS "#define glXGetContextIDEXT   \fBGLXEW_GET_FUN\fP(\fB__glewXGetContextIDEXT\fP)"
+
+.PP
+Definition at line 651 of file glxew\&.h\&.
+.SS "#define glXGetCurrentAssociatedContextAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXGetCurrentAssociatedContextAMD\fP)"
+
+.PP
+Definition at line 380 of file glxew\&.h\&.
+.SS "#define glXGetCurrentDisplay   \fBGLXEW_GET_FUN\fP(\fB__glewXGetCurrentDisplay\fP)"
+
+.PP
+Definition at line 192 of file glxew\&.h\&.
+.SS "#define glXGetCurrentReadDrawable   \fBGLXEW_GET_FUN\fP(\fB__glewXGetCurrentReadDrawable\fP)"
+
+.PP
+Definition at line 309 of file glxew\&.h\&.
+.SS "#define glXGetCurrentReadDrawableSGI   \fBGLXEW_GET_FUN\fP(\fB__glewXGetCurrentReadDrawableSGI\fP)"
+
+.PP
+Definition at line 1348 of file glxew\&.h\&.
+.SS "#define glXGetFBConfigAttrib   \fBGLXEW_GET_FUN\fP(\fB__glewXGetFBConfigAttrib\fP)"
+
+.PP
+Definition at line 310 of file glxew\&.h\&.
+.SS "#define glXGetFBConfigAttribSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXGetFBConfigAttribSGIX\fP)"
+
+.PP
+Definition at line 1139 of file glxew\&.h\&.
+.SS "#define glXGetFBConfigFromVisualSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXGetFBConfigFromVisualSGIX\fP)"
+
+.PP
+Definition at line 1140 of file glxew\&.h\&.
+.SS "#define glXGetFBConfigs   \fBGLXEW_GET_FUN\fP(\fB__glewXGetFBConfigs\fP)"
+
+.PP
+Definition at line 311 of file glxew\&.h\&.
+.SS "#define glXGetGPUIDsAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXGetGPUIDsAMD\fP)"
+
+.PP
+Definition at line 381 of file glxew\&.h\&.
+.SS "#define glXGetGPUInfoAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXGetGPUInfoAMD\fP)"
+
+.PP
+Definition at line 382 of file glxew\&.h\&.
+.SS "#define glXGetMscRateOML   \fBGLXEW_GET_FUN\fP(\fB__glewXGetMscRateOML\fP)"
+
+.PP
+Definition at line 1055 of file glxew\&.h\&.
+.SS "#define glXGetSelectedEvent   \fBGLXEW_GET_FUN\fP(\fB__glewXGetSelectedEvent\fP)"
+
+.PP
+Definition at line 312 of file glxew\&.h\&.
+.SS "#define glXGetSelectedEventSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXGetSelectedEventSGIX\fP)"
+
+.PP
+Definition at line 1256 of file glxew\&.h\&.
+.SS "#define glXGetSwapIntervalMESA   \fBGLXEW_GET_FUN\fP(\fB__glewXGetSwapIntervalMESA\fP)"
+
+.PP
+Definition at line 871 of file glxew\&.h\&.
+.SS "#define glXGetSyncValuesOML   \fBGLXEW_GET_FUN\fP(\fB__glewXGetSyncValuesOML\fP)"
+
+.PP
+Definition at line 1056 of file glxew\&.h\&.
+.SS "#define glXGetTransparentIndexSUN   \fBGLXEW_GET_FUN\fP(\fB__glewXGetTransparentIndexSUN\fP)"
+
+.PP
+Definition at line 1390 of file glxew\&.h\&.
+.SS "#define glXGetVideoDeviceNV   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVideoDeviceNV\fP)"
+
+.PP
+Definition at line 1020 of file glxew\&.h\&.
+.SS "#define glXGetVideoInfoNV   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVideoInfoNV\fP)"
+
+.PP
+Definition at line 1021 of file glxew\&.h\&.
+.SS "#define glXGetVideoResizeSUN   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVideoResizeSUN\fP)"
+
+.PP
+Definition at line 1407 of file glxew\&.h\&.
+.SS "#define glXGetVideoSyncSGI   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVideoSyncSGI\fP)"
+
+.PP
+Definition at line 1376 of file glxew\&.h\&.
+.SS "#define glXGetVisualFromFBConfig   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVisualFromFBConfig\fP)"
+
+.PP
+Definition at line 313 of file glxew\&.h\&.
+.SS "#define glXGetVisualFromFBConfigSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXGetVisualFromFBConfigSGIX\fP)"
+
+.PP
+Definition at line 1141 of file glxew\&.h\&.
+.SS "#define glXHyperpipeAttribSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXHyperpipeAttribSGIX\fP)"
+
+.PP
+Definition at line 1203 of file glxew\&.h\&.
+.SS "#define glXHyperpipeConfigSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXHyperpipeConfigSGIX\fP)"
+
+.PP
+Definition at line 1204 of file glxew\&.h\&.
+.SS "#define glXImportContextEXT   \fBGLXEW_GET_FUN\fP(\fB__glewXImportContextEXT\fP)"
+
+.PP
+Definition at line 652 of file glxew\&.h\&.
+.SS "#define glXJoinSwapGroupNV   \fBGLXEW_GET_FUN\fP(\fB__glewXJoinSwapGroupNV\fP)"
+
+.PP
+Definition at line 944 of file glxew\&.h\&.
+.SS "#define glXJoinSwapGroupSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXJoinSwapGroupSGIX\fP)"
+
+.PP
+Definition at line 1286 of file glxew\&.h\&.
+.SS "#define glXLockVideoCaptureDeviceNV   \fBGLXEW_GET_FUN\fP(\fB__glewXLockVideoCaptureDeviceNV\fP)"
+
+.PP
+Definition at line 988 of file glxew\&.h\&.
+.SS "#define glXMakeAssociatedContextCurrentAMD   \fBGLXEW_GET_FUN\fP(\fB__glewXMakeAssociatedContextCurrentAMD\fP)"
+
+.PP
+Definition at line 383 of file glxew\&.h\&.
+.SS "#define glXMakeContextCurrent   \fBGLXEW_GET_FUN\fP(\fB__glewXMakeContextCurrent\fP)"
+
+.PP
+Definition at line 314 of file glxew\&.h\&.
+.SS "#define glXMakeCurrentReadSGI   \fBGLXEW_GET_FUN\fP(\fB__glewXMakeCurrentReadSGI\fP)"
+
+.PP
+Definition at line 1349 of file glxew\&.h\&.
+.SS "#define glXQueryChannelDeltasSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryChannelDeltasSGIX\fP)"
+
+.PP
+Definition at line 1309 of file glxew\&.h\&.
+.SS "#define glXQueryChannelRectSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryChannelRectSGIX\fP)"
+
+.PP
+Definition at line 1310 of file glxew\&.h\&.
+.SS "#define glXQueryContext   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryContext\fP)"
+
+.PP
+Definition at line 315 of file glxew\&.h\&.
+.SS "#define glXQueryContextInfoEXT   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryContextInfoEXT\fP)"
+
+.PP
+Definition at line 653 of file glxew\&.h\&.
+.SS "#define glXQueryDrawable   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryDrawable\fP)"
+
+.PP
+Definition at line 316 of file glxew\&.h\&.
+.SS "#define glXQueryFrameCountNV   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryFrameCountNV\fP)"
+
+.PP
+Definition at line 945 of file glxew\&.h\&.
+.SS "#define glXQueryGLXPbufferSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryGLXPbufferSGIX\fP)"
+
+.PP
+Definition at line 1257 of file glxew\&.h\&.
+.SS "#define glXQueryHyperpipeAttribSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryHyperpipeAttribSGIX\fP)"
+
+.PP
+Definition at line 1205 of file glxew\&.h\&.
+.SS "#define glXQueryHyperpipeBestAttribSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryHyperpipeBestAttribSGIX\fP)"
+
+.PP
+Definition at line 1206 of file glxew\&.h\&.
+.SS "#define glXQueryHyperpipeConfigSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryHyperpipeConfigSGIX\fP)"
+
+.PP
+Definition at line 1207 of file glxew\&.h\&.
+.SS "#define glXQueryHyperpipeNetworkSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryHyperpipeNetworkSGIX\fP)"
+
+.PP
+Definition at line 1208 of file glxew\&.h\&.
+.SS "#define glXQueryMaxSwapBarriersSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryMaxSwapBarriersSGIX\fP)"
+
+.PP
+Definition at line 1273 of file glxew\&.h\&.
+.SS "#define glXQueryMaxSwapGroupsNV   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryMaxSwapGroupsNV\fP)"
+
+.PP
+Definition at line 946 of file glxew\&.h\&.
+.SS "#define glXQuerySwapGroupNV   \fBGLXEW_GET_FUN\fP(\fB__glewXQuerySwapGroupNV\fP)"
+
+.PP
+Definition at line 947 of file glxew\&.h\&.
+.SS "#define glXQueryVideoCaptureDeviceNV   \fBGLXEW_GET_FUN\fP(\fB__glewXQueryVideoCaptureDeviceNV\fP)"
+
+.PP
+Definition at line 989 of file glxew\&.h\&.
+.SS "#define glXReleaseBuffersMESA   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseBuffersMESA\fP)"
+
+.PP
+Definition at line 841 of file glxew\&.h\&.
+.SS "#define glXReleaseTexImageATI   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseTexImageATI\fP)"
+
+.PP
+Definition at line 572 of file glxew\&.h\&.
+.SS "#define glXReleaseTexImageEXT   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseTexImageEXT\fP)"
+
+.PP
+Definition at line 736 of file glxew\&.h\&.
+.SS "#define glXReleaseVideoCaptureDeviceNV   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseVideoCaptureDeviceNV\fP)"
+
+.PP
+Definition at line 990 of file glxew\&.h\&.
+.SS "#define glXReleaseVideoDeviceNV   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseVideoDeviceNV\fP)"
+
+.PP
+Definition at line 1022 of file glxew\&.h\&.
+.SS "#define glXReleaseVideoImageNV   \fBGLXEW_GET_FUN\fP(\fB__glewXReleaseVideoImageNV\fP)"
+
+.PP
+Definition at line 1023 of file glxew\&.h\&.
+.SS "#define glXResetFrameCountNV   \fBGLXEW_GET_FUN\fP(\fB__glewXResetFrameCountNV\fP)"
+
+.PP
+Definition at line 948 of file glxew\&.h\&.
+.SS "#define glXSelectEvent   \fBGLXEW_GET_FUN\fP(\fB__glewXSelectEvent\fP)"
+
+.PP
+Definition at line 317 of file glxew\&.h\&.
+.SS "#define glXSelectEventSGIX   \fBGLXEW_GET_FUN\fP(\fB__glewXSelectEventSGIX\fP)"
+
+.PP
+Definition at line 1258 of file glxew\&.h\&.
+.SS "#define glXSendPbufferToVideoNV   \fBGLXEW_GET_FUN\fP(\fB__glewXSendPbufferToVideoNV\fP)"
+
+.PP
+Definition at line 1024 of file glxew\&.h\&.
+.SS "#define glXSet3DfxModeMESA   \fBGLXEW_GET_FUN\fP(\fB__glewXSet3DfxModeMESA\fP)"
+
+.PP
+Definition at line 857 of file glxew\&.h\&.
+.SS "#define glXSwapBuffersMscOML   \fBGLXEW_GET_FUN\fP(\fB__glewXSwapBuffersMscOML\fP)"
+
+.PP
+Definition at line 1057 of file glxew\&.h\&.
+.SS "#define glXSwapIntervalEXT   \fBGLXEW_GET_FUN\fP(\fB__glewXSwapIntervalEXT\fP)"
+
+.PP
+Definition at line 678 of file glxew\&.h\&.
+.SS "#define glXSwapIntervalMESA   \fBGLXEW_GET_FUN\fP(\fB__glewXSwapIntervalMESA\fP)"
+
+.PP
+Definition at line 872 of file glxew\&.h\&.
+.SS "#define glXSwapIntervalSGI   \fBGLXEW_GET_FUN\fP(\fB__glewXSwapIntervalSGI\fP)"
+
+.PP
+Definition at line 1362 of file glxew\&.h\&.
+.SS "#define glXVideoResizeSUN   \fBGLXEW_GET_FUN\fP(\fB__glewXVideoResizeSUN\fP)"
+
+.PP
+Definition at line 1408 of file glxew\&.h\&.
+.SS "#define glXWaitForMscOML   \fBGLXEW_GET_FUN\fP(\fB__glewXWaitForMscOML\fP)"
+
+.PP
+Definition at line 1058 of file glxew\&.h\&.
+.SS "#define glXWaitForSbcOML   \fBGLXEW_GET_FUN\fP(\fB__glewXWaitForSbcOML\fP)"
+
+.PP
+Definition at line 1059 of file glxew\&.h\&.
+.SS "#define glXWaitVideoSyncSGI   \fBGLXEW_GET_FUN\fP(\fB__glewXWaitVideoSyncSGI\fP)"
+
+.PP
+Definition at line 1377 of file glxew\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef struct __GLXcontextRec* \fBGLXContext\fP"
+
+.PP
+Definition at line 141 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXContextID\fP"
+
+.PP
+Definition at line 643 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXDrawable\fP"
+
+.PP
+Definition at line 136 of file glxew\&.h\&.
+.SS "typedef union \fB__GLXEvent\fP  \fBGLXEvent\fP"
+
+.SS "typedef struct __GLXFBConfigRec* \fBGLXFBConfig\fP"
+
+.PP
+Definition at line 263 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXFBConfigID\fP"
+
+.PP
+Definition at line 260 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXFBConfigIDSGIX\fP"
+
+.PP
+Definition at line 1126 of file glxew\&.h\&.
+.SS "typedef struct __GLXFBConfigRec* \fBGLXFBConfigSGIX\fP"
+
+.PP
+Definition at line 1127 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXPbuffer\fP"
+
+.PP
+Definition at line 261 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXPbufferSGIX\fP"
+
+.PP
+Definition at line 1245 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXPixmap\fP"
+
+.PP
+Definition at line 137 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXVideoCaptureDeviceNV\fP"
+
+.PP
+Definition at line 978 of file glxew\&.h\&.
+.SS "typedef unsigned \fBint\fP \fBGLXVideoDeviceNV\fP"
+
+.PP
+Definition at line 144 of file glxew\&.h\&.
+.SS "typedef XID \fBGLXWindow\fP"
+
+.PP
+Definition at line 262 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP*( *  PFNGLXALLOCATEMEMORYNVPROC)(\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readFrequency, \fBGLfloat\fP writeFrequency, \fBGLfloat\fP priority)"
+
+.PP
+Definition at line 959 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXBINDCHANNELTOWINDOWSGIXPROC)(Display *display, \fBint\fP screen, \fBint\fP channel, Window window)"
+
+.PP
+Definition at line 1300 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXBINDHYPERPIPESGIXPROC)(Display *dpy, \fBint\fP hpId)"
+
+.PP
+Definition at line 1192 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXBINDSWAPBARRIERNVPROC)(Display *dpy, \fBGLuint\fP \fBgroup\fP, \fBGLuint\fP \fBbarrier\fP)"
+
+.PP
+Definition at line 936 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXBINDSWAPBARRIERSGIXPROC)(Display *dpy, \fBGLXDrawable\fP drawable, \fBint\fP \fBbarrier\fP)"
+
+.PP
+Definition at line 1269 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXBINDTEXIMAGEATIPROC)(Display *dpy, \fBGLXPbuffer\fP pbuf, \fBint\fP \fBbuffer\fP)"
+
+.PP
+Definition at line 566 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXBINDTEXIMAGEEXTPROC)(Display *display, \fBGLXDrawable\fP drawable, \fBint\fP \fBbuffer\fP, const \fBint\fP *attrib_list)"
+
+.PP
+Definition at line 732 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXBINDVIDEOCAPTUREDEVICENVPROC)(Display *dpy, unsigned \fBint\fP video_capture_slot, \fBGLXVideoCaptureDeviceNV\fP device)"
+
+.PP
+Definition at line 980 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXBINDVIDEODEVICENVPROC)(Display *dpy, unsigned \fBint\fP video_slot, unsigned \fBint\fP video_device, const \fBint\fP *attrib_list)"
+
+.PP
+Definition at line 921 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXBINDVIDEOIMAGENVPROC)(Display *dpy, \fBGLXVideoDeviceNV\fP VideoDevice, \fBGLXPbuffer\fP pbuf, \fBint\fP \fBiVideoBuffer\fP)"
+
+.PP
+Definition at line 1012 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXBLITCONTEXTFRAMEBUFFERAMDPROC)(\fBGLXContext\fP dstCtx, \fBGLint\fP \fBsrcX0\fP, \fBGLint\fP \fBsrcY0\fP, \fBGLint\fP \fBsrcX1\fP, \fBGLint\fP \fBsrcY1\fP, \fBGLint\fP \fBdstX0\fP, \fBGLint\fP \fBdstY0\fP, \fBGLint\fP \fBdstX1\fP, \fBGLint\fP \fBdstY1\fP, \fBGLbitfield\fP \fBmask\fP, \fBGLenum\fP \fBfilter\fP)"
+
+.PP
+Definition at line 365 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXCHANNELRECTSGIXPROC)(Display *display, \fBint\fP screen, \fBint\fP channel, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBint\fP \fBw\fP, \fBint\fP \fBh\fP)"
+
+.PP
+Definition at line 1301 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXCHANNELRECTSYNCSGIXPROC)(Display *display, \fBint\fP screen, \fBint\fP channel, \fBGLenum\fP synctype)"
+
+.PP
+Definition at line 1302 of file glxew\&.h\&.
+.SS "typedef \fBGLXFBConfig\fP*( *  PFNGLXCHOOSEFBCONFIGPROC)(Display *dpy, \fBint\fP screen, const \fBint\fP *attrib_list, \fBint\fP *nelements)"
+
+.PP
+Definition at line 283 of file glxew\&.h\&.
+.SS "typedef \fBGLXFBConfigSGIX\fP*( *  PFNGLXCHOOSEFBCONFIGSGIXPROC)(Display *dpy, \fBint\fP screen, const \fBint\fP *attrib_list, \fBint\fP *nelements)"
+
+.PP
+Definition at line 1129 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXCOPYIMAGESUBDATANVPROC)(Display *dpy, \fBGLXContext\fP srcCtx, \fBGLuint\fP \fBsrcName\fP, \fBGLenum\fP \fBsrcTarget\fP, \fBGLint\fP \fBsrcLevel\fP, \fBGLint\fP \fBsrcX\fP, \fBGLint\fP \fBsrcY\fP, \fBGLint\fP \fBsrcZ\fP, \fBGLXContext\fP dstCtx, \fBGLuint\fP \fBdstName\fP, \fBGLenum\fP \fBdstTarget\fP, \fBGLint\fP \fBdstLevel\fP, \fBGLint\fP \fBdstX\fP, \fBGLint\fP \fBdstY\fP, \fBGLint\fP \fBdstZ\fP, \fBGLsizei\fP \fBwidth\fP, \fBGLsizei\fP \fBheight\fP, \fBGLsizei\fP \fBdepth\fP)"
+
+.PP
+Definition at line 883 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXCOPYSUBBUFFERMESAPROC)(Display *dpy, \fBGLXDrawable\fP drawable, \fBint\fP \fBx\fP, \fBint\fP \fBy\fP, \fBint\fP \fBwidth\fP, \fBint\fP \fBheight\fP)"
+
+.PP
+Definition at line 813 of file glxew\&.h\&.
+.SS "typedef \fBGLXContext\fP( *  PFNGLXCREATEASSOCIATEDCONTEXTAMDPROC)(unsigned \fBint\fP \fBid\fP, \fBGLXContext\fP share_list)"
+
+.PP
+Definition at line 366 of file glxew\&.h\&.
+.SS "typedef \fBGLXContext\fP( *  PFNGLXCREATEASSOCIATEDCONTEXTATTRIBSAMDPROC)(unsigned \fBint\fP \fBid\fP, \fBGLXContext\fP share_context, const \fBint\fP *\fBattribList\fP)"
+
+.PP
+Definition at line 367 of file glxew\&.h\&.
+.SS "typedef \fBGLXContext\fP( *  PFNGLXCREATECONTEXTATTRIBSARBPROC)(Display *dpy, \fBGLXFBConfig\fP config, \fBGLXContext\fP share_context, Bool direct, const \fBint\fP *attrib_list)"
+
+.PP
+Definition at line 400 of file glxew\&.h\&.
+.SS "typedef \fBGLXContext\fP( *  PFNGLXCREATECONTEXTWITHCONFIGSGIXPROC)(Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP render_type, \fBGLXContext\fP share_list, Bool direct)"
+
+.PP
+Definition at line 1130 of file glxew\&.h\&.
+.SS "typedef \fBGLXPbuffer\fP( *  PFNGLXCREATEGLXPBUFFERSGIXPROC)(Display *dpy, \fBGLXFBConfig\fP config, unsigned \fBint\fP \fBwidth\fP, unsigned \fBint\fP \fBheight\fP, \fBint\fP *attrib_list)"
+
+.PP
+Definition at line 1248 of file glxew\&.h\&.
+.SS "typedef \fBGLXPixmap\fP( *  PFNGLXCREATEGLXPIXMAPMESAPROC)(Display *dpy, XVisualInfo *visual, Pixmap pixmap, Colormap cmap)"
+
+.PP
+Definition at line 826 of file glxew\&.h\&.
+.SS "typedef \fBGLXPixmap\fP( *  PFNGLXCREATEGLXPIXMAPWITHCONFIGSGIXPROC)(Display *dpy, \fBGLXFBConfig\fP config, Pixmap pixmap)"
+
+.PP
+Definition at line 1131 of file glxew\&.h\&.
+.SS "typedef \fBGLXContext\fP( *  PFNGLXCREATENEWCONTEXTPROC)(Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP render_type, \fBGLXContext\fP share_list, Bool direct)"
+
+.PP
+Definition at line 284 of file glxew\&.h\&.
+.SS "typedef \fBGLXPbuffer\fP( *  PFNGLXCREATEPBUFFERPROC)(Display *dpy, \fBGLXFBConfig\fP config, const \fBint\fP *attrib_list)"
+
+.PP
+Definition at line 285 of file glxew\&.h\&.
+.SS "typedef \fBGLXPixmap\fP( *  PFNGLXCREATEPIXMAPPROC)(Display *dpy, \fBGLXFBConfig\fP config, Pixmap pixmap, const \fBint\fP *attrib_list)"
+
+.PP
+Definition at line 286 of file glxew\&.h\&.
+.SS "typedef \fBGLXWindow\fP( *  PFNGLXCREATEWINDOWPROC)(Display *dpy, \fBGLXFBConfig\fP config, Window win, const \fBint\fP *attrib_list)"
+
+.PP
+Definition at line 287 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXCUSHIONSGIPROC)(Display *dpy, Window window, float cushion)"
+
+.PP
+Definition at line 1332 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXDELETEASSOCIATEDCONTEXTAMDPROC)(\fBGLXContext\fP ctx)"
+
+.PP
+Definition at line 368 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXDESTROYGLXPBUFFERSGIXPROC)(Display *dpy, \fBGLXPbuffer\fP pbuf)"
+
+.PP
+Definition at line 1249 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXDESTROYHYPERPIPECONFIGSGIXPROC)(Display *dpy, \fBint\fP hpId)"
+
+.PP
+Definition at line 1193 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXDESTROYPBUFFERPROC)(Display *dpy, \fBGLXPbuffer\fP pbuf)"
+
+.PP
+Definition at line 288 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXDESTROYPIXMAPPROC)(Display *dpy, \fBGLXPixmap\fP pixmap)"
+
+.PP
+Definition at line 289 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXDESTROYWINDOWPROC)(Display *dpy, \fBGLXWindow\fP win)"
+
+.PP
+Definition at line 290 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXDRAWABLEATTRIBATIPROC)(Display *dpy, \fBGLXDrawable\fP draw, const \fBint\fP *attrib_list)"
+
+.PP
+Definition at line 567 of file glxew\&.h\&.
+.SS "typedef \fBGLXVideoCaptureDeviceNV\fP*( *  PFNGLXENUMERATEVIDEOCAPTUREDEVICESNVPROC)(Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+
+.PP
+Definition at line 981 of file glxew\&.h\&.
+.SS "typedef unsigned \fBint\fP*( *  PFNGLXENUMERATEVIDEODEVICESNVPROC)(Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+
+.PP
+Definition at line 922 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXFREECONTEXTEXTPROC)(Display *dpy, \fBGLXContext\fP context)"
+
+.PP
+Definition at line 645 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXFREEMEMORYNVPROC)(\fBvoid\fP *\fBpointer\fP)"
+
+.PP
+Definition at line 960 of file glxew\&.h\&.
+.SS "typedef unsigned \fBint\fP( *  PFNGLXGETAGPOFFSETMESAPROC)(const \fBvoid\fP *\fBpointer\fP)"
+
+.PP
+Definition at line 800 of file glxew\&.h\&.
+.SS "typedef unsigned \fBint\fP( *  PFNGLXGETCONTEXTGPUIDAMDPROC)(\fBGLXContext\fP ctx)"
+
+.PP
+Definition at line 369 of file glxew\&.h\&.
+.SS "typedef \fBGLXContextID\fP( *  PFNGLXGETCONTEXTIDEXTPROC)(const \fBGLXContext\fP context)"
+
+.PP
+Definition at line 646 of file glxew\&.h\&.
+.SS "typedef \fBGLXContext\fP( *  PFNGLXGETCURRENTASSOCIATEDCONTEXTAMDPROC)(\fBvoid\fP)"
+
+.PP
+Definition at line 370 of file glxew\&.h\&.
+.SS "typedef Display*( *  PFNGLXGETCURRENTDISPLAYPROC)(\fBvoid\fP)"
+
+.PP
+Definition at line 190 of file glxew\&.h\&.
+.SS "typedef \fBGLXDrawable\fP( *  PFNGLXGETCURRENTREADDRAWABLEPROC)(\fBvoid\fP)"
+
+.PP
+Definition at line 291 of file glxew\&.h\&.
+.SS "typedef \fBGLXDrawable\fP( *  PFNGLXGETCURRENTREADDRAWABLESGIPROC)(\fBvoid\fP)"
+
+.PP
+Definition at line 1345 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXGETFBCONFIGATTRIBPROC)(Display *dpy, \fBGLXFBConfig\fP config, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+
+.PP
+Definition at line 292 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXGETFBCONFIGATTRIBSGIXPROC)(Display *dpy, \fBGLXFBConfigSGIX\fP config, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+
+.PP
+Definition at line 1132 of file glxew\&.h\&.
+.SS "typedef \fBGLXFBConfigSGIX\fP( *  PFNGLXGETFBCONFIGFROMVISUALSGIXPROC)(Display *dpy, XVisualInfo *vis)"
+
+.PP
+Definition at line 1133 of file glxew\&.h\&.
+.SS "typedef \fBGLXFBConfig\fP*( *  PFNGLXGETFBCONFIGSPROC)(Display *dpy, \fBint\fP screen, \fBint\fP *nelements)"
+
+.PP
+Definition at line 293 of file glxew\&.h\&.
+.SS "typedef unsigned \fBint\fP( *  PFNGLXGETGPUIDSAMDPROC)(unsigned \fBint\fP \fBmaxCount\fP, unsigned \fBint\fP *\fBids\fP)"
+
+.PP
+Definition at line 371 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXGETGPUINFOAMDPROC)(unsigned \fBint\fP \fBid\fP, \fBint\fP \fBproperty\fP, \fBGLenum\fP \fBdataType\fP, unsigned \fBint\fP \fBsize\fP, \fBvoid\fP *\fBdata\fP)"
+
+.PP
+Definition at line 372 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXGETMSCRATEOMLPROC)(Display *dpy, \fBGLXDrawable\fP drawable, int32_t *\fBnumerator\fP, int32_t *\fBdenominator\fP)"
+
+.PP
+Definition at line 1049 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXGETSELECTEDEVENTPROC)(Display *dpy, \fBGLXDrawable\fP draw, unsigned long *event_mask)"
+
+.PP
+Definition at line 294 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXGETSELECTEDEVENTSGIXPROC)(Display *dpy, \fBGLXDrawable\fP drawable, unsigned long *\fBmask\fP)"
+
+.PP
+Definition at line 1250 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXGETSWAPINTERVALMESAPROC)(\fBvoid\fP)"
+
+.PP
+Definition at line 868 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXGETSYNCVALUESOMLPROC)(Display *dpy, \fBGLXDrawable\fP drawable, int64_t *\fBust\fP, int64_t *\fBmsc\fP, int64_t *\fBsbc\fP)"
+
+.PP
+Definition at line 1050 of file glxew\&.h\&.
+.SS "typedef Status( *  PFNGLXGETTRANSPARENTINDEXSUNPROC)(Display *dpy, Window overlay, Window underlay, unsigned long *pTransparentIndex)"
+
+.PP
+Definition at line 1388 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXGETVIDEODEVICENVPROC)(Display *dpy, \fBint\fP screen, \fBint\fP numVideoDevices, \fBGLXVideoDeviceNV\fP *pVideoDevice)"
+
+.PP
+Definition at line 1013 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXGETVIDEOINFONVPROC)(Display *dpy, \fBint\fP screen, \fBGLXVideoDeviceNV\fP VideoDevice, unsigned long *\fBpulCounterOutputPbuffer\fP, unsigned long *\fBpulCounterOutputVideo\fP)"
+
+.PP
+Definition at line 1014 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXGETVIDEORESIZESUNPROC)(Display *display, \fBGLXDrawable\fP window, float *factor)"
+
+.PP
+Definition at line 1404 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXGETVIDEOSYNCSGIPROC)(unsigned \fBint\fP *\fBcount\fP)"
+
+.PP
+Definition at line 1373 of file glxew\&.h\&.
+.SS "typedef XVisualInfo*( *  PFNGLXGETVISUALFROMFBCONFIGPROC)(Display *dpy, \fBGLXFBConfig\fP config)"
+
+.PP
+Definition at line 295 of file glxew\&.h\&.
+.SS "typedef XVisualInfo*( *  PFNGLXGETVISUALFROMFBCONFIGSGIXPROC)(Display *dpy, \fBGLXFBConfig\fP config)"
+
+.PP
+Definition at line 1134 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXHYPERPIPEATTRIBSGIXPROC)(Display *dpy, \fBint\fP timeSlice, \fBint\fP attrib, \fBint\fP \fBsize\fP, \fBvoid\fP *\fBattribList\fP)"
+
+.PP
+Definition at line 1194 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXHYPERPIPECONFIGSGIXPROC)(Display *dpy, \fBint\fP networkId, \fBint\fP npipes, \fBGLXHyperpipeConfigSGIX\fP *cfg, \fBint\fP *hpId)"
+
+.PP
+Definition at line 1195 of file glxew\&.h\&.
+.SS "typedef \fBGLXContext\fP( *  PFNGLXIMPORTCONTEXTEXTPROC)(Display *dpy, \fBGLXContextID\fP contextID)"
+
+.PP
+Definition at line 647 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXJOINSWAPGROUPNVPROC)(Display *dpy, \fBGLXDrawable\fP drawable, \fBGLuint\fP \fBgroup\fP)"
+
+.PP
+Definition at line 937 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXJOINSWAPGROUPSGIXPROC)(Display *dpy, \fBGLXDrawable\fP drawable, \fBGLXDrawable\fP member)"
+
+.PP
+Definition at line 1284 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXLOCKVIDEOCAPTUREDEVICENVPROC)(Display *dpy, \fBGLXVideoCaptureDeviceNV\fP device)"
+
+.PP
+Definition at line 982 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXMAKEASSOCIATEDCONTEXTCURRENTAMDPROC)(\fBGLXContext\fP ctx)"
+
+.PP
+Definition at line 373 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXMAKECONTEXTCURRENTPROC)(Display *display, \fBGLXDrawable\fP draw, \fBGLXDrawable\fP read, \fBGLXContext\fP ctx)"
+
+.PP
+Definition at line 296 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXMAKECURRENTREADSGIPROC)(Display *dpy, \fBGLXDrawable\fP draw, \fBGLXDrawable\fP read, \fBGLXContext\fP ctx)"
+
+.PP
+Definition at line 1346 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXQUERYCHANNELDELTASSGIXPROC)(Display *display, \fBint\fP screen, \fBint\fP channel, \fBint\fP *\fBx\fP, \fBint\fP *\fBy\fP, \fBint\fP *\fBw\fP, \fBint\fP *\fBh\fP)"
+
+.PP
+Definition at line 1303 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXQUERYCHANNELRECTSGIXPROC)(Display *display, \fBint\fP screen, \fBint\fP channel, \fBint\fP *dx, \fBint\fP *dy, \fBint\fP *dw, \fBint\fP *dh)"
+
+.PP
+Definition at line 1304 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXQUERYCONTEXTINFOEXTPROC)(Display *dpy, \fBGLXContext\fP context, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+
+.PP
+Definition at line 648 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXQUERYCONTEXTPROC)(Display *dpy, \fBGLXContext\fP ctx, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+
+.PP
+Definition at line 297 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXQUERYDRAWABLEPROC)(Display *dpy, \fBGLXDrawable\fP draw, \fBint\fP attribute, unsigned \fBint\fP *\fBvalue\fP)"
+
+.PP
+Definition at line 298 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXQUERYFRAMECOUNTNVPROC)(Display *dpy, \fBint\fP screen, \fBGLuint\fP *\fBcount\fP)"
+
+.PP
+Definition at line 938 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXQUERYGLXPBUFFERSGIXPROC)(Display *dpy, \fBGLXPbuffer\fP pbuf, \fBint\fP attribute, unsigned \fBint\fP *\fBvalue\fP)"
+
+.PP
+Definition at line 1251 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXQUERYHYPERPIPEATTRIBSGIXPROC)(Display *dpy, \fBint\fP timeSlice, \fBint\fP attrib, \fBint\fP \fBsize\fP, \fBvoid\fP *returnAttribList)"
+
+.PP
+Definition at line 1196 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXQUERYHYPERPIPEBESTATTRIBSGIXPROC)(Display *dpy, \fBint\fP timeSlice, \fBint\fP attrib, \fBint\fP \fBsize\fP, \fBvoid\fP *\fBattribList\fP, \fBvoid\fP *returnAttribList)"
+
+.PP
+Definition at line 1197 of file glxew\&.h\&.
+.SS "typedef \fBGLXHyperpipeConfigSGIX\fP*( *  PFNGLXQUERYHYPERPIPECONFIGSGIXPROC)(Display *dpy, \fBint\fP hpId, \fBint\fP *npipes)"
+
+.PP
+Definition at line 1198 of file glxew\&.h\&.
+.SS "typedef \fBGLXHyperpipeNetworkSGIX\fP*( *  PFNGLXQUERYHYPERPIPENETWORKSGIXPROC)(Display *dpy, \fBint\fP *npipes)"
+
+.PP
+Definition at line 1199 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXQUERYMAXSWAPBARRIERSSGIXPROC)(Display *dpy, \fBint\fP screen, \fBint\fP *max)"
+
+.PP
+Definition at line 1270 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXQUERYMAXSWAPGROUPSNVPROC)(Display *dpy, \fBint\fP screen, \fBGLuint\fP *\fBmaxGroups\fP, \fBGLuint\fP *\fBmaxBarriers\fP)"
+
+.PP
+Definition at line 939 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXQUERYSWAPGROUPNVPROC)(Display *dpy, \fBGLXDrawable\fP drawable, \fBGLuint\fP *\fBgroup\fP, \fBGLuint\fP *\fBbarrier\fP)"
+
+.PP
+Definition at line 940 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXQUERYVIDEOCAPTUREDEVICENVPROC)(Display *dpy, \fBGLXVideoCaptureDeviceNV\fP device, \fBint\fP attribute, \fBint\fP *\fBvalue\fP)"
+
+.PP
+Definition at line 983 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXRELEASEBUFFERSMESAPROC)(Display *dpy, \fBGLXDrawable\fP d)"
+
+.PP
+Definition at line 839 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXRELEASETEXIMAGEATIPROC)(Display *dpy, \fBGLXPbuffer\fP pbuf, \fBint\fP \fBbuffer\fP)"
+
+.PP
+Definition at line 568 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXRELEASETEXIMAGEEXTPROC)(Display *display, \fBGLXDrawable\fP drawable, \fBint\fP \fBbuffer\fP)"
+
+.PP
+Definition at line 733 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXRELEASEVIDEOCAPTUREDEVICENVPROC)(Display *dpy, \fBGLXVideoCaptureDeviceNV\fP device)"
+
+.PP
+Definition at line 984 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXRELEASEVIDEODEVICENVPROC)(Display *dpy, \fBint\fP screen, \fBGLXVideoDeviceNV\fP VideoDevice)"
+
+.PP
+Definition at line 1015 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXRELEASEVIDEOIMAGENVPROC)(Display *dpy, \fBGLXPbuffer\fP pbuf)"
+
+.PP
+Definition at line 1016 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXRESETFRAMECOUNTNVPROC)(Display *dpy, \fBint\fP screen)"
+
+.PP
+Definition at line 941 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXSELECTEVENTPROC)(Display *dpy, \fBGLXDrawable\fP draw, unsigned long event_mask)"
+
+.PP
+Definition at line 299 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXSELECTEVENTSGIXPROC)(Display *dpy, \fBGLXDrawable\fP drawable, unsigned long \fBmask\fP)"
+
+.PP
+Definition at line 1252 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXSENDPBUFFERTOVIDEONVPROC)(Display *dpy, \fBGLXPbuffer\fP pbuf, \fBint\fP \fBiBufferType\fP, unsigned long *\fBpulCounterPbuffer\fP, \fBGLboolean\fP \fBbBlock\fP)"
+
+.PP
+Definition at line 1017 of file glxew\&.h\&.
+.SS "typedef \fBGLboolean\fP( *  PFNGLXSET3DFXMODEMESAPROC)(\fBGLint\fP \fBmode\fP)"
+
+.PP
+Definition at line 855 of file glxew\&.h\&.
+.SS "typedef int64_t( *  PFNGLXSWAPBUFFERSMSCOMLPROC)(Display *dpy, \fBGLXDrawable\fP drawable, int64_t \fBtarget_msc\fP, int64_t \fBdivisor\fP, int64_t \fBremainder\fP)"
+
+.PP
+Definition at line 1051 of file glxew\&.h\&.
+.SS "typedef \fBvoid\fP( *  PFNGLXSWAPINTERVALEXTPROC)(Display *dpy, \fBGLXDrawable\fP drawable, \fBint\fP interval)"
+
+.PP
+Definition at line 676 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXSWAPINTERVALMESAPROC)(unsigned \fBint\fP interval)"
+
+.PP
+Definition at line 869 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXSWAPINTERVALSGIPROC)(\fBint\fP interval)"
+
+.PP
+Definition at line 1360 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXVIDEORESIZESUNPROC)(Display *display, \fBGLXDrawable\fP window, float factor)"
+
+.PP
+Definition at line 1405 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXWAITFORMSCOMLPROC)(Display *dpy, \fBGLXDrawable\fP drawable, int64_t \fBtarget_msc\fP, int64_t \fBdivisor\fP, int64_t \fBremainder\fP, int64_t *\fBust\fP, int64_t *\fBmsc\fP, int64_t *\fBsbc\fP)"
+
+.PP
+Definition at line 1052 of file glxew\&.h\&.
+.SS "typedef Bool( *  PFNGLXWAITFORSBCOMLPROC)(Display *dpy, \fBGLXDrawable\fP drawable, int64_t \fBtarget_sbc\fP, int64_t *\fBust\fP, int64_t *\fBmsc\fP, int64_t *\fBsbc\fP)"
+
+.PP
+Definition at line 1053 of file glxew\&.h\&.
+.SS "typedef \fBint\fP( *  PFNGLXWAITVIDEOSYNCSGIPROC)(\fBint\fP \fBdivisor\fP, \fBint\fP \fBremainder\fP, unsigned \fBint\fP *\fBcount\fP)"
+
+.PP
+Definition at line 1374 of file glxew\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "XVisualInfo* glXChooseVisual (Display *dpy, \fBint\fPscreen, \fBint\fP *attribList)"
+
+.SS "\fBvoid\fP glXCopyContext (Display *dpy, \fBGLXContext\fPsrc, \fBGLXContext\fPdst, \fBGLulong\fPmask)"
+
+.SS "\fBGLXContext\fP glXCreateContext (Display *dpy, XVisualInfo *vis, \fBGLXContext\fPshareList, Booldirect)"
+
+.SS "\fBGLXPixmap\fP glXCreateGLXPixmap (Display *dpy, XVisualInfo *vis, Pixmappixmap)"
+
+.SS "\fBvoid\fP glXDestroyContext (Display *dpy, \fBGLXContext\fPctx)"
+
+.SS "\fBvoid\fP glXDestroyGLXPixmap (Display *dpy, \fBGLXPixmap\fPpix)"
+
+.SS "\fBGLEWAPI\fP \fBGLboolean\fP \fBGLEWAPIENTRY\fP glxewGetExtension (const char *name)"
+
+.SS "\fBGLEWAPI\fP \fBGLboolean\fP \fBGLEWAPIENTRY\fP glxewIsSupported (const char *name)"
+
+.SS "const char* glXGetClientString (Display *dpy, \fBint\fPname)"
+
+.SS "\fBint\fP glXGetConfig (Display *dpy, XVisualInfo *vis, \fBint\fPattrib, \fBint\fP *value)"
+
+.SS "\fBGLXContext\fP glXGetCurrentContext (\fBvoid\fP)"
+
+.SS "\fBGLXDrawable\fP glXGetCurrentDrawable (\fBvoid\fP)"
+
+.SS "Bool glXIsDirect (Display *dpy, \fBGLXContext\fPctx)"
+
+.SS "Bool glXMakeCurrent (Display *dpy, \fBGLXDrawable\fPdrawable, \fBGLXContext\fPctx)"
+
+.SS "Bool glXQueryExtension (Display *dpy, \fBint\fP *errorBase, \fBint\fP *eventBase)"
+
+.SS "const char* glXQueryExtensionsString (Display *dpy, \fBint\fPscreen)"
+
+.SS "const char* glXQueryServerString (Display *dpy, \fBint\fPscreen, \fBint\fPname)"
+
+.SS "Bool glXQueryVersion (Display *dpy, \fBint\fP *major, \fBint\fP *minor)"
+
+.SS "\fBvoid\fP glXSwapBuffers (Display *dpy, \fBGLXDrawable\fPdrawable)"
+
+.SS "\fBvoid\fP glXUseXFont (Fontfont, \fBint\fPfirst, \fBint\fPcount, \fBint\fPlistBase)"
+
+.SS "\fBvoid\fP glXWaitGL (\fBvoid\fP)"
+
+.SS "\fBvoid\fP glXWaitX (\fBvoid\fP)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXALLOCATEMEMORYNVPROC\fP __glewXAllocateMemoryNV"
+
+.PP
+Definition at line 1495 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDCHANNELTOWINDOWSGIXPROC\fP __glewXBindChannelToWindowSGIX"
+
+.PP
+Definition at line 1544 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDHYPERPIPESGIXPROC\fP __glewXBindHyperpipeSGIX"
+
+.PP
+Definition at line 1524 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDSWAPBARRIERNVPROC\fP __glewXBindSwapBarrierNV"
+
+.PP
+Definition at line 1488 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDSWAPBARRIERSGIXPROC\fP __glewXBindSwapBarrierSGIX"
+
+.PP
+Definition at line 1539 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDTEXIMAGEATIPROC\fP __glewXBindTexImageATI"
+
+.PP
+Definition at line 1456 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDTEXIMAGEEXTPROC\fP __glewXBindTexImageEXT"
+
+.PP
+Definition at line 1467 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDVIDEOCAPTUREDEVICENVPROC\fP __glewXBindVideoCaptureDeviceNV"
+
+.PP
+Definition at line 1498 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDVIDEODEVICENVPROC\fP __glewXBindVideoDeviceNV"
+
+.PP
+Definition at line 1485 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBINDVIDEOIMAGENVPROC\fP __glewXBindVideoImageNV"
+
+.PP
+Definition at line 1504 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXBLITCONTEXTFRAMEBUFFERAMDPROC\fP __glewXBlitContextFramebufferAMD"
+
+.PP
+Definition at line 1444 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCHANNELRECTSGIXPROC\fP __glewXChannelRectSGIX"
+
+.PP
+Definition at line 1545 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCHANNELRECTSYNCSGIXPROC\fP __glewXChannelRectSyncSGIX"
+
+.PP
+Definition at line 1546 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCHOOSEFBCONFIGPROC\fP __glewXChooseFBConfig"
+
+.PP
+Definition at line 1426 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCHOOSEFBCONFIGSGIXPROC\fP __glewXChooseFBConfigSGIX"
+
+.PP
+Definition at line 1517 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCOPYIMAGESUBDATANVPROC\fP __glewXCopyImageSubDataNV"
+
+.PP
+Definition at line 1483 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCOPYSUBBUFFERMESAPROC\fP __glewXCopySubBufferMESA"
+
+.PP
+Definition at line 1472 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATEASSOCIATEDCONTEXTAMDPROC\fP __glewXCreateAssociatedContextAMD"
+
+.PP
+Definition at line 1445 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATEASSOCIATEDCONTEXTATTRIBSAMDPROC\fP __glewXCreateAssociatedContextAttribsAMD"
+
+.PP
+Definition at line 1446 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATECONTEXTATTRIBSARBPROC\fP __glewXCreateContextAttribsARB"
+
+.PP
+Definition at line 1454 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATECONTEXTWITHCONFIGSGIXPROC\fP __glewXCreateContextWithConfigSGIX"
+
+.PP
+Definition at line 1518 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATEGLXPBUFFERSGIXPROC\fP __glewXCreateGLXPbufferSGIX"
+
+.PP
+Definition at line 1533 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATEGLXPIXMAPMESAPROC\fP __glewXCreateGLXPixmapMESA"
+
+.PP
+Definition at line 1474 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATEGLXPIXMAPWITHCONFIGSGIXPROC\fP __glewXCreateGLXPixmapWithConfigSGIX"
+
+.PP
+Definition at line 1519 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATENEWCONTEXTPROC\fP __glewXCreateNewContext"
+
+.PP
+Definition at line 1427 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATEPBUFFERPROC\fP __glewXCreatePbuffer"
+
+.PP
+Definition at line 1428 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATEPIXMAPPROC\fP __glewXCreatePixmap"
+
+.PP
+Definition at line 1429 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCREATEWINDOWPROC\fP __glewXCreateWindow"
+
+.PP
+Definition at line 1430 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXCUSHIONSGIPROC\fP __glewXCushionSGI"
+
+.PP
+Definition at line 1550 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXDELETEASSOCIATEDCONTEXTAMDPROC\fP __glewXDeleteAssociatedContextAMD"
+
+.PP
+Definition at line 1447 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXDESTROYGLXPBUFFERSGIXPROC\fP __glewXDestroyGLXPbufferSGIX"
+
+.PP
+Definition at line 1534 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXDESTROYHYPERPIPECONFIGSGIXPROC\fP __glewXDestroyHyperpipeConfigSGIX"
+
+.PP
+Definition at line 1525 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXDESTROYPBUFFERPROC\fP __glewXDestroyPbuffer"
+
+.PP
+Definition at line 1431 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXDESTROYPIXMAPPROC\fP __glewXDestroyPixmap"
+
+.PP
+Definition at line 1432 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXDESTROYWINDOWPROC\fP __glewXDestroyWindow"
+
+.PP
+Definition at line 1433 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXDRAWABLEATTRIBATIPROC\fP __glewXDrawableAttribATI"
+
+.PP
+Definition at line 1457 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXENUMERATEVIDEOCAPTUREDEVICESNVPROC\fP __glewXEnumerateVideoCaptureDevicesNV"
+
+.PP
+Definition at line 1499 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXENUMERATEVIDEODEVICESNVPROC\fP __glewXEnumerateVideoDevicesNV"
+
+.PP
+Definition at line 1486 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXFREECONTEXTEXTPROC\fP __glewXFreeContextEXT"
+
+.PP
+Definition at line 1460 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXFREEMEMORYNVPROC\fP __glewXFreeMemoryNV"
+
+.PP
+Definition at line 1496 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETAGPOFFSETMESAPROC\fP __glewXGetAGPOffsetMESA"
+
+.PP
+Definition at line 1470 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETCONTEXTGPUIDAMDPROC\fP __glewXGetContextGPUIDAMD"
+
+.PP
+Definition at line 1448 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETCONTEXTIDEXTPROC\fP __glewXGetContextIDEXT"
+
+.PP
+Definition at line 1461 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETCURRENTASSOCIATEDCONTEXTAMDPROC\fP __glewXGetCurrentAssociatedContextAMD"
+
+.PP
+Definition at line 1449 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETCURRENTDISPLAYPROC\fP __glewXGetCurrentDisplay"
+
+.PP
+Definition at line 1424 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETCURRENTREADDRAWABLEPROC\fP __glewXGetCurrentReadDrawable"
+
+.PP
+Definition at line 1434 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETCURRENTREADDRAWABLESGIPROC\fP __glewXGetCurrentReadDrawableSGI"
+
+.PP
+Definition at line 1552 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETFBCONFIGATTRIBPROC\fP __glewXGetFBConfigAttrib"
+
+.PP
+Definition at line 1435 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETFBCONFIGATTRIBSGIXPROC\fP __glewXGetFBConfigAttribSGIX"
+
+.PP
+Definition at line 1520 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETFBCONFIGFROMVISUALSGIXPROC\fP __glewXGetFBConfigFromVisualSGIX"
+
+.PP
+Definition at line 1521 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETFBCONFIGSPROC\fP __glewXGetFBConfigs"
+
+.PP
+Definition at line 1436 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETGPUIDSAMDPROC\fP __glewXGetGPUIDsAMD"
+
+.PP
+Definition at line 1450 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETGPUINFOAMDPROC\fP __glewXGetGPUInfoAMD"
+
+.PP
+Definition at line 1451 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETMSCRATEOMLPROC\fP __glewXGetMscRateOML"
+
+.PP
+Definition at line 1511 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETSELECTEDEVENTPROC\fP __glewXGetSelectedEvent"
+
+.PP
+Definition at line 1437 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETSELECTEDEVENTSGIXPROC\fP __glewXGetSelectedEventSGIX"
+
+.PP
+Definition at line 1535 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETSWAPINTERVALMESAPROC\fP __glewXGetSwapIntervalMESA"
+
+.PP
+Definition at line 1480 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETSYNCVALUESOMLPROC\fP __glewXGetSyncValuesOML"
+
+.PP
+Definition at line 1512 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETTRANSPARENTINDEXSUNPROC\fP __glewXGetTransparentIndexSUN"
+
+.PP
+Definition at line 1560 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETVIDEODEVICENVPROC\fP __glewXGetVideoDeviceNV"
+
+.PP
+Definition at line 1505 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETVIDEOINFONVPROC\fP __glewXGetVideoInfoNV"
+
+.PP
+Definition at line 1506 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETVIDEORESIZESUNPROC\fP __glewXGetVideoResizeSUN"
+
+.PP
+Definition at line 1562 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETVIDEOSYNCSGIPROC\fP __glewXGetVideoSyncSGI"
+
+.PP
+Definition at line 1557 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETVISUALFROMFBCONFIGPROC\fP __glewXGetVisualFromFBConfig"
+
+.PP
+Definition at line 1438 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXGETVISUALFROMFBCONFIGSGIXPROC\fP __glewXGetVisualFromFBConfigSGIX"
+
+.PP
+Definition at line 1522 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXHYPERPIPEATTRIBSGIXPROC\fP __glewXHyperpipeAttribSGIX"
+
+.PP
+Definition at line 1526 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXHYPERPIPECONFIGSGIXPROC\fP __glewXHyperpipeConfigSGIX"
+
+.PP
+Definition at line 1527 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXIMPORTCONTEXTEXTPROC\fP __glewXImportContextEXT"
+
+.PP
+Definition at line 1462 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXJOINSWAPGROUPNVPROC\fP __glewXJoinSwapGroupNV"
+
+.PP
+Definition at line 1489 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXJOINSWAPGROUPSGIXPROC\fP __glewXJoinSwapGroupSGIX"
+
+.PP
+Definition at line 1542 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXLOCKVIDEOCAPTUREDEVICENVPROC\fP __glewXLockVideoCaptureDeviceNV"
+
+.PP
+Definition at line 1500 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXMAKEASSOCIATEDCONTEXTCURRENTAMDPROC\fP __glewXMakeAssociatedContextCurrentAMD"
+
+.PP
+Definition at line 1452 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXMAKECONTEXTCURRENTPROC\fP __glewXMakeContextCurrent"
+
+.PP
+Definition at line 1439 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXMAKECURRENTREADSGIPROC\fP __glewXMakeCurrentReadSGI"
+
+.PP
+Definition at line 1553 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYCHANNELDELTASSGIXPROC\fP __glewXQueryChannelDeltasSGIX"
+
+.PP
+Definition at line 1547 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYCHANNELRECTSGIXPROC\fP __glewXQueryChannelRectSGIX"
+
+.PP
+Definition at line 1548 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYCONTEXTPROC\fP __glewXQueryContext"
+
+.PP
+Definition at line 1440 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYCONTEXTINFOEXTPROC\fP __glewXQueryContextInfoEXT"
+
+.PP
+Definition at line 1463 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYDRAWABLEPROC\fP __glewXQueryDrawable"
+
+.PP
+Definition at line 1441 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYFRAMECOUNTNVPROC\fP __glewXQueryFrameCountNV"
+
+.PP
+Definition at line 1490 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYGLXPBUFFERSGIXPROC\fP __glewXQueryGLXPbufferSGIX"
+
+.PP
+Definition at line 1536 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYHYPERPIPEATTRIBSGIXPROC\fP __glewXQueryHyperpipeAttribSGIX"
+
+.PP
+Definition at line 1528 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYHYPERPIPEBESTATTRIBSGIXPROC\fP __glewXQueryHyperpipeBestAttribSGIX"
+
+.PP
+Definition at line 1529 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYHYPERPIPECONFIGSGIXPROC\fP __glewXQueryHyperpipeConfigSGIX"
+
+.PP
+Definition at line 1530 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYHYPERPIPENETWORKSGIXPROC\fP __glewXQueryHyperpipeNetworkSGIX"
+
+.PP
+Definition at line 1531 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYMAXSWAPBARRIERSSGIXPROC\fP __glewXQueryMaxSwapBarriersSGIX"
+
+.PP
+Definition at line 1540 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYMAXSWAPGROUPSNVPROC\fP __glewXQueryMaxSwapGroupsNV"
+
+.PP
+Definition at line 1491 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYSWAPGROUPNVPROC\fP __glewXQuerySwapGroupNV"
+
+.PP
+Definition at line 1492 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXQUERYVIDEOCAPTUREDEVICENVPROC\fP __glewXQueryVideoCaptureDeviceNV"
+
+.PP
+Definition at line 1501 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXRELEASEBUFFERSMESAPROC\fP __glewXReleaseBuffersMESA"
+
+.PP
+Definition at line 1476 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXRELEASETEXIMAGEATIPROC\fP __glewXReleaseTexImageATI"
+
+.PP
+Definition at line 1458 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXRELEASETEXIMAGEEXTPROC\fP __glewXReleaseTexImageEXT"
+
+.PP
+Definition at line 1468 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXRELEASEVIDEOCAPTUREDEVICENVPROC\fP __glewXReleaseVideoCaptureDeviceNV"
+
+.PP
+Definition at line 1502 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXRELEASEVIDEODEVICENVPROC\fP __glewXReleaseVideoDeviceNV"
+
+.PP
+Definition at line 1507 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXRELEASEVIDEOIMAGENVPROC\fP __glewXReleaseVideoImageNV"
+
+.PP
+Definition at line 1508 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXRESETFRAMECOUNTNVPROC\fP __glewXResetFrameCountNV"
+
+.PP
+Definition at line 1493 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXSELECTEVENTPROC\fP __glewXSelectEvent"
+
+.PP
+Definition at line 1442 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXSELECTEVENTSGIXPROC\fP __glewXSelectEventSGIX"
+
+.PP
+Definition at line 1537 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXSENDPBUFFERTOVIDEONVPROC\fP __glewXSendPbufferToVideoNV"
+
+.PP
+Definition at line 1509 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXSET3DFXMODEMESAPROC\fP __glewXSet3DfxModeMESA"
+
+.PP
+Definition at line 1478 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXSWAPBUFFERSMSCOMLPROC\fP __glewXSwapBuffersMscOML"
+
+.PP
+Definition at line 1513 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXSWAPINTERVALEXTPROC\fP __glewXSwapIntervalEXT"
+
+.PP
+Definition at line 1465 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXSWAPINTERVALMESAPROC\fP __glewXSwapIntervalMESA"
+
+.PP
+Definition at line 1481 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXSWAPINTERVALSGIPROC\fP __glewXSwapIntervalSGI"
+
+.PP
+Definition at line 1555 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXVIDEORESIZESUNPROC\fP __glewXVideoResizeSUN"
+
+.PP
+Definition at line 1563 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXWAITFORMSCOMLPROC\fP __glewXWaitForMscOML"
+
+.PP
+Definition at line 1514 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXWAITFORSBCOMLPROC\fP __glewXWaitForSbcOML"
+
+.PP
+Definition at line 1515 of file glxew\&.h\&.
+.SS "\fBGLXEW_FUN_EXPORT\fP \fBPFNGLXWAITVIDEOSYNCSGIPROC\fP __glewXWaitVideoSyncSGI"
+
+.PP
+Definition at line 1558 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_3DFX_multisample"
+
+.PP
+Definition at line 1575 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_AMD_gpu_association"
+
+.PP
+Definition at line 1576 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_create_context"
+
+.PP
+Definition at line 1577 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_create_context_profile"
+
+.PP
+Definition at line 1578 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_create_context_robustness"
+
+.PP
+Definition at line 1579 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_fbconfig_float"
+
+.PP
+Definition at line 1580 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_framebuffer_sRGB"
+
+.PP
+Definition at line 1581 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_get_proc_address"
+
+.PP
+Definition at line 1582 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_multisample"
+
+.PP
+Definition at line 1583 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_robustness_application_isolation"
+
+.PP
+Definition at line 1584 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_robustness_share_group_isolation"
+
+.PP
+Definition at line 1585 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ARB_vertex_buffer_object"
+
+.PP
+Definition at line 1586 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ATI_pixel_format_float"
+
+.PP
+Definition at line 1587 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_ATI_render_texture"
+
+.PP
+Definition at line 1588 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_buffer_age"
+
+.PP
+Definition at line 1589 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_create_context_es2_profile"
+
+.PP
+Definition at line 1590 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_create_context_es_profile"
+
+.PP
+Definition at line 1591 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_fbconfig_packed_float"
+
+.PP
+Definition at line 1592 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_framebuffer_sRGB"
+
+.PP
+Definition at line 1593 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_import_context"
+
+.PP
+Definition at line 1594 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_scene_marker"
+
+.PP
+Definition at line 1595 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_swap_control"
+
+.PP
+Definition at line 1596 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_swap_control_tear"
+
+.PP
+Definition at line 1597 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_texture_from_pixmap"
+
+.PP
+Definition at line 1598 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_visual_info"
+
+.PP
+Definition at line 1599 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_EXT_visual_rating"
+
+.PP
+Definition at line 1600 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_INTEL_swap_event"
+
+.PP
+Definition at line 1601 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_MESA_agp_offset"
+
+.PP
+Definition at line 1602 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_MESA_copy_sub_buffer"
+
+.PP
+Definition at line 1603 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_MESA_pixmap_colormap"
+
+.PP
+Definition at line 1604 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_MESA_release_buffers"
+
+.PP
+Definition at line 1605 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_MESA_set_3dfx_mode"
+
+.PP
+Definition at line 1606 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_MESA_swap_control"
+
+.PP
+Definition at line 1607 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_NV_copy_image"
+
+.PP
+Definition at line 1608 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_NV_float_buffer"
+
+.PP
+Definition at line 1609 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_NV_multisample_coverage"
+
+.PP
+Definition at line 1610 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_NV_present_video"
+
+.PP
+Definition at line 1611 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_NV_swap_group"
+
+.PP
+Definition at line 1612 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_NV_vertex_array_range"
+
+.PP
+Definition at line 1613 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_NV_video_capture"
+
+.PP
+Definition at line 1614 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_NV_video_output"
+
+.PP
+Definition at line 1615 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_OML_swap_method"
+
+.PP
+Definition at line 1616 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_OML_sync_control"
+
+.PP
+Definition at line 1617 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGI_cushion"
+
+.PP
+Definition at line 1629 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGI_make_current_read"
+
+.PP
+Definition at line 1630 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGI_swap_control"
+
+.PP
+Definition at line 1631 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGI_video_sync"
+
+.PP
+Definition at line 1632 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIS_blended_overlay"
+
+.PP
+Definition at line 1618 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIS_color_range"
+
+.PP
+Definition at line 1619 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIS_multisample"
+
+.PP
+Definition at line 1620 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIS_shared_multisample"
+
+.PP
+Definition at line 1621 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIX_fbconfig"
+
+.PP
+Definition at line 1622 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIX_hyperpipe"
+
+.PP
+Definition at line 1623 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIX_pbuffer"
+
+.PP
+Definition at line 1624 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIX_swap_barrier"
+
+.PP
+Definition at line 1625 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIX_swap_group"
+
+.PP
+Definition at line 1626 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIX_video_resize"
+
+.PP
+Definition at line 1627 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SGIX_visual_select_group"
+
+.PP
+Definition at line 1628 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SUN_get_transparent_index"
+
+.PP
+Definition at line 1633 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_SUN_video_resize"
+
+.PP
+Definition at line 1634 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_VERSION_1_0"
+
+.PP
+Definition at line 1570 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_VERSION_1_1"
+
+.PP
+Definition at line 1571 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_VERSION_1_2"
+
+.PP
+Definition at line 1572 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_VERSION_1_3"
+
+.PP
+Definition at line 1573 of file glxew\&.h\&.
+.SS "\fBGLXEW_VAR_EXPORT\fP \fBGLboolean\fP __GLXEW_VERSION_1_4"
+
+.PP
+Definition at line 1574 of file glxew\&.h\&.
+.SS "\fBvoid\fP( * )(\fBvoid\fP) glXGetProcAddress(const \fBGLubyte\fP *procName)"
+
+.SS "\fBvoid\fP( * )(\fBvoid\fP) glXGetProcAddressARB(const \fBGLubyte\fP *procName)"
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

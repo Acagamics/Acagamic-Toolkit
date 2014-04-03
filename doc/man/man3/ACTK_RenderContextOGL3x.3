@@ -1,0 +1,90 @@
+.TH "ACTK::RenderContextOGL3x" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::RenderContextOGL3x \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RenderContextOGL3x\&.h>\fP
+.PP
+Inherits \fBACTK::IRenderContext\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRenderContextOGL3x\fP (\fBGLFWwindow\fP *window)"
+.br
+.ti -1c
+.RI "\fB~RenderContextOGL3x\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBrelease\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBclear\fP (const \fBClearState\fP &clearState)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBdraw\fP (\fBPrimitiveType\fP \fBtype\fP, float *vertices, unsigned \fBint\fP \fBcount\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBswapBuffers\fP ()"
+.br
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "class \fBGraphicsWindowOGL3x\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file RenderContextOGL3x\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ACTK::RenderContextOGL3x::RenderContextOGL3x (\fBGLFWwindow\fP *window)"
+
+.PP
+Definition at line 10 of file RenderContextOGL3x\&.cpp\&.
+.SS "ACTK::RenderContextOGL3x::~RenderContextOGL3x (\fBvoid\fP)"
+
+.PP
+Definition at line 22 of file RenderContextOGL3x\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBvoid\fP ACTK::RenderContextOGL3x::clear (const \fBClearState\fP &clearState)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IRenderContext\fP\&.
+.PP
+Definition at line 33 of file RenderContextOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::RenderContextOGL3x::draw (\fBPrimitiveType\fPtype, float *vertices, unsigned \fBint\fPcount)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IRenderContext\fP\&.
+.PP
+Definition at line 100 of file RenderContextOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::RenderContextOGL3x::release (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IRenderContext\fP\&.
+.PP
+Definition at line 27 of file RenderContextOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::RenderContextOGL3x::swapBuffers (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IRenderContext\fP\&.
+.PP
+Definition at line 116 of file RenderContextOGL3x\&.cpp\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "friend class \fBGraphicsWindowOGL3x\fP\fC [friend]\fP"
+
+.PP
+Definition at line 14 of file RenderContextOGL3x\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

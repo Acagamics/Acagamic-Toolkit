@@ -1,0 +1,200 @@
+.TH "Initialization and version information" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Initialization and version information \- 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBint\fP \fBglfwInit\fP (\fBvoid\fP)"
+.br
+.RI "\fIInitializes the GLFW library\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwTerminate\fP (\fBvoid\fP)"
+.br
+.RI "\fITerminates the GLFW library\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwGetVersion\fP (\fBint\fP *major, \fBint\fP *minor, \fBint\fP *rev)"
+.br
+.RI "\fIRetrieves the version of the GLFW library\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const char * \fBglfwGetVersionString\fP (\fBvoid\fP)"
+.br
+.RI "\fIReturns a string describing the compile-time configuration\&. \fP"
+.in -1c
+.SS "GLFW version macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLFW_VERSION_MAJOR\fP   3"
+.br
+.RI "\fIThe major version number of the GLFW library\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_VERSION_MINOR\fP   0"
+.br
+.RI "\fIThe minor version number of the GLFW library\&. \fP"
+.ti -1c
+.RI "#define \fBGLFW_VERSION_REVISION\fP   3"
+.br
+.RI "\fIThe revision number of the GLFW library\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define GLFW_VERSION_MAJOR   3"
+
+.PP
+The major version number of the GLFW library\&. This is incremented when the API is changed in non-compatible ways\&. 
+.PP
+Definition at line 216 of file glfw3\&.h\&.
+.SS "#define GLFW_VERSION_MINOR   0"
+
+.PP
+The minor version number of the GLFW library\&. This is incremented when features are added to the API but it remains backward-compatible\&. 
+.PP
+Definition at line 223 of file glfw3\&.h\&.
+.SS "#define GLFW_VERSION_REVISION   3"
+
+.PP
+The revision number of the GLFW library\&. This is incremented when a bug fix release is made that does not contain any API changes\&. 
+.PP
+Definition at line 230 of file glfw3\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBGLFWAPI\fP \fBvoid\fP glfwGetVersion (\fBint\fP *major, \fBint\fP *minor, \fBint\fP *rev)"
+
+.PP
+Retrieves the version of the GLFW library\&. This function retrieves the major, minor and revision numbers of the GLFW library\&. It is intended for when you are using GLFW as a shared library and want to ensure that you are using the minimum required version\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fImajor\fP Where to store the major version number, or \fCNULL\fP\&. 
+.br
+\fIminor\fP Where to store the minor version number, or \fCNULL\fP\&. 
+.br
+\fIrev\fP Where to store the revision number, or \fCNULL\fP\&.
+.RE
+.PP
+\fBRemarks:\fP
+.RS 4
+This function may be called before \fBglfwInit\fP\&.
+.PP
+This function may be called from any thread\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwGetVersionString\fP 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP const char* glfwGetVersionString (\fBvoid\fP)"
+
+.PP
+Returns a string describing the compile-time configuration\&. This function returns a static string generated at compile-time according to which configuration macros were defined\&. This is intended for use when submitting bug reports, to allow developers to see which code paths are enabled in a binary\&.
+.PP
+The format of the string is as follows:
+.IP "\(bu" 2
+The version of GLFW
+.IP "\(bu" 2
+The name of the window system API
+.IP "\(bu" 2
+The name of the context creation API
+.IP "\(bu" 2
+Any additional options or APIs
+.PP
+.PP
+For example, when compiling GLFW 3\&.0 with MinGW using the Win32 and WGL back ends, the version string may look something like this: 
+.PP
+.nf
+3.0.0 Win32 WGL MinGW
+
+.fi
+.PP
+.PP
+\fBReturns:\fP
+.RS 4
+The GLFW version string\&.
+.RE
+.PP
+\fBRemarks:\fP
+.RS 4
+This function may be called before \fBglfwInit\fP\&.
+.PP
+This function may be called from any thread\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwGetVersion\fP 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBint\fP glfwInit (\fBvoid\fP)"
+
+.PP
+Initializes the GLFW library\&. This function initializes the GLFW library\&. Before most GLFW functions can be used, GLFW must be initialized, and before a program terminates GLFW should be terminated in order to free any resources allocated during or after initialization\&.
+.PP
+If this function fails, it calls \fBglfwTerminate\fP before returning\&. If it succeeds, you should call \fBglfwTerminate\fP before the program exits\&.
+.PP
+Additional calls to this function after successful initialization but before termination will succeed but will do nothing\&.
+.PP
+\fBReturns:\fP
+.RS 4
+\fCGL_TRUE\fP if successful, or \fCGL_FALSE\fP if an error occurred\&.
+.RE
+.PP
+\fBNew in GLFW 3\fP
+.RS 4
+This function no longer registers \fBglfwTerminate\fP with \fCatexit\fP\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+This function may only be called from the main thread\&.
+.PP
+This function may take several seconds to complete on some systems, while on other systems it may take only a fraction of a second to complete\&.
+.PP
+\fBMac OS X:\fP This function will change the current directory of the application to the \fCContents/Resources\fP subdirectory of the application's bundle, if present\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwTerminate\fP 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBvoid\fP glfwTerminate (\fBvoid\fP)"
+
+.PP
+Terminates the GLFW library\&. This function destroys all remaining windows, frees any allocated resources and sets the library to an uninitialized state\&. Once this is called, you must again call \fBglfwInit\fP successfully before you will be able to use most GLFW functions\&.
+.PP
+If GLFW has been successfully initialized, this function should be called before the program exits\&. If initialization fails, there is no need to call this function, as it is called by \fBglfwInit\fP before it returns failure\&.
+.PP
+\fBRemarks:\fP
+.RS 4
+This function may be called before \fBglfwInit\fP\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+This function may only be called from the main thread\&.
+.RE
+.PP
+\fBWarning:\fP
+.RS 4
+No window's context may be current on another thread when this function is called\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwInit\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

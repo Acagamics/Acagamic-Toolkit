@@ -1,0 +1,114 @@
+.TH "C:/Users/Artur/Documents/Visual Studio 2012/Projects/Games/Acagamic-Toolkit/include/Logger.h" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+C:/Users/Artur/Documents/Visual Studio 2012/Projects/Games/Acagamic-Toolkit/include/Logger.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <vector>\fP
+.br
+\fC#include <fstream>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBACTK::EventLogger\fP"
+.br
+.RI "\fI\fBEventLogger\fP writes logs into the console and a textfile and handles assertions and errorMessageBoxes\&. \fP"
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBACTK\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBLOG_LEVEL_ALL\fP   0"
+.br
+.ti -1c
+.RI "#define \fBLOG_LEVEL_DEBUG\fP   1"
+.br
+.ti -1c
+.RI "#define \fBLOG_LEVEL_WARNING\fP   2"
+.br
+.ti -1c
+.RI "#define \fBLOG_LEVEL_ERROR\fP   3"
+.br
+.ti -1c
+.RI "#define \fBLOG_LEVEL_OFF\fP   5"
+.br
+.ti -1c
+.RI "#define \fBLOG_LEVEL\fP   \fBLOG_LEVEL_ERROR\fP"
+.br
+.ti -1c
+.RI "#define \fBLOG_DEBUG\fP"
+.br
+.ti -1c
+.RI "#define \fBLOG_WARNING\fP"
+.br
+.ti -1c
+.RI "#define \fBLOG_ERROR\fP   \fBACTK::EventLogger::GetInstance\fP()\&.logError"
+.br
+.ti -1c
+.RI "#define \fBLOG_FATAL\fP(var_1)   \fBACTK::EventLogger::GetInstance\fP()\&.logAssert(false, __FILE__, __LINE__, var_1)"
+.br
+.ti -1c
+.RI "#define \fBLOG_ASSERT\fP(var_1, var_2)   \fBACTK::EventLogger::GetInstance\fP()\&.logAssert(var_1, __FILE__, __LINE__, var_2)"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define LOG_ASSERT(var_1, var_2)   \fBACTK::EventLogger::GetInstance\fP()\&.logAssert(var_1, __FILE__, __LINE__, var_2)"
+
+.PP
+Definition at line 40 of file Logger\&.h\&.
+.SS "#define LOG_DEBUG"
+
+.PP
+Definition at line 24 of file Logger\&.h\&.
+.SS "#define LOG_ERROR   \fBACTK::EventLogger::GetInstance\fP()\&.logError"
+
+.PP
+Definition at line 34 of file Logger\&.h\&.
+.SS "#define LOG_FATAL(var_1)   \fBACTK::EventLogger::GetInstance\fP()\&.logAssert(false, __FILE__, __LINE__, var_1)"
+
+.PP
+Definition at line 39 of file Logger\&.h\&.
+.SS "#define LOG_LEVEL   \fBLOG_LEVEL_ERROR\fP"
+
+.PP
+Definition at line 17 of file Logger\&.h\&.
+.SS "#define LOG_LEVEL_ALL   0"
+
+.PP
+Definition at line 6 of file Logger\&.h\&.
+.SS "#define LOG_LEVEL_DEBUG   1"
+
+.PP
+Definition at line 7 of file Logger\&.h\&.
+.SS "#define LOG_LEVEL_ERROR   3"
+
+.PP
+Definition at line 9 of file Logger\&.h\&.
+.SS "#define LOG_LEVEL_OFF   5"
+
+.PP
+Definition at line 10 of file Logger\&.h\&.
+.SS "#define LOG_LEVEL_WARNING   2"
+
+.PP
+Definition at line 8 of file Logger\&.h\&.
+.SS "#define LOG_WARNING"
+
+.PP
+Definition at line 30 of file Logger\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

@@ -9,6 +9,9 @@ struct GLFWwindow;
 
 namespace ACTK 
 {
+	using namespace Core;
+	using namespace Renderer;
+
 	class GraphicsWindowOGL3x : public IGraphicsWindow
 	{
 	public:
@@ -19,15 +22,15 @@ namespace ACTK
 		// INIT/RELEASE STUFF:
 		// =========================================================================
 		// Creates the Window and register the Windows-Callback
-		bool initialize(HINSTANCE hInstance, unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
-		void release(void);
+		bool Initialize(HINSTANCE hInstance, unsigned int width, unsigned int height, const std::string& title, WindowType windowType);
+		void VRelease(void);
 
-		RenderContextPtr getContext();
-		HWND getWindowHandle() const;
+		RenderContextPtr VGetContext();
+		HWND VGetWindowHandle() const;
 
-		int getWidth() const;
-		int getHeight() const;
-		bool shouldClose() const;
+		int VGetWidth() const;
+		int VGetHeight() const;
+		bool VShouldClose() const;
 
 	private:
 		//you shall not copy

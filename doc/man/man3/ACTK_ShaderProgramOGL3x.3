@@ -1,0 +1,186 @@
+.TH "ACTK::ShaderProgramOGL3x" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::ShaderProgramOGL3x \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ShaderProgramOGL3x\&.h>\fP
+.PP
+Inherits \fBACTK::IShaderProgram\fP, and \fBACTK::ICleanableObserver\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBShaderProgramOGL3x\fP (const \fBstd::string\fP &vertexShaderSource, const \fBstd::string\fP &geometryShaderSource, const \fBstd::string\fP &fragmentShaderSource)"
+.br
+.ti -1c
+.RI "\fB~ShaderProgramOGL3x\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniform\fP (const char *\fBname\fP, \fBint\fP \fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniform\fP (const char *\fBname\fP, float \fBvalue\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniform\fP (const char *\fBname\fP, \fBint\fP value1, \fBint\fP value2)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniform\fP (const char *\fBname\fP, float value1, float value2)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniform\fP (const char *\fBname\fP, \fBint\fP value1, \fBint\fP value2, \fBint\fP value3)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniform\fP (const char *\fBname\fP, float value1, float value2, float value3)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniform\fP (const char *\fBname\fP, \fBint\fP value1, \fBint\fP value2, \fBint\fP value3, \fBint\fP value4)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniform\fP (const char *\fBname\fP, float value1, float value2, float value3, float value4)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniformVector\fP (const char *\fBname\fP, \fBint\fP *vector, unsigned \fBint\fP vector_size)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniformVector\fP (const char *\fBname\fP, float *vector, unsigned \fBint\fP vector_size)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniformMatrix\fP (const char *\fBname\fP, \fBint\fP *\fBmatrix\fP, unsigned \fBint\fP matrix_size)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBsetUniformMatrix\fP (const char *\fBname\fP, float *\fBmatrix\fP, unsigned \fBint\fP matrix_size)"
+.br
+.ti -1c
+.RI "unsigned \fBint\fP \fBGetPogramHandle\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBBind\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBCleanUniforms\fP ()"
+.br
+.ti -1c
+.RI "bool \fBIsReady\fP ()"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBnotifyDirty\fP (\fBICleanable\fP *\fBobj\fP)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file ShaderProgramOGL3x\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ACTK::ShaderProgramOGL3x::ShaderProgramOGL3x (const \fBstd::string\fP &vertexShaderSource, const \fBstd::string\fP &geometryShaderSource, const \fBstd::string\fP &fragmentShaderSource)"
+
+.PP
+Definition at line 11 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "ACTK::ShaderProgramOGL3x::~ShaderProgramOGL3x ()"
+
+.PP
+Definition at line 75 of file ShaderProgramOGL3x\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::Bind ()"
+
+.PP
+Definition at line 80 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::CleanUniforms ()"
+
+.PP
+Definition at line 85 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "unsigned \fBint\fP ACTK::ShaderProgramOGL3x::GetPogramHandle ()"
+
+.PP
+Definition at line 94 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "bool ACTK::ShaderProgramOGL3x::IsReady ()"
+
+.PP
+Definition at line 99 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::notifyDirty (\fBICleanable\fP *obj)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::ICleanableObserver\fP\&.
+.PP
+Definition at line 104 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniform (const char *name, \fBint\fPvalue)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 209 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniform (const char *name, floatvalue)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 214 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniform (const char *name, \fBint\fPvalue1, \fBint\fPvalue2)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 219 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniform (const char *name, floatvalue1, floatvalue2)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 225 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniform (const char *name, \fBint\fPvalue1, \fBint\fPvalue2, \fBint\fPvalue3)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 231 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniform (const char *name, floatvalue1, floatvalue2, floatvalue3)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 237 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniform (const char *name, \fBint\fPvalue1, \fBint\fPvalue2, \fBint\fPvalue3, \fBint\fPvalue4)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 243 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniform (const char *name, floatvalue1, floatvalue2, floatvalue3, floatvalue4)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 249 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniformMatrix (const char *name, \fBint\fP *matrix, unsigned \fBint\fPmatrix_size)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 264 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniformMatrix (const char *name, float *matrix, unsigned \fBint\fPmatrix_size)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 269 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniformVector (const char *name, \fBint\fP *vector, unsigned \fBint\fPvector_size)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 255 of file ShaderProgramOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::ShaderProgramOGL3x::setUniformVector (const char *name, float *vector, unsigned \fBint\fPvector_size)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IShaderProgram\fP\&.
+.PP
+Definition at line 259 of file ShaderProgramOGL3x\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

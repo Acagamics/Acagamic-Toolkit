@@ -1,0 +1,62 @@
+.TH "ACTK::IGraphicsWindow" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::IGraphicsWindow \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <IGraphicsWindow\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IGraphicsWindow\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBrelease\fP (void)=0"
+.br
+.ti -1c
+.RI "virtual \fBRenderContextPtr\fP \fBgetContext\fP ()=0"
+.br
+.ti -1c
+.RI "virtual HWND \fBgetWindowHandle\fP () const =0"
+.br
+.ti -1c
+.RI "virtual int \fBgetWidth\fP () const =0"
+.br
+.ti -1c
+.RI "virtual int \fBgetHeight\fP () const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBshouldClose\fP () const =0"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 11 of file IGraphicsWindow\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "virtual ACTK::IGraphicsWindow::~IGraphicsWindow ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Definition at line 14 of file IGraphicsWindow\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual \fBRenderContextPtr\fP ACTK::IGraphicsWindow::getContext ()\fC [pure virtual]\fP"
+
+.SS "virtual int ACTK::IGraphicsWindow::getHeight () const\fC [pure virtual]\fP"
+
+.SS "virtual int ACTK::IGraphicsWindow::getWidth () const\fC [pure virtual]\fP"
+
+.SS "virtual HWND ACTK::IGraphicsWindow::getWindowHandle () const\fC [pure virtual]\fP"
+
+.SS "virtual void ACTK::IGraphicsWindow::release (void)\fC [pure virtual]\fP"
+
+.SS "virtual bool ACTK::IGraphicsWindow::shouldClose () const\fC [pure virtual]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

@@ -3,6 +3,8 @@
 
 namespace ACTK
 {
+	using namespace Core;
+
 	class ShaderObjectOGL3x
 	{
 	public:

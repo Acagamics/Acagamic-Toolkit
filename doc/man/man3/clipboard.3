@@ -1,0 +1,78 @@
+.TH "Clipboard support" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Clipboard support \- 
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBvoid\fP \fBglfwSetClipboardString\fP (\fBGLFWwindow\fP *window, const char *\fBstring\fP)"
+.br
+.RI "\fISets the clipboard to the specified string\&. \fP"
+.ti -1c
+.RI "\fBGLFWAPI\fP const char * \fBglfwGetClipboardString\fP (\fBGLFWwindow\fP *window)"
+.br
+.RI "\fIRetrieves the contents of the clipboard as a string\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Function Documentation"
+.PP 
+.SS "\fBGLFWAPI\fP const char* glfwGetClipboardString (\fBGLFWwindow\fP *window)"
+
+.PP
+Retrieves the contents of the clipboard as a string\&. This function returns the contents of the system clipboard, if it contains or is convertible to a UTF-8 encoded string\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window that will request the clipboard contents\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The contents of the clipboard as a UTF-8 encoded string, or \fCNULL\fP if an error occurred\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+This function may only be called from the main thread\&.
+.PP
+The returned string is allocated and freed by GLFW\&. You should not free it yourself\&.
+.PP
+The returned string is valid only until the next call to \fBglfwGetClipboardString\fP or \fBglfwSetClipboardString\fP\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwSetClipboardString\fP 
+.RE
+.PP
+
+.SS "\fBGLFWAPI\fP \fBvoid\fP glfwSetClipboardString (\fBGLFWwindow\fP *window, const char *string)"
+
+.PP
+Sets the clipboard to the specified string\&. This function sets the system clipboard to the specified, UTF-8 encoded string\&. The string is copied before returning, so you don't have to retain it afterwards\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIwindow\fP The window that will own the clipboard contents\&. 
+.br
+\fIstring\fP A UTF-8 encoded string\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+This function may only be called from the main thread\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwGetClipboardString\fP 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

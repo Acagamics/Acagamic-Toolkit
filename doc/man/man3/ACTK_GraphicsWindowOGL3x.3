@@ -1,0 +1,102 @@
+.TH "ACTK::GraphicsWindowOGL3x" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::GraphicsWindowOGL3x \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <GraphicsWindowOGL3x\&.h>\fP
+.PP
+Inherits \fBACTK::IGraphicsWindow\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGraphicsWindowOGL3x\fP ()"
+.br
+.ti -1c
+.RI "\fB~GraphicsWindowOGL3x\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "bool \fBinitialize\fP (HINSTANCE hInstance, unsigned \fBint\fP \fBwidth\fP, unsigned \fBint\fP \fBheight\fP, const \fBstd::string\fP &title, \fBWindowType\fP windowType)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBrelease\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBRenderContextPtr\fP \fBgetContext\fP ()"
+.br
+.ti -1c
+.RI "HWND \fBgetWindowHandle\fP () const "
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetWidth\fP () const "
+.br
+.ti -1c
+.RI "\fBint\fP \fBgetHeight\fP () const "
+.br
+.ti -1c
+.RI "bool \fBshouldClose\fP () const "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file GraphicsWindowOGL3x\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ACTK::GraphicsWindowOGL3x::GraphicsWindowOGL3x ()"
+
+.PP
+Definition at line 12 of file GraphicsWindowOGL3x\&.cpp\&.
+.SS "ACTK::GraphicsWindowOGL3x::~GraphicsWindowOGL3x (\fBvoid\fP)"
+
+.PP
+Definition at line 18 of file GraphicsWindowOGL3x\&.cpp\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBRenderContextPtr\fP ACTK::GraphicsWindowOGL3x::getContext ()\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 58 of file GraphicsWindowOGL3x\&.cpp\&.
+.SS "\fBint\fP ACTK::GraphicsWindowOGL3x::getHeight () const\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 74 of file GraphicsWindowOGL3x\&.cpp\&.
+.SS "\fBint\fP ACTK::GraphicsWindowOGL3x::getWidth () const\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 68 of file GraphicsWindowOGL3x\&.cpp\&.
+.SS "HWND ACTK::GraphicsWindowOGL3x::getWindowHandle () const\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 63 of file GraphicsWindowOGL3x\&.cpp\&.
+.SS "bool ACTK::GraphicsWindowOGL3x::initialize (HINSTANCEhInstance, unsigned \fBint\fPwidth, unsigned \fBint\fPheight, const \fBstd::string\fP &title, \fBWindowType\fPwindowType)"
+
+.PP
+Definition at line 34 of file GraphicsWindowOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::GraphicsWindowOGL3x::release (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 23 of file GraphicsWindowOGL3x\&.cpp\&.
+.SS "bool ACTK::GraphicsWindowOGL3x::shouldClose () const\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IGraphicsWindow\fP\&.
+.PP
+Definition at line 81 of file GraphicsWindowOGL3x\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

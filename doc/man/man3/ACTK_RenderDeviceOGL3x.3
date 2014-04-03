@@ -1,0 +1,77 @@
+.TH "ACTK::RenderDeviceOGL3x" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::RenderDeviceOGL3x \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <RenderDeviceOGL3x\&.h>\fP
+.PP
+Inherits \fBACTK::IRenderDevice\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRenderDeviceOGL3x\fP (HINSTANCE hInstance)"
+.br
+.ti -1c
+.RI "\fB~RenderDeviceOGL3x\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBvoid\fP \fBrelease\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "\fBGraphicsWindowPtr\fP \fBcreateWindow\fP (unsigned \fBint\fP \fBwidth\fP, unsigned \fBint\fP \fBheight\fP, const \fBstd::string\fP &title, \fBWindowType\fP windowType)"
+.br
+.ti -1c
+.RI "\fBShaderProgramPtr\fP \fBcreateShaderProgram\fP (const \fBstd::string\fP &VertexShaderSource, const \fBstd::string\fP &FragementShaderSource)"
+.br
+.ti -1c
+.RI "\fBShaderProgramPtr\fP \fBcreateShaderProgram\fP (const \fBstd::string\fP &VertexShaderSource, const \fBstd::string\fP &GeometryShaderSource, const \fBstd::string\fP &FragementShaderSource)"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 9 of file RenderDeviceOGL3x\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ACTK::RenderDeviceOGL3x::RenderDeviceOGL3x (HINSTANCEhInstance)"
+
+.PP
+Definition at line 11 of file RenderDeviceOGL3x\&.cpp\&.
+.SS "ACTK::RenderDeviceOGL3x::~RenderDeviceOGL3x (\fBvoid\fP)\fC [inline]\fP"
+
+.PP
+Definition at line 13 of file RenderDeviceOGL3x\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBShaderProgramPtr\fP ACTK::RenderDeviceOGL3x::createShaderProgram (const \fBstd::string\fP &VertexShaderSource, const \fBstd::string\fP &FragementShaderSource)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IRenderDevice\fP\&.
+.PP
+Definition at line 43 of file RenderDeviceOGL3x\&.cpp\&.
+.SS "\fBShaderProgramPtr\fP ACTK::RenderDeviceOGL3x::createShaderProgram (const \fBstd::string\fP &VertexShaderSource, const \fBstd::string\fP &GeometryShaderSource, const \fBstd::string\fP &FragementShaderSource)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IRenderDevice\fP\&.
+.PP
+Definition at line 48 of file RenderDeviceOGL3x\&.cpp\&.
+.SS "\fBGraphicsWindowPtr\fP ACTK::RenderDeviceOGL3x::createWindow (unsigned \fBint\fPwidth, unsigned \fBint\fPheight, const \fBstd::string\fP &title, \fBWindowType\fPwindowType)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IRenderDevice\fP\&.
+.PP
+Definition at line 26 of file RenderDeviceOGL3x\&.cpp\&.
+.SS "\fBvoid\fP ACTK::RenderDeviceOGL3x::release (\fBvoid\fP)\fC [virtual]\fP"
+
+.PP
+Implements \fBACTK::IRenderDevice\fP\&.
+.PP
+Definition at line 21 of file RenderDeviceOGL3x\&.cpp\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

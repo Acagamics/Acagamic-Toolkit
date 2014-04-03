@@ -6,6 +6,9 @@
 
 namespace ACTK
 {
+	using namespace Core;
+	using namespace Renderer;
+
 	UniformDatatype TypeConverterOGL3x::ToActiveUniformDatatype(GLenum type)
 	{
 		switch (type)

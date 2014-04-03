@@ -1,0 +1,169 @@
+.TH "ACTK::EventLogger" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::EventLogger \- 
+.PP
+\fBEventLogger\fP writes logs into the console and a textfile and handles assertions and errorMessageBoxes\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <Logger\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fB~EventLogger\fP ()"
+.br
+.ti -1c
+.RI "void \fBinitLogFile\fP ()"
+.br
+.RI "\fIInitialize log file\&. \fP"
+.ti -1c
+.RI "bool \fBinit\fP (const char *logName)"
+.br
+.RI "\fILoad File to stream into\&. \fP"
+.ti -1c
+.RI "void \fBrelease\fP ()"
+.br
+.RI "\fIRelease stream logfile\&. \fP"
+.ti -1c
+.RI "bool \fBisInitialized\fP ()"
+.br
+.RI "\fIIs the event logging system initialized\&. \fP"
+.ti -1c
+.RI "void \fBlogDebug\fP (const char *text,\&.\&.\&.)"
+.br
+.RI "\fIwrites debug log into console and into the Logfile\&. You should use debug log if you want to present informations for debugging purposes \fP"
+.ti -1c
+.RI "void \fBlogWarning\fP (const char *text,\&.\&.\&.)"
+.br
+.RI "\fIInformations which are not lead into a crash but maybe result in semantic errors\&. \fP"
+.ti -1c
+.RI "void \fBlogError\fP (const char *text,\&.\&.\&.)"
+.br
+.RI "\fIAn errormessage will be written into the log and into the console and also will be shown in a messagebox\&. \fP"
+.ti -1c
+.RI "void \fBlogAssert\fP (bool contidion, const char *file, long line, const char *description)"
+.br
+.RI "\fIAn error which will do the same actions as logError but also triggers an assertion in debug\&. \fP"
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBSetInstance\fP (\fBEventLogger\fP &)"
+.br
+.RI "\fIThis avoids the creations of a new instance If you are using the logger inside a dll, each module will create his own instance of the logger\&. You have to give an instance of the logger into every dll\&. \fP"
+.ti -1c
+.RI "static \fBEventLogger\fP & \fBGetInstance\fP ()"
+.br
+.RI "\fISingleton instance\&. \fP"
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBEventLogger\fP ()"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBEventLogger\fP writes logs into the console and a textfile and handles assertions and errorMessageBoxes\&. 
+.PP
+Definition at line 45 of file Logger\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ACTK::EventLogger::~EventLogger ()"
+
+.SS "ACTK::EventLogger::EventLogger ()\fC [protected]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "static \fBEventLogger\fP& ACTK::EventLogger::GetInstance ()\fC [static]\fP"
+
+.PP
+Singleton instance\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+returns an instance or creates a new one 
+.RE
+.PP
+
+.SS "bool ACTK::EventLogger::init (const char *logName)"
+
+.PP
+Load File to stream into\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIlogName\fP Path to new logfile which will be created 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+true if initialization succeeded 
+.RE
+.PP
+
+.SS "void ACTK::EventLogger::initLogFile ()"
+
+.PP
+Initialize log file\&. 
+.SS "bool ACTK::EventLogger::isInitialized ()\fC [inline]\fP"
+
+.PP
+Is the event logging system initialized\&. 
+.PP
+\fBReturns:\fP
+.RS 4
+true if the logfile is initialized 
+.RE
+.PP
+
+.PP
+Definition at line 72 of file Logger\&.h\&.
+.SS "void ACTK::EventLogger::logAssert (boolcontidion, const char *file, longline, const char *description)"
+
+.PP
+An error which will do the same actions as logError but also triggers an assertion in debug\&. 
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcontidion\fP 
+.br
+\fIfile\fP 
+.br
+\fIline\fP 
+.br
+\fIdescription\fP 
+.RE
+.PP
+
+.SS "void ACTK::EventLogger::logDebug (const char *text, \&.\&.\&.)"
+
+.PP
+writes debug log into console and into the Logfile\&. You should use debug log if you want to present informations for debugging purposes 
+.SS "void ACTK::EventLogger::logError (const char *text, \&.\&.\&.)"
+
+.PP
+An errormessage will be written into the log and into the console and also will be shown in a messagebox\&. 
+.SS "void ACTK::EventLogger::logWarning (const char *text, \&.\&.\&.)"
+
+.PP
+Informations which are not lead into a crash but maybe result in semantic errors\&. 
+.SS "void ACTK::EventLogger::release ()"
+
+.PP
+Release stream logfile\&. 
+.SS "static void ACTK::EventLogger::SetInstance (\fBEventLogger\fP &)\fC [static]\fP"
+
+.PP
+This avoids the creations of a new instance If you are using the logger inside a dll, each module will create his own instance of the logger\&. You have to give an instance of the logger into every dll\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

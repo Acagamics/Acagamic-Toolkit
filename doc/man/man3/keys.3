@@ -1,0 +1,885 @@
+.TH "Keyboard keys" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Keyboard keys \- 
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBGLFW_KEY_UNKNOWN\fP   -1"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_SPACE\fP   32"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_APOSTROPHE\fP   39  /* ' */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_COMMA\fP   44  /* , */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_MINUS\fP   45  /* - */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PERIOD\fP   46  /* \&. */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_SLASH\fP   47  /* / */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_0\fP   48"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_1\fP   49"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_2\fP   50"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_3\fP   51"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_4\fP   52"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_5\fP   53"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_6\fP   54"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_7\fP   55"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_8\fP   56"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_9\fP   57"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_SEMICOLON\fP   59  /* ; */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_EQUAL\fP   61  /* = */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_A\fP   65"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_B\fP   66"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_C\fP   67"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_D\fP   68"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_E\fP   69"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F\fP   70"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_G\fP   71"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_H\fP   72"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_I\fP   73"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_J\fP   74"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_K\fP   75"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_L\fP   76"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_M\fP   77"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_N\fP   78"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_O\fP   79"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_P\fP   80"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_Q\fP   81"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_R\fP   82"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_S\fP   83"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_T\fP   84"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_U\fP   85"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_V\fP   86"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_W\fP   87"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_X\fP   88"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_Y\fP   89"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_Z\fP   90"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_BRACKET\fP   91  /* [ */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_BACKSLASH\fP   92  /* \\ */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_BRACKET\fP   93  /* ] */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_GRAVE_ACCENT\fP   96  /* ` */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_WORLD_1\fP   161 /* non-US #1 */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_WORLD_2\fP   162 /* non-US #2 */"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_ESCAPE\fP   256"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_ENTER\fP   257"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_TAB\fP   258"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_BACKSPACE\fP   259"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_INSERT\fP   260"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_DELETE\fP   261"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT\fP   262"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT\fP   263"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_DOWN\fP   264"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_UP\fP   265"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PAGE_UP\fP   266"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PAGE_DOWN\fP   267"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_HOME\fP   268"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_END\fP   269"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_CAPS_LOCK\fP   280"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_SCROLL_LOCK\fP   281"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_NUM_LOCK\fP   282"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PRINT_SCREEN\fP   283"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_PAUSE\fP   284"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F1\fP   290"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F2\fP   291"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F3\fP   292"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F4\fP   293"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F5\fP   294"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F6\fP   295"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F7\fP   296"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F8\fP   297"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F9\fP   298"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F10\fP   299"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F11\fP   300"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F12\fP   301"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F13\fP   302"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F14\fP   303"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F15\fP   304"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F16\fP   305"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F17\fP   306"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F18\fP   307"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F19\fP   308"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F20\fP   309"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F21\fP   310"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F22\fP   311"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F23\fP   312"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F24\fP   313"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_F25\fP   314"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_0\fP   320"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_1\fP   321"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_2\fP   322"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_3\fP   323"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_4\fP   324"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_5\fP   325"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_6\fP   326"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_7\fP   327"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_8\fP   328"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_9\fP   329"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_DECIMAL\fP   330"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_DIVIDE\fP   331"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_MULTIPLY\fP   332"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_SUBTRACT\fP   333"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_ADD\fP   334"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_ENTER\fP   335"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_KP_EQUAL\fP   336"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_SHIFT\fP   340"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_CONTROL\fP   341"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_ALT\fP   342"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LEFT_SUPER\fP   343"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_SHIFT\fP   344"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_CONTROL\fP   345"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_ALT\fP   346"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_RIGHT_SUPER\fP   347"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_MENU\fP   348"
+.br
+.ti -1c
+.RI "#define \fBGLFW_KEY_LAST\fP   \fBGLFW_KEY_MENU\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+These key codes are inspired by the \fIUSB HID Usage Tables v1\&.12\fP (p\&. 53-60), but re-arranged to map to 7-bit ASCII for printable keys (function keys are put in the 256+ range)\&.
+.PP
+The naming of the key codes follow these rules:
+.IP "\(bu" 2
+The US keyboard layout is used
+.IP "\(bu" 2
+Names of printable alpha-numeric characters are used (e\&.g\&. 'A', 'R', '3', etc\&.)
+.IP "\(bu" 2
+For non-alphanumeric characters, Unicode:ish names are used (e\&.g\&. 'COMMA', 'LEFT_SQUARE_BRACKET', etc\&.)\&. Note that some names do not correspond to the Unicode standard (usually for brevity)
+.IP "\(bu" 2
+Keys that lack a clear US mapping are named 'WORLD_x'
+.IP "\(bu" 2
+For non-printable keys, custom names are used (e\&.g\&. 'F4', 'BACKSPACE', etc\&.) 
+.PP
+
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define GLFW_KEY_0   48"
+
+.PP
+Definition at line 280 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_1   49"
+
+.PP
+Definition at line 281 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_2   50"
+
+.PP
+Definition at line 282 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_3   51"
+
+.PP
+Definition at line 283 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_4   52"
+
+.PP
+Definition at line 284 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_5   53"
+
+.PP
+Definition at line 285 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_6   54"
+
+.PP
+Definition at line 286 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_7   55"
+
+.PP
+Definition at line 287 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_8   56"
+
+.PP
+Definition at line 288 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_9   57"
+
+.PP
+Definition at line 289 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_A   65"
+
+.PP
+Definition at line 292 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_APOSTROPHE   39  /* ' */"
+
+.PP
+Definition at line 275 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_B   66"
+
+.PP
+Definition at line 293 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_BACKSLASH   92  /* \\ */"
+
+.PP
+Definition at line 319 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_BACKSPACE   259"
+
+.PP
+Definition at line 329 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_C   67"
+
+.PP
+Definition at line 294 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_CAPS_LOCK   280"
+
+.PP
+Definition at line 340 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_COMMA   44  /* , */"
+
+.PP
+Definition at line 276 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_D   68"
+
+.PP
+Definition at line 295 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_DELETE   261"
+
+.PP
+Definition at line 331 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_DOWN   264"
+
+.PP
+Definition at line 334 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_E   69"
+
+.PP
+Definition at line 296 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_END   269"
+
+.PP
+Definition at line 339 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_ENTER   257"
+
+.PP
+Definition at line 327 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_EQUAL   61  /* = */"
+
+.PP
+Definition at line 291 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_ESCAPE   256"
+
+.PP
+Definition at line 326 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F   70"
+
+.PP
+Definition at line 297 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F1   290"
+
+.PP
+Definition at line 345 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F10   299"
+
+.PP
+Definition at line 354 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F11   300"
+
+.PP
+Definition at line 355 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F12   301"
+
+.PP
+Definition at line 356 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F13   302"
+
+.PP
+Definition at line 357 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F14   303"
+
+.PP
+Definition at line 358 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F15   304"
+
+.PP
+Definition at line 359 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F16   305"
+
+.PP
+Definition at line 360 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F17   306"
+
+.PP
+Definition at line 361 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F18   307"
+
+.PP
+Definition at line 362 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F19   308"
+
+.PP
+Definition at line 363 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F2   291"
+
+.PP
+Definition at line 346 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F20   309"
+
+.PP
+Definition at line 364 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F21   310"
+
+.PP
+Definition at line 365 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F22   311"
+
+.PP
+Definition at line 366 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F23   312"
+
+.PP
+Definition at line 367 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F24   313"
+
+.PP
+Definition at line 368 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F25   314"
+
+.PP
+Definition at line 369 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F3   292"
+
+.PP
+Definition at line 347 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F4   293"
+
+.PP
+Definition at line 348 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F5   294"
+
+.PP
+Definition at line 349 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F6   295"
+
+.PP
+Definition at line 350 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F7   296"
+
+.PP
+Definition at line 351 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F8   297"
+
+.PP
+Definition at line 352 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_F9   298"
+
+.PP
+Definition at line 353 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_G   71"
+
+.PP
+Definition at line 298 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_GRAVE_ACCENT   96  /* ` */"
+
+.PP
+Definition at line 321 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_H   72"
+
+.PP
+Definition at line 299 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_HOME   268"
+
+.PP
+Definition at line 338 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_I   73"
+
+.PP
+Definition at line 300 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_INSERT   260"
+
+.PP
+Definition at line 330 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_J   74"
+
+.PP
+Definition at line 301 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_K   75"
+
+.PP
+Definition at line 302 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_0   320"
+
+.PP
+Definition at line 370 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_1   321"
+
+.PP
+Definition at line 371 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_2   322"
+
+.PP
+Definition at line 372 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_3   323"
+
+.PP
+Definition at line 373 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_4   324"
+
+.PP
+Definition at line 374 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_5   325"
+
+.PP
+Definition at line 375 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_6   326"
+
+.PP
+Definition at line 376 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_7   327"
+
+.PP
+Definition at line 377 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_8   328"
+
+.PP
+Definition at line 378 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_9   329"
+
+.PP
+Definition at line 379 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_ADD   334"
+
+.PP
+Definition at line 384 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_DECIMAL   330"
+
+.PP
+Definition at line 380 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_DIVIDE   331"
+
+.PP
+Definition at line 381 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_ENTER   335"
+
+.PP
+Definition at line 385 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_EQUAL   336"
+
+.PP
+Definition at line 386 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_MULTIPLY   332"
+
+.PP
+Definition at line 382 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_KP_SUBTRACT   333"
+
+.PP
+Definition at line 383 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_L   76"
+
+.PP
+Definition at line 303 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_LAST   \fBGLFW_KEY_MENU\fP"
+
+.PP
+Definition at line 396 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_LEFT   263"
+
+.PP
+Definition at line 333 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_LEFT_ALT   342"
+
+.PP
+Definition at line 389 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_LEFT_BRACKET   91  /* [ */"
+
+.PP
+Definition at line 318 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_LEFT_CONTROL   341"
+
+.PP
+Definition at line 388 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_LEFT_SHIFT   340"
+
+.PP
+Definition at line 387 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_LEFT_SUPER   343"
+
+.PP
+Definition at line 390 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_M   77"
+
+.PP
+Definition at line 304 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_MENU   348"
+
+.PP
+Definition at line 395 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_MINUS   45  /* - */"
+
+.PP
+Definition at line 277 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_N   78"
+
+.PP
+Definition at line 305 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_NUM_LOCK   282"
+
+.PP
+Definition at line 342 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_O   79"
+
+.PP
+Definition at line 306 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_P   80"
+
+.PP
+Definition at line 307 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_PAGE_DOWN   267"
+
+.PP
+Definition at line 337 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_PAGE_UP   266"
+
+.PP
+Definition at line 336 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_PAUSE   284"
+
+.PP
+Definition at line 344 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_PERIOD   46  /* \&. */"
+
+.PP
+Definition at line 278 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_PRINT_SCREEN   283"
+
+.PP
+Definition at line 343 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_Q   81"
+
+.PP
+Definition at line 308 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_R   82"
+
+.PP
+Definition at line 309 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_RIGHT   262"
+
+.PP
+Definition at line 332 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_RIGHT_ALT   346"
+
+.PP
+Definition at line 393 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_RIGHT_BRACKET   93  /* ] */"
+
+.PP
+Definition at line 320 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_RIGHT_CONTROL   345"
+
+.PP
+Definition at line 392 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_RIGHT_SHIFT   344"
+
+.PP
+Definition at line 391 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_RIGHT_SUPER   347"
+
+.PP
+Definition at line 394 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_S   83"
+
+.PP
+Definition at line 310 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_SCROLL_LOCK   281"
+
+.PP
+Definition at line 341 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_SEMICOLON   59  /* ; */"
+
+.PP
+Definition at line 290 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_SLASH   47  /* / */"
+
+.PP
+Definition at line 279 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_SPACE   32"
+
+.PP
+Definition at line 274 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_T   84"
+
+.PP
+Definition at line 311 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_TAB   258"
+
+.PP
+Definition at line 328 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_U   85"
+
+.PP
+Definition at line 312 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_UNKNOWN   -1"
+
+.PP
+Definition at line 271 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_UP   265"
+
+.PP
+Definition at line 335 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_V   86"
+
+.PP
+Definition at line 313 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_W   87"
+
+.PP
+Definition at line 314 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_WORLD_1   161 /* non-US #1 */"
+
+.PP
+Definition at line 322 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_WORLD_2   162 /* non-US #2 */"
+
+.PP
+Definition at line 323 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_X   88"
+
+.PP
+Definition at line 315 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_Y   89"
+
+.PP
+Definition at line 316 of file glfw3\&.h\&.
+.SS "#define GLFW_KEY_Z   90"
+
+.PP
+Definition at line 317 of file glfw3\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

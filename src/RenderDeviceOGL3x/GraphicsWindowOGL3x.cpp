@@ -9,6 +9,9 @@
 
 namespace ACTK
 {
+	using namespace Core;
+	using namespace Renderer;
+
 	GraphicsWindowOGL3x::GraphicsWindowOGL3x() :
 		m_context(nullptr) 
 	{
@@ -17,12 +20,12 @@ namespace ACTK
 
 	GraphicsWindowOGL3x::~GraphicsWindowOGL3x(void) 
 	{ 
-		release(); 
+		VRelease(); 
 	}
 
-	void GraphicsWindowOGL3x::release(void)
+	void GraphicsWindowOGL3x::VRelease(void)
 	{
-		m_context->release();
+		m_context->VRelease();
 
 		glfwTerminate();
 		glfwDestroyWindow(m_window);
@@ -31,7 +34,7 @@ namespace ACTK
 		LOG_DEBUG("OpenGL GraphicsWindow released");
 	}
 
-	bool GraphicsWindowOGL3x::initialize(HINSTANCE hInstance, unsigned int width, unsigned int height, const std::string& title, WindowType windowType)
+	bool GraphicsWindowOGL3x::Initialize(HINSTANCE hInstance, unsigned int width, unsigned int height, const std::string& title, WindowType windowType)
 	{
 		LOG_DEBUG("Initializing OpenGL Window");
 
@@ -55,30 +58,30 @@ namespace ACTK
 		return m_context != nullptr;
 	}
 
-	RenderContextPtr GraphicsWindowOGL3x::getContext()
+	RenderContextPtr GraphicsWindowOGL3x::VGetContext()
 	{ 
 		return m_context; 
 	}
 
-	HWND GraphicsWindowOGL3x::getWindowHandle() const
+	HWND GraphicsWindowOGL3x::VGetWindowHandle() const
 	{
 		return glfwGetWin32Window(m_window);
 	}
 
-	int GraphicsWindowOGL3x::getWidth() const  
+	int GraphicsWindowOGL3x::VGetWidth() const  
 	{
 		int width, height;
 		glfwGetWindowSize(m_window, &width, &height);
 		return width; 
 	}
-	int GraphicsWindowOGL3x::getHeight() const 
+	int GraphicsWindowOGL3x::VGetHeight() const 
 	{
 		int width, height;
 		glfwGetWindowSize(m_window, &width, &height);
 		return height;
 	}
 
-	bool GraphicsWindowOGL3x::shouldClose() const
+	bool GraphicsWindowOGL3x::VShouldClose() const
 	{
 		return glfwWindowShouldClose(m_window) != 0;
 	}

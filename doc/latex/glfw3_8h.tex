@@ -1,0 +1,968 @@
+\hypertarget{glfw3_8h}{\section{dependencies/glfw/include/\-G\-L\-F\-W/glfw3.h File Reference}
+\label{glfw3_8h}\index{dependencies/glfw/include/\-G\-L\-F\-W/glfw3.\-h@{dependencies/glfw/include/\-G\-L\-F\-W/glfw3.\-h}}
+}
+{\ttfamily \#include $<$stddef.\-h$>$}\\*
+{\ttfamily \#include $<$G\-L/gl.\-h$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_g_l_f_wvidmode}{G\-L\-F\-Wvidmode}
+\begin{DoxyCompactList}\small\item\em Video mode type. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_g_l_f_wgammaramp}{G\-L\-F\-Wgammaramp}
+\begin{DoxyCompactList}\small\item\em Gamma ramp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{glfw3_8h_a428a91acf2c2439dc1a257708ee1f805}{A\-P\-I\-E\-N\-T\-R\-Y}
+\item 
+\#define \hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I}
+\item 
+\#define \hyperlink{group__keys_ga99aacc875b6b27a072552631e13775c7}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-U\-N\-K\-N\-O\-W\-N}~-\/1
+\item 
+\#define \hyperlink{group__keys_gaddb2c23772b97fd7e26e8ee66f1ad014}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-S\-P\-A\-C\-E}~32
+\item 
+\#define \hyperlink{group__keys_ga6059b0b048ba6980b6107fffbd3b4b24}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-A\-P\-O\-S\-T\-R\-O\-P\-H\-E}~39  /$\ast$ ' $\ast$/
+\item 
+\#define \hyperlink{group__keys_gab3d5d72e59d3055f494627b0a524926c}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-C\-O\-M\-M\-A}~44  /$\ast$ , $\ast$/
+\item 
+\#define \hyperlink{group__keys_gac556b360f7f6fca4b70ba0aecf313fd4}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-M\-I\-N\-U\-S}~45  /$\ast$ -\/ $\ast$/
+\item 
+\#define \hyperlink{group__keys_ga37e296b650eab419fc474ff69033d927}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-P\-E\-R\-I\-O\-D}~46  /$\ast$ . $\ast$/
+\item 
+\#define \hyperlink{group__keys_gadf3d753b2d479148d711de34b83fd0db}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-S\-L\-A\-S\-H}~47  /$\ast$ / $\ast$/
+\item 
+\#define \hyperlink{group__keys_ga50391730e9d7112ad4fd42d0bd1597c1}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-0}~48
+\item 
+\#define \hyperlink{group__keys_ga05e4cae9ddb8d40cf6d82c8f11f2502f}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-1}~49
+\item 
+\#define \hyperlink{group__keys_gadc8e66b3a4c4b5c39ad1305cf852863c}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-2}~50
+\item 
+\#define \hyperlink{group__keys_ga812f0273fe1a981e1fa002ae73e92271}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-3}~51
+\item 
+\#define \hyperlink{group__keys_ga9e14b6975a9cc8f66cdd5cb3d3861356}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-4}~52
+\item 
+\#define \hyperlink{group__keys_ga4d74ddaa5d4c609993b4d4a15736c924}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-5}~53
+\item 
+\#define \hyperlink{group__keys_ga9ea4ab80c313a227b14d0a7c6f810b5d}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-6}~54
+\item 
+\#define \hyperlink{group__keys_gab79b1cfae7bd630cfc4604c1f263c666}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-7}~55
+\item 
+\#define \hyperlink{group__keys_gadeaa109a0f9f5afc94fe4a108e686f6f}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-8}~56
+\item 
+\#define \hyperlink{group__keys_ga2924cb5349ebbf97c8987f3521c44f39}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-9}~57
+\item 
+\#define \hyperlink{group__keys_ga84233de9ee5bb3e8788a5aa07d80af7d}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-S\-E\-M\-I\-C\-O\-L\-O\-N}~59  /$\ast$ ; $\ast$/
+\item 
+\#define \hyperlink{group__keys_gae1a2de47240d6664423c204bdd91bd17}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-E\-Q\-U\-A\-L}~61  /$\ast$ = $\ast$/
+\item 
+\#define \hyperlink{group__keys_ga03e842608e1ea323370889d33b8f70ff}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-A}~65
+\item 
+\#define \hyperlink{group__keys_ga8e3fb647ff3aca9e8dbf14fe66332941}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-B}~66
+\item 
+\#define \hyperlink{group__keys_ga00ccf3475d9ee2e679480d540d554669}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-C}~67
+\item 
+\#define \hyperlink{group__keys_ga011f7cdc9a654da984a2506479606933}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-D}~68
+\item 
+\#define \hyperlink{group__keys_gabf48fcc3afbe69349df432b470c96ef2}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-E}~69
+\item 
+\#define \hyperlink{group__keys_ga5df402e02aca08444240058fd9b42a55}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F}~70
+\item 
+\#define \hyperlink{group__keys_gae74ecddf7cc96104ab23989b1cdab536}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-G}~71
+\item 
+\#define \hyperlink{group__keys_gad4cc98fc8f35f015d9e2fb94bf136076}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-H}~72
+\item 
+\#define \hyperlink{group__keys_ga274655c8bfe39742684ca393cf8ed093}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-I}~73
+\item 
+\#define \hyperlink{group__keys_ga65ff2aedb129a3149ad9cb3e4159a75f}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-J}~74
+\item 
+\#define \hyperlink{group__keys_ga4ae8debadf6d2a691badae0b53ea3ba0}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K}~75
+\item 
+\#define \hyperlink{group__keys_gaaa8b54a13f6b1eed85ac86f82d550db2}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-L}~76
+\item 
+\#define \hyperlink{group__keys_ga4d7f0260c82e4ea3d6ebc7a21d6e3716}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-M}~77
+\item 
+\#define \hyperlink{group__keys_gae00856dfeb5d13aafebf59d44de5cdda}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-N}~78
+\item 
+\#define \hyperlink{group__keys_gaecbbb79130df419d58dd7f09a169efe9}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-O}~79
+\item 
+\#define \hyperlink{group__keys_ga8fc15819c1094fb2afa01d84546b33e1}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-P}~80
+\item 
+\#define \hyperlink{group__keys_gafdd01e38b120d67cf51e348bb47f3964}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-Q}~81
+\item 
+\#define \hyperlink{group__keys_ga4ce6c70a0c98c50b3fe4ab9a728d4d36}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-R}~82
+\item 
+\#define \hyperlink{group__keys_ga1570e2ccaab036ea82bed66fc1dab2a9}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-S}~83
+\item 
+\#define \hyperlink{group__keys_ga90e0560422ec7a30e7f3f375bc9f37f9}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-T}~84
+\item 
+\#define \hyperlink{group__keys_gacad52f3bf7d378fc0ffa72a76769256d}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-U}~85
+\item 
+\#define \hyperlink{group__keys_ga22c7763899ecf7788862e5f90eacce6b}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-V}~86
+\item 
+\#define \hyperlink{group__keys_gaa06a712e6202661fc03da5bdb7b6e545}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-W}~87
+\item 
+\#define \hyperlink{group__keys_gac1c42c0bf4192cea713c55598b06b744}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-X}~88
+\item 
+\#define \hyperlink{group__keys_gafd9f115a549effdf8e372a787c360313}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-Y}~89
+\item 
+\#define \hyperlink{group__keys_gac489e208c26afda8d4938ed88718760a}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-Z}~90
+\item 
+\#define \hyperlink{group__keys_gad1c8d9adac53925276ecb1d592511d8a}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-L\-E\-F\-T\-\_\-\-B\-R\-A\-C\-K\-E\-T}~91  /$\ast$ \mbox{[} $\ast$/
+\item 
+\#define \hyperlink{group__keys_gab8155ea99d1ab27ff56f24f8dc73f8d1}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-B\-A\-C\-K\-S\-L\-A\-S\-H}~92  /$\ast$ \textbackslash{} $\ast$/
+\item 
+\#define \hyperlink{group__keys_ga86ef225fd6a66404caae71044cdd58d8}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-R\-I\-G\-H\-T\-\_\-\-B\-R\-A\-C\-K\-E\-T}~93  /$\ast$ \mbox{]} $\ast$/
+\item 
+\#define \hyperlink{group__keys_ga7a3701fb4e2a0b136ff4b568c3c8d668}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-G\-R\-A\-V\-E\-\_\-\-A\-C\-C\-E\-N\-T}~96  /$\ast$ ` $\ast$/
+\item 
+\#define \hyperlink{group__keys_gadc78dad3dab76bcd4b5c20114052577a}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-W\-O\-R\-L\-D\-\_\-1}~161 /$\ast$ non-\/U\-S \#1 $\ast$/
+\item 
+\#define \hyperlink{group__keys_ga20494bfebf0bb4fc9503afca18ab2c5e}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-W\-O\-R\-L\-D\-\_\-2}~162 /$\ast$ non-\/U\-S \#2 $\ast$/
+\item 
+\#define \hyperlink{group__keys_gaac6596c350b635c245113b81c2123b93}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-E\-S\-C\-A\-P\-E}~256
+\item 
+\#define \hyperlink{group__keys_ga9555a92ecbecdbc1f3435219c571d667}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-T\-E\-R}~257
+\item 
+\#define \hyperlink{group__keys_ga6908a4bda9950a3e2b73f794bbe985df}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-T\-A\-B}~258
+\item 
+\#define \hyperlink{group__keys_ga6c0df1fe2f156bbd5a98c66d76ff3635}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-B\-A\-C\-K\-S\-P\-A\-C\-E}~259
+\item 
+\#define \hyperlink{group__keys_ga373ac7365435d6b0eb1068f470e34f47}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-I\-N\-S\-E\-R\-T}~260
+\item 
+\#define \hyperlink{group__keys_gadb111e4df74b8a715f2c05dad58d2682}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-D\-E\-L\-E\-T\-E}~261
+\item 
+\#define \hyperlink{group__keys_ga06ba07662e8c291a4a84535379ffc7ac}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-R\-I\-G\-H\-T}~262
+\item 
+\#define \hyperlink{group__keys_gae12a010d33c309a67ab9460c51eb2462}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-L\-E\-F\-T}~263
+\item 
+\#define \hyperlink{group__keys_gae2e3958c71595607416aa7bf082be2f9}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-D\-O\-W\-N}~264
+\item 
+\#define \hyperlink{group__keys_ga2f3342b194020d3544c67e3506b6f144}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-U\-P}~265
+\item 
+\#define \hyperlink{group__keys_ga3ab731f9622f0db280178a5f3cc6d586}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-G\-E\-\_\-\-U\-P}~266
+\item 
+\#define \hyperlink{group__keys_gaee0a8fa442001cc2147812f84b59041c}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-G\-E\-\_\-\-D\-O\-W\-N}~267
+\item 
+\#define \hyperlink{group__keys_ga41452c7287195d481e43207318c126a7}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-H\-O\-M\-E}~268
+\item 
+\#define \hyperlink{group__keys_ga86587ea1df19a65978d3e3b8439bedd9}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-E\-N\-D}~269
+\item 
+\#define \hyperlink{group__keys_ga92c1d2c9d63485f3d70f94f688d48672}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-C\-A\-P\-S\-\_\-\-L\-O\-C\-K}~280
+\item 
+\#define \hyperlink{group__keys_gaf622b63b9537f7084c2ab649b8365630}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-S\-C\-R\-O\-L\-L\-\_\-\-L\-O\-C\-K}~281
+\item 
+\#define \hyperlink{group__keys_ga3946edc362aeff213b2be6304296cf43}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-N\-U\-M\-\_\-\-L\-O\-C\-K}~282
+\item 
+\#define \hyperlink{group__keys_gaf964c2e65e97d0cf785a5636ee8df642}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-P\-R\-I\-N\-T\-\_\-\-S\-C\-R\-E\-E\-N}~283
+\item 
+\#define \hyperlink{group__keys_ga8116b9692d87382afb5849b6d8907f18}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-P\-A\-U\-S\-E}~284
+\item 
+\#define \hyperlink{group__keys_gafb8d66c573acf22e364049477dcbea30}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F1}~290
+\item 
+\#define \hyperlink{group__keys_ga0900750aff94889b940f5e428c07daee}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F2}~291
+\item 
+\#define \hyperlink{group__keys_gaed7cd729c0147a551bb8b7bb36c17015}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F3}~292
+\item 
+\#define \hyperlink{group__keys_ga9b61ebd0c63b44b7332fda2c9763eaa6}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F4}~293
+\item 
+\#define \hyperlink{group__keys_gaf258dda9947daa428377938ed577c8c2}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F5}~294
+\item 
+\#define \hyperlink{group__keys_ga6dc2d3f87b9d51ffbbbe2ef0299d8e1d}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F6}~295
+\item 
+\#define \hyperlink{group__keys_gacca6ef8a2162c52a0ac1d881e8d9c38a}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F7}~296
+\item 
+\#define \hyperlink{group__keys_gac9d39390336ae14e4a93e295de43c7e8}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F8}~297
+\item 
+\#define \hyperlink{group__keys_gae40de0de1c9f21cd26c9afa3d7050851}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F9}~298
+\item 
+\#define \hyperlink{group__keys_ga718d11d2f7d57471a2f6a894235995b1}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F10}~299
+\item 
+\#define \hyperlink{group__keys_ga0bc04b11627e7d69339151e7306b2832}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F11}~300
+\item 
+\#define \hyperlink{group__keys_gaf5908fa9b0a906ae03fc2c61ac7aa3e2}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F12}~301
+\item 
+\#define \hyperlink{group__keys_gad637f4308655e1001bd6ad942bc0fd4b}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F13}~302
+\item 
+\#define \hyperlink{group__keys_gaf14c66cff3396e5bd46e803c035e6c1f}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F14}~303
+\item 
+\#define \hyperlink{group__keys_ga7f70970db6e8be1794da8516a6d14058}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F15}~304
+\item 
+\#define \hyperlink{group__keys_gaa582dbb1d2ba2050aa1dca0838095b27}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F16}~305
+\item 
+\#define \hyperlink{group__keys_ga972ce5c365e2394b36104b0e3125c748}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F17}~306
+\item 
+\#define \hyperlink{group__keys_gaebf6391058d5566601e357edc5ea737c}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F18}~307
+\item 
+\#define \hyperlink{group__keys_gaec011d9ba044058cb54529da710e9791}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F19}~308
+\item 
+\#define \hyperlink{group__keys_ga82b9c721ada04cd5ca8de767da38022f}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F20}~309
+\item 
+\#define \hyperlink{group__keys_ga356afb14d3440ff2bb378f74f7ebc60f}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F21}~310
+\item 
+\#define \hyperlink{group__keys_ga90960bd2a155f2b09675324d3dff1565}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F22}~311
+\item 
+\#define \hyperlink{group__keys_ga43c21099aac10952d1be909a8ddee4d5}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F23}~312
+\item 
+\#define \hyperlink{group__keys_ga8150374677b5bed3043408732152dea2}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F24}~313
+\item 
+\#define \hyperlink{group__keys_gaa4bbd93ed73bb4c6ae7d83df880b7199}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-F25}~314
+\item 
+\#define \hyperlink{group__keys_ga10515dafc55b71e7683f5b4fedd1c70d}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-0}~320
+\item 
+\#define \hyperlink{group__keys_gaf3a29a334402c5eaf0b3439edf5587c3}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-1}~321
+\item 
+\#define \hyperlink{group__keys_gaf82d5a802ab8213c72653d7480c16f13}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-2}~322
+\item 
+\#define \hyperlink{group__keys_ga7e25ff30d56cd512828c1d4ae8d54ef2}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-3}~323
+\item 
+\#define \hyperlink{group__keys_gada7ec86778b85e0b4de0beea72234aea}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-4}~324
+\item 
+\#define \hyperlink{group__keys_ga9a5be274434866c51738cafbb6d26b45}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-5}~325
+\item 
+\#define \hyperlink{group__keys_gafc141b0f8450519084c01092a3157faa}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-6}~326
+\item 
+\#define \hyperlink{group__keys_ga8882f411f05d04ec77a9563974bbfa53}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-7}~327
+\item 
+\#define \hyperlink{group__keys_gab2ea2e6a12f89d315045af520ac78cec}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-8}~328
+\item 
+\#define \hyperlink{group__keys_gafb21426b630ed4fcc084868699ba74c1}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-9}~329
+\item 
+\#define \hyperlink{group__keys_ga4e231d968796331a9ea0dbfb98d4005b}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-\-D\-E\-C\-I\-M\-A\-L}~330
+\item 
+\#define \hyperlink{group__keys_gabca1733780a273d549129ad0f250d1e5}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-\-D\-I\-V\-I\-D\-E}~331
+\item 
+\#define \hyperlink{group__keys_ga9ada267eb0e78ed2ada8701dd24a56ef}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-\-M\-U\-L\-T\-I\-P\-L\-Y}~332
+\item 
+\#define \hyperlink{group__keys_gaa3dbd60782ff93d6082a124bce1fa236}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-\-S\-U\-B\-T\-R\-A\-C\-T}~333
+\item 
+\#define \hyperlink{group__keys_gad09c7c98acc79e89aa6a0a91275becac}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-\-A\-D\-D}~334
+\item 
+\#define \hyperlink{group__keys_ga4f728f8738f2986bd63eedd3d412e8cf}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-\-E\-N\-T\-E\-R}~335
+\item 
+\#define \hyperlink{group__keys_gaebdc76d4a808191e6d21b7e4ad2acd97}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-K\-P\-\_\-\-E\-Q\-U\-A\-L}~336
+\item 
+\#define \hyperlink{group__keys_ga8a530a28a65c44ab5d00b759b756d3f6}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-L\-E\-F\-T\-\_\-\-S\-H\-I\-F\-T}~340
+\item 
+\#define \hyperlink{group__keys_ga9f97b743e81460ac4b2deddecd10a464}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-L\-E\-F\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L}~341
+\item 
+\#define \hyperlink{group__keys_ga7f27dabf63a7789daa31e1c96790219b}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-L\-E\-F\-T\-\_\-\-A\-L\-T}~342
+\item 
+\#define \hyperlink{group__keys_gafb1207c91997fc295afd1835fbc5641a}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-L\-E\-F\-T\-\_\-\-S\-U\-P\-E\-R}~343
+\item 
+\#define \hyperlink{group__keys_gaffca36b99c9dce1a19cb9befbadce691}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-R\-I\-G\-H\-T\-\_\-\-S\-H\-I\-F\-T}~344
+\item 
+\#define \hyperlink{group__keys_gad1ca2094b2694e7251d0ab1fd34f8519}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-R\-I\-G\-H\-T\-\_\-\-C\-O\-N\-T\-R\-O\-L}~345
+\item 
+\#define \hyperlink{group__keys_ga687b38009131cfdd07a8d05fff8fa446}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-R\-I\-G\-H\-T\-\_\-\-A\-L\-T}~346
+\item 
+\#define \hyperlink{group__keys_gad4547a3e8e247594acb60423fe6502db}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-R\-I\-G\-H\-T\-\_\-\-S\-U\-P\-E\-R}~347
+\item 
+\#define \hyperlink{group__keys_ga9845be48a745fc232045c9ec174d8820}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-M\-E\-N\-U}~348
+\item 
+\#define \hyperlink{group__keys_ga442cbaef7bfb9a4ba13594dd7fbf2789}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-L\-A\-S\-T}~\hyperlink{group__keys_ga9845be48a745fc232045c9ec174d8820}{G\-L\-F\-W\-\_\-\-K\-E\-Y\-\_\-\-M\-E\-N\-U}
+\item 
+\#define \hyperlink{group__mods_ga14994d3196c290aaa347248e51740274}{G\-L\-F\-W\-\_\-\-M\-O\-D\-\_\-\-S\-H\-I\-F\-T}~0x0001
+\begin{DoxyCompactList}\small\item\em If this bit is set one or more Shift keys were held down. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mods_ga6ed94871c3208eefd85713fa929d45aa}{G\-L\-F\-W\-\_\-\-M\-O\-D\-\_\-\-C\-O\-N\-T\-R\-O\-L}~0x0002
+\begin{DoxyCompactList}\small\item\em If this bit is set one or more Control keys were held down. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mods_gad2acd5633463c29e07008687ea73c0f4}{G\-L\-F\-W\-\_\-\-M\-O\-D\-\_\-\-A\-L\-T}~0x0004
+\begin{DoxyCompactList}\small\item\em If this bit is set one or more Alt keys were held down. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__mods_ga6b64ba10ea0227cf6f42efd0a220aba1}{G\-L\-F\-W\-\_\-\-M\-O\-D\-\_\-\-S\-U\-P\-E\-R}~0x0008
+\begin{DoxyCompactList}\small\item\em If this bit is set one or more Super keys were held down. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__buttons_ga181a6e875251fd8671654eff00f9112e}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-1}~0
+\item 
+\#define \hyperlink{group__buttons_ga604b39b92c88ce9bd332e97fc3f4156c}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-2}~1
+\item 
+\#define \hyperlink{group__buttons_ga0130d505563d0236a6f85545f19e1721}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-3}~2
+\item 
+\#define \hyperlink{group__buttons_ga53f4097bb01d5521c7d9513418c91ca9}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-4}~3
+\item 
+\#define \hyperlink{group__buttons_gaf08c4ddecb051d3d9667db1d5e417c9c}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-5}~4
+\item 
+\#define \hyperlink{group__buttons_gae8513e06aab8aa393b595f22c6d8257a}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-6}~5
+\item 
+\#define \hyperlink{group__buttons_ga8b02a1ab55dde45b3a3883d54ffd7dc7}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-7}~6
+\item 
+\#define \hyperlink{group__buttons_ga35d5c4263e0dc0d0a4731ca6c562f32c}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-8}~7
+\item 
+\#define \hyperlink{group__buttons_gab1fd86a4518a9141ec7bcde2e15a2fdf}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-\-L\-A\-S\-T}~\hyperlink{group__buttons_ga35d5c4263e0dc0d0a4731ca6c562f32c}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-8}
+\item 
+\#define \hyperlink{group__buttons_gaf37100431dcd5082d48f95ee8bc8cd56}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-\-L\-E\-F\-T}~\hyperlink{group__buttons_ga181a6e875251fd8671654eff00f9112e}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-1}
+\item 
+\#define \hyperlink{group__buttons_ga3e2f2cf3c4942df73cc094247d275e74}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-\-R\-I\-G\-H\-T}~\hyperlink{group__buttons_ga604b39b92c88ce9bd332e97fc3f4156c}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-2}
+\item 
+\#define \hyperlink{group__buttons_ga34a4d2a701434f763fd93a2ff842b95a}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-\-M\-I\-D\-D\-L\-E}~\hyperlink{group__buttons_ga0130d505563d0236a6f85545f19e1721}{G\-L\-F\-W\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-\_\-3}
+\item 
+\#define \hyperlink{group__joysticks_ga34a0443d059e9f22272cd4669073f73d}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-1}~0
+\item 
+\#define \hyperlink{group__joysticks_ga6eab65ec88e65e0850ef8413504cb50c}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-2}~1
+\item 
+\#define \hyperlink{group__joysticks_gae6f3eedfeb42424c2f5e3161efb0b654}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-3}~2
+\item 
+\#define \hyperlink{group__joysticks_ga97ddbcad02b7f48d74fad4ddb08fff59}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-4}~3
+\item 
+\#define \hyperlink{group__joysticks_gae43281bc66d3fa5089fb50c3e7a28695}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-5}~4
+\item 
+\#define \hyperlink{group__joysticks_ga74771620aa53bd68a487186dea66fd77}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-6}~5
+\item 
+\#define \hyperlink{group__joysticks_ga20a9f4f3aaefed9ea5e66072fc588b87}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-7}~6
+\item 
+\#define \hyperlink{group__joysticks_ga21a934c940bcf25db0e4c8fe9b364bdb}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-8}~7
+\item 
+\#define \hyperlink{group__joysticks_ga87689d47df0ba6f9f5fcbbcaf7b3cecf}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-9}~8
+\item 
+\#define \hyperlink{group__joysticks_gaef55389ee605d6dfc31aef6fe98c54ec}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-10}~9
+\item 
+\#define \hyperlink{group__joysticks_gae7d26e3df447c2c14a569fcc18516af4}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-11}~10
+\item 
+\#define \hyperlink{group__joysticks_gab91bbf5b7ca6be8d3ac5c4d89ff48ac7}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-12}~11
+\item 
+\#define \hyperlink{group__joysticks_ga5c84fb4e49bf661d7d7c78eb4018c508}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-13}~12
+\item 
+\#define \hyperlink{group__joysticks_ga89540873278ae5a42b3e70d64164dc74}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-14}~13
+\item 
+\#define \hyperlink{group__joysticks_ga7b02ab70daf7a78bcc942d5d4cc1dcf9}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-15}~14
+\item 
+\#define \hyperlink{group__joysticks_ga453edeeabf350827646b6857df4f80ce}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-16}~15
+\item 
+\#define \hyperlink{group__joysticks_ga9ca13ebf24c331dd98df17d84a4b72c9}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-\-L\-A\-S\-T}~\hyperlink{group__joysticks_ga453edeeabf350827646b6857df4f80ce}{G\-L\-F\-W\-\_\-\-J\-O\-Y\-S\-T\-I\-C\-K\-\_\-16}
+\item 
+\#define \hyperlink{group__errors_ga2374ee02c177f12e1fa76ff3ed15e14a}{G\-L\-F\-W\-\_\-\-N\-O\-T\-\_\-\-I\-N\-I\-T\-I\-A\-L\-I\-Z\-E\-D}~0x00010001
+\begin{DoxyCompactList}\small\item\em G\-L\-F\-W has not been initialized. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gaa8290386e9528ccb9e42a3a4e16fc0d0}{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-C\-U\-R\-R\-E\-N\-T\-\_\-\-C\-O\-N\-T\-E\-X\-T}~0x00010002
+\begin{DoxyCompactList}\small\item\em No context is current for this thread. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_ga76f6bb9c4eea73db675f096b404593ce}{G\-L\-F\-W\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-E\-N\-U\-M}~0x00010003
+\begin{DoxyCompactList}\small\item\em One of the enum parameters for the function was given an invalid enum. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gaaf2ef9aa8202c2b82ac2d921e554c687}{G\-L\-F\-W\-\_\-\-I\-N\-V\-A\-L\-I\-D\-\_\-\-V\-A\-L\-U\-E}~0x00010004
+\begin{DoxyCompactList}\small\item\em One of the parameters for the function was given an invalid value. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_ga9023953a2bcb98c2906afd071d21ee7f}{G\-L\-F\-W\-\_\-\-O\-U\-T\-\_\-\-O\-F\-\_\-\-M\-E\-M\-O\-R\-Y}~0x00010005
+\begin{DoxyCompactList}\small\item\em A memory allocation failed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_ga56882b290db23261cc6c053c40c2d08e}{G\-L\-F\-W\-\_\-\-A\-P\-I\-\_\-\-U\-N\-A\-V\-A\-I\-L\-A\-B\-L\-E}~0x00010006
+\begin{DoxyCompactList}\small\item\em G\-L\-F\-W could not find support for the requested client A\-P\-I on the system. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gad16c5565b4a69f9c2a9ac2c0dbc89462}{G\-L\-F\-W\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-U\-N\-A\-V\-A\-I\-L\-A\-B\-L\-E}~0x00010007
+\begin{DoxyCompactList}\small\item\em The requested client A\-P\-I version is not available. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_gad44162d78100ea5e87cdd38426b8c7a1}{G\-L\-F\-W\-\_\-\-P\-L\-A\-T\-F\-O\-R\-M\-\_\-\-E\-R\-R\-O\-R}~0x00010008
+\begin{DoxyCompactList}\small\item\em A platform-\/specific error occurred that does not match any of the more specific categories. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__errors_ga196e125ef261d94184e2b55c05762f14}{G\-L\-F\-W\-\_\-\-F\-O\-R\-M\-A\-T\-\_\-\-U\-N\-A\-V\-A\-I\-L\-A\-B\-L\-E}~0x00010009
+\begin{DoxyCompactList}\small\item\em The clipboard did not contain data in the requested format. \end{DoxyCompactList}\item 
+\#define \hyperlink{glfw3_8h_a54ddb14825a1541a56e22afb5f832a9e}{G\-L\-F\-W\-\_\-\-F\-O\-C\-U\-S\-E\-D}~0x00020001
+\item 
+\#define \hyperlink{glfw3_8h_a39d44b7c056e55e581355a92d240b58a}{G\-L\-F\-W\-\_\-\-I\-C\-O\-N\-I\-F\-I\-E\-D}~0x00020002
+\item 
+\#define \hyperlink{glfw3_8h_adba13c7a1b3aa40831eb2beedbd5bd1d}{G\-L\-F\-W\-\_\-\-R\-E\-S\-I\-Z\-A\-B\-L\-E}~0x00020003
+\item 
+\#define \hyperlink{glfw3_8h_afb3cdc45297e06d8f1eb13adc69ca6c4}{G\-L\-F\-W\-\_\-\-V\-I\-S\-I\-B\-L\-E}~0x00020004
+\item 
+\#define \hyperlink{glfw3_8h_a21b854d36314c94d65aed84405b2f25e}{G\-L\-F\-W\-\_\-\-D\-E\-C\-O\-R\-A\-T\-E\-D}~0x00020005
+\item 
+\#define \hyperlink{glfw3_8h_af78ed8e417dbcc1e354906cc2708c982}{G\-L\-F\-W\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S}~0x00021001
+\item 
+\#define \hyperlink{glfw3_8h_afba3b72638c914e5fb8a237dd4c50d4d}{G\-L\-F\-W\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S}~0x00021002
+\item 
+\#define \hyperlink{glfw3_8h_ab292ea403db6d514537b515311bf9ae3}{G\-L\-F\-W\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S}~0x00021003
+\item 
+\#define \hyperlink{glfw3_8h_afed79a3f468997877da86c449bd43e8c}{G\-L\-F\-W\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S}~0x00021004
+\item 
+\#define \hyperlink{glfw3_8h_a318a55eac1fee57dfe593b6d38149d07}{G\-L\-F\-W\-\_\-\-D\-E\-P\-T\-H\-\_\-\-B\-I\-T\-S}~0x00021005
+\item 
+\#define \hyperlink{glfw3_8h_a5339890a45a1fb38e93cb9fcc5fd069d}{G\-L\-F\-W\-\_\-\-S\-T\-E\-N\-C\-I\-L\-\_\-\-B\-I\-T\-S}~0x00021006
+\item 
+\#define \hyperlink{glfw3_8h_aead34a9a683b2bc20eecf30ba738bfc6}{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S}~0x00021007
+\item 
+\#define \hyperlink{glfw3_8h_a65713cee1326f8e9d806fdf93187b471}{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S}~0x00021008
+\item 
+\#define \hyperlink{glfw3_8h_a22bbe9104a8ce1f8b88fb4f186aa36ce}{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S}~0x00021009
+\item 
+\#define \hyperlink{glfw3_8h_ae829b55591c18169a40ab4067a041b1f}{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S}~0x0002100\-A
+\item 
+\#define \hyperlink{glfw3_8h_ab05108c5029443b371112b031d1fa174}{G\-L\-F\-W\-\_\-\-A\-U\-X\-\_\-\-B\-U\-F\-F\-E\-R\-S}~0x0002100\-B
+\item 
+\#define \hyperlink{glfw3_8h_a83d991efca02537e2d69969135b77b03}{G\-L\-F\-W\-\_\-\-S\-T\-E\-R\-E\-O}~0x0002100\-C
+\item 
+\#define \hyperlink{glfw3_8h_a2cdf86fdcb7722fb8829c4e201607535}{G\-L\-F\-W\-\_\-\-S\-A\-M\-P\-L\-E\-S}~0x0002100\-D
+\item 
+\#define \hyperlink{glfw3_8h_a444a8f00414a63220591f9fdb7b5642b}{G\-L\-F\-W\-\_\-\-S\-R\-G\-B\-\_\-\-C\-A\-P\-A\-B\-L\-E}~0x0002100\-E
+\item 
+\#define \hyperlink{glfw3_8h_a0f20825e6e47ee8ba389024519682212}{G\-L\-F\-W\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-R\-A\-T\-E}~0x0002100\-F
+\item 
+\#define \hyperlink{glfw3_8h_a649309cf72a3d3de5b1348ca7936c95b}{G\-L\-F\-W\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-A\-P\-I}~0x00022001
+\item 
+\#define \hyperlink{glfw3_8h_afe5e4922de1f9932d7e9849bb053b0c0}{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}~0x00022002
+\item 
+\#define \hyperlink{glfw3_8h_a31aca791e4b538c4e4a771eb95cc2d07}{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}~0x00022003
+\item 
+\#define \hyperlink{glfw3_8h_afb9475071aa77c6fb05ca5a5c8678a08}{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}~0x00022004
+\item 
+\#define \hyperlink{glfw3_8h_ade3593916b4c507900aa2d6844810e00}{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S}~0x00022005
+\item 
+\#define \hyperlink{glfw3_8h_a13d24b12465da8b28985f46c8557925b}{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-F\-O\-R\-W\-A\-R\-D\-\_\-\-C\-O\-M\-P\-A\-T}~0x00022006
+\item 
+\#define \hyperlink{glfw3_8h_a87ec2df0b915201e950ca42d5d0831e1}{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C\-O\-N\-T\-E\-X\-T}~0x00022007
+\item 
+\#define \hyperlink{glfw3_8h_a44f3a6b4261fbe351e0b950b0f372e12}{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E}~0x00022008
+\item 
+\#define \hyperlink{glfw3_8h_a01b3f66db266341425e9abee6b257db2}{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-P\-I}~0x00030001
+\item 
+\#define \hyperlink{glfw3_8h_a28d9b3bc6c2a522d815c8e146595051f}{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-E\-S\-\_\-\-A\-P\-I}~0x00030002
+\item 
+\#define \hyperlink{glfw3_8h_a8b306cb27f5bb0d6d67c7356a0e0fc34}{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S}~0
+\item 
+\#define \hyperlink{glfw3_8h_aee84a679230d205005e22487ff678a85}{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-E\-S\-E\-T\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}~0x00031001
+\item 
+\#define \hyperlink{glfw3_8h_aec1132f245143fc915b2f0995228564c}{G\-L\-F\-W\-\_\-\-L\-O\-S\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-O\-N\-\_\-\-R\-E\-S\-E\-T}~0x00031002
+\item 
+\#define \hyperlink{glfw3_8h_ad6f2335d6f21cc9bab96633b1c111d5f}{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-N\-Y\-\_\-\-P\-R\-O\-F\-I\-L\-E}~0
+\item 
+\#define \hyperlink{glfw3_8h_af094bb16da76f66ebceb19ee213b3de8}{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-R\-E\-\_\-\-P\-R\-O\-F\-I\-L\-E}~0x00032001
+\item 
+\#define \hyperlink{glfw3_8h_ac06b663d79c8fcf04669cc8fcc0b7670}{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-M\-P\-A\-T\-\_\-\-P\-R\-O\-F\-I\-L\-E}~0x00032002
+\item 
+\#define \hyperlink{glfw3_8h_aade31da5b884a84a7625c6b059b9132c}{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R}~0x00033001
+\item 
+\#define \hyperlink{glfw3_8h_ae3bbe2315b7691ab088159eb6c9110fc}{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-K\-E\-Y\-S}~0x00033002
+\item 
+\#define \hyperlink{glfw3_8h_a4d7ce8ce71030c3b04e2b78145bc59d1}{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-S}~0x00033003
+\item 
+\#define \hyperlink{glfw3_8h_ae04dd25c8577e19fa8c97368561f6c68}{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L}~0x00034001
+\item 
+\#define \hyperlink{glfw3_8h_ac4d5cb9d78de8573349c58763d53bf11}{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-H\-I\-D\-D\-E\-N}~0x00034002
+\item 
+\#define \hyperlink{glfw3_8h_a2315b99a329ce53e6a13a9d46fd5ca88}{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}~0x00034003
+\item 
+\#define \hyperlink{glfw3_8h_abe11513fd1ffbee5bb9b173f06028b9e}{G\-L\-F\-W\-\_\-\-C\-O\-N\-N\-E\-C\-T\-E\-D}~0x00040001
+\item 
+\#define \hyperlink{glfw3_8h_aab64b25921ef21d89252d6f0a71bfc32}{G\-L\-F\-W\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}~0x00040002
+\end{DoxyCompactItemize}
+\begin{Indent}{\bf G\-L\-F\-W version macros}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__init_ga6337d9ea43b22fc529b2bba066b4a576}{G\-L\-F\-W\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}~3
+\begin{DoxyCompactList}\small\item\em The major version number of the G\-L\-F\-W library. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__init_gaf80d40f0aea7088ff337606e9c48f7a3}{G\-L\-F\-W\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}~0
+\begin{DoxyCompactList}\small\item\em The minor version number of the G\-L\-F\-W library. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__init_gab72ae2e2035d9ea461abc3495eac0502}{G\-L\-F\-W\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}~3
+\begin{DoxyCompactList}\small\item\em The revision number of the G\-L\-F\-W library. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}{\bf Key and button actions}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__input_gada11d965c4da13090ad336e030e4d11f}{G\-L\-F\-W\-\_\-\-R\-E\-L\-E\-A\-S\-E}~0
+\begin{DoxyCompactList}\small\item\em The key or button was released. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__input_ga2485743d0b59df3791c45951c4195265}{G\-L\-F\-W\-\_\-\-P\-R\-E\-S\-S}~1
+\begin{DoxyCompactList}\small\item\em The key or button was pressed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__input_gac96fd3b9fc66c6f0eebaf6532595338f}{G\-L\-F\-W\-\_\-\-R\-E\-P\-E\-A\-T}~2
+\begin{DoxyCompactList}\small\item\em The key was held down until it repeated. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__context_gabf42b10edde1c4fc71e212e576b9f811}{G\-L\-F\-Wglproc} )(\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Client A\-P\-I function pointer type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor}
+\begin{DoxyCompactList}\small\item\em Opaque monitor object. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow}
+\begin{DoxyCompactList}\small\item\em Opaque window object. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__error_ga6f2c8574259246a83b1d0c3baf23046f}{G\-L\-F\-Werrorfun} )(\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, const char $\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for error callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__window_ga1c36e52549efd47790eb3f324da71924}{G\-L\-F\-Wwindowposfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for window position callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__window_gaaca1c2715759d03da9834eac19323d4a}{G\-L\-F\-Wwindowsizefun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for window resize callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__window_ga07cff8bd3b3d573ecf49bb02d7669c1f}{G\-L\-F\-Wwindowclosefun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for window close callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__window_ga16764f89bf2060e6fa477f0943e1412b}{G\-L\-F\-Wwindowrefreshfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$)
+\begin{DoxyCompactList}\small\item\em The function signature for window content refresh callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__window_ga6b5f973531ea91663ad707ba4f2ac104}{G\-L\-F\-Wwindowfocusfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for window focus/defocus callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__window_gae47ae066eea9fe6050a62360928ae524}{G\-L\-F\-Wwindowiconifyfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for window iconify/restore callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__window_ga311bb32e578aa240b6464af494debffc}{G\-L\-F\-Wframebuffersizefun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for framebuffer resize callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__input_ga1e008c7a8751cea648c8f42cc91104cf}{G\-L\-F\-Wmousebuttonfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for mouse button callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__input_ga592fbfef76d88f027cb1bc4c36ebd437}{G\-L\-F\-Wcursorposfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, double, double)
+\begin{DoxyCompactList}\small\item\em The function signature for cursor position callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__input_ga762d898d9b0241d7e3e3b767c6cf318f}{G\-L\-F\-Wcursorenterfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for cursor enter/leave callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__input_ga6228cdf94d28fbd3a9a1fbb0e5922a8a}{G\-L\-F\-Wscrollfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, double, double)
+\begin{DoxyCompactList}\small\item\em The function signature for scroll callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__input_ga592dd1919f8a1dc7576b13cdd8b7b695}{G\-L\-F\-Wkeyfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for keyboard key callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__input_ga1103f1876518acecb5976f6b307c51d1}{G\-L\-F\-Wcharfun} )(\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$, unsigned \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for Unicode character callbacks. \end{DoxyCompactList}\item 
+typedef \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void}($\ast$ \hyperlink{group__monitor_ga67b74af6cecfdbccc7e57a6319a57210}{G\-L\-F\-Wmonitorfun} )(\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int})
+\begin{DoxyCompactList}\small\item\em The function signature for monitor configuration callbacks. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_g_l_f_wvidmode}{G\-L\-F\-Wvidmode} \hyperlink{group__monitor_gae48aadf4ea0967e6605c8f58fa5daccb}{G\-L\-F\-Wvidmode}
+\begin{DoxyCompactList}\small\item\em Video mode type. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{struct_g_l_f_wgammaramp}{G\-L\-F\-Wgammaramp} \hyperlink{group__monitor_gaec0bd37af673be8813592849f13e02f0}{G\-L\-F\-Wgammaramp}
+\begin{DoxyCompactList}\small\item\em Gamma ramp. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{group__init_gab41771f0215a2e0afb4cf1cf98082d40}{glfw\-Init} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Initializes the G\-L\-F\-W library. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__init_gafd90e6fd4819ea9e22e5e739519a6504}{glfw\-Terminate} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Terminates the G\-L\-F\-W library. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__init_ga2402c7824ac0194c13722790ff9559ff}{glfw\-Get\-Version} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$major, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$minor, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$rev)
+\begin{DoxyCompactList}\small\item\em Retrieves the version of the G\-L\-F\-W library. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const char $\ast$ \hyperlink{group__init_ga4b9092ac5eace57d94d3cd551d6b8ded}{glfw\-Get\-Version\-String} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Returns a string describing the compile-\/time configuration. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__error_ga6f2c8574259246a83b1d0c3baf23046f}{G\-L\-F\-Werrorfun} \hyperlink{group__error_ga5919096b958c47102126061fb5a6f9c3}{glfw\-Set\-Error\-Callback} (\hyperlink{group__error_ga6f2c8574259246a83b1d0c3baf23046f}{G\-L\-F\-Werrorfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the error callback. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$$\ast$ \hyperlink{group__monitor_gab4d483284c57e28837bc2cd9639e9665}{glfw\-Get\-Monitors} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_a10b284d589000663becfbc6867a3a9f7}{count})
+\begin{DoxyCompactList}\small\item\em Returns the currently connected monitors. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$ \hyperlink{group__monitor_ga59ea49f377fe701dd76764183e64d9f4}{glfw\-Get\-Primary\-Monitor} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Returns the primary monitor. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__monitor_ga45b5481a614ad7beb2aade9746d07563}{glfw\-Get\-Monitor\-Pos} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$xpos, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$ypos)
+\begin{DoxyCompactList}\small\item\em Returns the position of the monitor's viewport on the virtual screen. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__monitor_gadb3e088860fecedda3dabfd909b4df2b}{glfw\-Get\-Monitor\-Physical\-Size} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_aa105b18f96e6bc2485cb7f576a7fb9ba}{width}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_aa214bd63e12f7ddf524c83894fcc69a7}{height})
+\begin{DoxyCompactList}\small\item\em Returns the physical size of the monitor. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const char $\ast$ \hyperlink{group__monitor_ga22f62011bae33ea8d2974eff5d14f9b8}{glfw\-Get\-Monitor\-Name} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor)
+\begin{DoxyCompactList}\small\item\em Returns the name of the specified monitor. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__monitor_ga67b74af6cecfdbccc7e57a6319a57210}{G\-L\-F\-Wmonitorfun} \hyperlink{group__monitor_gacfa9978e57c73670577d530df23bf275}{glfw\-Set\-Monitor\-Callback} (\hyperlink{group__monitor_ga67b74af6cecfdbccc7e57a6319a57210}{G\-L\-F\-Wmonitorfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the monitor configuration callback. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const \hyperlink{struct_g_l_f_wvidmode}{G\-L\-F\-Wvidmode} $\ast$ \hyperlink{group__monitor_ga811c28d61595e630774389985947c665}{glfw\-Get\-Video\-Modes} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_a10b284d589000663becfbc6867a3a9f7}{count})
+\begin{DoxyCompactList}\small\item\em Returns the available video modes for the specified monitor. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const \hyperlink{struct_g_l_f_wvidmode}{G\-L\-F\-Wvidmode} $\ast$ \hyperlink{group__monitor_gac234b63ec525c70d7e18ac84aca088c6}{glfw\-Get\-Video\-Mode} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor)
+\begin{DoxyCompactList}\small\item\em Returns the current mode of the specified monitor. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__monitor_ga3e4ab484476c935b4cd0bf49a5c429d6}{glfw\-Set\-Gamma} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor, float gamma)
+\begin{DoxyCompactList}\small\item\em Generates a gamma ramp and sets it for the specified monitor. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const \hyperlink{struct_g_l_f_wgammaramp}{G\-L\-F\-Wgammaramp} $\ast$ \hyperlink{group__monitor_gaeeac9198f3c91b83440eed679441f76b}{glfw\-Get\-Gamma\-Ramp} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor)
+\begin{DoxyCompactList}\small\item\em Retrieves the current gamma ramp for the specified monitor. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__monitor_gac9f36a1cfa10eab191d3029ea8bc9558}{glfw\-Set\-Gamma\-Ramp} (\hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor, const \hyperlink{struct_g_l_f_wgammaramp}{G\-L\-F\-Wgammaramp} $\ast$ramp)
+\begin{DoxyCompactList}\small\item\em Sets the current gamma ramp for the specified monitor. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga8050ddceed9dc6bd9d3aa35666195cd4}{glfw\-Default\-Window\-Hints} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Resets all window hints to their default values. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_gab6e60483d79175b868d6d4dc1dcc63e2}{glfw\-Window\-Hint} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_aa43eab0fe80422366a4602998d53b133}{target}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} hint)
+\begin{DoxyCompactList}\small\item\em Sets the specified window hint to the desired value. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$ \hyperlink{group__window_ga680a02abe0e4494b6759d5703240713e}{glfw\-Create\-Window} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_aa105b18f96e6bc2485cb7f576a7fb9ba}{width}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_aa214bd63e12f7ddf524c83894fcc69a7}{height}, const char $\ast$title, \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$monitor, \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$share)
+\begin{DoxyCompactList}\small\item\em Creates a window and its associated context. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga806747476b7247d292be3711c323ea10}{glfw\-Destroy\-Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Destroys the specified window and its context. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{group__window_gaa6162f67dfa38b8beda2fea623649332}{glfw\-Window\-Should\-Close} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Checks the close flag of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga1cadeda7a1e2f224e06a8415d30741aa}{glfw\-Set\-Window\-Should\-Close} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value})
+\begin{DoxyCompactList}\small\item\em Sets the close flag of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga861ed3414ab8120e2f74151a666ed1dc}{glfw\-Set\-Window\-Title} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, const char $\ast$title)
+\begin{DoxyCompactList}\small\item\em Sets the title of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga0076a8591ef7494d359730cf2250b45b}{glfw\-Get\-Window\-Pos} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$xpos, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$ypos)
+\begin{DoxyCompactList}\small\item\em Retrieves the position of the client area of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga0dc8d880a0d87be16d3ea8114561f6f0}{glfw\-Set\-Window\-Pos} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} xpos, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} ypos)
+\begin{DoxyCompactList}\small\item\em Sets the position of the client area of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga7feb769ebb3f3d21579b5a3fb07be76e}{glfw\-Get\-Window\-Size} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_aa105b18f96e6bc2485cb7f576a7fb9ba}{width}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_aa214bd63e12f7ddf524c83894fcc69a7}{height})
+\begin{DoxyCompactList}\small\item\em Retrieves the size of the client area of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_gae54d1f4915ded15e267ddd3f41496cd2}{glfw\-Set\-Window\-Size} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_aa105b18f96e6bc2485cb7f576a7fb9ba}{width}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_aa214bd63e12f7ddf524c83894fcc69a7}{height})
+\begin{DoxyCompactList}\small\item\em Sets the size of the client area of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_gaf7d17f3534b4b6dc9a6f905e3a240b7e}{glfw\-Get\-Framebuffer\-Size} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_aa105b18f96e6bc2485cb7f576a7fb9ba}{width}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_aa214bd63e12f7ddf524c83894fcc69a7}{height})
+\begin{DoxyCompactList}\small\item\em Retrieves the size of the framebuffer of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga24274e3c6ecd44e11fec5e6b66e4d7f3}{glfw\-Iconify\-Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Iconifies the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga1e29caf0b819f578b04db52fff17256c}{glfw\-Restore\-Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Restores the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga7945bcdff9e5e058cf36505d6873ed8c}{glfw\-Show\-Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Makes the specified window visible. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_gaa17e287d521544bdeceafa09ac036e20}{glfw\-Hide\-Window} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Hides the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__monitor_ga8d9efd1cde9426692c73fe40437d0ae3}{G\-L\-F\-Wmonitor} $\ast$ \hyperlink{group__window_gaf1525cb3bccd5789c702cc9676ef3403}{glfw\-Get\-Window\-Monitor} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Returns the monitor that the window uses for full screen mode. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{group__window_ga1bb0c7e100418e284dbb800789c63d40}{glfw\-Get\-Window\-Attrib} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} attrib)
+\begin{DoxyCompactList}\small\item\em Returns an attribute of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_gacc9e68faee3c1763b54cd9bc405cf43e}{glfw\-Set\-Window\-User\-Pointer} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} $\ast$\hyperlink{glew_8h_ae55c7660a19efe8abc738283ea88fb58}{pointer})
+\begin{DoxyCompactList}\small\item\em Sets the user pointer of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} $\ast$ \hyperlink{group__window_ga0a9ff3b4bf8589e9518e8816d06a8f50}{glfw\-Get\-Window\-User\-Pointer} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Returns the user pointer of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_ga1c36e52549efd47790eb3f324da71924}{G\-L\-F\-Wwindowposfun} \hyperlink{group__window_gaea610899c4cb070dcd655c6de1fe1d2c}{glfw\-Set\-Window\-Pos\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__window_ga1c36e52549efd47790eb3f324da71924}{G\-L\-F\-Wwindowposfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the position callback for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_gaaca1c2715759d03da9834eac19323d4a}{G\-L\-F\-Wwindowsizefun} \hyperlink{group__window_ga150dad5f364425916c5816074cffa5e7}{glfw\-Set\-Window\-Size\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__window_gaaca1c2715759d03da9834eac19323d4a}{G\-L\-F\-Wwindowsizefun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the size callback for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_ga07cff8bd3b3d573ecf49bb02d7669c1f}{G\-L\-F\-Wwindowclosefun} \hyperlink{group__window_ga5b827da350141c789acd64f5c4f7a0e1}{glfw\-Set\-Window\-Close\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__window_ga07cff8bd3b3d573ecf49bb02d7669c1f}{G\-L\-F\-Wwindowclosefun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the close callback for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_ga16764f89bf2060e6fa477f0943e1412b}{G\-L\-F\-Wwindowrefreshfun} \hyperlink{group__window_ga9d2621fbc271a0cdc0ce91f9749f46e3}{glfw\-Set\-Window\-Refresh\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__window_ga16764f89bf2060e6fa477f0943e1412b}{G\-L\-F\-Wwindowrefreshfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the refresh callback for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_ga6b5f973531ea91663ad707ba4f2ac104}{G\-L\-F\-Wwindowfocusfun} \hyperlink{group__window_gac89c6534ba7fbab6f6c68b855656c0d4}{glfw\-Set\-Window\-Focus\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__window_ga6b5f973531ea91663ad707ba4f2ac104}{G\-L\-F\-Wwindowfocusfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the focus callback for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_gae47ae066eea9fe6050a62360928ae524}{G\-L\-F\-Wwindowiconifyfun} \hyperlink{group__window_ga17cd86946117b56c76397530900519db}{glfw\-Set\-Window\-Iconify\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__window_gae47ae066eea9fe6050a62360928ae524}{G\-L\-F\-Wwindowiconifyfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the iconify callback for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_ga311bb32e578aa240b6464af494debffc}{G\-L\-F\-Wframebuffersizefun} \hyperlink{group__window_gad766bcdb4465f9c6c62e5d8ca7cfba56}{glfw\-Set\-Framebuffer\-Size\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__window_ga311bb32e578aa240b6464af494debffc}{G\-L\-F\-Wframebuffersizefun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the framebuffer resize callback for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga872d16e4c77f58c0436f356255920cfc}{glfw\-Poll\-Events} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Processes all pending events. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__window_ga6e042d05823c11e11c7339b81a237738}{glfw\-Wait\-Events} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Waits until events are pending and processes them. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{group__input_ga1248dd5b1e566b2817e71547564d6af9}{glfw\-Get\-Input\-Mode} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode})
+\begin{DoxyCompactList}\small\item\em Returns the value of an input option for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__input_gae1eb729d2dd91dc33fd60e150a6e1684}{glfw\-Set\-Input\-Mode} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_a1e71d9c196e4683cc06c4b54d53f7ef5}{mode}, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{glew_8h_a6a4f8a1a444e9080b297963b3db29fe0}{value})
+\begin{DoxyCompactList}\small\item\em Sets an input option for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{group__input_ga7d8ad8ffaf272808f04e1d5d33ec8859}{glfw\-Get\-Key} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} key)
+\begin{DoxyCompactList}\small\item\em Returns the last reported state of a keyboard key for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{group__input_ga6da5efb04f700c312a57a169fa9393a0}{glfw\-Get\-Mouse\-Button} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} button)
+\begin{DoxyCompactList}\small\item\em Returns the last reported state of a mouse button for the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__input_gad289438eb7cf53d11eca685373f44105}{glfw\-Get\-Cursor\-Pos} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, double $\ast$xpos, double $\ast$ypos)
+\begin{DoxyCompactList}\small\item\em Retrieves the last reported cursor position, relative to the client area of the window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__input_gaaf152cc93418acb0ba342e3f4af922bc}{glfw\-Set\-Cursor\-Pos} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, double xpos, double ypos)
+\begin{DoxyCompactList}\small\item\em Sets the position of the cursor, relative to the client area of the window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__input_ga592dd1919f8a1dc7576b13cdd8b7b695}{G\-L\-F\-Wkeyfun} \hyperlink{group__input_gaa73bb92f628a2a0be9c132d56f19362c}{glfw\-Set\-Key\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__input_ga592dd1919f8a1dc7576b13cdd8b7b695}{G\-L\-F\-Wkeyfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the key callback. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__input_ga1103f1876518acecb5976f6b307c51d1}{G\-L\-F\-Wcharfun} \hyperlink{group__input_ga07b2959b23dc3e466ce7475746021002}{glfw\-Set\-Char\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__input_ga1103f1876518acecb5976f6b307c51d1}{G\-L\-F\-Wcharfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the Unicode character callback. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__input_ga1e008c7a8751cea648c8f42cc91104cf}{G\-L\-F\-Wmousebuttonfun} \hyperlink{group__input_ga20e5ba1ce4e086aedd48a06dc311c95f}{glfw\-Set\-Mouse\-Button\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__input_ga1e008c7a8751cea648c8f42cc91104cf}{G\-L\-F\-Wmousebuttonfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the mouse button callback. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__input_ga592fbfef76d88f027cb1bc4c36ebd437}{G\-L\-F\-Wcursorposfun} \hyperlink{group__input_ga9c49c0d3d3c775c3124726f1d902124d}{glfw\-Set\-Cursor\-Pos\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__input_ga592fbfef76d88f027cb1bc4c36ebd437}{G\-L\-F\-Wcursorposfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the cursor position callback. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__input_ga762d898d9b0241d7e3e3b767c6cf318f}{G\-L\-F\-Wcursorenterfun} \hyperlink{group__input_gaa20014985561efeb2c53f1956f727830}{glfw\-Set\-Cursor\-Enter\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__input_ga762d898d9b0241d7e3e3b767c6cf318f}{G\-L\-F\-Wcursorenterfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the cursor enter/exit callback. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__input_ga6228cdf94d28fbd3a9a1fbb0e5922a8a}{G\-L\-F\-Wscrollfun} \hyperlink{group__input_ga29011514e93368712a3063a28707ced3}{glfw\-Set\-Scroll\-Callback} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, \hyperlink{group__input_ga6228cdf94d28fbd3a9a1fbb0e5922a8a}{G\-L\-F\-Wscrollfun} cbfun)
+\begin{DoxyCompactList}\small\item\em Sets the scroll callback. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{group__input_ga7f81f22f355f4b7d315caf73cdfd9906}{glfw\-Joystick\-Present} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} joy)
+\begin{DoxyCompactList}\small\item\em Returns whether the specified joystick is present. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const float $\ast$ \hyperlink{group__input_gaab9e573d808b088c5079c0f577d39448}{glfw\-Get\-Joystick\-Axes} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} joy, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_a10b284d589000663becfbc6867a3a9f7}{count})
+\begin{DoxyCompactList}\small\item\em Returns the values of all axes of the specified joystick. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const unsigned char $\ast$ \hyperlink{group__input_ga3951bea72b5fb4870b1aa0e5c2e9c903}{glfw\-Get\-Joystick\-Buttons} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} joy, \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} $\ast$\hyperlink{glew_8h_a10b284d589000663becfbc6867a3a9f7}{count})
+\begin{DoxyCompactList}\small\item\em Returns the state of all buttons of the specified joystick. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const char $\ast$ \hyperlink{group__input_gac50a4fd9b01886cf9fa2c45f19191fb8}{glfw\-Get\-Joystick\-Name} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} joy)
+\begin{DoxyCompactList}\small\item\em Returns the name of the specified joystick. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__clipboard_ga7a580309bbc185a0459c3559021d2fd7}{glfw\-Set\-Clipboard\-String} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window, const char $\ast$\hyperlink{glew_8h_ae9ea2d206f76ea82db7a2ea002fdef2f}{string})
+\begin{DoxyCompactList}\small\item\em Sets the clipboard to the specified string. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} const char $\ast$ \hyperlink{group__clipboard_ga3ac90c8bbaf0b46063bb02b574f3b6f7}{glfw\-Get\-Clipboard\-String} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Retrieves the contents of the clipboard as a string. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} double \hyperlink{group__time_ga03d4a1039b8662c71eeb40beea8cb622}{glfw\-Get\-Time} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Returns the value of the G\-L\-F\-W timer. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__time_ga94360a3628a09f32708f83cc3fa48590}{glfw\-Set\-Time} (double time)
+\begin{DoxyCompactList}\small\item\em Sets the G\-L\-F\-W timer. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__context_gafd76c93e15ec8b0b90506a9936a46185}{glfw\-Make\-Context\-Current} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Makes the context of the specified window current for the calling thread. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$ \hyperlink{group__context_gac28d98c655377d81a516bf5ef90780c8}{glfw\-Get\-Current\-Context} (\hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void})
+\begin{DoxyCompactList}\small\item\em Returns the window whose context is current on the calling thread. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__context_gafb827800eedbfcbc97b1e5408df668d7}{glfw\-Swap\-Buffers} (\hyperlink{group__window_ga3c96d80d363e67d13a41b5d1821f3242}{G\-L\-F\-Wwindow} $\ast$window)
+\begin{DoxyCompactList}\small\item\em Swaps the front and back buffers of the specified window. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_aeea6e3dfae3acf232096f57d2d57f084}{void} \hyperlink{group__context_ga12a595c06947cec4967c6e1f14210a8a}{glfw\-Swap\-Interval} (\hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} interval)
+\begin{DoxyCompactList}\small\item\em Sets the swap interval for the current context. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{wglew_8h_a500a82aecba06f4550f6849b8099ca21}{int} \hyperlink{group__context_ga9a28c712d35f9e43534e1d03b051c04c}{glfw\-Extension\-Supported} (const char $\ast$extension)
+\begin{DoxyCompactList}\small\item\em Returns whether the specified extension is available. \end{DoxyCompactList}\item 
+\hyperlink{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{G\-L\-F\-W\-A\-P\-I} \hyperlink{group__context_gabf42b10edde1c4fc71e212e576b9f811}{G\-L\-F\-Wglproc} \hyperlink{group__context_ga0e8af175218929615c16e74938c10f2a}{glfw\-Get\-Proc\-Address} (const char $\ast$procname)
+\begin{DoxyCompactList}\small\item\em Returns the address of the specified function for the current context. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{glfw3_8h_a428a91acf2c2439dc1a257708ee1f805}{\index{glfw3.\-h@{glfw3.\-h}!A\-P\-I\-E\-N\-T\-R\-Y@{A\-P\-I\-E\-N\-T\-R\-Y}}
+\index{A\-P\-I\-E\-N\-T\-R\-Y@{A\-P\-I\-E\-N\-T\-R\-Y}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{A\-P\-I\-E\-N\-T\-R\-Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\-P\-I\-E\-N\-T\-R\-Y}}\label{glfw3_8h_a428a91acf2c2439dc1a257708ee1f805}
+
+
+Definition at line 94 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ae829b55591c18169a40ab4067a041b1f}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S~0x0002100\-A}}\label{glfw3_8h_ae829b55591c18169a40ab4067a041b1f}
+
+
+Definition at line 508 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a22bbe9104a8ce1f8b88fb4f186aa36ce}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S~0x00021009}}\label{glfw3_8h_a22bbe9104a8ce1f8b88fb4f186aa36ce}
+
+
+Definition at line 507 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a65713cee1326f8e9d806fdf93187b471}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S~0x00021008}}\label{glfw3_8h_a65713cee1326f8e9d806fdf93187b471}
+
+
+Definition at line 506 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_aead34a9a683b2bc20eecf30ba738bfc6}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-A\-C\-C\-U\-M\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S~0x00021007}}\label{glfw3_8h_aead34a9a683b2bc20eecf30ba738bfc6}
+
+
+Definition at line 505 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_afed79a3f468997877da86c449bd43e8c}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-A\-L\-P\-H\-A\-\_\-\-B\-I\-T\-S~0x00021004}}\label{glfw3_8h_afed79a3f468997877da86c449bd43e8c}
+
+
+Definition at line 502 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ab05108c5029443b371112b031d1fa174}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-A\-U\-X\-\_\-\-B\-U\-F\-F\-E\-R\-S@{G\-L\-F\-W\-\_\-\-A\-U\-X\-\_\-\-B\-U\-F\-F\-E\-R\-S}}
+\index{G\-L\-F\-W\-\_\-\-A\-U\-X\-\_\-\-B\-U\-F\-F\-E\-R\-S@{G\-L\-F\-W\-\_\-\-A\-U\-X\-\_\-\-B\-U\-F\-F\-E\-R\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-A\-U\-X\-\_\-\-B\-U\-F\-F\-E\-R\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-A\-U\-X\-\_\-\-B\-U\-F\-F\-E\-R\-S~0x0002100\-B}}\label{glfw3_8h_ab05108c5029443b371112b031d1fa174}
+
+
+Definition at line 509 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ab292ea403db6d514537b515311bf9ae3}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-B\-L\-U\-E\-\_\-\-B\-I\-T\-S~0x00021003}}\label{glfw3_8h_ab292ea403db6d514537b515311bf9ae3}
+
+
+Definition at line 501 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a649309cf72a3d3de5b1348ca7936c95b}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-A\-P\-I@{G\-L\-F\-W\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-A\-P\-I}}
+\index{G\-L\-F\-W\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-A\-P\-I@{G\-L\-F\-W\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-A\-P\-I}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-A\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-L\-I\-E\-N\-T\-\_\-\-A\-P\-I~0x00022001}}\label{glfw3_8h_a649309cf72a3d3de5b1348ca7936c95b}
+
+
+Definition at line 515 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_abe11513fd1ffbee5bb9b173f06028b9e}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-O\-N\-N\-E\-C\-T\-E\-D@{G\-L\-F\-W\-\_\-\-C\-O\-N\-N\-E\-C\-T\-E\-D}}
+\index{G\-L\-F\-W\-\_\-\-C\-O\-N\-N\-E\-C\-T\-E\-D@{G\-L\-F\-W\-\_\-\-C\-O\-N\-N\-E\-C\-T\-E\-D}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-O\-N\-N\-E\-C\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-O\-N\-N\-E\-C\-T\-E\-D~0x00040001}}\label{glfw3_8h_abe11513fd1ffbee5bb9b173f06028b9e}
+
+
+Definition at line 543 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_afb9475071aa77c6fb05ca5a5c8678a08}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}}
+\index{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N@{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-E\-V\-I\-S\-I\-O\-N~0x00022004}}\label{glfw3_8h_afb9475071aa77c6fb05ca5a5c8678a08}
+
+
+Definition at line 518 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ade3593916b4c507900aa2d6844810e00}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S@{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S}}
+\index{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S@{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S~0x00022005}}\label{glfw3_8h_ade3593916b4c507900aa2d6844810e00}
+
+
+Definition at line 519 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_afe5e4922de1f9932d7e9849bb053b0c0}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R@{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}}
+\index{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R@{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-A\-J\-O\-R~0x00022002}}\label{glfw3_8h_afe5e4922de1f9932d7e9849bb053b0c0}
+
+
+Definition at line 516 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a31aca791e4b538c4e4a771eb95cc2d07}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R@{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}}
+\index{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R@{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-V\-E\-R\-S\-I\-O\-N\-\_\-\-M\-I\-N\-O\-R~0x00022003}}\label{glfw3_8h_a31aca791e4b538c4e4a771eb95cc2d07}
+
+
+Definition at line 517 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_aade31da5b884a84a7625c6b059b9132c}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R@{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R}}
+\index{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R@{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R~0x00033001}}\label{glfw3_8h_aade31da5b884a84a7625c6b059b9132c}
+
+
+Definition at line 535 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a2315b99a329ce53e6a13a9d46fd5ca88}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}}
+\index{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D@{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-D\-I\-S\-A\-B\-L\-E\-D~0x00034003}}\label{glfw3_8h_a2315b99a329ce53e6a13a9d46fd5ca88}
+
+
+Definition at line 541 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ac4d5cb9d78de8573349c58763d53bf11}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-H\-I\-D\-D\-E\-N@{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-H\-I\-D\-D\-E\-N}}
+\index{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-H\-I\-D\-D\-E\-N@{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-H\-I\-D\-D\-E\-N}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-H\-I\-D\-D\-E\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-H\-I\-D\-D\-E\-N~0x00034002}}\label{glfw3_8h_ac4d5cb9d78de8573349c58763d53bf11}
+
+
+Definition at line 540 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ae04dd25c8577e19fa8c97368561f6c68}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L@{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L}}
+\index{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L@{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-C\-U\-R\-S\-O\-R\-\_\-\-N\-O\-R\-M\-A\-L~0x00034001}}\label{glfw3_8h_ae04dd25c8577e19fa8c97368561f6c68}
+
+
+Definition at line 539 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a21b854d36314c94d65aed84405b2f25e}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-D\-E\-C\-O\-R\-A\-T\-E\-D@{G\-L\-F\-W\-\_\-\-D\-E\-C\-O\-R\-A\-T\-E\-D}}
+\index{G\-L\-F\-W\-\_\-\-D\-E\-C\-O\-R\-A\-T\-E\-D@{G\-L\-F\-W\-\_\-\-D\-E\-C\-O\-R\-A\-T\-E\-D}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-D\-E\-C\-O\-R\-A\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-D\-E\-C\-O\-R\-A\-T\-E\-D~0x00020005}}\label{glfw3_8h_a21b854d36314c94d65aed84405b2f25e}
+
+
+Definition at line 497 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a318a55eac1fee57dfe593b6d38149d07}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-D\-E\-P\-T\-H\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-D\-E\-P\-T\-H\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-D\-E\-P\-T\-H\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-D\-E\-P\-T\-H\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-D\-E\-P\-T\-H\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-D\-E\-P\-T\-H\-\_\-\-B\-I\-T\-S~0x00021005}}\label{glfw3_8h_a318a55eac1fee57dfe593b6d38149d07}
+
+
+Definition at line 503 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_aab64b25921ef21d89252d6f0a71bfc32}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D@{G\-L\-F\-W\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}}
+\index{G\-L\-F\-W\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D@{G\-L\-F\-W\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-D\-I\-S\-C\-O\-N\-N\-E\-C\-T\-E\-D~0x00040002}}\label{glfw3_8h_aab64b25921ef21d89252d6f0a71bfc32}
+
+
+Definition at line 544 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a54ddb14825a1541a56e22afb5f832a9e}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-F\-O\-C\-U\-S\-E\-D@{G\-L\-F\-W\-\_\-\-F\-O\-C\-U\-S\-E\-D}}
+\index{G\-L\-F\-W\-\_\-\-F\-O\-C\-U\-S\-E\-D@{G\-L\-F\-W\-\_\-\-F\-O\-C\-U\-S\-E\-D}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-F\-O\-C\-U\-S\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-F\-O\-C\-U\-S\-E\-D~0x00020001}}\label{glfw3_8h_a54ddb14825a1541a56e22afb5f832a9e}
+
+
+Definition at line 493 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_afba3b72638c914e5fb8a237dd4c50d4d}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-G\-R\-E\-E\-N\-\_\-\-B\-I\-T\-S~0x00021002}}\label{glfw3_8h_afba3b72638c914e5fb8a237dd4c50d4d}
+
+
+Definition at line 500 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a39d44b7c056e55e581355a92d240b58a}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-I\-C\-O\-N\-I\-F\-I\-E\-D@{G\-L\-F\-W\-\_\-\-I\-C\-O\-N\-I\-F\-I\-E\-D}}
+\index{G\-L\-F\-W\-\_\-\-I\-C\-O\-N\-I\-F\-I\-E\-D@{G\-L\-F\-W\-\_\-\-I\-C\-O\-N\-I\-F\-I\-E\-D}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-I\-C\-O\-N\-I\-F\-I\-E\-D}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-I\-C\-O\-N\-I\-F\-I\-E\-D~0x00020002}}\label{glfw3_8h_a39d44b7c056e55e581355a92d240b58a}
+
+
+Definition at line 494 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_aec1132f245143fc915b2f0995228564c}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-L\-O\-S\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-O\-N\-\_\-\-R\-E\-S\-E\-T@{G\-L\-F\-W\-\_\-\-L\-O\-S\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-O\-N\-\_\-\-R\-E\-S\-E\-T}}
+\index{G\-L\-F\-W\-\_\-\-L\-O\-S\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-O\-N\-\_\-\-R\-E\-S\-E\-T@{G\-L\-F\-W\-\_\-\-L\-O\-S\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-O\-N\-\_\-\-R\-E\-S\-E\-T}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-L\-O\-S\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-O\-N\-\_\-\-R\-E\-S\-E\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-L\-O\-S\-E\-\_\-\-C\-O\-N\-T\-E\-X\-T\-\_\-\-O\-N\-\_\-\-R\-E\-S\-E\-T~0x00031002}}\label{glfw3_8h_aec1132f245143fc915b2f0995228564c}
+
+
+Definition at line 529 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_aee84a679230d205005e22487ff678a85}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-E\-S\-E\-T\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N@{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-E\-S\-E\-T\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}}
+\index{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-E\-S\-E\-T\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N@{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-E\-S\-E\-T\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-E\-S\-E\-T\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-E\-S\-E\-T\-\_\-\-N\-O\-T\-I\-F\-I\-C\-A\-T\-I\-O\-N~0x00031001}}\label{glfw3_8h_aee84a679230d205005e22487ff678a85}
+
+
+Definition at line 528 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a8b306cb27f5bb0d6d67c7356a0e0fc34}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S@{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S}}
+\index{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S@{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-N\-O\-\_\-\-R\-O\-B\-U\-S\-T\-N\-E\-S\-S~0}}\label{glfw3_8h_a8b306cb27f5bb0d6d67c7356a0e0fc34}
+
+
+Definition at line 527 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ad6f2335d6f21cc9bab96633b1c111d5f}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-N\-Y\-\_\-\-P\-R\-O\-F\-I\-L\-E@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-N\-Y\-\_\-\-P\-R\-O\-F\-I\-L\-E}}
+\index{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-N\-Y\-\_\-\-P\-R\-O\-F\-I\-L\-E@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-N\-Y\-\_\-\-P\-R\-O\-F\-I\-L\-E}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-N\-Y\-\_\-\-P\-R\-O\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-N\-Y\-\_\-\-P\-R\-O\-F\-I\-L\-E~0}}\label{glfw3_8h_ad6f2335d6f21cc9bab96633b1c111d5f}
+
+
+Definition at line 531 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a01b3f66db266341425e9abee6b257db2}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-P\-I@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-P\-I}}
+\index{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-P\-I@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-P\-I}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-A\-P\-I~0x00030001}}\label{glfw3_8h_a01b3f66db266341425e9abee6b257db2}
+
+
+Definition at line 524 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ac06b663d79c8fcf04669cc8fcc0b7670}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-M\-P\-A\-T\-\_\-\-P\-R\-O\-F\-I\-L\-E@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-M\-P\-A\-T\-\_\-\-P\-R\-O\-F\-I\-L\-E}}
+\index{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-M\-P\-A\-T\-\_\-\-P\-R\-O\-F\-I\-L\-E@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-M\-P\-A\-T\-\_\-\-P\-R\-O\-F\-I\-L\-E}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-M\-P\-A\-T\-\_\-\-P\-R\-O\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-M\-P\-A\-T\-\_\-\-P\-R\-O\-F\-I\-L\-E~0x00032002}}\label{glfw3_8h_ac06b663d79c8fcf04669cc8fcc0b7670}
+
+
+Definition at line 533 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_af094bb16da76f66ebceb19ee213b3de8}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-R\-E\-\_\-\-P\-R\-O\-F\-I\-L\-E@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-R\-E\-\_\-\-P\-R\-O\-F\-I\-L\-E}}
+\index{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-R\-E\-\_\-\-P\-R\-O\-F\-I\-L\-E@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-R\-E\-\_\-\-P\-R\-O\-F\-I\-L\-E}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-R\-E\-\_\-\-P\-R\-O\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-C\-O\-R\-E\-\_\-\-P\-R\-O\-F\-I\-L\-E~0x00032001}}\label{glfw3_8h_af094bb16da76f66ebceb19ee213b3de8}
+
+
+Definition at line 532 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a87ec2df0b915201e950ca42d5d0831e1}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C\-O\-N\-T\-E\-X\-T@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C\-O\-N\-T\-E\-X\-T}}
+\index{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C\-O\-N\-T\-E\-X\-T@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C\-O\-N\-T\-E\-X\-T}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C\-O\-N\-T\-E\-X\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-D\-E\-B\-U\-G\-\_\-\-C\-O\-N\-T\-E\-X\-T~0x00022007}}\label{glfw3_8h_a87ec2df0b915201e950ca42d5d0831e1}
+
+
+Definition at line 521 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a28d9b3bc6c2a522d815c8e146595051f}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-E\-S\-\_\-\-A\-P\-I@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-E\-S\-\_\-\-A\-P\-I}}
+\index{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-E\-S\-\_\-\-A\-P\-I@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-E\-S\-\_\-\-A\-P\-I}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-E\-S\-\_\-\-A\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-E\-S\-\_\-\-A\-P\-I~0x00030002}}\label{glfw3_8h_a28d9b3bc6c2a522d815c8e146595051f}
+
+
+Definition at line 525 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a13d24b12465da8b28985f46c8557925b}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-F\-O\-R\-W\-A\-R\-D\-\_\-\-C\-O\-M\-P\-A\-T@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-F\-O\-R\-W\-A\-R\-D\-\_\-\-C\-O\-M\-P\-A\-T}}
+\index{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-F\-O\-R\-W\-A\-R\-D\-\_\-\-C\-O\-M\-P\-A\-T@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-F\-O\-R\-W\-A\-R\-D\-\_\-\-C\-O\-M\-P\-A\-T}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-F\-O\-R\-W\-A\-R\-D\-\_\-\-C\-O\-M\-P\-A\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-F\-O\-R\-W\-A\-R\-D\-\_\-\-C\-O\-M\-P\-A\-T~0x00022006}}\label{glfw3_8h_a13d24b12465da8b28985f46c8557925b}
+
+
+Definition at line 520 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a44f3a6b4261fbe351e0b950b0f372e12}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E}}
+\index{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E@{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-O\-P\-E\-N\-G\-L\-\_\-\-P\-R\-O\-F\-I\-L\-E~0x00022008}}\label{glfw3_8h_a44f3a6b4261fbe351e0b950b0f372e12}
+
+
+Definition at line 522 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_af78ed8e417dbcc1e354906cc2708c982}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-R\-E\-D\-\_\-\-B\-I\-T\-S~0x00021001}}\label{glfw3_8h_af78ed8e417dbcc1e354906cc2708c982}
+
+
+Definition at line 499 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a0f20825e6e47ee8ba389024519682212}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-R\-A\-T\-E@{G\-L\-F\-W\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-R\-A\-T\-E}}
+\index{G\-L\-F\-W\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-R\-A\-T\-E@{G\-L\-F\-W\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-R\-A\-T\-E}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-R\-A\-T\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-R\-E\-F\-R\-E\-S\-H\-\_\-\-R\-A\-T\-E~0x0002100\-F}}\label{glfw3_8h_a0f20825e6e47ee8ba389024519682212}
+
+
+Definition at line 513 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_adba13c7a1b3aa40831eb2beedbd5bd1d}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-R\-E\-S\-I\-Z\-A\-B\-L\-E@{G\-L\-F\-W\-\_\-\-R\-E\-S\-I\-Z\-A\-B\-L\-E}}
+\index{G\-L\-F\-W\-\_\-\-R\-E\-S\-I\-Z\-A\-B\-L\-E@{G\-L\-F\-W\-\_\-\-R\-E\-S\-I\-Z\-A\-B\-L\-E}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-R\-E\-S\-I\-Z\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-R\-E\-S\-I\-Z\-A\-B\-L\-E~0x00020003}}\label{glfw3_8h_adba13c7a1b3aa40831eb2beedbd5bd1d}
+
+
+Definition at line 495 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a2cdf86fdcb7722fb8829c4e201607535}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-S\-A\-M\-P\-L\-E\-S@{G\-L\-F\-W\-\_\-\-S\-A\-M\-P\-L\-E\-S}}
+\index{G\-L\-F\-W\-\_\-\-S\-A\-M\-P\-L\-E\-S@{G\-L\-F\-W\-\_\-\-S\-A\-M\-P\-L\-E\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-S\-A\-M\-P\-L\-E\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-S\-A\-M\-P\-L\-E\-S~0x0002100\-D}}\label{glfw3_8h_a2cdf86fdcb7722fb8829c4e201607535}
+
+
+Definition at line 511 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a444a8f00414a63220591f9fdb7b5642b}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-S\-R\-G\-B\-\_\-\-C\-A\-P\-A\-B\-L\-E@{G\-L\-F\-W\-\_\-\-S\-R\-G\-B\-\_\-\-C\-A\-P\-A\-B\-L\-E}}
+\index{G\-L\-F\-W\-\_\-\-S\-R\-G\-B\-\_\-\-C\-A\-P\-A\-B\-L\-E@{G\-L\-F\-W\-\_\-\-S\-R\-G\-B\-\_\-\-C\-A\-P\-A\-B\-L\-E}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-S\-R\-G\-B\-\_\-\-C\-A\-P\-A\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-S\-R\-G\-B\-\_\-\-C\-A\-P\-A\-B\-L\-E~0x0002100\-E}}\label{glfw3_8h_a444a8f00414a63220591f9fdb7b5642b}
+
+
+Definition at line 512 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a5339890a45a1fb38e93cb9fcc5fd069d}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-S\-T\-E\-N\-C\-I\-L\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-S\-T\-E\-N\-C\-I\-L\-\_\-\-B\-I\-T\-S}}
+\index{G\-L\-F\-W\-\_\-\-S\-T\-E\-N\-C\-I\-L\-\_\-\-B\-I\-T\-S@{G\-L\-F\-W\-\_\-\-S\-T\-E\-N\-C\-I\-L\-\_\-\-B\-I\-T\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-S\-T\-E\-N\-C\-I\-L\-\_\-\-B\-I\-T\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-S\-T\-E\-N\-C\-I\-L\-\_\-\-B\-I\-T\-S~0x00021006}}\label{glfw3_8h_a5339890a45a1fb38e93cb9fcc5fd069d}
+
+
+Definition at line 504 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a83d991efca02537e2d69969135b77b03}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-S\-T\-E\-R\-E\-O@{G\-L\-F\-W\-\_\-\-S\-T\-E\-R\-E\-O}}
+\index{G\-L\-F\-W\-\_\-\-S\-T\-E\-R\-E\-O@{G\-L\-F\-W\-\_\-\-S\-T\-E\-R\-E\-O}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-S\-T\-E\-R\-E\-O}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-S\-T\-E\-R\-E\-O~0x0002100\-C}}\label{glfw3_8h_a83d991efca02537e2d69969135b77b03}
+
+
+Definition at line 510 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_ae3bbe2315b7691ab088159eb6c9110fc}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-K\-E\-Y\-S@{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-K\-E\-Y\-S}}
+\index{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-K\-E\-Y\-S@{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-K\-E\-Y\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-K\-E\-Y\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-K\-E\-Y\-S~0x00033002}}\label{glfw3_8h_ae3bbe2315b7691ab088159eb6c9110fc}
+
+
+Definition at line 536 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a4d7ce8ce71030c3b04e2b78145bc59d1}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-S@{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-S}}
+\index{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-S@{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-S}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-S}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-S\-T\-I\-C\-K\-Y\-\_\-\-M\-O\-U\-S\-E\-\_\-\-B\-U\-T\-T\-O\-N\-S~0x00033003}}\label{glfw3_8h_a4d7ce8ce71030c3b04e2b78145bc59d1}
+
+
+Definition at line 537 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_afb3cdc45297e06d8f1eb13adc69ca6c4}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-\_\-\-V\-I\-S\-I\-B\-L\-E@{G\-L\-F\-W\-\_\-\-V\-I\-S\-I\-B\-L\-E}}
+\index{G\-L\-F\-W\-\_\-\-V\-I\-S\-I\-B\-L\-E@{G\-L\-F\-W\-\_\-\-V\-I\-S\-I\-B\-L\-E}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-\_\-\-V\-I\-S\-I\-B\-L\-E}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-\_\-\-V\-I\-S\-I\-B\-L\-E~0x00020004}}\label{glfw3_8h_afb3cdc45297e06d8f1eb13adc69ca6c4}
+
+
+Definition at line 496 of file glfw3.\-h.
+
+\hypertarget{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}{\index{glfw3.\-h@{glfw3.\-h}!G\-L\-F\-W\-A\-P\-I@{G\-L\-F\-W\-A\-P\-I}}
+\index{G\-L\-F\-W\-A\-P\-I@{G\-L\-F\-W\-A\-P\-I}!glfw3.h@{glfw3.\-h}}
+\subsubsection[{G\-L\-F\-W\-A\-P\-I}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\-L\-F\-W\-A\-P\-I}}\label{glfw3_8h_a56da5036b2cc259351ae22fd6439bb47}
+
+
+Definition at line 198 of file glfw3.\-h.
+

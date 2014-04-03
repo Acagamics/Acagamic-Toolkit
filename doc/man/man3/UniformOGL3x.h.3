@@ -1,0 +1,60 @@
+.TH "src/RenderDeviceOGL3x/UniformOGL3x.h" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+src/RenderDeviceOGL3x/UniformOGL3x.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'ICleanableObserver\&.h'\fP
+.br
+\fC#include 'GL\\glew\&.h'\fP
+.br
+\fC#include <hash_map>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBACTK::IUniformOGL3x\fP"
+.br
+.ti -1c
+.RI "class \fBACTK::UniformOGL3x< T >\fP"
+.br
+.ti -1c
+.RI "class \fBACTK::UniformI\fP"
+.br
+.ti -1c
+.RI "class \fBACTK::UniformF\fP"
+.br
+.ti -1c
+.RI "class \fBACTK::UniformUI\fP"
+.br
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "\fBACTK\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::hash_map
+.br
+< \fBstd::string\fP, IUniformOGL3x * > \fBACTK::UniformMap\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBACTK::UniformDatatype\fP : char { \fBACTK::UniformDatatype::NONE\fP, \fBACTK::UniformDatatype::Int\fP, \fBACTK::UniformDatatype::UnsignedInt\fP, \fBACTK::UniformDatatype::Float\fP, \fBACTK::UniformDatatype::FloatVector2\fP, \fBACTK::UniformDatatype::FloatVector3\fP, \fBACTK::UniformDatatype::FloatVector4\fP, \fBACTK::UniformDatatype::IntVector2\fP, \fBACTK::UniformDatatype::IntVector3\fP, \fBACTK::UniformDatatype::IntVector4\fP, \fBACTK::UniformDatatype::UnsignedIntVector2\fP, \fBACTK::UniformDatatype::UnsignedIntVector3\fP, \fBACTK::UniformDatatype::UnsignedIntVector4\fP, \fBACTK::UniformDatatype::Bool\fP, \fBACTK::UniformDatatype::BoolVector2\fP, \fBACTK::UniformDatatype::BoolVector3\fP, \fBACTK::UniformDatatype::BoolVector4\fP, \fBACTK::UniformDatatype::FloatMatrix22\fP, \fBACTK::UniformDatatype::FloatMatrix33\fP, \fBACTK::UniformDatatype::FloatMatrix44\fP, \fBACTK::UniformDatatype::FloatMatrix23\fP, \fBACTK::UniformDatatype::FloatMatrix24\fP, \fBACTK::UniformDatatype::FloatMatrix32\fP, \fBACTK::UniformDatatype::FloatMatrix34\fP, \fBACTK::UniformDatatype::FloatMatrix42\fP, \fBACTK::UniformDatatype::FloatMatrix43\fP, \fBACTK::UniformDatatype::Sampler1D\fP, \fBACTK::UniformDatatype::Sampler2D\fP, \fBACTK::UniformDatatype::Sampler2DRectangle\fP, \fBACTK::UniformDatatype::Sampler2DRectangleShadow\fP, \fBACTK::UniformDatatype::Sampler3D\fP, \fBACTK::UniformDatatype::SamplerCube\fP, \fBACTK::UniformDatatype::Sampler1DShadow\fP, \fBACTK::UniformDatatype::Sampler2DShadow\fP, \fBACTK::UniformDatatype::Sampler1DArray\fP, \fBACTK::UniformDatatype::Sampler2DArray\fP, \fBACTK::UniformDatatype::Sampler1DArrayShadow\fP, \fBACTK::UniformDatatype::Sampler2DArrayShadow\fP, \fBACTK::UniformDatatype::SamplerCubeShadow\fP, \fBACTK::UniformDatatype::IntSampler1D\fP, \fBACTK::UniformDatatype::IntSampler2D\fP, \fBACTK::UniformDatatype::IntSampler2DRectangle\fP, \fBACTK::UniformDatatype::IntSampler3D\fP, \fBACTK::UniformDatatype::IntSamplerCube\fP, \fBACTK::UniformDatatype::IntSampler1DArray\fP, \fBACTK::UniformDatatype::IntSampler2DArray\fP, \fBACTK::UniformDatatype::UnsignedIntSampler1D\fP, \fBACTK::UniformDatatype::UnsignedIntSampler2D\fP, \fBACTK::UniformDatatype::UnsignedIntSampler2DRectangle\fP, \fBACTK::UniformDatatype::UnsignedIntSampler3D\fP, \fBACTK::UniformDatatype::UnsignedIntSamplerCube\fP, \fBACTK::UniformDatatype::UnsignedIntSampler1DArray\fP, \fBACTK::UniformDatatype::UnsignedIntSampler2DArray\fP }"
+.br
+.in -1c
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

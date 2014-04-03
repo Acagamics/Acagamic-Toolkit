@@ -9,6 +9,8 @@
 
 namespace ACTK
 {
+namespace Core
+{
 	struct Color
 	{
 		union
@@ -46,4 +48,4 @@ namespace ACTK
 				alpha != other.alpha;
 		}
 	};
-}
+}}

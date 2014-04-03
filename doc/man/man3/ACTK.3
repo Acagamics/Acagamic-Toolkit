@@ -1,0 +1,185 @@
+.TH "ACTK" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK \- 
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBColor\fP"
+.br
+.ti -1c
+.RI "struct \fBColorMask\fP"
+.br
+.ti -1c
+.RI "struct \fBClearState\fP"
+.br
+.ti -1c
+.RI "class \fBICleanable\fP"
+.br
+.ti -1c
+.RI "class \fBICleanableObserver\fP"
+.br
+.ti -1c
+.RI "class \fBIGraphicsWindow\fP"
+.br
+.ti -1c
+.RI "class \fBIRenderContext\fP"
+.br
+.ti -1c
+.RI "class \fBIRenderDevice\fP"
+.br
+.RI "\fIRendererDevice represents the Graphics Server\&. \fP"
+.ti -1c
+.RI "class \fBIShaderProgram\fP"
+.br
+.ti -1c
+.RI "class \fBEventLogger\fP"
+.br
+.RI "\fI\fBEventLogger\fP writes logs into the console and a textfile and handles assertions and errorMessageBoxes\&. \fP"
+.ti -1c
+.RI "class \fBRenderDeviceManager\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef enum 
+.br
+\fBACTK::TYPE_ClearBuffers\fP \fBClearBuffers\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBIGraphicsWindow\fP > \fBGraphicsWindowPtr\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBIRenderContext\fP > \fBRenderContextPtr\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBIRenderDevice\fP > \fBRenderDevicePtr\fP"
+.br
+.ti -1c
+.RI "typedef std::shared_ptr
+.br
+< \fBIShaderProgram\fP > \fBShaderProgramPtr\fP"
+.br
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTYPE_ClearBuffers\fP { \fBColorBuffer\fP = 1, \fBDepthBuffer\fP = 2, \fBStencilBuffer\fP = 4, \fBColorAndDepthBuffer\fP = ColorBuffer | DepthBuffer, \fBAll\fP = ColorBuffer | DepthBuffer | StencilBuffer }"
+.br
+.ti -1c
+.RI "enum \fBPrimitiveType\fP : char { \fBPrimitiveType::POINTS\fP, \fBPrimitiveType::LINE\fP, \fBPrimitiveType::LINES\fP, \fBPrimitiveType::LINE_STRIP\fP, \fBPrimitiveType::LINE_LOOP\fP, \fBPrimitiveType::TRIANGLES\fP, \fBPrimitiveType::TRIANGLE_STRIP\fP, \fBPrimitiveType::TRIANGLE_FAN\fP, \fBPrimitiveType::QUADS\fP, \fBPrimitiveType::QUAD_STRIP\fP, \fBPrimitiveType::POLYGON\fP }"
+.br
+.ti -1c
+.RI "enum \fBWindowType\fP : char { \fBWindowType::Windowed\fP, \fBWindowType::Fullscreen\fP }"
+.br
+.ti -1c
+.RI "enum \fBAPI\fP : char { \fBAPI::OpenGL3x\fP, \fBAPI::Direct3D11\fP }"
+.br
+.in -1c
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef enum \fBACTK::TYPE_ClearBuffers\fP  \fBACTK::ClearBuffers\fP"
+
+.SS "typedef std::shared_ptr<\fBIGraphicsWindow\fP> \fBACTK::GraphicsWindowPtr\fP"
+
+.PP
+Definition at line 25 of file IGraphicsWindow\&.h\&.
+.SS "typedef std::shared_ptr<\fBIRenderContext\fP> \fBACTK::RenderContextPtr\fP"
+
+.PP
+Definition at line 44 of file IRenderContext\&.h\&.
+.SS "typedef std::shared_ptr<\fBIRenderDevice\fP> \fBACTK::RenderDevicePtr\fP"
+
+.PP
+Definition at line 30 of file IRenderDevice\&.h\&.
+.SS "typedef std::shared_ptr<\fBIShaderProgram\fP> \fBACTK::ShaderProgramPtr\fP"
+
+.PP
+Definition at line 30 of file IShaderProgram\&.h\&.
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBACTK::API\fP : char\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIOpenGL3x \fP\fP
+.TP
+\fB\fIDirect3D11 \fP\fP
+.PP
+Definition at line 8 of file RenderDeviceManager\&.h\&.
+.SS "enum \fBACTK::PrimitiveType\fP : char\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIPOINTS \fP\fP
+.TP
+\fB\fILINE \fP\fP
+.TP
+\fB\fILINES \fP\fP
+.TP
+\fB\fILINE_STRIP \fP\fP
+.TP
+\fB\fILINE_LOOP \fP\fP
+.TP
+\fB\fITRIANGLES \fP\fP
+.TP
+\fB\fITRIANGLE_STRIP \fP\fP
+.TP
+\fB\fITRIANGLE_FAN \fP\fP
+.TP
+\fB\fIQUADS \fP\fP
+.TP
+\fB\fIQUAD_STRIP \fP\fP
+.TP
+\fB\fIPOLYGON \fP\fP
+.PP
+Definition at line 9 of file IRenderContext\&.h\&.
+.SS "enum \fBACTK::TYPE_ClearBuffers\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIColorBuffer \fP\fP
+.TP
+\fB\fIDepthBuffer \fP\fP
+.TP
+\fB\fIStencilBuffer \fP\fP
+.TP
+\fB\fIColorAndDepthBuffer \fP\fP
+.TP
+\fB\fIAll \fP\fP
+.PP
+Definition at line 44 of file ClearState\&.h\&.
+.SS "enum \fBACTK::WindowType\fP : char\fC [strong]\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIWindowed \fP\fP
+.TP
+\fB\fIFullscreen \fP\fP
+.PP
+Definition at line 10 of file IRenderDevice\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

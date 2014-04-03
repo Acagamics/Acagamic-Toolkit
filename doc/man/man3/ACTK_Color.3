@@ -1,0 +1,101 @@
+.TH "ACTK::Color" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::Color \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ACTK\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBColor\fP (float \fBred\fP, float \fBgreen\fP, float \fBblue\fP, float \fBalpha\fP)"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBColor\fP &other)"
+.br
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBColor\fP &other)"
+.br
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "union {"
+.br
+.ti -1c
+.RI "   float \fBa\fP [4]"
+.br
+.ti -1c
+.RI "   struct {"
+.br
+.ti -1c
+.RI "      float \fBred\fP"
+.br
+.ti -1c
+.RI "      float \fBgreen\fP"
+.br
+.ti -1c
+.RI "      float \fBblue\fP"
+.br
+.ti -1c
+.RI "      float \fBalpha\fP"
+.br
+.ti -1c
+.RI "   } "
+.br
+.ti -1c
+.RI "}; "
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line 12 of file ACTK\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ACTK::Color::Color (floatred, floatgreen, floatblue, floatalpha)\fC [inline]\fP"
+
+.PP
+Definition at line 23 of file ACTK\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool ACTK::Color::operator!= (const \fBColor\fP &other)\fC [inline]\fP"
+
+.PP
+Definition at line 40 of file ACTK\&.h\&.
+.SS "bool ACTK::Color::operator== (const \fBColor\fP &other)\fC [inline]\fP"
+
+.PP
+Definition at line 31 of file ACTK\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "union { \&.\&.\&. } "
+
+.SS "float ACTK::Color::a[4]"
+
+.PP
+Definition at line 16 of file ACTK\&.h\&.
+.SS "float ACTK::Color::alpha"
+
+.PP
+Definition at line 19 of file ACTK\&.h\&.
+.SS "float ACTK::Color::blue"
+
+.PP
+Definition at line 19 of file ACTK\&.h\&.
+.SS "float ACTK::Color::green"
+
+.PP
+Definition at line 19 of file ACTK\&.h\&.
+.SS "float ACTK::Color::red"
+
+.PP
+Definition at line 19 of file ACTK\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

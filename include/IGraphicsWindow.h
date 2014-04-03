@@ -7,21 +7,22 @@
 
 namespace ACTK
 {
-
+namespace Renderer
+{
 	class IGraphicsWindow
 	{
 	public:
 		virtual ~IGraphicsWindow(){}
-		virtual void release(void) = 0;
+		virtual void VRelease(void) = 0;
 
-		virtual RenderContextPtr getContext() = 0;
-		virtual HWND getWindowHandle() const = 0;
+		virtual RenderContextPtr VGetContext() = 0;
+		virtual HWND VGetWindowHandle() const = 0;
 
-		virtual int getWidth() const = 0;
-		virtual int getHeight() const = 0;
-		virtual bool shouldClose() const = 0;
+		virtual int VGetWidth() const = 0;
+		virtual int VGetHeight() const = 0;
+		virtual bool VShouldClose() const = 0;
 	};
 
 	typedef std::shared_ptr<IGraphicsWindow> GraphicsWindowPtr;
 
-}
+}}

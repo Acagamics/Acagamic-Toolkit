@@ -1,0 +1,86 @@
+.TH "Error handling" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Error handling \- 
+.SS "Modules"
+
+.in +1c
+.ti -1c
+.RI "\fBError codes\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBvoid\fP(* \fBGLFWerrorfun\fP )(\fBint\fP, const char *)"
+.br
+.RI "\fIThe function signature for error callbacks\&. \fP"
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBGLFWAPI\fP \fBGLFWerrorfun\fP \fBglfwSetErrorCallback\fP (\fBGLFWerrorfun\fP cbfun)"
+.br
+.RI "\fISets the error callback\&. \fP"
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBvoid\fP(*  GLFWerrorfun)(\fBint\fP, const char *)"
+
+.PP
+The function signature for error callbacks\&. This is the function signature for error callback functions\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIerror\fP An \fBerror code\fP\&. 
+.br
+\fIdescription\fP A UTF-8 encoded string describing the error\&.
+.RE
+.PP
+\fBSee Also:\fP
+.RS 4
+\fBglfwSetErrorCallback\fP 
+.RE
+.PP
+
+.PP
+Definition at line 587 of file glfw3\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "\fBGLFWAPI\fP \fBGLFWerrorfun\fP glfwSetErrorCallback (\fBGLFWerrorfun\fPcbfun)"
+
+.PP
+Sets the error callback\&. This function sets the error callback, which is called with an error code and a human-readable description each time a GLFW error occurs\&.
+.PP
+\fBParameters:\fP
+.RS 4
+\fIcbfun\fP The new callback, or \fCNULL\fP to remove the currently set callback\&. 
+.RE
+.PP
+\fBReturns:\fP
+.RS 4
+The previously set callback, or \fCNULL\fP if no callback was set or an error occurred\&.
+.RE
+.PP
+\fBRemarks:\fP
+.RS 4
+This function may be called before \fBglfwInit\fP\&.
+.RE
+.PP
+\fBNote:\fP
+.RS 4
+The error callback is called by the thread where the error was generated\&. If you are using GLFW from multiple threads, your error callback needs to be written accordingly\&.
+.PP
+Because the description string provided to the callback may have been generated specifically for that error, it is not guaranteed to be valid after the callback has returned\&. If you wish to use it after that, you need to make your own copy of it before returning\&. 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

@@ -1,0 +1,129 @@
+\hypertarget{_logger_8h}{\section{C\-:/\-Users/\-Artur/\-Documents/\-Visual Studio 2012/\-Projects/\-Games/\-Acagamic-\/\-Toolkit/include/\-Logger.h File Reference}
+\label{_logger_8h}\index{C\-:/\-Users/\-Artur/\-Documents/\-Visual Studio 2012/\-Projects/\-Games/\-Acagamic-\/\-Toolkit/include/\-Logger.\-h@{C\-:/\-Users/\-Artur/\-Documents/\-Visual Studio 2012/\-Projects/\-Games/\-Acagamic-\/\-Toolkit/include/\-Logger.\-h}}
+}
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_a_c_t_k_1_1_event_logger}{A\-C\-T\-K\-::\-Event\-Logger}
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_a_c_t_k_1_1_event_logger}{Event\-Logger} writes logs into the console and a textfile and handles assertions and error\-Message\-Boxes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{namespace_a_c_t_k}{A\-C\-T\-K}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{_logger_8h_a18226173309d6c2ae828080dad0859cf}{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-A\-L\-L}~0
+\item 
+\#define \hyperlink{_logger_8h_a130224df8c6bf22a688e3cb74a45689a}{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}~1
+\item 
+\#define \hyperlink{_logger_8h_af539a66abed2a7a15e3443d70a3cf1e1}{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N\-I\-N\-G}~2
+\item 
+\#define \hyperlink{_logger_8h_a742fc70e331d7e568bd893c514756a29}{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}~3
+\item 
+\#define \hyperlink{_logger_8h_a4837e193731aa69f0829202c4534cbb5}{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-O\-F\-F}~5
+\item 
+\#define \hyperlink{_logger_8h_a0b87e0d3bf5853bcbb0b66a7c48fdc05}{L\-O\-G\-\_\-\-L\-E\-V\-E\-L}~\hyperlink{_logger_8h_a742fc70e331d7e568bd893c514756a29}{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}
+\item 
+\#define \hyperlink{_logger_8h_a6ff63e8955665c4a58b1598f2b07c51a}{L\-O\-G\-\_\-\-D\-E\-B\-U\-G}
+\item 
+\#define \hyperlink{_logger_8h_adf4476a6a4ea6c74231c826e899d7189}{L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}
+\item 
+\#define \hyperlink{_logger_8h_aced66975c154ea0e2a8ec3bc818b4e08}{L\-O\-G\-\_\-\-E\-R\-R\-O\-R}~\hyperlink{class_a_c_t_k_1_1_event_logger_acf848cde8431d19d8b39d56807276f39}{A\-C\-T\-K\-::\-Event\-Logger\-::\-Get\-Instance}().log\-Error
+\item 
+\#define \hyperlink{_logger_8h_afb45b38b474efd871302e0b8fb16c38e}{L\-O\-G\-\_\-\-F\-A\-T\-A\-L}(var\-\_\-1)~\hyperlink{class_a_c_t_k_1_1_event_logger_acf848cde8431d19d8b39d56807276f39}{A\-C\-T\-K\-::\-Event\-Logger\-::\-Get\-Instance}().log\-Assert(false, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, var\-\_\-1)
+\item 
+\#define \hyperlink{_logger_8h_a62fbe5c71b47e3972fb0ded4f52b0e3e}{L\-O\-G\-\_\-\-A\-S\-S\-E\-R\-T}(var\-\_\-1, var\-\_\-2)~\hyperlink{class_a_c_t_k_1_1_event_logger_acf848cde8431d19d8b39d56807276f39}{A\-C\-T\-K\-::\-Event\-Logger\-::\-Get\-Instance}().log\-Assert(var\-\_\-1, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, var\-\_\-2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{_logger_8h_a62fbe5c71b47e3972fb0ded4f52b0e3e}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-A\-S\-S\-E\-R\-T@{L\-O\-G\-\_\-\-A\-S\-S\-E\-R\-T}}
+\index{L\-O\-G\-\_\-\-A\-S\-S\-E\-R\-T@{L\-O\-G\-\_\-\-A\-S\-S\-E\-R\-T}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-A\-S\-S\-E\-R\-T}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-A\-S\-S\-E\-R\-T(
+\begin{DoxyParamCaption}
+\item[{}]{var\-\_\-1, }
+\item[{}]{var\-\_\-2}
+\end{DoxyParamCaption}
+)~{\bf A\-C\-T\-K\-::\-Event\-Logger\-::\-Get\-Instance}().log\-Assert(var\-\_\-1, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, var\-\_\-2)}}\label{_logger_8h_a62fbe5c71b47e3972fb0ded4f52b0e3e}
+
+
+Definition at line 40 of file Logger.\-h.
+
+\hypertarget{_logger_8h_a6ff63e8955665c4a58b1598f2b07c51a}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{L\-O\-G\-\_\-\-D\-E\-B\-U\-G}}
+\index{L\-O\-G\-\_\-\-D\-E\-B\-U\-G@{L\-O\-G\-\_\-\-D\-E\-B\-U\-G}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-D\-E\-B\-U\-G}}\label{_logger_8h_a6ff63e8955665c4a58b1598f2b07c51a}
+
+
+Definition at line 24 of file Logger.\-h.
+
+\hypertarget{_logger_8h_aced66975c154ea0e2a8ec3bc818b4e08}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-E\-R\-R\-O\-R@{L\-O\-G\-\_\-\-E\-R\-R\-O\-R}}
+\index{L\-O\-G\-\_\-\-E\-R\-R\-O\-R@{L\-O\-G\-\_\-\-E\-R\-R\-O\-R}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-E\-R\-R\-O\-R~{\bf A\-C\-T\-K\-::\-Event\-Logger\-::\-Get\-Instance}().log\-Error}}\label{_logger_8h_aced66975c154ea0e2a8ec3bc818b4e08}
+
+
+Definition at line 34 of file Logger.\-h.
+
+\hypertarget{_logger_8h_afb45b38b474efd871302e0b8fb16c38e}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-F\-A\-T\-A\-L@{L\-O\-G\-\_\-\-F\-A\-T\-A\-L}}
+\index{L\-O\-G\-\_\-\-F\-A\-T\-A\-L@{L\-O\-G\-\_\-\-F\-A\-T\-A\-L}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-F\-A\-T\-A\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-F\-A\-T\-A\-L(
+\begin{DoxyParamCaption}
+\item[{}]{var\-\_\-1}
+\end{DoxyParamCaption}
+)~{\bf A\-C\-T\-K\-::\-Event\-Logger\-::\-Get\-Instance}().log\-Assert(false, \-\_\-\-\_\-\-F\-I\-L\-E\-\_\-\-\_\-, \-\_\-\-\_\-\-L\-I\-N\-E\-\_\-\-\_\-, var\-\_\-1)}}\label{_logger_8h_afb45b38b474efd871302e0b8fb16c38e}
+
+
+Definition at line 39 of file Logger.\-h.
+
+\hypertarget{_logger_8h_a0b87e0d3bf5853bcbb0b66a7c48fdc05}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-L\-E\-V\-E\-L@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L}}
+\index{L\-O\-G\-\_\-\-L\-E\-V\-E\-L@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-L\-E\-V\-E\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-L\-E\-V\-E\-L~{\bf L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}}}\label{_logger_8h_a0b87e0d3bf5853bcbb0b66a7c48fdc05}
+
+
+Definition at line 17 of file Logger.\-h.
+
+\hypertarget{_logger_8h_a18226173309d6c2ae828080dad0859cf}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-A\-L\-L@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-A\-L\-L}}
+\index{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-A\-L\-L@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-A\-L\-L}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-A\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-A\-L\-L~0}}\label{_logger_8h_a18226173309d6c2ae828080dad0859cf}
+
+
+Definition at line 6 of file Logger.\-h.
+
+\hypertarget{_logger_8h_a130224df8c6bf22a688e3cb74a45689a}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}}
+\index{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-D\-E\-B\-U\-G~1}}\label{_logger_8h_a130224df8c6bf22a688e3cb74a45689a}
+
+
+Definition at line 7 of file Logger.\-h.
+
+\hypertarget{_logger_8h_a742fc70e331d7e568bd893c514756a29}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}}
+\index{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-E\-R\-R\-O\-R~3}}\label{_logger_8h_a742fc70e331d7e568bd893c514756a29}
+
+
+Definition at line 9 of file Logger.\-h.
+
+\hypertarget{_logger_8h_a4837e193731aa69f0829202c4534cbb5}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-O\-F\-F@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-O\-F\-F}}
+\index{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-O\-F\-F@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-O\-F\-F}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-O\-F\-F}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-O\-F\-F~5}}\label{_logger_8h_a4837e193731aa69f0829202c4534cbb5}
+
+
+Definition at line 10 of file Logger.\-h.
+
+\hypertarget{_logger_8h_af539a66abed2a7a15e3443d70a3cf1e1}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N\-I\-N\-G@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N\-I\-N\-G}}
+\index{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N\-I\-N\-G@{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N\-I\-N\-G}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-L\-E\-V\-E\-L\-\_\-\-W\-A\-R\-N\-I\-N\-G~2}}\label{_logger_8h_af539a66abed2a7a15e3443d70a3cf1e1}
+
+
+Definition at line 8 of file Logger.\-h.
+
+\hypertarget{_logger_8h_adf4476a6a4ea6c74231c826e899d7189}{\index{Logger.\-h@{Logger.\-h}!L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G@{L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}}
+\index{L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G@{L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}!Logger.h@{Logger.\-h}}
+\subsubsection[{L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}]{\setlength{\rightskip}{0pt plus 5cm}\#define L\-O\-G\-\_\-\-W\-A\-R\-N\-I\-N\-G}}\label{_logger_8h_adf4476a6a4ea6c74231c826e899d7189}
+
+
+Definition at line 30 of file Logger.\-h.
+

@@ -1,0 +1,82 @@
+.TH "ACTK::UniformOGL3x< T >" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ACTK::UniformOGL3x< T > \- 
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <UniformOGL3x\&.h>\fP
+.PP
+Inherits \fBACTK::IUniformOGL3x\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBUniformOGL3x\fP (\fBint\fP \fBlocation\fP, \fBUniformDatatype\fP datatype, \fBint\fP \fBcount\fP, \fBICleanableObserver\fP *observer)"
+.br
+.ti -1c
+.RI "\fB~UniformOGL3x\fP ()"
+.br
+.ti -1c
+.RI "virtual \fBvoid\fP \fBclean\fP ()=0"
+.br
+.ti -1c
+.RI "template<class A > \fBvoid\fP \fBsetValue\fP (A *\fBval\fP, \fBint\fP arrayLength)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBint\fP \fBm_arrayLength\fP"
+.br
+.ti -1c
+.RI "T * \fBm_val\fP"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+
+.SS "template<class T>class ACTK::UniformOGL3x< T >"
+
+.PP
+Definition at line 99 of file UniformOGL3x\&.h\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "template<class T> \fBACTK::UniformOGL3x\fP< T >::\fBUniformOGL3x\fP (\fBint\fPlocation, \fBUniformDatatype\fPdatatype, \fBint\fPcount, \fBICleanableObserver\fP *observer)\fC [inline]\fP"
+
+.PP
+Definition at line 102 of file UniformOGL3x\&.h\&.
+.SS "template<class T> \fBACTK::UniformOGL3x\fP< T >::~\fBUniformOGL3x\fP ()\fC [inline]\fP"
+
+.PP
+Definition at line 108 of file UniformOGL3x\&.h\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<class T> virtual \fBvoid\fP \fBACTK::UniformOGL3x\fP< T >::clean ()\fC [pure virtual]\fP"
+
+.PP
+Implements \fBACTK::IUniformOGL3x\fP\&.
+.PP
+Implemented in \fBACTK::UniformUI\fP, \fBACTK::UniformF\fP, and \fBACTK::UniformI\fP\&.
+.SS "template<class T> template<class A > \fBvoid\fP \fBACTK::UniformOGL3x\fP< T >::setValue (A *val, \fBint\fParrayLength)\fC [inline]\fP"
+
+.PP
+Definition at line 118 of file UniformOGL3x\&.h\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "template<class T> \fBint\fP \fBACTK::UniformOGL3x\fP< T >::m_arrayLength\fC [protected]\fP"
+
+.PP
+Definition at line 144 of file UniformOGL3x\&.h\&.
+.SS "template<class T> T* \fBACTK::UniformOGL3x\fP< T >::m_val\fC [protected]\fP"
+
+.PP
+Definition at line 145 of file UniformOGL3x\&.h\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

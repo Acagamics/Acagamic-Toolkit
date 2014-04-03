@@ -2,11 +2,13 @@
 
 namespace ACTK
 {
+namespace Core
+{
 	class ICleanable
 	{
 	public:
 		virtual ~ICleanable(){}
 
-		virtual void clean() = 0;
+		virtual void Clean() = 0;
 	};
-}
+}}

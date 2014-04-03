@@ -1,0 +1,5902 @@
+.TH "dependencies/glfw/include/GL/wglew.h" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+dependencies/glfw/include/GL/wglew.h \- 
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <windows\&.h>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fB_GPU_DEVICE\fP"
+.br
+.in -1c
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fB__WGLEW_H__\fP"
+.br
+.ti -1c
+.RI "#define \fB__wglext_h_\fP"
+.br
+.ti -1c
+.RI "#define \fBWIN32_LEAN_AND_MEAN\fP   1"
+.br
+.ti -1c
+.RI "#define \fBGLEWAPI\fP   extern __declspec(dllimport)"
+.br
+.ti -1c
+.RI "#define \fBWGL_3DFX_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLE_BUFFERS_3DFX\fP   0x2060"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLES_3DFX\fP   0x2061"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_3DFX_multisample\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_3DFX_multisample\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_3DL_stereo_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_EMITTER_ENABLE_3DL\fP   0x2055"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_EMITTER_DISABLE_3DL\fP   0x2056"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_POLARITY_NORMAL_3DL\fP   0x2057"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_POLARITY_INVERT_3DL\fP   0x2058"
+.br
+.ti -1c
+.RI "#define \fBwglSetStereoEmitterState3DL\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSetStereoEmitterState3DL\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_3DL_stereo_control\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_3DL_stereo_control\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_AMD_gpu_association\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_VENDOR_AMD\fP   0x1F00"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_RENDERER_STRING_AMD\fP   0x1F01"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_OPENGL_VERSION_STRING_AMD\fP   0x1F02"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_FASTEST_TARGET_GPUS_AMD\fP   0x21A2"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_RAM_AMD\fP   0x21A3"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_CLOCK_AMD\fP   0x21A4"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_NUM_PIPES_AMD\fP   0x21A5"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_NUM_SIMD_AMD\fP   0x21A6"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_NUM_RB_AMD\fP   0x21A7"
+.br
+.ti -1c
+.RI "#define \fBWGL_GPU_NUM_SPI_AMD\fP   0x21A8"
+.br
+.ti -1c
+.RI "#define \fBwglBlitContextFramebufferAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewBlitContextFramebufferAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglCreateAssociatedContextAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateAssociatedContextAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglCreateAssociatedContextAttribsAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateAssociatedContextAttribsAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDeleteAssociatedContextAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDeleteAssociatedContextAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetContextGPUIDAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetContextGPUIDAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetCurrentAssociatedContextAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetCurrentAssociatedContextAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetGPUIDsAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGPUIDsAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetGPUInfoAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGPUInfoAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglMakeAssociatedContextCurrentAMD\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewMakeAssociatedContextCurrentAMD\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_AMD_gpu_association\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_AMD_gpu_association\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_buffer_region\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRONT_COLOR_BUFFER_BIT_ARB\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBWGL_BACK_COLOR_BUFFER_BIT_ARB\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_BUFFER_BIT_ARB\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBWGL_STENCIL_BUFFER_BIT_ARB\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBwglCreateBufferRegionARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateBufferRegionARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDeleteBufferRegionARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDeleteBufferRegionARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglRestoreBufferRegionARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewRestoreBufferRegionARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSaveBufferRegionARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSaveBufferRegionARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_buffer_region\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_buffer_region\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_create_context\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_DEBUG_BIT_ARB\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_MAJOR_VERSION_ARB\fP   0x2091"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_MINOR_VERSION_ARB\fP   0x2092"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_LAYER_PLANE_ARB\fP   0x2093"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_FLAGS_ARB\fP   0x2094"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_VERSION_ARB\fP   0x2095"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_PROFILE_ARB\fP   0x2096"
+.br
+.ti -1c
+.RI "#define \fBwglCreateContextAttribsARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateContextAttribsARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_create_context\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_create_context\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_create_context_profile\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_CORE_PROFILE_BIT_ARB\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_PROFILE_MASK_ARB\fP   0x9126"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_create_context_profile\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_create_context_profile\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_create_context_robustness\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_ROBUST_ACCESS_BIT_ARB\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBWGL_LOSE_CONTEXT_ON_RESET_ARB\fP   0x8252"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB\fP   0x8256"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_RESET_NOTIFICATION_ARB\fP   0x8261"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_create_context_robustness\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_create_context_robustness\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_extensions_string\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglGetExtensionsStringARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetExtensionsStringARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_extensions_string\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_extensions_string\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_framebuffer_sRGB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRAMEBUFFER_SRGB_CAPABLE_ARB\fP   0x20A9"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_framebuffer_sRGB\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_framebuffer_sRGB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_make_current_read\fP   1"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_PIXEL_TYPE_ARB\fP   0x2043"
+.br
+.ti -1c
+.RI "#define \fBERROR_INCOMPATIBLE_DEVICE_CONTEXTS_ARB\fP   0x2054"
+.br
+.ti -1c
+.RI "#define \fBwglGetCurrentReadDCARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetCurrentReadDCARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglMakeContextCurrentARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewMakeContextCurrentARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_make_current_read\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_make_current_read\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLE_BUFFERS_ARB\fP   0x2041"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLES_ARB\fP   0x2042"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_multisample\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_multisample\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_pbuffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_PBUFFER_ARB\fP   0x202D"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_PIXELS_ARB\fP   0x202E"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_WIDTH_ARB\fP   0x202F"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_HEIGHT_ARB\fP   0x2030"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_LARGEST_ARB\fP   0x2033"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_WIDTH_ARB\fP   0x2034"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_HEIGHT_ARB\fP   0x2035"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_LOST_ARB\fP   0x2036"
+.br
+.ti -1c
+.RI "#define \fBwglCreatePbufferARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreatePbufferARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDestroyPbufferARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDestroyPbufferARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetPbufferDCARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPbufferDCARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryPbufferARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryPbufferARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglReleasePbufferDCARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewReleasePbufferDCARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_pbuffer\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_pbuffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_pixel_format\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_PIXEL_FORMATS_ARB\fP   0x2000"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_WINDOW_ARB\fP   0x2001"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_BITMAP_ARB\fP   0x2002"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCELERATION_ARB\fP   0x2003"
+.br
+.ti -1c
+.RI "#define \fBWGL_NEED_PALETTE_ARB\fP   0x2004"
+.br
+.ti -1c
+.RI "#define \fBWGL_NEED_SYSTEM_PALETTE_ARB\fP   0x2005"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_LAYER_BUFFERS_ARB\fP   0x2006"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_METHOD_ARB\fP   0x2007"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_OVERLAYS_ARB\fP   0x2008"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_UNDERLAYS_ARB\fP   0x2009"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_ARB\fP   0x200A"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_DEPTH_ARB\fP   0x200C"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_STENCIL_ARB\fP   0x200D"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_ACCUM_ARB\fP   0x200E"
+.br
+.ti -1c
+.RI "#define \fBWGL_SUPPORT_GDI_ARB\fP   0x200F"
+.br
+.ti -1c
+.RI "#define \fBWGL_SUPPORT_OPENGL_ARB\fP   0x2010"
+.br
+.ti -1c
+.RI "#define \fBWGL_DOUBLE_BUFFER_ARB\fP   0x2011"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_ARB\fP   0x2012"
+.br
+.ti -1c
+.RI "#define \fBWGL_PIXEL_TYPE_ARB\fP   0x2013"
+.br
+.ti -1c
+.RI "#define \fBWGL_COLOR_BITS_ARB\fP   0x2014"
+.br
+.ti -1c
+.RI "#define \fBWGL_RED_BITS_ARB\fP   0x2015"
+.br
+.ti -1c
+.RI "#define \fBWGL_RED_SHIFT_ARB\fP   0x2016"
+.br
+.ti -1c
+.RI "#define \fBWGL_GREEN_BITS_ARB\fP   0x2017"
+.br
+.ti -1c
+.RI "#define \fBWGL_GREEN_SHIFT_ARB\fP   0x2018"
+.br
+.ti -1c
+.RI "#define \fBWGL_BLUE_BITS_ARB\fP   0x2019"
+.br
+.ti -1c
+.RI "#define \fBWGL_BLUE_SHIFT_ARB\fP   0x201A"
+.br
+.ti -1c
+.RI "#define \fBWGL_ALPHA_BITS_ARB\fP   0x201B"
+.br
+.ti -1c
+.RI "#define \fBWGL_ALPHA_SHIFT_ARB\fP   0x201C"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_BITS_ARB\fP   0x201D"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_RED_BITS_ARB\fP   0x201E"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_GREEN_BITS_ARB\fP   0x201F"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_BLUE_BITS_ARB\fP   0x2020"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_ALPHA_BITS_ARB\fP   0x2021"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_BITS_ARB\fP   0x2022"
+.br
+.ti -1c
+.RI "#define \fBWGL_STENCIL_BITS_ARB\fP   0x2023"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX_BUFFERS_ARB\fP   0x2024"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_ACCELERATION_ARB\fP   0x2025"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENERIC_ACCELERATION_ARB\fP   0x2026"
+.br
+.ti -1c
+.RI "#define \fBWGL_FULL_ACCELERATION_ARB\fP   0x2027"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_EXCHANGE_ARB\fP   0x2028"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_COPY_ARB\fP   0x2029"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_UNDEFINED_ARB\fP   0x202A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_ARB\fP   0x202B"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_COLORINDEX_ARB\fP   0x202C"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_RED_VALUE_ARB\fP   0x2037"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_GREEN_VALUE_ARB\fP   0x2038"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_BLUE_VALUE_ARB\fP   0x2039"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_ALPHA_VALUE_ARB\fP   0x203A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_INDEX_VALUE_ARB\fP   0x203B"
+.br
+.ti -1c
+.RI "#define \fBwglChoosePixelFormatARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewChoosePixelFormatARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetPixelFormatAttribfvARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPixelFormatAttribfvARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetPixelFormatAttribivARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPixelFormatAttribivARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_pixel_format\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_pixel_format\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_pixel_format_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_FLOAT_ARB\fP   0x21A0"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_pixel_format_float\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_pixel_format_float\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_render_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RGB_ARB\fP   0x2070"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RGBA_ARB\fP   0x2071"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FORMAT_ARB\fP   0x2072"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_TARGET_ARB\fP   0x2073"
+.br
+.ti -1c
+.RI "#define \fBWGL_MIPMAP_TEXTURE_ARB\fP   0x2074"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_RGB_ARB\fP   0x2075"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_RGBA_ARB\fP   0x2076"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_TEXTURE_ARB\fP   0x2077"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_ARB\fP   0x2078"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_1D_ARB\fP   0x2079"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_2D_ARB\fP   0x207A"
+.br
+.ti -1c
+.RI "#define \fBWGL_MIPMAP_LEVEL_ARB\fP   0x207B"
+.br
+.ti -1c
+.RI "#define \fBWGL_CUBE_MAP_FACE_ARB\fP   0x207C"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB\fP   0x207D"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB\fP   0x207E"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB\fP   0x207F"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB\fP   0x2080"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB\fP   0x2081"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB\fP   0x2082"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRONT_LEFT_ARB\fP   0x2083"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRONT_RIGHT_ARB\fP   0x2084"
+.br
+.ti -1c
+.RI "#define \fBWGL_BACK_LEFT_ARB\fP   0x2085"
+.br
+.ti -1c
+.RI "#define \fBWGL_BACK_RIGHT_ARB\fP   0x2086"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX0_ARB\fP   0x2087"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX1_ARB\fP   0x2088"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX2_ARB\fP   0x2089"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX3_ARB\fP   0x208A"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX4_ARB\fP   0x208B"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX5_ARB\fP   0x208C"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX6_ARB\fP   0x208D"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX7_ARB\fP   0x208E"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX8_ARB\fP   0x208F"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX9_ARB\fP   0x2090"
+.br
+.ti -1c
+.RI "#define \fBwglBindTexImageARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewBindTexImageARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglReleaseTexImageARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseTexImageARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSetPbufferAttribARB\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSetPbufferAttribARB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_render_texture\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_render_texture\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_robustness_application_isolation\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_RESET_ISOLATION_BIT_ARB\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_robustness_application_isolation\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_robustness_application_isolation\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ARB_robustness_share_group_isolation\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_RESET_ISOLATION_BIT_ARB\fP   0x00000008"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ARB_robustness_share_group_isolation\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_robustness_share_group_isolation\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ATI_pixel_format_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_FLOAT_ATI\fP   0x21A0"
+.br
+.ti -1c
+.RI "#define \fBGL_RGBA_FLOAT_MODE_ATI\fP   0x8820"
+.br
+.ti -1c
+.RI "#define \fBGL_COLOR_CLEAR_UNCLAMPED_VALUE_ATI\fP   0x8835"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ATI_pixel_format_float\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ATI_pixel_format_float\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_ATI_render_texture_rectangle\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_RECTANGLE_ATI\fP   0x21A5"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_ATI_render_texture_rectangle\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ATI_render_texture_rectangle\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_create_context_es2_profile\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_ES2_PROFILE_BIT_EXT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_create_context_es2_profile\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_create_context_es2_profile\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_create_context_es_profile\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_CONTEXT_ES_PROFILE_BIT_EXT\fP   0x00000004"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_create_context_es_profile\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_create_context_es_profile\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_depth_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_FLOAT_EXT\fP   0x2040"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_depth_float\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_depth_float\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_display_color_table\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglBindDisplayColorTableEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewBindDisplayColorTableEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglCreateDisplayColorTableEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateDisplayColorTableEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDestroyDisplayColorTableEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDestroyDisplayColorTableEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglLoadDisplayColorTableEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewLoadDisplayColorTableEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_display_color_table\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_display_color_table\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_extensions_string\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglGetExtensionsStringEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetExtensionsStringEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_extensions_string\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_extensions_string\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_framebuffer_sRGB\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_FRAMEBUFFER_SRGB_CAPABLE_EXT\fP   0x20A9"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_framebuffer_sRGB\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_framebuffer_sRGB\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_make_current_read\fP   1"
+.br
+.ti -1c
+.RI "#define \fBERROR_INVALID_PIXEL_TYPE_EXT\fP   0x2043"
+.br
+.ti -1c
+.RI "#define \fBwglGetCurrentReadDCEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetCurrentReadDCEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglMakeContextCurrentEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewMakeContextCurrentEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_make_current_read\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_make_current_read\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_multisample\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLE_BUFFERS_EXT\fP   0x2041"
+.br
+.ti -1c
+.RI "#define \fBWGL_SAMPLES_EXT\fP   0x2042"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_multisample\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_multisample\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_pbuffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_PBUFFER_EXT\fP   0x202D"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_PIXELS_EXT\fP   0x202E"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_WIDTH_EXT\fP   0x202F"
+.br
+.ti -1c
+.RI "#define \fBWGL_MAX_PBUFFER_HEIGHT_EXT\fP   0x2030"
+.br
+.ti -1c
+.RI "#define \fBWGL_OPTIMAL_PBUFFER_WIDTH_EXT\fP   0x2031"
+.br
+.ti -1c
+.RI "#define \fBWGL_OPTIMAL_PBUFFER_HEIGHT_EXT\fP   0x2032"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_LARGEST_EXT\fP   0x2033"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_WIDTH_EXT\fP   0x2034"
+.br
+.ti -1c
+.RI "#define \fBWGL_PBUFFER_HEIGHT_EXT\fP   0x2035"
+.br
+.ti -1c
+.RI "#define \fBwglCreatePbufferEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreatePbufferEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDestroyPbufferEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDestroyPbufferEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetPbufferDCEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPbufferDCEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryPbufferEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryPbufferEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglReleasePbufferDCEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewReleasePbufferDCEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_pbuffer\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_pbuffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_pixel_format\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_PIXEL_FORMATS_EXT\fP   0x2000"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_WINDOW_EXT\fP   0x2001"
+.br
+.ti -1c
+.RI "#define \fBWGL_DRAW_TO_BITMAP_EXT\fP   0x2002"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCELERATION_EXT\fP   0x2003"
+.br
+.ti -1c
+.RI "#define \fBWGL_NEED_PALETTE_EXT\fP   0x2004"
+.br
+.ti -1c
+.RI "#define \fBWGL_NEED_SYSTEM_PALETTE_EXT\fP   0x2005"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_LAYER_BUFFERS_EXT\fP   0x2006"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_METHOD_EXT\fP   0x2007"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_OVERLAYS_EXT\fP   0x2008"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUMBER_UNDERLAYS_EXT\fP   0x2009"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_EXT\fP   0x200A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TRANSPARENT_VALUE_EXT\fP   0x200B"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_DEPTH_EXT\fP   0x200C"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_STENCIL_EXT\fP   0x200D"
+.br
+.ti -1c
+.RI "#define \fBWGL_SHARE_ACCUM_EXT\fP   0x200E"
+.br
+.ti -1c
+.RI "#define \fBWGL_SUPPORT_GDI_EXT\fP   0x200F"
+.br
+.ti -1c
+.RI "#define \fBWGL_SUPPORT_OPENGL_EXT\fP   0x2010"
+.br
+.ti -1c
+.RI "#define \fBWGL_DOUBLE_BUFFER_EXT\fP   0x2011"
+.br
+.ti -1c
+.RI "#define \fBWGL_STEREO_EXT\fP   0x2012"
+.br
+.ti -1c
+.RI "#define \fBWGL_PIXEL_TYPE_EXT\fP   0x2013"
+.br
+.ti -1c
+.RI "#define \fBWGL_COLOR_BITS_EXT\fP   0x2014"
+.br
+.ti -1c
+.RI "#define \fBWGL_RED_BITS_EXT\fP   0x2015"
+.br
+.ti -1c
+.RI "#define \fBWGL_RED_SHIFT_EXT\fP   0x2016"
+.br
+.ti -1c
+.RI "#define \fBWGL_GREEN_BITS_EXT\fP   0x2017"
+.br
+.ti -1c
+.RI "#define \fBWGL_GREEN_SHIFT_EXT\fP   0x2018"
+.br
+.ti -1c
+.RI "#define \fBWGL_BLUE_BITS_EXT\fP   0x2019"
+.br
+.ti -1c
+.RI "#define \fBWGL_BLUE_SHIFT_EXT\fP   0x201A"
+.br
+.ti -1c
+.RI "#define \fBWGL_ALPHA_BITS_EXT\fP   0x201B"
+.br
+.ti -1c
+.RI "#define \fBWGL_ALPHA_SHIFT_EXT\fP   0x201C"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_BITS_EXT\fP   0x201D"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_RED_BITS_EXT\fP   0x201E"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_GREEN_BITS_EXT\fP   0x201F"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_BLUE_BITS_EXT\fP   0x2020"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCUM_ALPHA_BITS_EXT\fP   0x2021"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_BITS_EXT\fP   0x2022"
+.br
+.ti -1c
+.RI "#define \fBWGL_STENCIL_BITS_EXT\fP   0x2023"
+.br
+.ti -1c
+.RI "#define \fBWGL_AUX_BUFFERS_EXT\fP   0x2024"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_ACCELERATION_EXT\fP   0x2025"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENERIC_ACCELERATION_EXT\fP   0x2026"
+.br
+.ti -1c
+.RI "#define \fBWGL_FULL_ACCELERATION_EXT\fP   0x2027"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_EXCHANGE_EXT\fP   0x2028"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_COPY_EXT\fP   0x2029"
+.br
+.ti -1c
+.RI "#define \fBWGL_SWAP_UNDEFINED_EXT\fP   0x202A"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_EXT\fP   0x202B"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_COLORINDEX_EXT\fP   0x202C"
+.br
+.ti -1c
+.RI "#define \fBwglChoosePixelFormatEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewChoosePixelFormatEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetPixelFormatAttribfvEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPixelFormatAttribfvEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetPixelFormatAttribivEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPixelFormatAttribivEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_pixel_format\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_pixel_format\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_pixel_format_packed_float\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_TYPE_RGBA_UNSIGNED_FLOAT_EXT\fP   0x20A8"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_pixel_format_packed_float\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_pixel_format_packed_float\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_swap_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglGetSwapIntervalEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetSwapIntervalEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSwapIntervalEXT\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSwapIntervalEXT\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_swap_control\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_swap_control\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_EXT_swap_control_tear\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_EXT_swap_control_tear\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_swap_control_tear\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_digital_video_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_DIGITAL_VIDEO_CURSOR_ALPHA_FRAMEBUFFER_I3D\fP   0x2050"
+.br
+.ti -1c
+.RI "#define \fBWGL_DIGITAL_VIDEO_CURSOR_ALPHA_VALUE_I3D\fP   0x2051"
+.br
+.ti -1c
+.RI "#define \fBWGL_DIGITAL_VIDEO_CURSOR_INCLUDED_I3D\fP   0x2052"
+.br
+.ti -1c
+.RI "#define \fBWGL_DIGITAL_VIDEO_GAMMA_CORRECTED_I3D\fP   0x2053"
+.br
+.ti -1c
+.RI "#define \fBwglGetDigitalVideoParametersI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetDigitalVideoParametersI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSetDigitalVideoParametersI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSetDigitalVideoParametersI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_I3D_digital_video_control\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_digital_video_control\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_gamma\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_GAMMA_TABLE_SIZE_I3D\fP   0x204E"
+.br
+.ti -1c
+.RI "#define \fBWGL_GAMMA_EXCLUDE_DESKTOP_I3D\fP   0x204F"
+.br
+.ti -1c
+.RI "#define \fBwglGetGammaTableI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGammaTableI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetGammaTableParametersI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGammaTableParametersI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSetGammaTableI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSetGammaTableI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSetGammaTableParametersI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSetGammaTableParametersI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_I3D_gamma\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_gamma\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_genlock\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_MULTIVIEW_I3D\fP   0x2044"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EXTERNAL_SYNC_I3D\fP   0x2045"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EXTERNAL_FIELD_I3D\fP   0x2046"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EXTERNAL_TTL_I3D\fP   0x2047"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_DIGITAL_SYNC_I3D\fP   0x2048"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_DIGITAL_FIELD_I3D\fP   0x2049"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EDGE_FALLING_I3D\fP   0x204A"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EDGE_RISING_I3D\fP   0x204B"
+.br
+.ti -1c
+.RI "#define \fBWGL_GENLOCK_SOURCE_EDGE_BOTH_I3D\fP   0x204C"
+.br
+.ti -1c
+.RI "#define \fBwglDisableGenlockI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDisableGenlockI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglEnableGenlockI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewEnableGenlockI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGenlockSampleRateI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGenlockSampleRateI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGenlockSourceDelayI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGenlockSourceDelayI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGenlockSourceEdgeI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGenlockSourceEdgeI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGenlockSourceI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGenlockSourceI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetGenlockSampleRateI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGenlockSampleRateI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetGenlockSourceDelayI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGenlockSourceDelayI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetGenlockSourceEdgeI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGenlockSourceEdgeI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetGenlockSourceI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGenlockSourceI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglIsEnabledGenlockI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewIsEnabledGenlockI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryGenlockMaxSourceDelayI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryGenlockMaxSourceDelayI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_I3D_genlock\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_genlock\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_image_buffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_IMAGE_BUFFER_MIN_ACCESS_I3D\fP   0x00000001"
+.br
+.ti -1c
+.RI "#define \fBWGL_IMAGE_BUFFER_LOCK_I3D\fP   0x00000002"
+.br
+.ti -1c
+.RI "#define \fBwglAssociateImageBufferEventsI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewAssociateImageBufferEventsI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglCreateImageBufferI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateImageBufferI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDestroyImageBufferI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDestroyImageBufferI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglReleaseImageBufferEventsI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseImageBufferEventsI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_I3D_image_buffer\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_image_buffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_swap_frame_lock\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglDisableFrameLockI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDisableFrameLockI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglEnableFrameLockI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewEnableFrameLockI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglIsEnabledFrameLockI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewIsEnabledFrameLockI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryFrameLockMasterI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryFrameLockMasterI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_I3D_swap_frame_lock\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_swap_frame_lock\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_I3D_swap_frame_usage\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglBeginFrameTrackingI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewBeginFrameTrackingI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglEndFrameTrackingI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewEndFrameTrackingI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetFrameUsageI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetFrameUsageI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryFrameTrackingI3D\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryFrameTrackingI3D\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_I3D_swap_frame_usage\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_swap_frame_usage\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_DX_interop\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCESS_READ_ONLY_NV\fP   0x0000"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCESS_READ_WRITE_NV\fP   0x0001"
+.br
+.ti -1c
+.RI "#define \fBWGL_ACCESS_WRITE_DISCARD_NV\fP   0x0002"
+.br
+.ti -1c
+.RI "#define \fBwglDXCloseDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDXCloseDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDXLockObjectsNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDXLockObjectsNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDXObjectAccessNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDXObjectAccessNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDXOpenDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDXOpenDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDXRegisterObjectNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDXRegisterObjectNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDXSetResourceShareHandleNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDXSetResourceShareHandleNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDXUnlockObjectsNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDXUnlockObjectsNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDXUnregisterObjectNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDXUnregisterObjectNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_DX_interop\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_DX_interop\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_DX_interop2\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_DX_interop2\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_DX_interop2\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_copy_image\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglCopyImageSubDataNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCopyImageSubDataNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_copy_image\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_copy_image\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_float_buffer\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_FLOAT_COMPONENTS_NV\fP   0x20B0"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_R_NV\fP   0x20B1"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RG_NV\fP   0x20B2"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGB_NV\fP   0x20B3"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGBA_NV\fP   0x20B4"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FLOAT_R_NV\fP   0x20B5"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FLOAT_RG_NV\fP   0x20B6"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FLOAT_RGB_NV\fP   0x20B7"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_FLOAT_RGBA_NV\fP   0x20B8"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_float_buffer\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_float_buffer\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_gpu_affinity\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV\fP   0x20D0"
+.br
+.ti -1c
+.RI "#define \fBWGL_ERROR_MISSING_AFFINITY_MASK_NV\fP   0x20D1"
+.br
+.ti -1c
+.RI "#define \fBwglCreateAffinityDCNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateAffinityDCNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglDeleteDCNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewDeleteDCNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglEnumGpuDevicesNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumGpuDevicesNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglEnumGpusFromAffinityDCNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumGpusFromAffinityDCNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglEnumGpusNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumGpusNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_gpu_affinity\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_gpu_affinity\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_multisample_coverage\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_COVERAGE_SAMPLES_NV\fP   0x2042"
+.br
+.ti -1c
+.RI "#define \fBWGL_COLOR_SAMPLES_NV\fP   0x20B9"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_multisample_coverage\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_multisample_coverage\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_present_video\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUM_VIDEO_SLOTS_NV\fP   0x20F0"
+.br
+.ti -1c
+.RI "#define \fBwglBindVideoDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewBindVideoDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglEnumerateVideoDevicesNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumerateVideoDevicesNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryCurrentContextNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryCurrentContextNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_present_video\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_present_video\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_render_depth_texture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_NO_TEXTURE_ARB\fP   0x2077"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_DEPTH_NV\fP   0x20A3"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_DEPTH_NV\fP   0x20A4"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_TEXTURE_FORMAT_NV\fP   0x20A5"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_DEPTH_COMPONENT_NV\fP   0x20A6"
+.br
+.ti -1c
+.RI "#define \fBWGL_DEPTH_COMPONENT_NV\fP   0x20A7"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_render_depth_texture\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_render_depth_texture\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_render_texture_rectangle\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_RGB_NV\fP   0x20A0"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_TEXTURE_RECTANGLE_RGBA_NV\fP   0x20A1"
+.br
+.ti -1c
+.RI "#define \fBWGL_TEXTURE_RECTANGLE_NV\fP   0x20A2"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_render_texture_rectangle\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_render_texture_rectangle\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_swap_group\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglBindSwapBarrierNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewBindSwapBarrierNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglJoinSwapGroupNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewJoinSwapGroupNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryFrameCountNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryFrameCountNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryMaxSwapGroupsNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryMaxSwapGroupsNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQuerySwapGroupNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQuerySwapGroupNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglResetFrameCountNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewResetFrameCountNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_swap_group\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_swap_group\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_vertex_array_range\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglAllocateMemoryNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewAllocateMemoryNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglFreeMemoryNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewFreeMemoryNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_vertex_array_range\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_vertex_array_range\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_video_capture\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_UNIQUE_ID_NV\fP   0x20CE"
+.br
+.ti -1c
+.RI "#define \fBWGL_NUM_VIDEO_CAPTURE_SLOTS_NV\fP   0x20CF"
+.br
+.ti -1c
+.RI "#define \fBwglBindVideoCaptureDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewBindVideoCaptureDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglEnumerateVideoCaptureDevicesNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumerateVideoCaptureDevicesNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglLockVideoCaptureDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewLockVideoCaptureDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglQueryVideoCaptureDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryVideoCaptureDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglReleaseVideoCaptureDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseVideoCaptureDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_video_capture\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_video_capture\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_NV_video_output\fP   1"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_VIDEO_RGB_NV\fP   0x20C0"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_VIDEO_RGBA_NV\fP   0x20C1"
+.br
+.ti -1c
+.RI "#define \fBWGL_BIND_TO_VIDEO_RGB_AND_DEPTH_NV\fP   0x20C2"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_COLOR_NV\fP   0x20C3"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_ALPHA_NV\fP   0x20C4"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_DEPTH_NV\fP   0x20C5"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_COLOR_AND_ALPHA_NV\fP   0x20C6"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_COLOR_AND_DEPTH_NV\fP   0x20C7"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_FRAME\fP   0x20C8"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_FIELD_1\fP   0x20C9"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_FIELD_2\fP   0x20CA"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_STACKED_FIELDS_1_2\fP   0x20CB"
+.br
+.ti -1c
+.RI "#define \fBWGL_VIDEO_OUT_STACKED_FIELDS_2_1\fP   0x20CC"
+.br
+.ti -1c
+.RI "#define \fBwglBindVideoImageNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewBindVideoImageNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetVideoDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetVideoDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetVideoInfoNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetVideoInfoNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglReleaseVideoDeviceNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseVideoDeviceNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglReleaseVideoImageNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseVideoImageNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSendPbufferToVideoNV\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSendPbufferToVideoNV\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_NV_video_output\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_video_output\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGL_OML_sync_control\fP   1"
+.br
+.ti -1c
+.RI "#define \fBwglGetMscRateOML\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetMscRateOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglGetSyncValuesOML\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewGetSyncValuesOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSwapBuffersMscOML\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSwapBuffersMscOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglSwapLayerBuffersMscOML\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewSwapLayerBuffersMscOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglWaitForMscOML\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewWaitForMscOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBwglWaitForSbcOML\fP   \fBWGLEW_GET_FUN\fP(\fB__wglewWaitForSbcOML\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_OML_sync_control\fP   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_OML_sync_control\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_FUN_EXPORT\fP   \fBGLEW_FUN_EXPORT\fP"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_VAR_EXPORT\fP   \fBGLEW_VAR_EXPORT\fP"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_GET_VAR\fP(\fBx\fP)   (*(const \fBGLboolean\fP*)&\fBx\fP)"
+.br
+.ti -1c
+.RI "#define \fBWGLEW_GET_FUN\fP(\fBx\fP)   \fBx\fP"
+.br
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuState\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBsrcX0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBsrcY0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcX1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBdstX0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY0\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY1\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLbitfield\fP \fBmask\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLbitfield\fP \fBGLenum\fP \fBfilter\fP"
+.br
+.ti -1c
+.RI "typedef \fBHGLRC\fP \fBhShareContext\fP"
+.br
+.ti -1c
+.RI "typedef \fBHGLRC\fP const \fBint\fP * \fBattribList\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP * \fBids\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT\fP \fBproperty\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT\fP \fBGLenum\fP \fBdataType\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT\fP \fBGLenum\fP \fBUINT\fP \fBsize\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT\fP \fBGLenum\fP \fBUINT\fP \fBvoid\fP * \fBdata\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiLayerPlane\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBUINT\fP \fBuType\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBx\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBy\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBwidth\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBheight\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBxSrc\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBySrc\fP"
+.br
+.ti -1c
+.RI "typedef const char *WINAPI * \fBPFNWGLGETEXTENSIONSSTRINGARBPROC\fP (\fBHDC\fP hdc)"
+.br
+.ti -1c
+.RI "typedef \fBHDC\fP \fBhReadDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBHDC\fP \fBHGLRC\fP \fBhglrc\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiPixelFormat\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBiWidth\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP \fBiHeight\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBint\fP const \fBint\fP * \fBpiAttribList\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiAttribute\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP * \fBpiValue\fP"
+.br
+.ti -1c
+.RI "typedef \fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef const \fBint\fP * \fBpiAttribIList\fP"
+.br
+.ti -1c
+.RI "typedef const \fBint\fP const FLOAT * \fBpfAttribFList\fP"
+.br
+.ti -1c
+.RI "typedef const \fBint\fP const FLOAT \fBUINT\fP \fBnMaxFormats\fP"
+.br
+.ti -1c
+.RI "typedef const \fBint\fP const FLOAT 
+.br
+\fBUINT\fP \fBint\fP * \fBpiFormats\fP"
+.br
+.ti -1c
+.RI "typedef const \fBint\fP const FLOAT 
+.br
+\fBUINT\fP \fBint\fP \fBUINT\fP * \fBnNumFormats\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBnAttributes\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBUINT\fP const \fBint\fP * \fBpiAttributes\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBUINT\fP const \fBint\fP 
+.br
+FLOAT * \fBpfValues\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBint\fP \fBUINT\fP const \fBint\fP 
+.br
+\fBint\fP * \fBpiValues\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiBuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBlength\fP"
+.br
+.ti -1c
+.RI "typedef const char *WINAPI * \fBPFNWGLGETEXTENSIONSSTRINGEXTPROC\fP (\fBvoid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiEntries\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP USHORT * \fBpuRed\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP USHORT USHORT * \fBpuGreen\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP USHORT USHORT USHORT * \fBpuBlue\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuRate\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuDelay\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuEdge\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBuSource\fP"
+.br
+.ti -1c
+.RI "typedef \fBBOOL\fP * \fBpFlag\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP * \fBuMaxLineDelay\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBUINT\fP * \fBuMaxPixelDelay\fP"
+.br
+.ti -1c
+.RI "typedef \fBHANDLE\fP * \fBpEvent\fP"
+.br
+.ti -1c
+.RI "typedef \fBHANDLE\fP \fBLPVOID\fP * \fBpAddress\fP"
+.br
+.ti -1c
+.RI "typedef \fBHANDLE\fP \fBLPVOID\fP DWORD * \fBpSize\fP"
+.br
+.ti -1c
+.RI "typedef \fBHANDLE\fP \fBLPVOID\fP DWORD \fBUINT\fP \fBcount\fP"
+.br
+.ti -1c
+.RI "typedef DWORD \fBdwSize\fP"
+.br
+.ti -1c
+.RI "typedef DWORD \fBUINT\fP \fBuFlags\fP"
+.br
+.ti -1c
+.RI "typedef DWORD * \fBpMissedFrames\fP"
+.br
+.ti -1c
+.RI "typedef DWORD float * \fBpLastMissedUsage\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLint\fP \fBHANDLE\fP * \fBhObjects\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLenum\fP \fBaccess\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP * \fBdxObject\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP \fBGLuint\fP \fBname\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP \fBGLuint\fP \fBGLenum\fP \fBtype\fP"
+.br
+.ti -1c
+.RI "typedef \fBHANDLE\fP \fBshareHandle\fP"
+.br
+.ti -1c
+.RI "typedef \fBHANDLE\fP \fBhObject\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBsrcName\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBsrcTarget\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBsrcLevel\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBsrcX\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBsrcY\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcZ\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBhDstRC\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBdstName\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP 
+.br
+\fBGLenum\fP \fBdstTarget\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP 
+.br
+\fBGLenum\fP \fBGLint\fP \fBdstLevel\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP 
+.br
+\fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBdstX\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP 
+.br
+\fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP 
+.br
+\fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstZ\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP 
+.br
+\fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP 
+.br
+\fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP 
+.br
+\fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBdepth\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_GPU_DEVICE\fP \fBGPU_DEVICE\fP"
+.br
+.ti -1c
+.RI "typedef struct \fB_GPU_DEVICE\fP * \fBPGPU_DEVICE\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBiDeviceIndex\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBPGPU_DEVICE\fP \fBlpGpuDevice\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP \fBiGpuIndex\fP"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP HGPUNV * \fBhGpu\fP"
+.br
+.ti -1c
+.RI "typedef HGPUNV * \fBphGpu\fP"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP \fBuVideoSlot\fP"
+.br
+.ti -1c
+.RI "typedef unsigned \fBint\fP 
+.br
+HVIDEOOUTPUTDEVICENV \fBhVideoDevice\fP"
+.br
+.ti -1c
+.RI "typedef HVIDEOOUTPUTDEVICENV * \fBphDeviceList\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBbarrier\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBgroup\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP * \fBmaxGroups\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLuint\fP \fBGLuint\fP * \fBmaxBarriers\fP"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP *WINAPI * \fBPFNWGLALLOCATEMEMORYNVPROC\fP (\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readFrequency, \fBGLfloat\fP writeFrequency, \fBGLfloat\fP priority)"
+.br
+.ti -1c
+.RI "typedef HVIDEOINPUTDEVICENV \fBhDevice\fP"
+.br
+.ti -1c
+.RI "typedef \fBHPBUFFERARB\fP \fBhPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBHPBUFFERARB\fP \fBint\fP \fBiVideoBuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBnumDevices\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long * \fBpulCounterOutputPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef unsigned long unsigned 
+.br
+long * \fBpulCounterOutputVideo\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP \fBiBufferType\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP unsigned long * \fBpulCounterPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP unsigned long \fBBOOL\fP \fBbBlock\fP"
+.br
+.ti -1c
+.RI "typedef INT32 * \fBnumerator\fP"
+.br
+.ti -1c
+.RI "typedef INT32 INT32 * \fBdenominator\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP * \fBust\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBINT64\fP * \fBmsc\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP * \fBsbc\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBtarget_msc\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBINT64\fP \fBdivisor\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP \fBremainder\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT\fP \fBfuPlanes\fP"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP \fBtarget_sbc\fP"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "typedef \fBBOOL\fP (WINAPI *PFNWGLSETSTEREOEMITTERSTATE3DLPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBVOID\fP (WINAPI *PFNWGLBLITCONTEXTFRAMEBUFFERAMDPROC)(\fBHGLRC\fP dstCtx"
+.br
+.ti -1c
+.RI "typedef \fBHGLRC\fP (WINAPI *PFNWGLCREATEASSOCIATEDCONTEXTAMDPROC)(\fBUINT\fP \fBid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBUINT\fP (WINAPI *PFNWGLGETCONTEXTGPUIDAMDPROC)(\fBHGLRC\fP \fBhglrc\fP)"
+.br
+.ti -1c
+.RI "typedef \fBINT\fP (WINAPI *PFNWGLGETGPUINFOAMDPROC)(\fBUINT\fP \fBid\fP"
+.br
+.ti -1c
+.RI "typedef \fBHANDLE\fP (WINAPI *PFNWGLCREATEBUFFERREGIONARBPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBHDC\fP (WINAPI *PFNWGLGETCURRENTREADDCARBPROC)(\fBVOID\fP)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (\fBHPBUFFERARB\fP)"
+.br
+.ti -1c
+.RI "typedef \fBHPBUFFERARB\fP (WINAPI *PFNWGLCREATEPBUFFERARBPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBint\fP (WINAPI *PFNWGLRELEASEPBUFFERDCARBPROC)(\fBHPBUFFERARB\fP \fBhPbuffer\fP"
+.br
+.ti -1c
+.RI "typedef \fBGLboolean\fP (WINAPI *PFNWGLBINDDISPLAYCOLORTABLEEXTPROC)(\fBGLushort\fP \fBid\fP)"
+.br
+.ti -1c
+.RI "typedef \fBvoid\fP (WINAPI *PFNWGLDESTROYDISPLAYCOLORTABLEEXTPROC)(\fBGLushort\fP \fBid\fP)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (\fBHPBUFFEREXT\fP)"
+.br
+.ti -1c
+.RI "typedef \fBHPBUFFEREXT\fP (WINAPI *PFNWGLCREATEPBUFFEREXTPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "typedef \fBLPVOID\fP (WINAPI *PFNWGLCREATEIMAGEBUFFERI3DPROC)(\fBHDC\fP \fBhDC\fP"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HGPUNV)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HVIDEOOUTPUTDEVICENV)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HVIDEOINPUTDEVICENV)"
+.br
+.ti -1c
+.RI "\fBDECLARE_HANDLE\fP (HPVIDEODEV)"
+.br
+.ti -1c
+.RI "typedef \fBINT64\fP (WINAPI *PFNWGLSWAPBUFFERSMSCOMLPROC)(\fBHDC\fP hdc"
+.br
+.ti -1c
+.RI "\fBGLEWAPI\fP \fBGLboolean\fP \fBGLEWAPIENTRY\fP \fBwglewIsSupported\fP (const char *\fBname\fP)"
+.br
+.ti -1c
+.RI "\fBGLEWAPI\fP \fBGLboolean\fP \fBGLEWAPIENTRY\fP \fBwglewGetExtension\fP (const char *\fBname\fP)"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSETSTEREOEMITTERSTATE3DLPROC \fB__wglewSetStereoEmitterState3DL\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLBLITCONTEXTFRAMEBUFFERAMDPROC \fB__wglewBlitContextFramebufferAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATEASSOCIATEDCONTEXTAMDPROC \fB__wglewCreateAssociatedContextAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATEASSOCIATEDCONTEXTATTRIBSAMDPROC \fB__wglewCreateAssociatedContextAttribsAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDELETEASSOCIATEDCONTEXTAMDPROC \fB__wglewDeleteAssociatedContextAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETCONTEXTGPUIDAMDPROC \fB__wglewGetContextGPUIDAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETCURRENTASSOCIATEDCONTEXTAMDPROC \fB__wglewGetCurrentAssociatedContextAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETGPUIDSAMDPROC \fB__wglewGetGPUIDsAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETGPUINFOAMDPROC \fB__wglewGetGPUInfoAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLMAKEASSOCIATEDCONTEXTCURRENTAMDPROC \fB__wglewMakeAssociatedContextCurrentAMD\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATEBUFFERREGIONARBPROC \fB__wglewCreateBufferRegionARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDELETEBUFFERREGIONARBPROC \fB__wglewDeleteBufferRegionARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRESTOREBUFFERREGIONARBPROC \fB__wglewRestoreBufferRegionARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSAVEBUFFERREGIONARBPROC \fB__wglewSaveBufferRegionARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATECONTEXTATTRIBSARBPROC \fB__wglewCreateContextAttribsARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+\fBPFNWGLGETEXTENSIONSSTRINGARBPROC\fP \fB__wglewGetExtensionsStringARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETCURRENTREADDCARBPROC \fB__wglewGetCurrentReadDCARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLMAKECONTEXTCURRENTARBPROC \fB__wglewMakeContextCurrentARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATEPBUFFERARBPROC \fB__wglewCreatePbufferARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDESTROYPBUFFERARBPROC \fB__wglewDestroyPbufferARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETPBUFFERDCARBPROC \fB__wglewGetPbufferDCARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYPBUFFERARBPROC \fB__wglewQueryPbufferARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRELEASEPBUFFERDCARBPROC \fB__wglewReleasePbufferDCARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCHOOSEPIXELFORMATARBPROC \fB__wglewChoosePixelFormatARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETPIXELFORMATATTRIBFVARBPROC \fB__wglewGetPixelFormatAttribfvARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETPIXELFORMATATTRIBIVARBPROC \fB__wglewGetPixelFormatAttribivARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLBINDTEXIMAGEARBPROC \fB__wglewBindTexImageARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRELEASETEXIMAGEARBPROC \fB__wglewReleaseTexImageARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSETPBUFFERATTRIBARBPROC \fB__wglewSetPbufferAttribARB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLBINDDISPLAYCOLORTABLEEXTPROC \fB__wglewBindDisplayColorTableEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATEDISPLAYCOLORTABLEEXTPROC \fB__wglewCreateDisplayColorTableEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDESTROYDISPLAYCOLORTABLEEXTPROC \fB__wglewDestroyDisplayColorTableEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLLOADDISPLAYCOLORTABLEEXTPROC \fB__wglewLoadDisplayColorTableEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+\fBPFNWGLGETEXTENSIONSSTRINGEXTPROC\fP \fB__wglewGetExtensionsStringEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETCURRENTREADDCEXTPROC \fB__wglewGetCurrentReadDCEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLMAKECONTEXTCURRENTEXTPROC \fB__wglewMakeContextCurrentEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATEPBUFFEREXTPROC \fB__wglewCreatePbufferEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDESTROYPBUFFEREXTPROC \fB__wglewDestroyPbufferEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETPBUFFERDCEXTPROC \fB__wglewGetPbufferDCEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYPBUFFEREXTPROC \fB__wglewQueryPbufferEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRELEASEPBUFFERDCEXTPROC \fB__wglewReleasePbufferDCEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCHOOSEPIXELFORMATEXTPROC \fB__wglewChoosePixelFormatEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETPIXELFORMATATTRIBFVEXTPROC \fB__wglewGetPixelFormatAttribfvEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETPIXELFORMATATTRIBIVEXTPROC \fB__wglewGetPixelFormatAttribivEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETSWAPINTERVALEXTPROC \fB__wglewGetSwapIntervalEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSWAPINTERVALEXTPROC \fB__wglewSwapIntervalEXT\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETDIGITALVIDEOPARAMETERSI3DPROC \fB__wglewGetDigitalVideoParametersI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSETDIGITALVIDEOPARAMETERSI3DPROC \fB__wglewSetDigitalVideoParametersI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETGAMMATABLEI3DPROC \fB__wglewGetGammaTableI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETGAMMATABLEPARAMETERSI3DPROC \fB__wglewGetGammaTableParametersI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSETGAMMATABLEI3DPROC \fB__wglewSetGammaTableI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSETGAMMATABLEPARAMETERSI3DPROC \fB__wglewSetGammaTableParametersI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDISABLEGENLOCKI3DPROC \fB__wglewDisableGenlockI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLENABLEGENLOCKI3DPROC \fB__wglewEnableGenlockI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGENLOCKSAMPLERATEI3DPROC \fB__wglewGenlockSampleRateI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGENLOCKSOURCEDELAYI3DPROC \fB__wglewGenlockSourceDelayI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGENLOCKSOURCEEDGEI3DPROC \fB__wglewGenlockSourceEdgeI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGENLOCKSOURCEI3DPROC \fB__wglewGenlockSourceI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETGENLOCKSAMPLERATEI3DPROC \fB__wglewGetGenlockSampleRateI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETGENLOCKSOURCEDELAYI3DPROC \fB__wglewGetGenlockSourceDelayI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETGENLOCKSOURCEEDGEI3DPROC \fB__wglewGetGenlockSourceEdgeI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETGENLOCKSOURCEI3DPROC \fB__wglewGetGenlockSourceI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLISENABLEDGENLOCKI3DPROC \fB__wglewIsEnabledGenlockI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYGENLOCKMAXSOURCEDELAYI3DPROC \fB__wglewQueryGenlockMaxSourceDelayI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLASSOCIATEIMAGEBUFFEREVENTSI3DPROC \fB__wglewAssociateImageBufferEventsI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATEIMAGEBUFFERI3DPROC \fB__wglewCreateImageBufferI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDESTROYIMAGEBUFFERI3DPROC \fB__wglewDestroyImageBufferI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRELEASEIMAGEBUFFEREVENTSI3DPROC \fB__wglewReleaseImageBufferEventsI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDISABLEFRAMELOCKI3DPROC \fB__wglewDisableFrameLockI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLENABLEFRAMELOCKI3DPROC \fB__wglewEnableFrameLockI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLISENABLEDFRAMELOCKI3DPROC \fB__wglewIsEnabledFrameLockI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYFRAMELOCKMASTERI3DPROC \fB__wglewQueryFrameLockMasterI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLBEGINFRAMETRACKINGI3DPROC \fB__wglewBeginFrameTrackingI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLENDFRAMETRACKINGI3DPROC \fB__wglewEndFrameTrackingI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETFRAMEUSAGEI3DPROC \fB__wglewGetFrameUsageI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYFRAMETRACKINGI3DPROC \fB__wglewQueryFrameTrackingI3D\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDXCLOSEDEVICENVPROC \fB__wglewDXCloseDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDXLOCKOBJECTSNVPROC \fB__wglewDXLockObjectsNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDXOBJECTACCESSNVPROC \fB__wglewDXObjectAccessNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDXOPENDEVICENVPROC \fB__wglewDXOpenDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDXREGISTEROBJECTNVPROC \fB__wglewDXRegisterObjectNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDXSETRESOURCESHAREHANDLENVPROC \fB__wglewDXSetResourceShareHandleNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDXUNLOCKOBJECTSNVPROC \fB__wglewDXUnlockObjectsNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDXUNREGISTEROBJECTNVPROC \fB__wglewDXUnregisterObjectNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCOPYIMAGESUBDATANVPROC \fB__wglewCopyImageSubDataNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLCREATEAFFINITYDCNVPROC \fB__wglewCreateAffinityDCNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLDELETEDCNVPROC \fB__wglewDeleteDCNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLENUMGPUDEVICESNVPROC \fB__wglewEnumGpuDevicesNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLENUMGPUSFROMAFFINITYDCNVPROC \fB__wglewEnumGpusFromAffinityDCNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLENUMGPUSNVPROC \fB__wglewEnumGpusNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLBINDVIDEODEVICENVPROC \fB__wglewBindVideoDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLENUMERATEVIDEODEVICESNVPROC \fB__wglewEnumerateVideoDevicesNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYCURRENTCONTEXTNVPROC \fB__wglewQueryCurrentContextNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLBINDSWAPBARRIERNVPROC \fB__wglewBindSwapBarrierNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLJOINSWAPGROUPNVPROC \fB__wglewJoinSwapGroupNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYFRAMECOUNTNVPROC \fB__wglewQueryFrameCountNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYMAXSWAPGROUPSNVPROC \fB__wglewQueryMaxSwapGroupsNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYSWAPGROUPNVPROC \fB__wglewQuerySwapGroupNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRESETFRAMECOUNTNVPROC \fB__wglewResetFrameCountNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+\fBPFNWGLALLOCATEMEMORYNVPROC\fP \fB__wglewAllocateMemoryNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLFREEMEMORYNVPROC \fB__wglewFreeMemoryNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLBINDVIDEOCAPTUREDEVICENVPROC \fB__wglewBindVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLENUMERATEVIDEOCAPTUREDEVICESNVPROC \fB__wglewEnumerateVideoCaptureDevicesNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLLOCKVIDEOCAPTUREDEVICENVPROC \fB__wglewLockVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLQUERYVIDEOCAPTUREDEVICENVPROC \fB__wglewQueryVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRELEASEVIDEOCAPTUREDEVICENVPROC \fB__wglewReleaseVideoCaptureDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLBINDVIDEOIMAGENVPROC \fB__wglewBindVideoImageNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETVIDEODEVICENVPROC \fB__wglewGetVideoDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETVIDEOINFONVPROC \fB__wglewGetVideoInfoNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRELEASEVIDEODEVICENVPROC \fB__wglewReleaseVideoDeviceNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLRELEASEVIDEOIMAGENVPROC \fB__wglewReleaseVideoImageNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSENDPBUFFERTOVIDEONVPROC \fB__wglewSendPbufferToVideoNV\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETMSCRATEOMLPROC \fB__wglewGetMscRateOML\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLGETSYNCVALUESOMLPROC \fB__wglewGetSyncValuesOML\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSWAPBUFFERSMSCOMLPROC \fB__wglewSwapBuffersMscOML\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLSWAPLAYERBUFFERSMSCOMLPROC \fB__wglewSwapLayerBuffersMscOML\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLWAITFORMSCOMLPROC \fB__wglewWaitForMscOML\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_FUN_EXPORT\fP 
+.br
+PFNWGLWAITFORSBCOMLPROC \fB__wglewWaitForSbcOML\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_3DFX_multisample\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_3DL_stereo_control\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_AMD_gpu_association\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_buffer_region\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_create_context\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_create_context_profile\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_create_context_robustness\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_extensions_string\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_framebuffer_sRGB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_make_current_read\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_multisample\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_pbuffer\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_pixel_format\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_pixel_format_float\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_render_texture\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_robustness_application_isolation\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ARB_robustness_share_group_isolation\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ATI_pixel_format_float\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_ATI_render_texture_rectangle\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_create_context_es2_profile\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_create_context_es_profile\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_depth_float\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_display_color_table\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_extensions_string\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_framebuffer_sRGB\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_make_current_read\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_multisample\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_pbuffer\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_pixel_format\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_pixel_format_packed_float\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_swap_control\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_EXT_swap_control_tear\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_I3D_digital_video_control\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_I3D_gamma\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_I3D_genlock\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_I3D_image_buffer\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_I3D_swap_frame_lock\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_I3D_swap_frame_usage\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_DX_interop\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_DX_interop2\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_copy_image\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_float_buffer\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_gpu_affinity\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_multisample_coverage\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_present_video\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_render_depth_texture\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_render_texture_rectangle\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_swap_group\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_vertex_array_range\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_video_capture\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_NV_video_output\fP"
+.br
+.ti -1c
+.RI "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP \fB__WGLEW_OML_sync_control\fP"
+.br
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define __WGLEW_H__"
+
+.PP
+Definition at line 57 of file wglew\&.h\&.
+.SS "#define __wglext_h_"
+
+.PP
+Definition at line 63 of file wglew\&.h\&.
+.SS "#define ERROR_INCOMPATIBLE_DEVICE_CONTEXTS_ARB   0x2054"
+
+.PP
+Definition at line 264 of file wglew\&.h\&.
+.SS "#define ERROR_INVALID_PIXEL_TYPE_ARB   0x2043"
+
+.PP
+Definition at line 263 of file wglew\&.h\&.
+.SS "#define ERROR_INVALID_PIXEL_TYPE_EXT   0x2043"
+
+.PP
+Definition at line 576 of file wglew\&.h\&.
+.SS "#define ERROR_INVALID_PROFILE_ARB   0x2096"
+
+.PP
+Definition at line 197 of file wglew\&.h\&.
+.SS "#define ERROR_INVALID_VERSION_ARB   0x2095"
+
+.PP
+Definition at line 196 of file wglew\&.h\&.
+.SS "#define GL_COLOR_CLEAR_UNCLAMPED_VALUE_ATI   0x8835"
+
+.PP
+Definition at line 478 of file wglew\&.h\&.
+.SS "#define GL_RGBA_FLOAT_MODE_ATI   0x8820"
+
+.PP
+Definition at line 477 of file wglew\&.h\&.
+.SS "#define GLEWAPI   extern __declspec(dllimport)"
+
+.PP
+Definition at line 83 of file wglew\&.h\&.
+.SS "#define WGL_3DFX_multisample   1"
+
+.PP
+Definition at line 94 of file wglew\&.h\&.
+.SS "#define WGL_3DL_stereo_control   1"
+
+.PP
+Definition at line 106 of file wglew\&.h\&.
+.SS "#define WGL_ACCELERATION_ARB   0x2003"
+
+.PP
+Definition at line 328 of file wglew\&.h\&.
+.SS "#define WGL_ACCELERATION_EXT   0x2003"
+
+.PP
+Definition at line 641 of file wglew\&.h\&.
+.SS "#define WGL_ACCESS_READ_ONLY_NV   0x0000"
+
+.PP
+Definition at line 883 of file wglew\&.h\&.
+.SS "#define WGL_ACCESS_READ_WRITE_NV   0x0001"
+
+.PP
+Definition at line 884 of file wglew\&.h\&.
+.SS "#define WGL_ACCESS_WRITE_DISCARD_NV   0x0002"
+
+.PP
+Definition at line 885 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_ALPHA_BITS_ARB   0x2021"
+
+.PP
+Definition at line 357 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_ALPHA_BITS_EXT   0x2021"
+
+.PP
+Definition at line 671 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_BITS_ARB   0x201D"
+
+.PP
+Definition at line 353 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_BITS_EXT   0x201D"
+
+.PP
+Definition at line 667 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_BLUE_BITS_ARB   0x2020"
+
+.PP
+Definition at line 356 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_BLUE_BITS_EXT   0x2020"
+
+.PP
+Definition at line 670 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_GREEN_BITS_ARB   0x201F"
+
+.PP
+Definition at line 355 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_GREEN_BITS_EXT   0x201F"
+
+.PP
+Definition at line 669 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_RED_BITS_ARB   0x201E"
+
+.PP
+Definition at line 354 of file wglew\&.h\&.
+.SS "#define WGL_ACCUM_RED_BITS_EXT   0x201E"
+
+.PP
+Definition at line 668 of file wglew\&.h\&.
+.SS "#define WGL_ALPHA_BITS_ARB   0x201B"
+
+.PP
+Definition at line 351 of file wglew\&.h\&.
+.SS "#define WGL_ALPHA_BITS_EXT   0x201B"
+
+.PP
+Definition at line 665 of file wglew\&.h\&.
+.SS "#define WGL_ALPHA_SHIFT_ARB   0x201C"
+
+.PP
+Definition at line 352 of file wglew\&.h\&.
+.SS "#define WGL_ALPHA_SHIFT_EXT   0x201C"
+
+.PP
+Definition at line 666 of file wglew\&.h\&.
+.SS "#define WGL_AMD_gpu_association   1"
+
+.PP
+Definition at line 124 of file wglew\&.h\&.
+.SS "#define WGL_ARB_buffer_region   1"
+
+.PP
+Definition at line 164 of file wglew\&.h\&.
+.SS "#define WGL_ARB_create_context   1"
+
+.PP
+Definition at line 188 of file wglew\&.h\&.
+.SS "#define WGL_ARB_create_context_profile   1"
+
+.PP
+Definition at line 210 of file wglew\&.h\&.
+.SS "#define WGL_ARB_create_context_robustness   1"
+
+.PP
+Definition at line 223 of file wglew\&.h\&.
+.SS "#define WGL_ARB_extensions_string   1"
+
+.PP
+Definition at line 237 of file wglew\&.h\&.
+.SS "#define WGL_ARB_framebuffer_sRGB   1"
+
+.PP
+Definition at line 250 of file wglew\&.h\&.
+.SS "#define WGL_ARB_make_current_read   1"
+
+.PP
+Definition at line 261 of file wglew\&.h\&.
+.SS "#define WGL_ARB_multisample   1"
+
+.PP
+Definition at line 279 of file wglew\&.h\&.
+.SS "#define WGL_ARB_pbuffer   1"
+
+.PP
+Definition at line 291 of file wglew\&.h\&.
+.SS "#define WGL_ARB_pixel_format   1"
+
+.PP
+Definition at line 323 of file wglew\&.h\&.
+.SS "#define WGL_ARB_pixel_format_float   1"
+
+.PP
+Definition at line 390 of file wglew\&.h\&.
+.SS "#define WGL_ARB_render_texture   1"
+
+.PP
+Definition at line 401 of file wglew\&.h\&.
+.SS "#define WGL_ARB_robustness_application_isolation   1"
+
+.PP
+Definition at line 452 of file wglew\&.h\&.
+.SS "#define WGL_ARB_robustness_share_group_isolation   1"
+
+.PP
+Definition at line 463 of file wglew\&.h\&.
+.SS "#define WGL_ATI_pixel_format_float   1"
+
+.PP
+Definition at line 474 of file wglew\&.h\&.
+.SS "#define WGL_ATI_render_texture_rectangle   1"
+
+.PP
+Definition at line 487 of file wglew\&.h\&.
+.SS "#define WGL_AUX0_ARB   0x2087"
+
+.PP
+Definition at line 426 of file wglew\&.h\&.
+.SS "#define WGL_AUX1_ARB   0x2088"
+
+.PP
+Definition at line 427 of file wglew\&.h\&.
+.SS "#define WGL_AUX2_ARB   0x2089"
+
+.PP
+Definition at line 428 of file wglew\&.h\&.
+.SS "#define WGL_AUX3_ARB   0x208A"
+
+.PP
+Definition at line 429 of file wglew\&.h\&.
+.SS "#define WGL_AUX4_ARB   0x208B"
+
+.PP
+Definition at line 430 of file wglew\&.h\&.
+.SS "#define WGL_AUX5_ARB   0x208C"
+
+.PP
+Definition at line 431 of file wglew\&.h\&.
+.SS "#define WGL_AUX6_ARB   0x208D"
+
+.PP
+Definition at line 432 of file wglew\&.h\&.
+.SS "#define WGL_AUX7_ARB   0x208E"
+
+.PP
+Definition at line 433 of file wglew\&.h\&.
+.SS "#define WGL_AUX8_ARB   0x208F"
+
+.PP
+Definition at line 434 of file wglew\&.h\&.
+.SS "#define WGL_AUX9_ARB   0x2090"
+
+.PP
+Definition at line 435 of file wglew\&.h\&.
+.SS "#define WGL_AUX_BUFFERS_ARB   0x2024"
+
+.PP
+Definition at line 360 of file wglew\&.h\&.
+.SS "#define WGL_AUX_BUFFERS_EXT   0x2024"
+
+.PP
+Definition at line 674 of file wglew\&.h\&.
+.SS "#define WGL_BACK_COLOR_BUFFER_BIT_ARB   0x00000002"
+
+.PP
+Definition at line 167 of file wglew\&.h\&.
+.SS "#define WGL_BACK_LEFT_ARB   0x2085"
+
+.PP
+Definition at line 424 of file wglew\&.h\&.
+.SS "#define WGL_BACK_RIGHT_ARB   0x2086"
+
+.PP
+Definition at line 425 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_DEPTH_NV   0x20A3"
+
+.PP
+Definition at line 1022 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_DEPTH_NV   0x20A4"
+
+.PP
+Definition at line 1023 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_R_NV   0x20B1"
+
+.PP
+Definition at line 937 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RG_NV   0x20B2"
+
+.PP
+Definition at line 938 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGB_NV   0x20B3"
+
+.PP
+Definition at line 939 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_FLOAT_RGBA_NV   0x20B4"
+
+.PP
+Definition at line 940 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_RGB_NV   0x20A0"
+
+.PP
+Definition at line 1037 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RECTANGLE_RGBA_NV   0x20A1"
+
+.PP
+Definition at line 1038 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RGB_ARB   0x2070"
+
+.PP
+Definition at line 403 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_TEXTURE_RGBA_ARB   0x2071"
+
+.PP
+Definition at line 404 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_VIDEO_RGB_AND_DEPTH_NV   0x20C2"
+
+.PP
+Definition at line 1116 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_VIDEO_RGB_NV   0x20C0"
+
+.PP
+Definition at line 1114 of file wglew\&.h\&.
+.SS "#define WGL_BIND_TO_VIDEO_RGBA_NV   0x20C1"
+
+.PP
+Definition at line 1115 of file wglew\&.h\&.
+.SS "#define WGL_BLUE_BITS_ARB   0x2019"
+
+.PP
+Definition at line 349 of file wglew\&.h\&.
+.SS "#define WGL_BLUE_BITS_EXT   0x2019"
+
+.PP
+Definition at line 663 of file wglew\&.h\&.
+.SS "#define WGL_BLUE_SHIFT_ARB   0x201A"
+
+.PP
+Definition at line 350 of file wglew\&.h\&.
+.SS "#define WGL_BLUE_SHIFT_EXT   0x201A"
+
+.PP
+Definition at line 664 of file wglew\&.h\&.
+.SS "#define WGL_COLOR_BITS_ARB   0x2014"
+
+.PP
+Definition at line 344 of file wglew\&.h\&.
+.SS "#define WGL_COLOR_BITS_EXT   0x2014"
+
+.PP
+Definition at line 658 of file wglew\&.h\&.
+.SS "#define WGL_COLOR_SAMPLES_NV   0x20B9"
+
+.PP
+Definition at line 989 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_COMPATIBILITY_PROFILE_BIT_ARB   0x00000002"
+
+.PP
+Definition at line 213 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_CORE_PROFILE_BIT_ARB   0x00000001"
+
+.PP
+Definition at line 212 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_DEBUG_BIT_ARB   0x0001"
+
+.PP
+Definition at line 190 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_ES2_PROFILE_BIT_EXT   0x00000004"
+
+.PP
+Definition at line 500 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_ES_PROFILE_BIT_EXT   0x00000004"
+
+.PP
+Definition at line 511 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_FLAGS_ARB   0x2094"
+
+.PP
+Definition at line 195 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_FORWARD_COMPATIBLE_BIT_ARB   0x0002"
+
+.PP
+Definition at line 191 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_LAYER_PLANE_ARB   0x2093"
+
+.PP
+Definition at line 194 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_MAJOR_VERSION_ARB   0x2091"
+
+.PP
+Definition at line 192 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_MINOR_VERSION_ARB   0x2092"
+
+.PP
+Definition at line 193 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_PROFILE_MASK_ARB   0x9126"
+
+.PP
+Definition at line 214 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_RESET_ISOLATION_BIT_ARB   0x00000008"
+
+.PP
+Definition at line 465 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_RESET_ISOLATION_BIT_ARB   0x00000008"
+
+.PP
+Definition at line 465 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_RESET_NOTIFICATION_STRATEGY_ARB   0x8256"
+
+.PP
+Definition at line 227 of file wglew\&.h\&.
+.SS "#define WGL_CONTEXT_ROBUST_ACCESS_BIT_ARB   0x00000004"
+
+.PP
+Definition at line 225 of file wglew\&.h\&.
+.SS "#define WGL_COVERAGE_SAMPLES_NV   0x2042"
+
+.PP
+Definition at line 988 of file wglew\&.h\&.
+.SS "#define WGL_CUBE_MAP_FACE_ARB   0x207C"
+
+.PP
+Definition at line 415 of file wglew\&.h\&.
+.SS "#define WGL_DEPTH_BITS_ARB   0x2022"
+
+.PP
+Definition at line 358 of file wglew\&.h\&.
+.SS "#define WGL_DEPTH_BITS_EXT   0x2022"
+
+.PP
+Definition at line 672 of file wglew\&.h\&.
+.SS "#define WGL_DEPTH_BUFFER_BIT_ARB   0x00000004"
+
+.PP
+Definition at line 168 of file wglew\&.h\&.
+.SS "#define WGL_DEPTH_COMPONENT_NV   0x20A7"
+
+.PP
+Definition at line 1026 of file wglew\&.h\&.
+.SS "#define WGL_DEPTH_FLOAT_EXT   0x2040"
+
+.PP
+Definition at line 522 of file wglew\&.h\&.
+.SS "#define WGL_DEPTH_TEXTURE_FORMAT_NV   0x20A5"
+
+.PP
+Definition at line 1024 of file wglew\&.h\&.
+.SS "#define WGL_DIGITAL_VIDEO_CURSOR_ALPHA_FRAMEBUFFER_I3D   0x2050"
+
+.PP
+Definition at line 736 of file wglew\&.h\&.
+.SS "#define WGL_DIGITAL_VIDEO_CURSOR_ALPHA_VALUE_I3D   0x2051"
+
+.PP
+Definition at line 737 of file wglew\&.h\&.
+.SS "#define WGL_DIGITAL_VIDEO_CURSOR_INCLUDED_I3D   0x2052"
+
+.PP
+Definition at line 738 of file wglew\&.h\&.
+.SS "#define WGL_DIGITAL_VIDEO_GAMMA_CORRECTED_I3D   0x2053"
+
+.PP
+Definition at line 739 of file wglew\&.h\&.
+.SS "#define WGL_DOUBLE_BUFFER_ARB   0x2011"
+
+.PP
+Definition at line 341 of file wglew\&.h\&.
+.SS "#define WGL_DOUBLE_BUFFER_EXT   0x2011"
+
+.PP
+Definition at line 655 of file wglew\&.h\&.
+.SS "#define WGL_DRAW_TO_BITMAP_ARB   0x2002"
+
+.PP
+Definition at line 327 of file wglew\&.h\&.
+.SS "#define WGL_DRAW_TO_BITMAP_EXT   0x2002"
+
+.PP
+Definition at line 640 of file wglew\&.h\&.
+.SS "#define WGL_DRAW_TO_PBUFFER_ARB   0x202D"
+
+.PP
+Definition at line 293 of file wglew\&.h\&.
+.SS "#define WGL_DRAW_TO_PBUFFER_EXT   0x202D"
+
+.PP
+Definition at line 605 of file wglew\&.h\&.
+.SS "#define WGL_DRAW_TO_WINDOW_ARB   0x2001"
+
+.PP
+Definition at line 326 of file wglew\&.h\&.
+.SS "#define WGL_DRAW_TO_WINDOW_EXT   0x2001"
+
+.PP
+Definition at line 639 of file wglew\&.h\&.
+.SS "#define WGL_ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV   0x20D0"
+
+.PP
+Definition at line 955 of file wglew\&.h\&.
+.SS "#define WGL_ERROR_MISSING_AFFINITY_MASK_NV   0x20D1"
+
+.PP
+Definition at line 956 of file wglew\&.h\&.
+.SS "#define WGL_EXT_create_context_es2_profile   1"
+
+.PP
+Definition at line 498 of file wglew\&.h\&.
+.SS "#define WGL_EXT_create_context_es_profile   1"
+
+.PP
+Definition at line 509 of file wglew\&.h\&.
+.SS "#define WGL_EXT_depth_float   1"
+
+.PP
+Definition at line 520 of file wglew\&.h\&.
+.SS "#define WGL_EXT_display_color_table   1"
+
+.PP
+Definition at line 531 of file wglew\&.h\&.
+.SS "#define WGL_EXT_extensions_string   1"
+
+.PP
+Definition at line 550 of file wglew\&.h\&.
+.SS "#define WGL_EXT_framebuffer_sRGB   1"
+
+.PP
+Definition at line 563 of file wglew\&.h\&.
+.SS "#define WGL_EXT_make_current_read   1"
+
+.PP
+Definition at line 574 of file wglew\&.h\&.
+.SS "#define WGL_EXT_multisample   1"
+
+.PP
+Definition at line 591 of file wglew\&.h\&.
+.SS "#define WGL_EXT_pbuffer   1"
+
+.PP
+Definition at line 603 of file wglew\&.h\&.
+.SS "#define WGL_EXT_pixel_format   1"
+
+.PP
+Definition at line 636 of file wglew\&.h\&.
+.SS "#define WGL_EXT_pixel_format_packed_float   1"
+
+.PP
+Definition at line 699 of file wglew\&.h\&.
+.SS "#define WGL_EXT_swap_control   1"
+
+.PP
+Definition at line 710 of file wglew\&.h\&.
+.SS "#define WGL_EXT_swap_control_tear   1"
+
+.PP
+Definition at line 725 of file wglew\&.h\&.
+.SS "#define WGL_FLOAT_COMPONENTS_NV   0x20B0"
+
+.PP
+Definition at line 936 of file wglew\&.h\&.
+.SS "#define WGL_FRAMEBUFFER_SRGB_CAPABLE_ARB   0x20A9"
+
+.PP
+Definition at line 252 of file wglew\&.h\&.
+.SS "#define WGL_FRAMEBUFFER_SRGB_CAPABLE_EXT   0x20A9"
+
+.PP
+Definition at line 565 of file wglew\&.h\&.
+.SS "#define WGL_FRONT_COLOR_BUFFER_BIT_ARB   0x00000001"
+
+.PP
+Definition at line 166 of file wglew\&.h\&.
+.SS "#define WGL_FRONT_LEFT_ARB   0x2083"
+
+.PP
+Definition at line 422 of file wglew\&.h\&.
+.SS "#define WGL_FRONT_RIGHT_ARB   0x2084"
+
+.PP
+Definition at line 423 of file wglew\&.h\&.
+.SS "#define WGL_FULL_ACCELERATION_ARB   0x2027"
+
+.PP
+Definition at line 363 of file wglew\&.h\&.
+.SS "#define WGL_FULL_ACCELERATION_EXT   0x2027"
+
+.PP
+Definition at line 677 of file wglew\&.h\&.
+.SS "#define WGL_GAMMA_EXCLUDE_DESKTOP_I3D   0x204F"
+
+.PP
+Definition at line 757 of file wglew\&.h\&.
+.SS "#define WGL_GAMMA_TABLE_SIZE_I3D   0x204E"
+
+.PP
+Definition at line 756 of file wglew\&.h\&.
+.SS "#define WGL_GENERIC_ACCELERATION_ARB   0x2026"
+
+.PP
+Definition at line 362 of file wglew\&.h\&.
+.SS "#define WGL_GENERIC_ACCELERATION_EXT   0x2026"
+
+.PP
+Definition at line 676 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_DIGITAL_FIELD_I3D   0x2049"
+
+.PP
+Definition at line 783 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_DIGITAL_SYNC_I3D   0x2048"
+
+.PP
+Definition at line 782 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EDGE_BOTH_I3D   0x204C"
+
+.PP
+Definition at line 786 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EDGE_FALLING_I3D   0x204A"
+
+.PP
+Definition at line 784 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EDGE_RISING_I3D   0x204B"
+
+.PP
+Definition at line 785 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EXTERNAL_FIELD_I3D   0x2046"
+
+.PP
+Definition at line 780 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EXTERNAL_SYNC_I3D   0x2045"
+
+.PP
+Definition at line 779 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_EXTERNAL_TTL_I3D   0x2047"
+
+.PP
+Definition at line 781 of file wglew\&.h\&.
+.SS "#define WGL_GENLOCK_SOURCE_MULTIVIEW_I3D   0x2044"
+
+.PP
+Definition at line 778 of file wglew\&.h\&.
+.SS "#define WGL_GPU_CLOCK_AMD   0x21A4"
+
+.PP
+Definition at line 131 of file wglew\&.h\&.
+.SS "#define WGL_GPU_FASTEST_TARGET_GPUS_AMD   0x21A2"
+
+.PP
+Definition at line 129 of file wglew\&.h\&.
+.SS "#define WGL_GPU_NUM_PIPES_AMD   0x21A5"
+
+.PP
+Definition at line 132 of file wglew\&.h\&.
+.SS "#define WGL_GPU_NUM_RB_AMD   0x21A7"
+
+.PP
+Definition at line 134 of file wglew\&.h\&.
+.SS "#define WGL_GPU_NUM_SIMD_AMD   0x21A6"
+
+.PP
+Definition at line 133 of file wglew\&.h\&.
+.SS "#define WGL_GPU_NUM_SPI_AMD   0x21A8"
+
+.PP
+Definition at line 135 of file wglew\&.h\&.
+.SS "#define WGL_GPU_OPENGL_VERSION_STRING_AMD   0x1F02"
+
+.PP
+Definition at line 128 of file wglew\&.h\&.
+.SS "#define WGL_GPU_RAM_AMD   0x21A3"
+
+.PP
+Definition at line 130 of file wglew\&.h\&.
+.SS "#define WGL_GPU_RENDERER_STRING_AMD   0x1F01"
+
+.PP
+Definition at line 127 of file wglew\&.h\&.
+.SS "#define WGL_GPU_VENDOR_AMD   0x1F00"
+
+.PP
+Definition at line 126 of file wglew\&.h\&.
+.SS "#define WGL_GREEN_BITS_ARB   0x2017"
+
+.PP
+Definition at line 347 of file wglew\&.h\&.
+.SS "#define WGL_GREEN_BITS_EXT   0x2017"
+
+.PP
+Definition at line 661 of file wglew\&.h\&.
+.SS "#define WGL_GREEN_SHIFT_ARB   0x2018"
+
+.PP
+Definition at line 348 of file wglew\&.h\&.
+.SS "#define WGL_GREEN_SHIFT_EXT   0x2018"
+
+.PP
+Definition at line 662 of file wglew\&.h\&.
+.SS "#define WGL_I3D_digital_video_control   1"
+
+.PP
+Definition at line 734 of file wglew\&.h\&.
+.SS "#define WGL_I3D_gamma   1"
+
+.PP
+Definition at line 754 of file wglew\&.h\&.
+.SS "#define WGL_I3D_genlock   1"
+
+.PP
+Definition at line 776 of file wglew\&.h\&.
+.SS "#define WGL_I3D_image_buffer   1"
+
+.PP
+Definition at line 821 of file wglew\&.h\&.
+.SS "#define WGL_I3D_swap_frame_lock   1"
+
+.PP
+Definition at line 843 of file wglew\&.h\&.
+.SS "#define WGL_I3D_swap_frame_usage   1"
+
+.PP
+Definition at line 862 of file wglew\&.h\&.
+.SS "#define WGL_IMAGE_BUFFER_LOCK_I3D   0x00000002"
+
+.PP
+Definition at line 824 of file wglew\&.h\&.
+.SS "#define WGL_IMAGE_BUFFER_MIN_ACCESS_I3D   0x00000001"
+
+.PP
+Definition at line 823 of file wglew\&.h\&.
+.SS "#define WGL_LOSE_CONTEXT_ON_RESET_ARB   0x8252"
+
+.PP
+Definition at line 226 of file wglew\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_HEIGHT_ARB   0x2030"
+
+.PP
+Definition at line 296 of file wglew\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_HEIGHT_EXT   0x2030"
+
+.PP
+Definition at line 608 of file wglew\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_PIXELS_ARB   0x202E"
+
+.PP
+Definition at line 294 of file wglew\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_PIXELS_EXT   0x202E"
+
+.PP
+Definition at line 606 of file wglew\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_WIDTH_ARB   0x202F"
+
+.PP
+Definition at line 295 of file wglew\&.h\&.
+.SS "#define WGL_MAX_PBUFFER_WIDTH_EXT   0x202F"
+
+.PP
+Definition at line 607 of file wglew\&.h\&.
+.SS "#define WGL_MIPMAP_LEVEL_ARB   0x207B"
+
+.PP
+Definition at line 414 of file wglew\&.h\&.
+.SS "#define WGL_MIPMAP_TEXTURE_ARB   0x2074"
+
+.PP
+Definition at line 407 of file wglew\&.h\&.
+.SS "#define WGL_NEED_PALETTE_ARB   0x2004"
+
+.PP
+Definition at line 329 of file wglew\&.h\&.
+.SS "#define WGL_NEED_PALETTE_EXT   0x2004"
+
+.PP
+Definition at line 642 of file wglew\&.h\&.
+.SS "#define WGL_NEED_SYSTEM_PALETTE_ARB   0x2005"
+
+.PP
+Definition at line 330 of file wglew\&.h\&.
+.SS "#define WGL_NEED_SYSTEM_PALETTE_EXT   0x2005"
+
+.PP
+Definition at line 643 of file wglew\&.h\&.
+.SS "#define WGL_NO_ACCELERATION_ARB   0x2025"
+
+.PP
+Definition at line 361 of file wglew\&.h\&.
+.SS "#define WGL_NO_ACCELERATION_EXT   0x2025"
+
+.PP
+Definition at line 675 of file wglew\&.h\&.
+.SS "#define WGL_NO_RESET_NOTIFICATION_ARB   0x8261"
+
+.PP
+Definition at line 228 of file wglew\&.h\&.
+.SS "#define WGL_NO_TEXTURE_ARB   0x2077"
+
+.PP
+Definition at line 1021 of file wglew\&.h\&.
+.SS "#define WGL_NO_TEXTURE_ARB   0x2077"
+
+.PP
+Definition at line 1021 of file wglew\&.h\&.
+.SS "#define WGL_NUM_VIDEO_CAPTURE_SLOTS_NV   0x20CF"
+
+.PP
+Definition at line 1089 of file wglew\&.h\&.
+.SS "#define WGL_NUM_VIDEO_SLOTS_NV   0x20F0"
+
+.PP
+Definition at line 1000 of file wglew\&.h\&.
+.SS "#define WGL_NUMBER_OVERLAYS_ARB   0x2008"
+
+.PP
+Definition at line 333 of file wglew\&.h\&.
+.SS "#define WGL_NUMBER_OVERLAYS_EXT   0x2008"
+
+.PP
+Definition at line 646 of file wglew\&.h\&.
+.SS "#define WGL_NUMBER_PIXEL_FORMATS_ARB   0x2000"
+
+.PP
+Definition at line 325 of file wglew\&.h\&.
+.SS "#define WGL_NUMBER_PIXEL_FORMATS_EXT   0x2000"
+
+.PP
+Definition at line 638 of file wglew\&.h\&.
+.SS "#define WGL_NUMBER_UNDERLAYS_ARB   0x2009"
+
+.PP
+Definition at line 334 of file wglew\&.h\&.
+.SS "#define WGL_NUMBER_UNDERLAYS_EXT   0x2009"
+
+.PP
+Definition at line 647 of file wglew\&.h\&.
+.SS "#define WGL_NV_copy_image   1"
+
+.PP
+Definition at line 921 of file wglew\&.h\&.
+.SS "#define WGL_NV_DX_interop   1"
+
+.PP
+Definition at line 881 of file wglew\&.h\&.
+.SS "#define WGL_NV_DX_interop2   1"
+
+.PP
+Definition at line 912 of file wglew\&.h\&.
+.SS "#define WGL_NV_float_buffer   1"
+
+.PP
+Definition at line 934 of file wglew\&.h\&.
+.SS "#define WGL_NV_gpu_affinity   1"
+
+.PP
+Definition at line 953 of file wglew\&.h\&.
+.SS "#define WGL_NV_multisample_coverage   1"
+
+.PP
+Definition at line 986 of file wglew\&.h\&.
+.SS "#define WGL_NV_present_video   1"
+
+.PP
+Definition at line 998 of file wglew\&.h\&.
+.SS "#define WGL_NV_render_depth_texture   1"
+
+.PP
+Definition at line 1019 of file wglew\&.h\&.
+.SS "#define WGL_NV_render_texture_rectangle   1"
+
+.PP
+Definition at line 1035 of file wglew\&.h\&.
+.SS "#define WGL_NV_swap_group   1"
+
+.PP
+Definition at line 1048 of file wglew\&.h\&.
+.SS "#define WGL_NV_vertex_array_range   1"
+
+.PP
+Definition at line 1071 of file wglew\&.h\&.
+.SS "#define WGL_NV_video_capture   1"
+
+.PP
+Definition at line 1086 of file wglew\&.h\&.
+.SS "#define WGL_NV_video_output   1"
+
+.PP
+Definition at line 1112 of file wglew\&.h\&.
+.SS "#define WGL_OML_sync_control   1"
+
+.PP
+Definition at line 1151 of file wglew\&.h\&.
+.SS "#define WGL_OPTIMAL_PBUFFER_HEIGHT_EXT   0x2032"
+
+.PP
+Definition at line 610 of file wglew\&.h\&.
+.SS "#define WGL_OPTIMAL_PBUFFER_WIDTH_EXT   0x2031"
+
+.PP
+Definition at line 609 of file wglew\&.h\&.
+.SS "#define WGL_PBUFFER_HEIGHT_ARB   0x2035"
+
+.PP
+Definition at line 299 of file wglew\&.h\&.
+.SS "#define WGL_PBUFFER_HEIGHT_EXT   0x2035"
+
+.PP
+Definition at line 613 of file wglew\&.h\&.
+.SS "#define WGL_PBUFFER_LARGEST_ARB   0x2033"
+
+.PP
+Definition at line 297 of file wglew\&.h\&.
+.SS "#define WGL_PBUFFER_LARGEST_EXT   0x2033"
+
+.PP
+Definition at line 611 of file wglew\&.h\&.
+.SS "#define WGL_PBUFFER_LOST_ARB   0x2036"
+
+.PP
+Definition at line 300 of file wglew\&.h\&.
+.SS "#define WGL_PBUFFER_WIDTH_ARB   0x2034"
+
+.PP
+Definition at line 298 of file wglew\&.h\&.
+.SS "#define WGL_PBUFFER_WIDTH_EXT   0x2034"
+
+.PP
+Definition at line 612 of file wglew\&.h\&.
+.SS "#define WGL_PIXEL_TYPE_ARB   0x2013"
+
+.PP
+Definition at line 343 of file wglew\&.h\&.
+.SS "#define WGL_PIXEL_TYPE_EXT   0x2013"
+
+.PP
+Definition at line 657 of file wglew\&.h\&.
+.SS "#define WGL_RED_BITS_ARB   0x2015"
+
+.PP
+Definition at line 345 of file wglew\&.h\&.
+.SS "#define WGL_RED_BITS_EXT   0x2015"
+
+.PP
+Definition at line 659 of file wglew\&.h\&.
+.SS "#define WGL_RED_SHIFT_ARB   0x2016"
+
+.PP
+Definition at line 346 of file wglew\&.h\&.
+.SS "#define WGL_RED_SHIFT_EXT   0x2016"
+
+.PP
+Definition at line 660 of file wglew\&.h\&.
+.SS "#define WGL_SAMPLE_BUFFERS_3DFX   0x2060"
+
+.PP
+Definition at line 96 of file wglew\&.h\&.
+.SS "#define WGL_SAMPLE_BUFFERS_ARB   0x2041"
+
+.PP
+Definition at line 281 of file wglew\&.h\&.
+.SS "#define WGL_SAMPLE_BUFFERS_EXT   0x2041"
+
+.PP
+Definition at line 593 of file wglew\&.h\&.
+.SS "#define WGL_SAMPLES_3DFX   0x2061"
+
+.PP
+Definition at line 97 of file wglew\&.h\&.
+.SS "#define WGL_SAMPLES_ARB   0x2042"
+
+.PP
+Definition at line 282 of file wglew\&.h\&.
+.SS "#define WGL_SAMPLES_EXT   0x2042"
+
+.PP
+Definition at line 594 of file wglew\&.h\&.
+.SS "#define WGL_SHARE_ACCUM_ARB   0x200E"
+
+.PP
+Definition at line 338 of file wglew\&.h\&.
+.SS "#define WGL_SHARE_ACCUM_EXT   0x200E"
+
+.PP
+Definition at line 652 of file wglew\&.h\&.
+.SS "#define WGL_SHARE_DEPTH_ARB   0x200C"
+
+.PP
+Definition at line 336 of file wglew\&.h\&.
+.SS "#define WGL_SHARE_DEPTH_EXT   0x200C"
+
+.PP
+Definition at line 650 of file wglew\&.h\&.
+.SS "#define WGL_SHARE_STENCIL_ARB   0x200D"
+
+.PP
+Definition at line 337 of file wglew\&.h\&.
+.SS "#define WGL_SHARE_STENCIL_EXT   0x200D"
+
+.PP
+Definition at line 651 of file wglew\&.h\&.
+.SS "#define WGL_STENCIL_BITS_ARB   0x2023"
+
+.PP
+Definition at line 359 of file wglew\&.h\&.
+.SS "#define WGL_STENCIL_BITS_EXT   0x2023"
+
+.PP
+Definition at line 673 of file wglew\&.h\&.
+.SS "#define WGL_STENCIL_BUFFER_BIT_ARB   0x00000008"
+
+.PP
+Definition at line 169 of file wglew\&.h\&.
+.SS "#define WGL_STEREO_ARB   0x2012"
+
+.PP
+Definition at line 342 of file wglew\&.h\&.
+.SS "#define WGL_STEREO_EMITTER_DISABLE_3DL   0x2056"
+
+.PP
+Definition at line 109 of file wglew\&.h\&.
+.SS "#define WGL_STEREO_EMITTER_ENABLE_3DL   0x2055"
+
+.PP
+Definition at line 108 of file wglew\&.h\&.
+.SS "#define WGL_STEREO_EXT   0x2012"
+
+.PP
+Definition at line 656 of file wglew\&.h\&.
+.SS "#define WGL_STEREO_POLARITY_INVERT_3DL   0x2058"
+
+.PP
+Definition at line 111 of file wglew\&.h\&.
+.SS "#define WGL_STEREO_POLARITY_NORMAL_3DL   0x2057"
+
+.PP
+Definition at line 110 of file wglew\&.h\&.
+.SS "#define WGL_SUPPORT_GDI_ARB   0x200F"
+
+.PP
+Definition at line 339 of file wglew\&.h\&.
+.SS "#define WGL_SUPPORT_GDI_EXT   0x200F"
+
+.PP
+Definition at line 653 of file wglew\&.h\&.
+.SS "#define WGL_SUPPORT_OPENGL_ARB   0x2010"
+
+.PP
+Definition at line 340 of file wglew\&.h\&.
+.SS "#define WGL_SUPPORT_OPENGL_EXT   0x2010"
+
+.PP
+Definition at line 654 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_COPY_ARB   0x2029"
+
+.PP
+Definition at line 365 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_COPY_EXT   0x2029"
+
+.PP
+Definition at line 679 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_EXCHANGE_ARB   0x2028"
+
+.PP
+Definition at line 364 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_EXCHANGE_EXT   0x2028"
+
+.PP
+Definition at line 678 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_LAYER_BUFFERS_ARB   0x2006"
+
+.PP
+Definition at line 331 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_LAYER_BUFFERS_EXT   0x2006"
+
+.PP
+Definition at line 644 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_METHOD_ARB   0x2007"
+
+.PP
+Definition at line 332 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_METHOD_EXT   0x2007"
+
+.PP
+Definition at line 645 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_UNDEFINED_ARB   0x202A"
+
+.PP
+Definition at line 366 of file wglew\&.h\&.
+.SS "#define WGL_SWAP_UNDEFINED_EXT   0x202A"
+
+.PP
+Definition at line 680 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_1D_ARB   0x2079"
+
+.PP
+Definition at line 412 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_2D_ARB   0x207A"
+
+.PP
+Definition at line 413 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_ARB   0x2078"
+
+.PP
+Definition at line 411 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB   0x207E"
+
+.PP
+Definition at line 417 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB   0x2080"
+
+.PP
+Definition at line 419 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB   0x2082"
+
+.PP
+Definition at line 421 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB   0x207D"
+
+.PP
+Definition at line 416 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB   0x207F"
+
+.PP
+Definition at line 418 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB   0x2081"
+
+.PP
+Definition at line 420 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_DEPTH_COMPONENT_NV   0x20A6"
+
+.PP
+Definition at line 1025 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_FLOAT_R_NV   0x20B5"
+
+.PP
+Definition at line 941 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_FLOAT_RG_NV   0x20B6"
+
+.PP
+Definition at line 942 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_FLOAT_RGB_NV   0x20B7"
+
+.PP
+Definition at line 943 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_FLOAT_RGBA_NV   0x20B8"
+
+.PP
+Definition at line 944 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_FORMAT_ARB   0x2072"
+
+.PP
+Definition at line 405 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_RECTANGLE_ATI   0x21A5"
+
+.PP
+Definition at line 489 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_RECTANGLE_NV   0x20A2"
+
+.PP
+Definition at line 1039 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_RGB_ARB   0x2075"
+
+.PP
+Definition at line 408 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_RGBA_ARB   0x2076"
+
+.PP
+Definition at line 409 of file wglew\&.h\&.
+.SS "#define WGL_TEXTURE_TARGET_ARB   0x2073"
+
+.PP
+Definition at line 406 of file wglew\&.h\&.
+.SS "#define WGL_TRANSPARENT_ALPHA_VALUE_ARB   0x203A"
+
+.PP
+Definition at line 372 of file wglew\&.h\&.
+.SS "#define WGL_TRANSPARENT_ARB   0x200A"
+
+.PP
+Definition at line 335 of file wglew\&.h\&.
+.SS "#define WGL_TRANSPARENT_BLUE_VALUE_ARB   0x2039"
+
+.PP
+Definition at line 371 of file wglew\&.h\&.
+.SS "#define WGL_TRANSPARENT_EXT   0x200A"
+
+.PP
+Definition at line 648 of file wglew\&.h\&.
+.SS "#define WGL_TRANSPARENT_GREEN_VALUE_ARB   0x2038"
+
+.PP
+Definition at line 370 of file wglew\&.h\&.
+.SS "#define WGL_TRANSPARENT_INDEX_VALUE_ARB   0x203B"
+
+.PP
+Definition at line 373 of file wglew\&.h\&.
+.SS "#define WGL_TRANSPARENT_RED_VALUE_ARB   0x2037"
+
+.PP
+Definition at line 369 of file wglew\&.h\&.
+.SS "#define WGL_TRANSPARENT_VALUE_EXT   0x200B"
+
+.PP
+Definition at line 649 of file wglew\&.h\&.
+.SS "#define WGL_TYPE_COLORINDEX_ARB   0x202C"
+
+.PP
+Definition at line 368 of file wglew\&.h\&.
+.SS "#define WGL_TYPE_COLORINDEX_EXT   0x202C"
+
+.PP
+Definition at line 682 of file wglew\&.h\&.
+.SS "#define WGL_TYPE_RGBA_ARB   0x202B"
+
+.PP
+Definition at line 367 of file wglew\&.h\&.
+.SS "#define WGL_TYPE_RGBA_EXT   0x202B"
+
+.PP
+Definition at line 681 of file wglew\&.h\&.
+.SS "#define WGL_TYPE_RGBA_FLOAT_ARB   0x21A0"
+
+.PP
+Definition at line 392 of file wglew\&.h\&.
+.SS "#define WGL_TYPE_RGBA_FLOAT_ATI   0x21A0"
+
+.PP
+Definition at line 476 of file wglew\&.h\&.
+.SS "#define WGL_TYPE_RGBA_UNSIGNED_FLOAT_EXT   0x20A8"
+
+.PP
+Definition at line 701 of file wglew\&.h\&.
+.SS "#define WGL_UNIQUE_ID_NV   0x20CE"
+
+.PP
+Definition at line 1088 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_ALPHA_NV   0x20C4"
+
+.PP
+Definition at line 1118 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_COLOR_AND_ALPHA_NV   0x20C6"
+
+.PP
+Definition at line 1120 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_COLOR_AND_DEPTH_NV   0x20C7"
+
+.PP
+Definition at line 1121 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_COLOR_NV   0x20C3"
+
+.PP
+Definition at line 1117 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_DEPTH_NV   0x20C5"
+
+.PP
+Definition at line 1119 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_FIELD_1   0x20C9"
+
+.PP
+Definition at line 1123 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_FIELD_2   0x20CA"
+
+.PP
+Definition at line 1124 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_FRAME   0x20C8"
+
+.PP
+Definition at line 1122 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_STACKED_FIELDS_1_2   0x20CB"
+
+.PP
+Definition at line 1125 of file wglew\&.h\&.
+.SS "#define WGL_VIDEO_OUT_STACKED_FIELDS_2_1   0x20CC"
+
+.PP
+Definition at line 1126 of file wglew\&.h\&.
+.SS "#define wglAllocateMemoryNV   \fBWGLEW_GET_FUN\fP(\fB__wglewAllocateMemoryNV\fP)"
+
+.PP
+Definition at line 1076 of file wglew\&.h\&.
+.SS "#define wglAssociateImageBufferEventsI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewAssociateImageBufferEventsI3D\fP)"
+
+.PP
+Definition at line 831 of file wglew\&.h\&.
+.SS "#define wglBeginFrameTrackingI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewBeginFrameTrackingI3D\fP)"
+
+.PP
+Definition at line 869 of file wglew\&.h\&.
+.SS "#define wglBindDisplayColorTableEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewBindDisplayColorTableEXT\fP)"
+
+.PP
+Definition at line 538 of file wglew\&.h\&.
+.SS "#define wglBindSwapBarrierNV   \fBWGLEW_GET_FUN\fP(\fB__wglewBindSwapBarrierNV\fP)"
+
+.PP
+Definition at line 1057 of file wglew\&.h\&.
+.SS "#define wglBindTexImageARB   \fBWGLEW_GET_FUN\fP(\fB__wglewBindTexImageARB\fP)"
+
+.PP
+Definition at line 441 of file wglew\&.h\&.
+.SS "#define wglBindVideoCaptureDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewBindVideoCaptureDeviceNV\fP)"
+
+.PP
+Definition at line 1099 of file wglew\&.h\&.
+.SS "#define wglBindVideoDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewBindVideoDeviceNV\fP)"
+
+.PP
+Definition at line 1008 of file wglew\&.h\&.
+.SS "#define wglBindVideoImageNV   \fBWGLEW_GET_FUN\fP(\fB__wglewBindVideoImageNV\fP)"
+
+.PP
+Definition at line 1137 of file wglew\&.h\&.
+.SS "#define wglBlitContextFramebufferAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewBlitContextFramebufferAMD\fP)"
+
+.PP
+Definition at line 147 of file wglew\&.h\&.
+.SS "#define wglChoosePixelFormatARB   \fBWGLEW_GET_FUN\fP(\fB__wglewChoosePixelFormatARB\fP)"
+
+.PP
+Definition at line 379 of file wglew\&.h\&.
+.SS "#define wglChoosePixelFormatEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewChoosePixelFormatEXT\fP)"
+
+.PP
+Definition at line 688 of file wglew\&.h\&.
+.SS "#define wglCopyImageSubDataNV   \fBWGLEW_GET_FUN\fP(\fB__wglewCopyImageSubDataNV\fP)"
+
+.PP
+Definition at line 925 of file wglew\&.h\&.
+.SS "#define wglCreateAffinityDCNV   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateAffinityDCNV\fP)"
+
+.PP
+Definition at line 973 of file wglew\&.h\&.
+.SS "#define wglCreateAssociatedContextAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateAssociatedContextAMD\fP)"
+
+.PP
+Definition at line 148 of file wglew\&.h\&.
+.SS "#define wglCreateAssociatedContextAttribsAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateAssociatedContextAttribsAMD\fP)"
+
+.PP
+Definition at line 149 of file wglew\&.h\&.
+.SS "#define wglCreateBufferRegionARB   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateBufferRegionARB\fP)"
+
+.PP
+Definition at line 176 of file wglew\&.h\&.
+.SS "#define wglCreateContextAttribsARB   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateContextAttribsARB\fP)"
+
+.PP
+Definition at line 201 of file wglew\&.h\&.
+.SS "#define wglCreateDisplayColorTableEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateDisplayColorTableEXT\fP)"
+
+.PP
+Definition at line 539 of file wglew\&.h\&.
+.SS "#define wglCreateImageBufferI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewCreateImageBufferI3D\fP)"
+
+.PP
+Definition at line 832 of file wglew\&.h\&.
+.SS "#define wglCreatePbufferARB   \fBWGLEW_GET_FUN\fP(\fB__wglewCreatePbufferARB\fP)"
+
+.PP
+Definition at line 310 of file wglew\&.h\&.
+.SS "#define wglCreatePbufferEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewCreatePbufferEXT\fP)"
+
+.PP
+Definition at line 623 of file wglew\&.h\&.
+.SS "#define wglDeleteAssociatedContextAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewDeleteAssociatedContextAMD\fP)"
+
+.PP
+Definition at line 150 of file wglew\&.h\&.
+.SS "#define wglDeleteBufferRegionARB   \fBWGLEW_GET_FUN\fP(\fB__wglewDeleteBufferRegionARB\fP)"
+
+.PP
+Definition at line 177 of file wglew\&.h\&.
+.SS "#define wglDeleteDCNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDeleteDCNV\fP)"
+
+.PP
+Definition at line 974 of file wglew\&.h\&.
+.SS "#define wglDestroyDisplayColorTableEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewDestroyDisplayColorTableEXT\fP)"
+
+.PP
+Definition at line 540 of file wglew\&.h\&.
+.SS "#define wglDestroyImageBufferI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewDestroyImageBufferI3D\fP)"
+
+.PP
+Definition at line 833 of file wglew\&.h\&.
+.SS "#define wglDestroyPbufferARB   \fBWGLEW_GET_FUN\fP(\fB__wglewDestroyPbufferARB\fP)"
+
+.PP
+Definition at line 311 of file wglew\&.h\&.
+.SS "#define wglDestroyPbufferEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewDestroyPbufferEXT\fP)"
+
+.PP
+Definition at line 624 of file wglew\&.h\&.
+.SS "#define wglDisableFrameLockI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewDisableFrameLockI3D\fP)"
+
+.PP
+Definition at line 850 of file wglew\&.h\&.
+.SS "#define wglDisableGenlockI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewDisableGenlockI3D\fP)"
+
+.PP
+Definition at line 801 of file wglew\&.h\&.
+.SS "#define wglDXCloseDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDXCloseDeviceNV\fP)"
+
+.PP
+Definition at line 896 of file wglew\&.h\&.
+.SS "#define wglDXLockObjectsNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDXLockObjectsNV\fP)"
+
+.PP
+Definition at line 897 of file wglew\&.h\&.
+.SS "#define wglDXObjectAccessNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDXObjectAccessNV\fP)"
+
+.PP
+Definition at line 898 of file wglew\&.h\&.
+.SS "#define wglDXOpenDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDXOpenDeviceNV\fP)"
+
+.PP
+Definition at line 899 of file wglew\&.h\&.
+.SS "#define wglDXRegisterObjectNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDXRegisterObjectNV\fP)"
+
+.PP
+Definition at line 900 of file wglew\&.h\&.
+.SS "#define wglDXSetResourceShareHandleNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDXSetResourceShareHandleNV\fP)"
+
+.PP
+Definition at line 901 of file wglew\&.h\&.
+.SS "#define wglDXUnlockObjectsNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDXUnlockObjectsNV\fP)"
+
+.PP
+Definition at line 902 of file wglew\&.h\&.
+.SS "#define wglDXUnregisterObjectNV   \fBWGLEW_GET_FUN\fP(\fB__wglewDXUnregisterObjectNV\fP)"
+
+.PP
+Definition at line 903 of file wglew\&.h\&.
+.SS "#define wglEnableFrameLockI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewEnableFrameLockI3D\fP)"
+
+.PP
+Definition at line 851 of file wglew\&.h\&.
+.SS "#define wglEnableGenlockI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewEnableGenlockI3D\fP)"
+
+.PP
+Definition at line 802 of file wglew\&.h\&.
+.SS "#define wglEndFrameTrackingI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewEndFrameTrackingI3D\fP)"
+
+.PP
+Definition at line 870 of file wglew\&.h\&.
+.SS "#define wglEnumerateVideoCaptureDevicesNV   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumerateVideoCaptureDevicesNV\fP)"
+
+.PP
+Definition at line 1100 of file wglew\&.h\&.
+.SS "#define wglEnumerateVideoDevicesNV   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumerateVideoDevicesNV\fP)"
+
+.PP
+Definition at line 1009 of file wglew\&.h\&.
+.SS "#define wglEnumGpuDevicesNV   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumGpuDevicesNV\fP)"
+
+.PP
+Definition at line 975 of file wglew\&.h\&.
+.SS "#define wglEnumGpusFromAffinityDCNV   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumGpusFromAffinityDCNV\fP)"
+
+.PP
+Definition at line 976 of file wglew\&.h\&.
+.SS "#define wglEnumGpusNV   \fBWGLEW_GET_FUN\fP(\fB__wglewEnumGpusNV\fP)"
+
+.PP
+Definition at line 977 of file wglew\&.h\&.
+.SS "#define WGLEW_3DFX_multisample   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_3DFX_multisample\fP)"
+
+.PP
+Definition at line 99 of file wglew\&.h\&.
+.SS "#define WGLEW_3DL_stereo_control   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_3DL_stereo_control\fP)"
+
+.PP
+Definition at line 117 of file wglew\&.h\&.
+.SS "#define WGLEW_AMD_gpu_association   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_AMD_gpu_association\fP)"
+
+.PP
+Definition at line 157 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_buffer_region   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_buffer_region\fP)"
+
+.PP
+Definition at line 181 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_create_context   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_create_context\fP)"
+
+.PP
+Definition at line 203 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_create_context_profile   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_create_context_profile\fP)"
+
+.PP
+Definition at line 216 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_create_context_robustness   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_create_context_robustness\fP)"
+
+.PP
+Definition at line 230 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_extensions_string   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_extensions_string\fP)"
+
+.PP
+Definition at line 243 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_framebuffer_sRGB   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_framebuffer_sRGB\fP)"
+
+.PP
+Definition at line 254 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_make_current_read   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_make_current_read\fP)"
+
+.PP
+Definition at line 272 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_multisample   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_multisample\fP)"
+
+.PP
+Definition at line 284 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_pbuffer   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_pbuffer\fP)"
+
+.PP
+Definition at line 316 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_pixel_format   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_pixel_format\fP)"
+
+.PP
+Definition at line 383 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_pixel_format_float   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_pixel_format_float\fP)"
+
+.PP
+Definition at line 394 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_render_texture   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_render_texture\fP)"
+
+.PP
+Definition at line 445 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_robustness_application_isolation   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_robustness_application_isolation\fP)"
+
+.PP
+Definition at line 456 of file wglew\&.h\&.
+.SS "#define WGLEW_ARB_robustness_share_group_isolation   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ARB_robustness_share_group_isolation\fP)"
+
+.PP
+Definition at line 467 of file wglew\&.h\&.
+.SS "#define WGLEW_ATI_pixel_format_float   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ATI_pixel_format_float\fP)"
+
+.PP
+Definition at line 480 of file wglew\&.h\&.
+.SS "#define WGLEW_ATI_render_texture_rectangle   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_ATI_render_texture_rectangle\fP)"
+
+.PP
+Definition at line 491 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_create_context_es2_profile   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_create_context_es2_profile\fP)"
+
+.PP
+Definition at line 502 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_create_context_es_profile   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_create_context_es_profile\fP)"
+
+.PP
+Definition at line 513 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_depth_float   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_depth_float\fP)"
+
+.PP
+Definition at line 524 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_display_color_table   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_display_color_table\fP)"
+
+.PP
+Definition at line 543 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_extensions_string   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_extensions_string\fP)"
+
+.PP
+Definition at line 556 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_framebuffer_sRGB   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_framebuffer_sRGB\fP)"
+
+.PP
+Definition at line 567 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_make_current_read   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_make_current_read\fP)"
+
+.PP
+Definition at line 584 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_multisample   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_multisample\fP)"
+
+.PP
+Definition at line 596 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_pbuffer   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_pbuffer\fP)"
+
+.PP
+Definition at line 629 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_pixel_format   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_pixel_format\fP)"
+
+.PP
+Definition at line 692 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_pixel_format_packed_float   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_pixel_format_packed_float\fP)"
+
+.PP
+Definition at line 703 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_swap_control   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_swap_control\fP)"
+
+.PP
+Definition at line 718 of file wglew\&.h\&.
+.SS "#define WGLEW_EXT_swap_control_tear   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_EXT_swap_control_tear\fP)"
+
+.PP
+Definition at line 727 of file wglew\&.h\&.
+.SS "#define WGLEW_FUN_EXPORT   \fBGLEW_FUN_EXPORT\fP"
+
+.PP
+Definition at line 1177 of file wglew\&.h\&.
+.SS "#define WGLEW_GET_FUN(\fBx\fP)   \fBx\fP"
+
+.PP
+Definition at line 1407 of file wglew\&.h\&.
+.SS "#define WGLEW_GET_VAR(\fBx\fP)   (*(const \fBGLboolean\fP*)&\fBx\fP)"
+
+.PP
+Definition at line 1406 of file wglew\&.h\&.
+.SS "#define WGLEW_I3D_digital_video_control   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_digital_video_control\fP)"
+
+.PP
+Definition at line 747 of file wglew\&.h\&.
+.SS "#define WGLEW_I3D_gamma   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_gamma\fP)"
+
+.PP
+Definition at line 769 of file wglew\&.h\&.
+.SS "#define WGLEW_I3D_genlock   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_genlock\fP)"
+
+.PP
+Definition at line 814 of file wglew\&.h\&.
+.SS "#define WGLEW_I3D_image_buffer   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_image_buffer\fP)"
+
+.PP
+Definition at line 836 of file wglew\&.h\&.
+.SS "#define WGLEW_I3D_swap_frame_lock   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_swap_frame_lock\fP)"
+
+.PP
+Definition at line 855 of file wglew\&.h\&.
+.SS "#define WGLEW_I3D_swap_frame_usage   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_I3D_swap_frame_usage\fP)"
+
+.PP
+Definition at line 874 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_copy_image   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_copy_image\fP)"
+
+.PP
+Definition at line 927 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_DX_interop   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_DX_interop\fP)"
+
+.PP
+Definition at line 905 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_DX_interop2   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_DX_interop2\fP)"
+
+.PP
+Definition at line 914 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_float_buffer   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_float_buffer\fP)"
+
+.PP
+Definition at line 946 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_gpu_affinity   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_gpu_affinity\fP)"
+
+.PP
+Definition at line 979 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_multisample_coverage   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_multisample_coverage\fP)"
+
+.PP
+Definition at line 991 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_present_video   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_present_video\fP)"
+
+.PP
+Definition at line 1012 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_render_depth_texture   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_render_depth_texture\fP)"
+
+.PP
+Definition at line 1028 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_render_texture_rectangle   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_render_texture_rectangle\fP)"
+
+.PP
+Definition at line 1041 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_swap_group   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_swap_group\fP)"
+
+.PP
+Definition at line 1064 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_vertex_array_range   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_vertex_array_range\fP)"
+
+.PP
+Definition at line 1079 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_video_capture   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_video_capture\fP)"
+
+.PP
+Definition at line 1105 of file wglew\&.h\&.
+.SS "#define WGLEW_NV_video_output   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_NV_video_output\fP)"
+
+.PP
+Definition at line 1144 of file wglew\&.h\&.
+.SS "#define WGLEW_OML_sync_control   \fBWGLEW_GET_VAR\fP(\fB__WGLEW_OML_sync_control\fP)"
+
+.PP
+Definition at line 1167 of file wglew\&.h\&.
+.SS "#define WGLEW_VAR_EXPORT   \fBGLEW_VAR_EXPORT\fP"
+
+.PP
+Definition at line 1178 of file wglew\&.h\&.
+.SS "#define wglFreeMemoryNV   \fBWGLEW_GET_FUN\fP(\fB__wglewFreeMemoryNV\fP)"
+
+.PP
+Definition at line 1077 of file wglew\&.h\&.
+.SS "#define wglGenlockSampleRateI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGenlockSampleRateI3D\fP)"
+
+.PP
+Definition at line 803 of file wglew\&.h\&.
+.SS "#define wglGenlockSourceDelayI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGenlockSourceDelayI3D\fP)"
+
+.PP
+Definition at line 804 of file wglew\&.h\&.
+.SS "#define wglGenlockSourceEdgeI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGenlockSourceEdgeI3D\fP)"
+
+.PP
+Definition at line 805 of file wglew\&.h\&.
+.SS "#define wglGenlockSourceI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGenlockSourceI3D\fP)"
+
+.PP
+Definition at line 806 of file wglew\&.h\&.
+.SS "#define wglGetContextGPUIDAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewGetContextGPUIDAMD\fP)"
+
+.PP
+Definition at line 151 of file wglew\&.h\&.
+.SS "#define wglGetCurrentAssociatedContextAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewGetCurrentAssociatedContextAMD\fP)"
+
+.PP
+Definition at line 152 of file wglew\&.h\&.
+.SS "#define wglGetCurrentReadDCARB   \fBWGLEW_GET_FUN\fP(\fB__wglewGetCurrentReadDCARB\fP)"
+
+.PP
+Definition at line 269 of file wglew\&.h\&.
+.SS "#define wglGetCurrentReadDCEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewGetCurrentReadDCEXT\fP)"
+
+.PP
+Definition at line 581 of file wglew\&.h\&.
+.SS "#define wglGetDigitalVideoParametersI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGetDigitalVideoParametersI3D\fP)"
+
+.PP
+Definition at line 744 of file wglew\&.h\&.
+.SS "#define wglGetExtensionsStringARB   \fBWGLEW_GET_FUN\fP(\fB__wglewGetExtensionsStringARB\fP)"
+
+.PP
+Definition at line 241 of file wglew\&.h\&.
+.SS "#define wglGetExtensionsStringEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewGetExtensionsStringEXT\fP)"
+
+.PP
+Definition at line 554 of file wglew\&.h\&.
+.SS "#define wglGetFrameUsageI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGetFrameUsageI3D\fP)"
+
+.PP
+Definition at line 871 of file wglew\&.h\&.
+.SS "#define wglGetGammaTableI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGammaTableI3D\fP)"
+
+.PP
+Definition at line 764 of file wglew\&.h\&.
+.SS "#define wglGetGammaTableParametersI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGammaTableParametersI3D\fP)"
+
+.PP
+Definition at line 765 of file wglew\&.h\&.
+.SS "#define wglGetGenlockSampleRateI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGenlockSampleRateI3D\fP)"
+
+.PP
+Definition at line 807 of file wglew\&.h\&.
+.SS "#define wglGetGenlockSourceDelayI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGenlockSourceDelayI3D\fP)"
+
+.PP
+Definition at line 808 of file wglew\&.h\&.
+.SS "#define wglGetGenlockSourceEdgeI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGenlockSourceEdgeI3D\fP)"
+
+.PP
+Definition at line 809 of file wglew\&.h\&.
+.SS "#define wglGetGenlockSourceI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGenlockSourceI3D\fP)"
+
+.PP
+Definition at line 810 of file wglew\&.h\&.
+.SS "#define wglGetGPUIDsAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGPUIDsAMD\fP)"
+
+.PP
+Definition at line 153 of file wglew\&.h\&.
+.SS "#define wglGetGPUInfoAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewGetGPUInfoAMD\fP)"
+
+.PP
+Definition at line 154 of file wglew\&.h\&.
+.SS "#define wglGetMscRateOML   \fBWGLEW_GET_FUN\fP(\fB__wglewGetMscRateOML\fP)"
+
+.PP
+Definition at line 1160 of file wglew\&.h\&.
+.SS "#define wglGetPbufferDCARB   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPbufferDCARB\fP)"
+
+.PP
+Definition at line 312 of file wglew\&.h\&.
+.SS "#define wglGetPbufferDCEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPbufferDCEXT\fP)"
+
+.PP
+Definition at line 625 of file wglew\&.h\&.
+.SS "#define wglGetPixelFormatAttribfvARB   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPixelFormatAttribfvARB\fP)"
+
+.PP
+Definition at line 380 of file wglew\&.h\&.
+.SS "#define wglGetPixelFormatAttribfvEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPixelFormatAttribfvEXT\fP)"
+
+.PP
+Definition at line 689 of file wglew\&.h\&.
+.SS "#define wglGetPixelFormatAttribivARB   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPixelFormatAttribivARB\fP)"
+
+.PP
+Definition at line 381 of file wglew\&.h\&.
+.SS "#define wglGetPixelFormatAttribivEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewGetPixelFormatAttribivEXT\fP)"
+
+.PP
+Definition at line 690 of file wglew\&.h\&.
+.SS "#define wglGetSwapIntervalEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewGetSwapIntervalEXT\fP)"
+
+.PP
+Definition at line 715 of file wglew\&.h\&.
+.SS "#define wglGetSyncValuesOML   \fBWGLEW_GET_FUN\fP(\fB__wglewGetSyncValuesOML\fP)"
+
+.PP
+Definition at line 1161 of file wglew\&.h\&.
+.SS "#define wglGetVideoDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewGetVideoDeviceNV\fP)"
+
+.PP
+Definition at line 1138 of file wglew\&.h\&.
+.SS "#define wglGetVideoInfoNV   \fBWGLEW_GET_FUN\fP(\fB__wglewGetVideoInfoNV\fP)"
+
+.PP
+Definition at line 1139 of file wglew\&.h\&.
+.SS "#define wglIsEnabledFrameLockI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewIsEnabledFrameLockI3D\fP)"
+
+.PP
+Definition at line 852 of file wglew\&.h\&.
+.SS "#define wglIsEnabledGenlockI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewIsEnabledGenlockI3D\fP)"
+
+.PP
+Definition at line 811 of file wglew\&.h\&.
+.SS "#define wglJoinSwapGroupNV   \fBWGLEW_GET_FUN\fP(\fB__wglewJoinSwapGroupNV\fP)"
+
+.PP
+Definition at line 1058 of file wglew\&.h\&.
+.SS "#define wglLoadDisplayColorTableEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewLoadDisplayColorTableEXT\fP)"
+
+.PP
+Definition at line 541 of file wglew\&.h\&.
+.SS "#define wglLockVideoCaptureDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewLockVideoCaptureDeviceNV\fP)"
+
+.PP
+Definition at line 1101 of file wglew\&.h\&.
+.SS "#define wglMakeAssociatedContextCurrentAMD   \fBWGLEW_GET_FUN\fP(\fB__wglewMakeAssociatedContextCurrentAMD\fP)"
+
+.PP
+Definition at line 155 of file wglew\&.h\&.
+.SS "#define wglMakeContextCurrentARB   \fBWGLEW_GET_FUN\fP(\fB__wglewMakeContextCurrentARB\fP)"
+
+.PP
+Definition at line 270 of file wglew\&.h\&.
+.SS "#define wglMakeContextCurrentEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewMakeContextCurrentEXT\fP)"
+
+.PP
+Definition at line 582 of file wglew\&.h\&.
+.SS "#define wglQueryCurrentContextNV   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryCurrentContextNV\fP)"
+
+.PP
+Definition at line 1010 of file wglew\&.h\&.
+.SS "#define wglQueryFrameCountNV   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryFrameCountNV\fP)"
+
+.PP
+Definition at line 1059 of file wglew\&.h\&.
+.SS "#define wglQueryFrameLockMasterI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryFrameLockMasterI3D\fP)"
+
+.PP
+Definition at line 853 of file wglew\&.h\&.
+.SS "#define wglQueryFrameTrackingI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryFrameTrackingI3D\fP)"
+
+.PP
+Definition at line 872 of file wglew\&.h\&.
+.SS "#define wglQueryGenlockMaxSourceDelayI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryGenlockMaxSourceDelayI3D\fP)"
+
+.PP
+Definition at line 812 of file wglew\&.h\&.
+.SS "#define wglQueryMaxSwapGroupsNV   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryMaxSwapGroupsNV\fP)"
+
+.PP
+Definition at line 1060 of file wglew\&.h\&.
+.SS "#define wglQueryPbufferARB   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryPbufferARB\fP)"
+
+.PP
+Definition at line 313 of file wglew\&.h\&.
+.SS "#define wglQueryPbufferEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryPbufferEXT\fP)"
+
+.PP
+Definition at line 626 of file wglew\&.h\&.
+.SS "#define wglQuerySwapGroupNV   \fBWGLEW_GET_FUN\fP(\fB__wglewQuerySwapGroupNV\fP)"
+
+.PP
+Definition at line 1061 of file wglew\&.h\&.
+.SS "#define wglQueryVideoCaptureDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewQueryVideoCaptureDeviceNV\fP)"
+
+.PP
+Definition at line 1102 of file wglew\&.h\&.
+.SS "#define wglReleaseImageBufferEventsI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseImageBufferEventsI3D\fP)"
+
+.PP
+Definition at line 834 of file wglew\&.h\&.
+.SS "#define wglReleasePbufferDCARB   \fBWGLEW_GET_FUN\fP(\fB__wglewReleasePbufferDCARB\fP)"
+
+.PP
+Definition at line 314 of file wglew\&.h\&.
+.SS "#define wglReleasePbufferDCEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewReleasePbufferDCEXT\fP)"
+
+.PP
+Definition at line 627 of file wglew\&.h\&.
+.SS "#define wglReleaseTexImageARB   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseTexImageARB\fP)"
+
+.PP
+Definition at line 442 of file wglew\&.h\&.
+.SS "#define wglReleaseVideoCaptureDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseVideoCaptureDeviceNV\fP)"
+
+.PP
+Definition at line 1103 of file wglew\&.h\&.
+.SS "#define wglReleaseVideoDeviceNV   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseVideoDeviceNV\fP)"
+
+.PP
+Definition at line 1140 of file wglew\&.h\&.
+.SS "#define wglReleaseVideoImageNV   \fBWGLEW_GET_FUN\fP(\fB__wglewReleaseVideoImageNV\fP)"
+
+.PP
+Definition at line 1141 of file wglew\&.h\&.
+.SS "#define wglResetFrameCountNV   \fBWGLEW_GET_FUN\fP(\fB__wglewResetFrameCountNV\fP)"
+
+.PP
+Definition at line 1062 of file wglew\&.h\&.
+.SS "#define wglRestoreBufferRegionARB   \fBWGLEW_GET_FUN\fP(\fB__wglewRestoreBufferRegionARB\fP)"
+
+.PP
+Definition at line 178 of file wglew\&.h\&.
+.SS "#define wglSaveBufferRegionARB   \fBWGLEW_GET_FUN\fP(\fB__wglewSaveBufferRegionARB\fP)"
+
+.PP
+Definition at line 179 of file wglew\&.h\&.
+.SS "#define wglSendPbufferToVideoNV   \fBWGLEW_GET_FUN\fP(\fB__wglewSendPbufferToVideoNV\fP)"
+
+.PP
+Definition at line 1142 of file wglew\&.h\&.
+.SS "#define wglSetDigitalVideoParametersI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewSetDigitalVideoParametersI3D\fP)"
+
+.PP
+Definition at line 745 of file wglew\&.h\&.
+.SS "#define wglSetGammaTableI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewSetGammaTableI3D\fP)"
+
+.PP
+Definition at line 766 of file wglew\&.h\&.
+.SS "#define wglSetGammaTableParametersI3D   \fBWGLEW_GET_FUN\fP(\fB__wglewSetGammaTableParametersI3D\fP)"
+
+.PP
+Definition at line 767 of file wglew\&.h\&.
+.SS "#define wglSetPbufferAttribARB   \fBWGLEW_GET_FUN\fP(\fB__wglewSetPbufferAttribARB\fP)"
+
+.PP
+Definition at line 443 of file wglew\&.h\&.
+.SS "#define wglSetStereoEmitterState3DL   \fBWGLEW_GET_FUN\fP(\fB__wglewSetStereoEmitterState3DL\fP)"
+
+.PP
+Definition at line 115 of file wglew\&.h\&.
+.SS "#define wglSwapBuffersMscOML   \fBWGLEW_GET_FUN\fP(\fB__wglewSwapBuffersMscOML\fP)"
+
+.PP
+Definition at line 1162 of file wglew\&.h\&.
+.SS "#define wglSwapIntervalEXT   \fBWGLEW_GET_FUN\fP(\fB__wglewSwapIntervalEXT\fP)"
+
+.PP
+Definition at line 716 of file wglew\&.h\&.
+.SS "#define wglSwapLayerBuffersMscOML   \fBWGLEW_GET_FUN\fP(\fB__wglewSwapLayerBuffersMscOML\fP)"
+
+.PP
+Definition at line 1163 of file wglew\&.h\&.
+.SS "#define wglWaitForMscOML   \fBWGLEW_GET_FUN\fP(\fB__wglewWaitForMscOML\fP)"
+
+.PP
+Definition at line 1164 of file wglew\&.h\&.
+.SS "#define wglWaitForSbcOML   \fBWGLEW_GET_FUN\fP(\fB__wglewWaitForSbcOML\fP)"
+
+.PP
+Definition at line 1165 of file wglew\&.h\&.
+.SS "#define WIN32_LEAN_AND_MEAN   1"
+
+.PP
+Definition at line 67 of file wglew\&.h\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef \fBvoid\fP \fBGLuint\fP \fBGLenum\fP \fBGLenum\fP \fBaccess\fP"
+
+.PP
+Definition at line 889 of file wglew\&.h\&.
+.SS "typedef \fBHGLRC\fP const \fBint\fP * \fBattribList\fP"
+
+.PP
+Definition at line 139 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLuint\fP * \fBbarrier\fP"
+
+.PP
+Definition at line 1050 of file wglew\&.h\&.
+.SS "typedef \fBint\fP unsigned long \fBBOOL\fP \fBbBlock\fP"
+
+.PP
+Definition at line 1135 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP* \fBcount\fP"
+
+.PP
+Definition at line 826 of file wglew\&.h\&.
+.SS "typedef \fBINT\fP \fBGLenum\fP \fBUINT\fP \fBvoid\fP* \fBdata\fP"
+
+.PP
+Definition at line 144 of file wglew\&.h\&.
+.SS "typedef \fBINT\fP \fBGLenum\fP \fBdataType\fP"
+
+.PP
+Definition at line 144 of file wglew\&.h\&.
+.SS "typedef INT32 INT32* \fBdenominator\fP"
+
+.PP
+Definition at line 1153 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBGLsizei\fP \fBdepth\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP \fBdivisor\fP"
+
+.PP
+Definition at line 1155 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBdstLevel\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBdstName\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBdstTarget\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBdstX\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX0\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstX1\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY0\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstY1\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBdstZ\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef DWORD \fBdwSize\fP"
+
+.PP
+Definition at line 827 of file wglew\&.h\&.
+.SS "typedef \fBvoid\fP* \fBdxObject\fP"
+
+.PP
+Definition at line 891 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBGLenum\fP \fBfilter\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBINT\fP \fBfuPlanes\fP"
+
+.PP
+Definition at line 1156 of file wglew\&.h\&.
+.SS "typedef struct \fB_GPU_DEVICE\fP  \fBGPU_DEVICE\fP"
+
+.SS "typedef \fBGLuint\fP* \fBgroup\fP"
+
+.PP
+Definition at line 1051 of file wglew\&.h\&.
+.SS "typedef \fBHDC\fP \fBhDC\fP"
+
+.PP
+Definition at line 308 of file wglew\&.h\&.
+.SS "typedef HVIDEOINPUTDEVICENV \fBhDevice\fP"
+
+.PP
+Definition at line 1093 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBhDstRC\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBGLsizei\fP \fBheight\fP"
+
+.PP
+Definition at line 173 of file wglew\&.h\&.
+.SS "typedef \fBHDC\fP \fBHGLRC\fP \fBhglrc\fP"
+
+.PP
+Definition at line 267 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP HGPUNV* \fBhGpu\fP"
+
+.PP
+Definition at line 970 of file wglew\&.h\&.
+.SS "typedef \fBHANDLE\fP \fBhObject\fP"
+
+.PP
+Definition at line 894 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBHANDLE\fP * \fBhObjects\fP"
+
+.PP
+Definition at line 888 of file wglew\&.h\&.
+.SS "typedef \fBHPBUFFERARB\fP \fBhPbuffer\fP"
+
+.PP
+Definition at line 1130 of file wglew\&.h\&.
+.SS "typedef \fBHDC\fP \fBhReadDC\fP"
+
+.PP
+Definition at line 267 of file wglew\&.h\&.
+.SS "typedef \fBHGLRC\fP \fBhShareContext\fP"
+
+.PP
+Definition at line 139 of file wglew\&.h\&.
+.SS "typedef \fBint\fP HPVIDEODEV * \fBhVideoDevice\fP"
+
+.PP
+Definition at line 1004 of file wglew\&.h\&.
+.SS "typedef HVIDEOINPUTDEVICENV \fBint\fP \fBiAttribute\fP"
+
+.PP
+Definition at line 307 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBiBuffer\fP"
+
+.PP
+Definition at line 437 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBiBufferType\fP"
+
+.PP
+Definition at line 1135 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP \fBiDeviceIndex\fP"
+
+.PP
+Definition at line 969 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP* \fBids\fP"
+
+.PP
+Definition at line 143 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBiEntries\fP"
+
+.PP
+Definition at line 759 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP \fBiGpuIndex\fP"
+
+.PP
+Definition at line 970 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBint\fP \fBiHeight\fP"
+
+.PP
+Definition at line 304 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBiLayerPlane\fP"
+
+.PP
+Definition at line 171 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBiPixelFormat\fP"
+
+.PP
+Definition at line 304 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBiVideoBuffer\fP"
+
+.PP
+Definition at line 1130 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBiWidth\fP"
+
+.PP
+Definition at line 304 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBlength\fP"
+
+.PP
+Definition at line 536 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP \fBPGPU_DEVICE\fP \fBlpGpuDevice\fP"
+
+.PP
+Definition at line 969 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLbitfield\fP \fBmask\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLuint\fP* \fBmaxBarriers\fP"
+
+.PP
+Definition at line 1053 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP* \fBmaxGroups\fP"
+
+.PP
+Definition at line 1053 of file wglew\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP * \fBmsc\fP"
+
+.PP
+Definition at line 1154 of file wglew\&.h\&.
+.SS "typedef \fBvoid\fP \fBGLuint\fP \fBname\fP"
+
+.PP
+Definition at line 891 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBnAttributes\fP"
+
+.PP
+Definition at line 376 of file wglew\&.h\&.
+.SS "typedef const \fBint\fP const FLOAT \fBUINT\fP \fBnMaxFormats\fP"
+
+.PP
+Definition at line 375 of file wglew\&.h\&.
+.SS "typedef const \fBint\fP const FLOAT \fBUINT\fP \fBint\fP \fBUINT\fP * \fBnNumFormats\fP"
+
+.PP
+Definition at line 375 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBnumDevices\fP"
+
+.PP
+Definition at line 1131 of file wglew\&.h\&.
+.SS "typedef INT32* \fBnumerator\fP"
+
+.PP
+Definition at line 1153 of file wglew\&.h\&.
+.SS "typedef \fBLPVOID\fP * \fBpAddress\fP"
+
+.PP
+Definition at line 826 of file wglew\&.h\&.
+.SS "typedef \fBHANDLE\fP* \fBpEvent\fP"
+
+.PP
+Definition at line 826 of file wglew\&.h\&.
+.SS "typedef const \fBint\fP const FLOAT * \fBpfAttribFList\fP"
+
+.PP
+Definition at line 375 of file wglew\&.h\&.
+.SS "typedef \fBBOOL\fP* \fBpFlag\fP"
+
+.PP
+Definition at line 798 of file wglew\&.h\&.
+.SS "typedef \fBvoid\fP* WINAPI* PFNWGLALLOCATEMEMORYNVPROC(\fBGLsizei\fP \fBsize\fP, \fBGLfloat\fP readFrequency, \fBGLfloat\fP writeFrequency, \fBGLfloat\fP priority)"
+
+.PP
+Definition at line 1073 of file wglew\&.h\&.
+.SS "typedef const char* WINAPI* PFNWGLGETEXTENSIONSSTRINGARBPROC(\fBHDC\fP hdc)"
+
+.PP
+Definition at line 239 of file wglew\&.h\&.
+.SS "typedef const char* WINAPI* PFNWGLGETEXTENSIONSSTRINGEXTPROC(\fBvoid\fP)"
+
+.PP
+Definition at line 552 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBint\fP FLOAT * \fBpfValues\fP"
+
+.PP
+Definition at line 376 of file wglew\&.h\&.
+.SS "typedef struct \fB_GPU_DEVICE\fP * \fBPGPU_DEVICE\fP"
+
+.SS "typedef HVIDEOINPUTDEVICENV * \fBphDeviceList\fP"
+
+.PP
+Definition at line 1005 of file wglew\&.h\&.
+.SS "typedef HGPUNV* \fBphGpu\fP"
+
+.PP
+Definition at line 971 of file wglew\&.h\&.
+.SS "typedef const \fBint\fP * \fBpiAttribIList\fP"
+
+.PP
+Definition at line 375 of file wglew\&.h\&.
+.SS "typedef unsigned \fBint\fP HVIDEOOUTPUTDEVICENV const \fBint\fP * \fBpiAttribList\fP"
+
+.PP
+Definition at line 304 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBint\fP * \fBpiAttributes\fP"
+
+.PP
+Definition at line 376 of file wglew\&.h\&.
+.SS "typedef const \fBint\fP const FLOAT \fBUINT\fP \fBint\fP * \fBpiFormats\fP"
+
+.PP
+Definition at line 375 of file wglew\&.h\&.
+.SS "typedef HVIDEOINPUTDEVICENV \fBint\fP \fBint\fP * \fBpiValue\fP"
+
+.PP
+Definition at line 307 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBUINT\fP \fBint\fP \fBint\fP * \fBpiValues\fP"
+
+.PP
+Definition at line 377 of file wglew\&.h\&.
+.SS "typedef DWORD float* \fBpLastMissedUsage\fP"
+
+.PP
+Definition at line 867 of file wglew\&.h\&.
+.SS "typedef DWORD* \fBpMissedFrames\fP"
+
+.PP
+Definition at line 867 of file wglew\&.h\&.
+.SS "typedef \fBINT\fP \fBproperty\fP"
+
+.PP
+Definition at line 144 of file wglew\&.h\&.
+.SS "typedef \fBHANDLE\fP \fBLPVOID\fP DWORD* \fBpSize\fP"
+
+.PP
+Definition at line 826 of file wglew\&.h\&.
+.SS "typedef \fBint\fP const USHORT const USHORT const USHORT * \fBpuBlue\fP"
+
+.PP
+Definition at line 759 of file wglew\&.h\&.
+.SS "typedef \fBint\fP const USHORT const USHORT * \fBpuGreen\fP"
+
+.PP
+Definition at line 759 of file wglew\&.h\&.
+.SS "typedef unsigned long* \fBpulCounterOutputPbuffer\fP"
+
+.PP
+Definition at line 1132 of file wglew\&.h\&.
+.SS "typedef unsigned long unsigned long* \fBpulCounterOutputVideo\fP"
+
+.PP
+Definition at line 1132 of file wglew\&.h\&.
+.SS "typedef \fBint\fP unsigned long* \fBpulCounterPbuffer\fP"
+
+.PP
+Definition at line 1135 of file wglew\&.h\&.
+.SS "typedef \fBint\fP const USHORT * \fBpuRed\fP"
+
+.PP
+Definition at line 759 of file wglew\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP \fBremainder\fP"
+
+.PP
+Definition at line 1155 of file wglew\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP \fBINT64\fP \fBINT64\fP * \fBsbc\fP"
+
+.PP
+Definition at line 1154 of file wglew\&.h\&.
+.SS "typedef \fBHANDLE\fP \fBshareHandle\fP"
+
+.PP
+Definition at line 892 of file wglew\&.h\&.
+.SS "typedef \fBINT\fP \fBGLenum\fP \fBUINT\fP \fBsize\fP"
+
+.PP
+Definition at line 144 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBsrcLevel\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBsrcName\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBsrcTarget\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBsrcX\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBsrcX0\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcX1\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBsrcY0\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcY1\fP"
+
+.PP
+Definition at line 137 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBsrcZ\fP"
+
+.PP
+Definition at line 923 of file wglew\&.h\&.
+.SS "typedef \fBINT64\fP \fBtarget_msc\fP"
+
+.PP
+Definition at line 1155 of file wglew\&.h\&.
+.SS "typedef \fBINT64\fP \fBtarget_sbc\fP"
+
+.PP
+Definition at line 1158 of file wglew\&.h\&.
+.SS "typedef \fBvoid\fP \fBGLuint\fP \fBGLenum\fP \fBtype\fP"
+
+.PP
+Definition at line 891 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP * \fBuDelay\fP"
+
+.PP
+Definition at line 791 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP * \fBuEdge\fP"
+
+.PP
+Definition at line 792 of file wglew\&.h\&.
+.SS "typedef DWORD \fBUINT\fP \fBuFlags\fP"
+
+.PP
+Definition at line 827 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP* \fBuMaxLineDelay\fP"
+
+.PP
+Definition at line 799 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP \fBUINT\fP* \fBuMaxPixelDelay\fP"
+
+.PP
+Definition at line 799 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP * \fBuRate\fP"
+
+.PP
+Definition at line 790 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP * \fBuSource\fP"
+
+.PP
+Definition at line 793 of file wglew\&.h\&.
+.SS "typedef \fBINT64\fP \fBINT64\fP * \fBust\fP"
+
+.PP
+Definition at line 1154 of file wglew\&.h\&.
+.SS "typedef \fBUINT\fP \fBuState\fP"
+
+.PP
+Definition at line 113 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBUINT\fP \fBuType\fP"
+
+.PP
+Definition at line 171 of file wglew\&.h\&.
+.SS "typedef unsigned \fBint\fP \fBuVideoSlot\fP"
+
+.PP
+Definition at line 1004 of file wglew\&.h\&.
+.SS "typedef \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBHGLRC\fP \fBGLuint\fP \fBGLenum\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLint\fP \fBGLsizei\fP \fBwidth\fP"
+
+.PP
+Definition at line 173 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBx\fP"
+
+.PP
+Definition at line 173 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBxSrc\fP"
+
+.PP
+Definition at line 173 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBy\fP"
+
+.PP
+Definition at line 173 of file wglew\&.h\&.
+.SS "typedef \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBint\fP \fBySrc\fP"
+
+.PP
+Definition at line 173 of file wglew\&.h\&.
+.SH "Function Documentation"
+.PP 
+.SS "typedef BOOL (WINAPI *PFNWGLSETSTEREOEMITTERSTATE3DLPROC)"
+
+.SS "DECLARE_HANDLE (\fBHPBUFFERARB\fP)"
+
+.SS "DECLARE_HANDLE (\fBHPBUFFEREXT\fP)"
+
+.SS "DECLARE_HANDLE (HGPUNV)"
+
+.SS "DECLARE_HANDLE (HVIDEOOUTPUTDEVICENV)"
+
+.SS "DECLARE_HANDLE (HVIDEOINPUTDEVICENV)"
+
+.SS "DECLARE_HANDLE (HPVIDEODEV)"
+
+.SS "typedef \fBGLboolean\fP (WINAPI *PFNWGLBINDDISPLAYCOLORTABLEEXTPROC)"
+
+.SS "typedef HANDLE (WINAPI *PFNWGLCREATEBUFFERREGIONARBPROC)"
+
+.SS "typedef HDC (WINAPI *PFNWGLGETCURRENTREADDCARBPROC)"
+
+.SS "typedef HGLRC (WINAPI *PFNWGLCREATEASSOCIATEDCONTEXTAMDPROC)"
+
+.SS "typedef HPBUFFERARB (WINAPI *PFNWGLCREATEPBUFFERARBPROC)"
+
+.SS "typedef HPBUFFEREXT (WINAPI *PFNWGLCREATEPBUFFEREXTPROC)"
+
+.SS "typedef INT (WINAPI *PFNWGLGETGPUINFOAMDPROC)"
+
+.SS "typedef int (WINAPI *PFNWGLRELEASEPBUFFERDCARBPROC)"
+
+.SS "typedef INT64 (WINAPI *PFNWGLSWAPBUFFERSMSCOMLPROC)"
+
+.SS "typedef LPVOID (WINAPI *PFNWGLCREATEIMAGEBUFFERI3DPROC)"
+
+.SS "typedef UINT (WINAPI *PFNWGLGETCONTEXTGPUIDAMDPROC)"
+
+.SS "typedef VOID (WINAPI *PFNWGLBLITCONTEXTFRAMEBUFFERAMDPROC)"
+
+.SS "typedef void (WINAPI *PFNWGLDESTROYDISPLAYCOLORTABLEEXTPROC)"
+
+.SS "\fBGLEWAPI\fP \fBGLboolean\fP \fBGLEWAPIENTRY\fP wglewGetExtension (const char *name)"
+
+.SS "\fBGLEWAPI\fP \fBGLboolean\fP \fBGLEWAPIENTRY\fP wglewIsSupported (const char *name)"
+
+.SH "Variable Documentation"
+.PP 
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_3DFX_multisample"
+
+.PP
+Definition at line 1333 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_3DL_stereo_control"
+
+.PP
+Definition at line 1334 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_AMD_gpu_association"
+
+.PP
+Definition at line 1335 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_buffer_region"
+
+.PP
+Definition at line 1336 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_create_context"
+
+.PP
+Definition at line 1337 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_create_context_profile"
+
+.PP
+Definition at line 1338 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_create_context_robustness"
+
+.PP
+Definition at line 1339 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_extensions_string"
+
+.PP
+Definition at line 1340 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_framebuffer_sRGB"
+
+.PP
+Definition at line 1341 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_make_current_read"
+
+.PP
+Definition at line 1342 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_multisample"
+
+.PP
+Definition at line 1343 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_pbuffer"
+
+.PP
+Definition at line 1344 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_pixel_format"
+
+.PP
+Definition at line 1345 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_pixel_format_float"
+
+.PP
+Definition at line 1346 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_render_texture"
+
+.PP
+Definition at line 1347 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_robustness_application_isolation"
+
+.PP
+Definition at line 1348 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ARB_robustness_share_group_isolation"
+
+.PP
+Definition at line 1349 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ATI_pixel_format_float"
+
+.PP
+Definition at line 1350 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_ATI_render_texture_rectangle"
+
+.PP
+Definition at line 1351 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_create_context_es2_profile"
+
+.PP
+Definition at line 1352 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_create_context_es_profile"
+
+.PP
+Definition at line 1353 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_depth_float"
+
+.PP
+Definition at line 1354 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_display_color_table"
+
+.PP
+Definition at line 1355 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_extensions_string"
+
+.PP
+Definition at line 1356 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_framebuffer_sRGB"
+
+.PP
+Definition at line 1357 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_make_current_read"
+
+.PP
+Definition at line 1358 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_multisample"
+
+.PP
+Definition at line 1359 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_pbuffer"
+
+.PP
+Definition at line 1360 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_pixel_format"
+
+.PP
+Definition at line 1361 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_pixel_format_packed_float"
+
+.PP
+Definition at line 1362 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_swap_control"
+
+.PP
+Definition at line 1363 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_EXT_swap_control_tear"
+
+.PP
+Definition at line 1364 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_I3D_digital_video_control"
+
+.PP
+Definition at line 1365 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_I3D_gamma"
+
+.PP
+Definition at line 1366 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_I3D_genlock"
+
+.PP
+Definition at line 1367 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_I3D_image_buffer"
+
+.PP
+Definition at line 1368 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_I3D_swap_frame_lock"
+
+.PP
+Definition at line 1369 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_I3D_swap_frame_usage"
+
+.PP
+Definition at line 1370 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_copy_image"
+
+.PP
+Definition at line 1373 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_DX_interop"
+
+.PP
+Definition at line 1371 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_DX_interop2"
+
+.PP
+Definition at line 1372 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_float_buffer"
+
+.PP
+Definition at line 1374 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_gpu_affinity"
+
+.PP
+Definition at line 1375 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_multisample_coverage"
+
+.PP
+Definition at line 1376 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_present_video"
+
+.PP
+Definition at line 1377 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_render_depth_texture"
+
+.PP
+Definition at line 1378 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_render_texture_rectangle"
+
+.PP
+Definition at line 1379 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_swap_group"
+
+.PP
+Definition at line 1380 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_vertex_array_range"
+
+.PP
+Definition at line 1381 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_video_capture"
+
+.PP
+Definition at line 1382 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_NV_video_output"
+
+.PP
+Definition at line 1383 of file wglew\&.h\&.
+.SS "\fBWGLEW_VAR_EXPORT\fP \fBGLboolean\fP __WGLEW_OML_sync_control"
+
+.PP
+Definition at line 1384 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP \fBPFNWGLALLOCATEMEMORYNVPROC\fP __wglewAllocateMemoryNV"
+
+.PP
+Definition at line 1311 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLASSOCIATEIMAGEBUFFEREVENTSI3DPROC __wglewAssociateImageBufferEventsI3D"
+
+.PP
+Definition at line 1268 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLBEGINFRAMETRACKINGI3DPROC __wglewBeginFrameTrackingI3D"
+
+.PP
+Definition at line 1278 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLBINDDISPLAYCOLORTABLEEXTPROC __wglewBindDisplayColorTableEXT"
+
+.PP
+Definition at line 1224 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLBINDSWAPBARRIERNVPROC __wglewBindSwapBarrierNV"
+
+.PP
+Definition at line 1304 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLBINDTEXIMAGEARBPROC __wglewBindTexImageARB"
+
+.PP
+Definition at line 1220 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLBINDVIDEOCAPTUREDEVICENVPROC __wglewBindVideoCaptureDeviceNV"
+
+.PP
+Definition at line 1314 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLBINDVIDEODEVICENVPROC __wglewBindVideoDeviceNV"
+
+.PP
+Definition at line 1300 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLBINDVIDEOIMAGENVPROC __wglewBindVideoImageNV"
+
+.PP
+Definition at line 1320 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLBLITCONTEXTFRAMEBUFFERAMDPROC __wglewBlitContextFramebufferAMD"
+
+.PP
+Definition at line 1188 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCHOOSEPIXELFORMATARBPROC __wglewChoosePixelFormatARB"
+
+.PP
+Definition at line 1216 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCHOOSEPIXELFORMATEXTPROC __wglewChoosePixelFormatEXT"
+
+.PP
+Definition at line 1240 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCOPYIMAGESUBDATANVPROC __wglewCopyImageSubDataNV"
+
+.PP
+Definition at line 1292 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATEAFFINITYDCNVPROC __wglewCreateAffinityDCNV"
+
+.PP
+Definition at line 1294 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATEASSOCIATEDCONTEXTAMDPROC __wglewCreateAssociatedContextAMD"
+
+.PP
+Definition at line 1189 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATEASSOCIATEDCONTEXTATTRIBSAMDPROC __wglewCreateAssociatedContextAttribsAMD"
+
+.PP
+Definition at line 1190 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATEBUFFERREGIONARBPROC __wglewCreateBufferRegionARB"
+
+.PP
+Definition at line 1198 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATECONTEXTATTRIBSARBPROC __wglewCreateContextAttribsARB"
+
+.PP
+Definition at line 1203 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATEDISPLAYCOLORTABLEEXTPROC __wglewCreateDisplayColorTableEXT"
+
+.PP
+Definition at line 1225 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATEIMAGEBUFFERI3DPROC __wglewCreateImageBufferI3D"
+
+.PP
+Definition at line 1269 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATEPBUFFERARBPROC __wglewCreatePbufferARB"
+
+.PP
+Definition at line 1210 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLCREATEPBUFFEREXTPROC __wglewCreatePbufferEXT"
+
+.PP
+Definition at line 1234 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDELETEASSOCIATEDCONTEXTAMDPROC __wglewDeleteAssociatedContextAMD"
+
+.PP
+Definition at line 1191 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDELETEBUFFERREGIONARBPROC __wglewDeleteBufferRegionARB"
+
+.PP
+Definition at line 1199 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDELETEDCNVPROC __wglewDeleteDCNV"
+
+.PP
+Definition at line 1295 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDESTROYDISPLAYCOLORTABLEEXTPROC __wglewDestroyDisplayColorTableEXT"
+
+.PP
+Definition at line 1226 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDESTROYIMAGEBUFFERI3DPROC __wglewDestroyImageBufferI3D"
+
+.PP
+Definition at line 1270 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDESTROYPBUFFERARBPROC __wglewDestroyPbufferARB"
+
+.PP
+Definition at line 1211 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDESTROYPBUFFEREXTPROC __wglewDestroyPbufferEXT"
+
+.PP
+Definition at line 1235 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDISABLEFRAMELOCKI3DPROC __wglewDisableFrameLockI3D"
+
+.PP
+Definition at line 1273 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDISABLEGENLOCKI3DPROC __wglewDisableGenlockI3D"
+
+.PP
+Definition at line 1255 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDXCLOSEDEVICENVPROC __wglewDXCloseDeviceNV"
+
+.PP
+Definition at line 1283 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDXLOCKOBJECTSNVPROC __wglewDXLockObjectsNV"
+
+.PP
+Definition at line 1284 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDXOBJECTACCESSNVPROC __wglewDXObjectAccessNV"
+
+.PP
+Definition at line 1285 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDXOPENDEVICENVPROC __wglewDXOpenDeviceNV"
+
+.PP
+Definition at line 1286 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDXREGISTEROBJECTNVPROC __wglewDXRegisterObjectNV"
+
+.PP
+Definition at line 1287 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDXSETRESOURCESHAREHANDLENVPROC __wglewDXSetResourceShareHandleNV"
+
+.PP
+Definition at line 1288 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDXUNLOCKOBJECTSNVPROC __wglewDXUnlockObjectsNV"
+
+.PP
+Definition at line 1289 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLDXUNREGISTEROBJECTNVPROC __wglewDXUnregisterObjectNV"
+
+.PP
+Definition at line 1290 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLENABLEFRAMELOCKI3DPROC __wglewEnableFrameLockI3D"
+
+.PP
+Definition at line 1274 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLENABLEGENLOCKI3DPROC __wglewEnableGenlockI3D"
+
+.PP
+Definition at line 1256 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLENDFRAMETRACKINGI3DPROC __wglewEndFrameTrackingI3D"
+
+.PP
+Definition at line 1279 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLENUMERATEVIDEOCAPTUREDEVICESNVPROC __wglewEnumerateVideoCaptureDevicesNV"
+
+.PP
+Definition at line 1315 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLENUMERATEVIDEODEVICESNVPROC __wglewEnumerateVideoDevicesNV"
+
+.PP
+Definition at line 1301 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLENUMGPUDEVICESNVPROC __wglewEnumGpuDevicesNV"
+
+.PP
+Definition at line 1296 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLENUMGPUSFROMAFFINITYDCNVPROC __wglewEnumGpusFromAffinityDCNV"
+
+.PP
+Definition at line 1297 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLENUMGPUSNVPROC __wglewEnumGpusNV"
+
+.PP
+Definition at line 1298 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLFREEMEMORYNVPROC __wglewFreeMemoryNV"
+
+.PP
+Definition at line 1312 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGENLOCKSAMPLERATEI3DPROC __wglewGenlockSampleRateI3D"
+
+.PP
+Definition at line 1257 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGENLOCKSOURCEDELAYI3DPROC __wglewGenlockSourceDelayI3D"
+
+.PP
+Definition at line 1258 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGENLOCKSOURCEEDGEI3DPROC __wglewGenlockSourceEdgeI3D"
+
+.PP
+Definition at line 1259 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGENLOCKSOURCEI3DPROC __wglewGenlockSourceI3D"
+
+.PP
+Definition at line 1260 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETCONTEXTGPUIDAMDPROC __wglewGetContextGPUIDAMD"
+
+.PP
+Definition at line 1192 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETCURRENTASSOCIATEDCONTEXTAMDPROC __wglewGetCurrentAssociatedContextAMD"
+
+.PP
+Definition at line 1193 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETCURRENTREADDCARBPROC __wglewGetCurrentReadDCARB"
+
+.PP
+Definition at line 1207 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETCURRENTREADDCEXTPROC __wglewGetCurrentReadDCEXT"
+
+.PP
+Definition at line 1231 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETDIGITALVIDEOPARAMETERSI3DPROC __wglewGetDigitalVideoParametersI3D"
+
+.PP
+Definition at line 1247 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP \fBPFNWGLGETEXTENSIONSSTRINGARBPROC\fP __wglewGetExtensionsStringARB"
+
+.PP
+Definition at line 1205 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP \fBPFNWGLGETEXTENSIONSSTRINGEXTPROC\fP __wglewGetExtensionsStringEXT"
+
+.PP
+Definition at line 1229 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETFRAMEUSAGEI3DPROC __wglewGetFrameUsageI3D"
+
+.PP
+Definition at line 1280 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETGAMMATABLEI3DPROC __wglewGetGammaTableI3D"
+
+.PP
+Definition at line 1250 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETGAMMATABLEPARAMETERSI3DPROC __wglewGetGammaTableParametersI3D"
+
+.PP
+Definition at line 1251 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETGENLOCKSAMPLERATEI3DPROC __wglewGetGenlockSampleRateI3D"
+
+.PP
+Definition at line 1261 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETGENLOCKSOURCEDELAYI3DPROC __wglewGetGenlockSourceDelayI3D"
+
+.PP
+Definition at line 1262 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETGENLOCKSOURCEEDGEI3DPROC __wglewGetGenlockSourceEdgeI3D"
+
+.PP
+Definition at line 1263 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETGENLOCKSOURCEI3DPROC __wglewGetGenlockSourceI3D"
+
+.PP
+Definition at line 1264 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETGPUIDSAMDPROC __wglewGetGPUIDsAMD"
+
+.PP
+Definition at line 1194 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETGPUINFOAMDPROC __wglewGetGPUInfoAMD"
+
+.PP
+Definition at line 1195 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETMSCRATEOMLPROC __wglewGetMscRateOML"
+
+.PP
+Definition at line 1327 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETPBUFFERDCARBPROC __wglewGetPbufferDCARB"
+
+.PP
+Definition at line 1212 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETPBUFFERDCEXTPROC __wglewGetPbufferDCEXT"
+
+.PP
+Definition at line 1236 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETPIXELFORMATATTRIBFVARBPROC __wglewGetPixelFormatAttribfvARB"
+
+.PP
+Definition at line 1217 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETPIXELFORMATATTRIBFVEXTPROC __wglewGetPixelFormatAttribfvEXT"
+
+.PP
+Definition at line 1241 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETPIXELFORMATATTRIBIVARBPROC __wglewGetPixelFormatAttribivARB"
+
+.PP
+Definition at line 1218 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETPIXELFORMATATTRIBIVEXTPROC __wglewGetPixelFormatAttribivEXT"
+
+.PP
+Definition at line 1242 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETSWAPINTERVALEXTPROC __wglewGetSwapIntervalEXT"
+
+.PP
+Definition at line 1244 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETSYNCVALUESOMLPROC __wglewGetSyncValuesOML"
+
+.PP
+Definition at line 1328 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETVIDEODEVICENVPROC __wglewGetVideoDeviceNV"
+
+.PP
+Definition at line 1321 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLGETVIDEOINFONVPROC __wglewGetVideoInfoNV"
+
+.PP
+Definition at line 1322 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLISENABLEDFRAMELOCKI3DPROC __wglewIsEnabledFrameLockI3D"
+
+.PP
+Definition at line 1275 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLISENABLEDGENLOCKI3DPROC __wglewIsEnabledGenlockI3D"
+
+.PP
+Definition at line 1265 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLJOINSWAPGROUPNVPROC __wglewJoinSwapGroupNV"
+
+.PP
+Definition at line 1305 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLLOADDISPLAYCOLORTABLEEXTPROC __wglewLoadDisplayColorTableEXT"
+
+.PP
+Definition at line 1227 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLLOCKVIDEOCAPTUREDEVICENVPROC __wglewLockVideoCaptureDeviceNV"
+
+.PP
+Definition at line 1316 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLMAKEASSOCIATEDCONTEXTCURRENTAMDPROC __wglewMakeAssociatedContextCurrentAMD"
+
+.PP
+Definition at line 1196 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLMAKECONTEXTCURRENTARBPROC __wglewMakeContextCurrentARB"
+
+.PP
+Definition at line 1208 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLMAKECONTEXTCURRENTEXTPROC __wglewMakeContextCurrentEXT"
+
+.PP
+Definition at line 1232 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYCURRENTCONTEXTNVPROC __wglewQueryCurrentContextNV"
+
+.PP
+Definition at line 1302 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYFRAMECOUNTNVPROC __wglewQueryFrameCountNV"
+
+.PP
+Definition at line 1306 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYFRAMELOCKMASTERI3DPROC __wglewQueryFrameLockMasterI3D"
+
+.PP
+Definition at line 1276 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYFRAMETRACKINGI3DPROC __wglewQueryFrameTrackingI3D"
+
+.PP
+Definition at line 1281 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYGENLOCKMAXSOURCEDELAYI3DPROC __wglewQueryGenlockMaxSourceDelayI3D"
+
+.PP
+Definition at line 1266 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYMAXSWAPGROUPSNVPROC __wglewQueryMaxSwapGroupsNV"
+
+.PP
+Definition at line 1307 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYPBUFFERARBPROC __wglewQueryPbufferARB"
+
+.PP
+Definition at line 1213 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYPBUFFEREXTPROC __wglewQueryPbufferEXT"
+
+.PP
+Definition at line 1237 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYSWAPGROUPNVPROC __wglewQuerySwapGroupNV"
+
+.PP
+Definition at line 1308 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLQUERYVIDEOCAPTUREDEVICENVPROC __wglewQueryVideoCaptureDeviceNV"
+
+.PP
+Definition at line 1317 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRELEASEIMAGEBUFFEREVENTSI3DPROC __wglewReleaseImageBufferEventsI3D"
+
+.PP
+Definition at line 1271 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRELEASEPBUFFERDCARBPROC __wglewReleasePbufferDCARB"
+
+.PP
+Definition at line 1214 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRELEASEPBUFFERDCEXTPROC __wglewReleasePbufferDCEXT"
+
+.PP
+Definition at line 1238 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRELEASETEXIMAGEARBPROC __wglewReleaseTexImageARB"
+
+.PP
+Definition at line 1221 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRELEASEVIDEOCAPTUREDEVICENVPROC __wglewReleaseVideoCaptureDeviceNV"
+
+.PP
+Definition at line 1318 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRELEASEVIDEODEVICENVPROC __wglewReleaseVideoDeviceNV"
+
+.PP
+Definition at line 1323 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRELEASEVIDEOIMAGENVPROC __wglewReleaseVideoImageNV"
+
+.PP
+Definition at line 1324 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRESETFRAMECOUNTNVPROC __wglewResetFrameCountNV"
+
+.PP
+Definition at line 1309 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLRESTOREBUFFERREGIONARBPROC __wglewRestoreBufferRegionARB"
+
+.PP
+Definition at line 1200 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSAVEBUFFERREGIONARBPROC __wglewSaveBufferRegionARB"
+
+.PP
+Definition at line 1201 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSENDPBUFFERTOVIDEONVPROC __wglewSendPbufferToVideoNV"
+
+.PP
+Definition at line 1325 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSETDIGITALVIDEOPARAMETERSI3DPROC __wglewSetDigitalVideoParametersI3D"
+
+.PP
+Definition at line 1248 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSETGAMMATABLEI3DPROC __wglewSetGammaTableI3D"
+
+.PP
+Definition at line 1252 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSETGAMMATABLEPARAMETERSI3DPROC __wglewSetGammaTableParametersI3D"
+
+.PP
+Definition at line 1253 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSETPBUFFERATTRIBARBPROC __wglewSetPbufferAttribARB"
+
+.PP
+Definition at line 1222 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSETSTEREOEMITTERSTATE3DLPROC __wglewSetStereoEmitterState3DL"
+
+.PP
+Definition at line 1186 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSWAPBUFFERSMSCOMLPROC __wglewSwapBuffersMscOML"
+
+.PP
+Definition at line 1329 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSWAPINTERVALEXTPROC __wglewSwapIntervalEXT"
+
+.PP
+Definition at line 1245 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLSWAPLAYERBUFFERSMSCOMLPROC __wglewSwapLayerBuffersMscOML"
+
+.PP
+Definition at line 1330 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLWAITFORMSCOMLPROC __wglewWaitForMscOML"
+
+.PP
+Definition at line 1331 of file wglew\&.h\&.
+.SS "\fBWGLEW_FUN_EXPORT\fP PFNWGLWAITFORSBCOMLPROC __wglewWaitForSbcOML"
+
+.PP
+Definition at line 1332 of file wglew\&.h\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.

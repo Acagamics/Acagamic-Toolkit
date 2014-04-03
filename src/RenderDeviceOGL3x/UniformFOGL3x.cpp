@@ -6,6 +6,8 @@
 
 namespace ACTK
 {
+	using namespace Core;
+
 	UniformF::UniformF(int location, UniformDatatype datatype, int count, ICleanableObserver* observer) : UniformOGL3x(location, datatype, count, observer)
 	{
 		switch (Datatype)
@@ -68,7 +70,7 @@ namespace ACTK
 		}
 	}
 
-	void UniformF::clean()
+	void UniformF::Clean()
 	{
 		switch(Datatype)
 		{

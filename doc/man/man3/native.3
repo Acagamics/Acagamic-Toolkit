@@ -1,0 +1,33 @@
+.TH "Native access" 3 "Thu Apr 3 2014" "Acagamics Toolkit" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Native access \- 
+\fBBy using the native API, you assert that you know what you're doing and how to fix problems caused by using it\&. If you don't, you shouldn't be using it\&.\fP
+.PP
+Before the inclusion of \fBglfw3native\&.h\fP, you must define exactly one window API macro and exactly one context API macro\&. Failure to do this will cause a compile-time error\&.
+.PP
+The available window API macros are:
+.IP "\(bu" 2
+\fCGLFW_EXPOSE_NATIVE_WIN32\fP
+.IP "\(bu" 2
+\fCGLFW_EXPOSE_NATIVE_COCOA\fP
+.IP "\(bu" 2
+\fCGLFW_EXPOSE_NATIVE_X11\fP
+.PP
+.PP
+The available context API macros are:
+.IP "\(bu" 2
+\fCGLFW_EXPOSE_NATIVE_WGL\fP
+.IP "\(bu" 2
+\fCGLFW_EXPOSE_NATIVE_NSGL\fP
+.IP "\(bu" 2
+\fCGLFW_EXPOSE_NATIVE_GLX\fP
+.IP "\(bu" 2
+\fCGLFW_EXPOSE_NATIVE_EGL\fP
+.PP
+.PP
+These macros select which of the native access functions that are declared and which platform-specific headers to include\&. It is then up your (by definition platform-specific) code to handle which of these should be defined\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Acagamics Toolkit from the source code\&.
