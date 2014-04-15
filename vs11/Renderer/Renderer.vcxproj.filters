@@ -9,38 +9,31 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Header Files\Device">
+      <UniqueIdentifier>{da9691ad-cff3-4640-9859-633924d5cb28}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Interface Files">
-      <UniqueIdentifier>{1f64b645-e08d-4bb9-a392-f18da81bc764}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Interface Files\Device">
-      <UniqueIdentifier>{190c2b8e-3e2a-4ef4-85d2-d0990f0f52ce}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Interface Files\Device\Shader">
-      <UniqueIdentifier>{e7d0aff3-4f8c-4f9a-a8e7-b2c97b3c80fb}</UniqueIdentifier>
+    <Filter Include="Header Files\Device\Shader">
+      <UniqueIdentifier>{a610bcf1-d7c2-45d2-a5af-695092abc102}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\include\RenderDeviceManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\include\IRenderDevice.h">
-      <Filter>Interface Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\include\IGraphicsWindow.h">
-      <Filter>Interface Files\Device</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\include\ClearState.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\include\IGraphicsWindow.h">
+      <Filter>Header Files\Device</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\include\IRenderContext.h">
-      <Filter>Interface Files\Device</Filter>
+      <Filter>Header Files\Device</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\include\IRenderDevice.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\..\include\IShaderProgram.h">
-      <Filter>Interface Files\Device\Shader</Filter>
+      <Filter>Header Files\Device\Shader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

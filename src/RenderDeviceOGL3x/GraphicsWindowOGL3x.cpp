@@ -27,7 +27,6 @@ namespace ACTK
 	{
 		m_context->VRelease();
 
-		glfwTerminate();
 		glfwDestroyWindow(m_window);
 		m_window = nullptr;
 
