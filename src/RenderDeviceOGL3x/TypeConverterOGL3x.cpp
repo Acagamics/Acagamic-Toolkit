@@ -118,30 +118,32 @@ namespace ACTK
 	{
 		switch (type)
 		{
-			case PrimitiveType::LINE:
-				return GL_LINE;
-			case PrimitiveType::LINES:
+			case PrimitiveType::Lines:
 				return GL_LINES;
-			case PrimitiveType::LINE_LOOP:
+			case PrimitiveType::LineLoop:
 				return GL_LINE_LOOP;
-			case PrimitiveType::LINE_STRIP:
+			case PrimitiveType::LineStrip:
 				return GL_LINE_STRIP;
-			case PrimitiveType::POINTS:
+			case PrimitiveType::LineStripAdjacency:
+				return GL_LINE_STRIP_ADJACENCY;
+			case PrimitiveType::LinesAdjacency:
+				return GL_LINES_ADJACENCY;
+			case PrimitiveType::Points:
 				return GL_POINTS;
-			case PrimitiveType::POLYGON:
-				return GL_POLYGON;
-			case PrimitiveType::QUADS:
-				return GL_QUADS;
-			case PrimitiveType::QUAD_STRIP:
-				return GL_QUAD_STRIP;
-			case PrimitiveType::TRIANGLES: 
+			case PrimitiveType::Triangles: 
 				return GL_TRIANGLES;
-			case PrimitiveType::TRIANGLE_FAN: 
+			case PrimitiveType::TriangleFan: 
 				return GL_TRIANGLE_FAN;
-			case PrimitiveType::TRIANGLE_STRIP: 
+			case PrimitiveType::TriangleStrip: 
 				return GL_TRIANGLE_STRIP;
+			case PrimitiveType::TriangleStripAdjacency:
+				return GL_TRIANGLE_STRIP_ADJACENCY;
+			case PrimitiveType::TrianglesAdjacency:
+				return GL_TRIANGLES_ADJACENCY;
+			case PrimitiveType::Patches:
+				return GL_PATCHES;
 		}
-		LOG_ASSERT(false, "ActiveAttribType does not exist.");
+		LOG_ASSERT(false, "PrimitiveType does not exist.");
 		return GL_INVALID_ENUM;
 	}
 };

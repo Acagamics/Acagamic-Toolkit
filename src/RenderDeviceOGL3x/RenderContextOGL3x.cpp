@@ -2,6 +2,7 @@
 #include "GL\glew.h"
 #include "GLFW\glfw3.h"
 #include "TypeConverterOGL3x.h"
+#include "ShaderProgramOGL3x.h"
 
 namespace ACTK 
 {
@@ -100,13 +101,17 @@ namespace ACTK
 		glClear(clearMask);
 	}
 
-	void RenderContextOGL3x::VDraw(PrimitiveType type ,float* vertices, unsigned int count)
+	void RenderContextOGL3x::VDraw(PrimitiveType type ,float* vertices, ShaderProgramPtr shaderProgram, unsigned int count)
 	{
+		std::shared_ptr<ShaderProgramOGL3x> shaderProg = std::dynamic_pointer_cast<ShaderProgramOGL3x>(shaderProgram);
+
+		shaderProg->Bind();
+
+		shaderProg->CleanUniforms();
+
 		for (int i = 0; i < count; i++)
 		{
 			glBegin(TypeConverterOGL3x::To(type));
-			
-			glColor3f(1.0f,0.0f,1.0f);
 
 			glVertex3f(vertices[9*i],vertices[9*i+1],vertices[9*i+2]);
 			glVertex3f(vertices[9*i+3],vertices[9*i+4],vertices[9*i+5]);

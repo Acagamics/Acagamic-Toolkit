@@ -3,6 +3,7 @@
 #include <memory>
 #include <Windows.h>
 #include "ClearState.h"
+#include "IShaderProgram.h"
 
 namespace ACTK
 {
@@ -10,17 +11,18 @@ namespace Renderer
 {
 	enum class PrimitiveType : char
 	{
-		POINTS,
-		LINE,
-		LINES,
-		LINE_STRIP,
-		LINE_LOOP,
-		TRIANGLES,
-		TRIANGLE_STRIP,
-		TRIANGLE_FAN,
-		QUADS,
-		QUAD_STRIP,
-		POLYGON
+		Points, 
+		LineStrip, 
+		LineLoop, 
+		Lines, 
+		LineStripAdjacency, 
+		LinesAdjacency, 
+		TriangleStrip, 
+		TriangleFan, 
+		Triangles, 
+		TriangleStripAdjacency, 
+		TrianglesAdjacency, 
+		Patches
 	};
 
 	class IRenderContext
@@ -38,7 +40,7 @@ namespace Renderer
 		// =========================================================================
 		virtual void VClear(const ClearState& clearState) = 0;
 
-		virtual void VDraw(PrimitiveType type ,float* vertices, unsigned int count) = 0;
+		virtual void VDraw(PrimitiveType type ,float* vertices, ShaderProgramPtr shaderProgram, unsigned int count) = 0;
 
 		virtual void VSwapBuffers(void) = 0;
 	};

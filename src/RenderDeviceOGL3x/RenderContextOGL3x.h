@@ -28,7 +28,7 @@ namespace ACTK {
 		// =========================================================================
 		void VClear(const ClearState& clearState);
 
-		void VDraw(PrimitiveType type ,float* vertices, unsigned int count);
+		void VDraw(PrimitiveType type ,float* vertices, ShaderProgramPtr shaderProgram, unsigned int count);
 
 		void VSwapBuffers();
 
