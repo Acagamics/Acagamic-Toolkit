@@ -22,9 +22,9 @@ namespace ACTK
 		}
 	}
 
-
 	void RenderDeviceOGL3x::VRelease(void)
 	{
+		glfwTerminate();
 		LOG_DEBUG("RenderDeviceOGL3x released.");
 	}
 

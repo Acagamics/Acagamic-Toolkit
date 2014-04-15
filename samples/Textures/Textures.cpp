@@ -47,8 +47,8 @@ int main()
 
 	///////////////////////////////////////////////////////////////////
 	// Uniforms
-	float white[] = {1.0f, 1.0f, 1.0f};
-	ShaderProgram->VSetUniformVector("u_color", white, 3);
+	float rosa[] = {1.0f, 0.0f, 1.0f};
+	ShaderProgram->VSetUniformVector("u_color", rosa, 3);
 
 	///////////////////////////////////////////////////////////////////
 	// RenderState
@@ -96,7 +96,7 @@ int main()
 				// 5. Schritt: ContextOGL->draw( PrimitiveType, Offset, Count, VertexArray, ShaderProgram, RenderState );	// RenderState einstellen
 
 				// 6. Schritt: Das selbe mit Vertex Buffern
-			ContextOGL->VDraw(ACTK::Renderer::PrimitiveType::LineLoop, vertices, ShaderProgram, 1);
+			ContextOGL->VDraw(ACTK::Renderer::PrimitiveType::TRIANGLES,vertices,1);
 			ContextOGL->VSwapBuffers();
         }
 	}

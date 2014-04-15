@@ -55,7 +55,7 @@
       <Filter>Source Files\Device\Shader</Filter>
     </ClCompile>
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\TypeConverterOGL3x.cpp">
-      <Filter>Source Files\Device</Filter>
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
