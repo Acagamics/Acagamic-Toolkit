@@ -86,7 +86,7 @@
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\TypeConverterOGL3x.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Texture2DOGL3x.h">
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\Texture2DOGL3x.h">
       <Filter>Header Files\Device\Texture</Filter>
     </ClInclude>
   </ItemGroup>

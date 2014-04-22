@@ -106,9 +106,9 @@
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\RenderDeviceOGL3x.h" />
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\ShaderObjectOGL3x.h" />
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\ShaderProgramOGL3x.h" />
+    <ClInclude Include="..\..\src\RenderDeviceOGL3x\Texture2DOGL3x.h" />
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\TypeConverterOGL3x.h" />
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\UniformOGL3x.h" />
-    <ClInclude Include="Texture2DOGL3x.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

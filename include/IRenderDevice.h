@@ -2,6 +2,7 @@
 #include "ACTK.h"
 #include "IGraphicsWindow.h"
 #include "IShaderProgram.h"
+#include "ITexture2D.h"
 #include <memory>
 #include <string>
 
@@ -28,7 +29,8 @@ namespace Renderer
 		virtual ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource) = 0;
 		virtual ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource) = 0;
 
-		virtual Texture2DPtr		createTexture(const ) = 0;
+		//TODO
+		virtual Texture2DPtr		createTexture() = 0;
 	};
 
 	typedef std::shared_ptr<IRenderDevice> RenderDevicePtr;
