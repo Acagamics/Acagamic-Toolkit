@@ -25,6 +25,12 @@
     <Filter Include="Source Files\Device\Shader">
       <UniqueIdentifier>{c1440483-6d0a-4ec5-8a96-6014cfdcc2b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Device\Texture">
+      <UniqueIdentifier>{bd6f7425-a272-4590-b802-c122f1592b28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Device\Texture">
+      <UniqueIdentifier>{8312093e-1bc6-4997-a74a-84aa5d936813}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.cpp">
@@ -79,6 +85,9 @@
     </ClInclude>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\TypeConverterOGL3x.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture2DOGL3x.h">
+      <Filter>Header Files\Device\Texture</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

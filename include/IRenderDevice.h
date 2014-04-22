@@ -27,6 +27,8 @@ namespace Renderer
 	
 		virtual ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource) = 0;
 		virtual ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource) = 0;
+
+		virtual Texture2DPtr		createTexture(const ) = 0;
 	};
 
 	typedef std::shared_ptr<IRenderDevice> RenderDevicePtr;
