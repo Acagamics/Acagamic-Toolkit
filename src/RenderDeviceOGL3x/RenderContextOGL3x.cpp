@@ -127,4 +127,17 @@ namespace ACTK
 		glfwSwapBuffers(m_window);
 	}
 
+	void RenderContextOGL3x::VSetTexture2DSampler(const char* name, Texture2DPtr texture2DPtr, ShaderProgramPtr shaderProgramPtr, ImagePtr image = nullptr)
+	{
+		Texture2DDescription texDescription = texture2DPtr->GetDescription();
+		//TODO: Load the Image.
+		glTexImage2D(GL_TEXTURE_2D, 0, 
+			TypeConverterOGL3x::To(texDescription.GetFormat()), 
+			texDescription.GetWidth, 
+			texDescription.GetHeight, 0, GL_RGB,
+              GL_UNSIGNED_BYTE, image);
+		//TODO: Free image.
+		shaderProgramPtr->VSetUniform(name, 0);
+		//glUniform1i(glGetUniformLocation(shaderObjectPtr->GetShaderHandle(), "texKitten"), 0);
+	}
 }

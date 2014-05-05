@@ -22,6 +22,8 @@ namespace ACTK
 		ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource);
 		ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource);
 
+		Texture2DPtr		VCreateTexture2D(const int location, const Texture2DDescription description);
+
 	private:
 		//you shall not copy
 		RenderDeviceOGL3x(RenderDeviceOGL3x&){} 

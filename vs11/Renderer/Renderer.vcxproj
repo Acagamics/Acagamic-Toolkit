@@ -87,8 +87,8 @@
     <ClInclude Include="..\..\include\IRenderContext.h" />
     <ClInclude Include="..\..\include\IRenderDevice.h" />
     <ClInclude Include="..\..\include\IShaderProgram.h" />
+    <ClInclude Include="..\..\include\ITexture2D.h" />
     <ClInclude Include="..\..\include\RenderDeviceManager.h" />
-    <ClInclude Include="ITexture2D.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\src\Renderer\RenderDeviceManager.cpp" />

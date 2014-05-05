@@ -38,7 +38,7 @@
     <ClInclude Include="..\..\include\IShaderProgram.h">
       <Filter>Header Files\Device\Shader</Filter>
     </ClInclude>
-    <ClInclude Include="ITexture2D.h">
+    <ClInclude Include="..\..\include\ITexture2D.h">
       <Filter>Header Files\Device\TextureObject</Filter>
     </ClInclude>
   </ItemGroup>

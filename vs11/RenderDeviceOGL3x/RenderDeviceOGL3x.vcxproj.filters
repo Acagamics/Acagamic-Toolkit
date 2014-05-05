@@ -63,6 +63,9 @@
     <ClCompile Include="..\..\src\RenderDeviceOGL3x\TypeConverterOGL3x.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\src\RenderDeviceOGL3x\Texture2DOGL3x.cpp">
+      <Filter>Source Files\Device\Texture</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\src\RenderDeviceOGL3x\GraphicsWindowOGL3x.h">

@@ -35,7 +35,7 @@ namespace ACTK
 		//static GLenum						To(StencilTestFunction function);
 
 		//// Texture
-		//static GLenum						To(TextureFormat format);
+		static GLenum						To(Texture2DFormat format);
 		//static GLenum						To(ImageFormat format);
 		//static GLenum						To(ImageDatatype type);
 		//static GLenum						TextureToPixelFormat(TextureFormat textureFormat);

@@ -24,9 +24,6 @@ namespace ACTK
 		ShaderProgramOGL3x(const std::string& vertexShaderSource, const std::string& geometryShaderSource, const std::string& fragmentShaderSource);
 		~ShaderProgramOGL3x();
 
-		// TODO: Funktionen definieren:
-		// Die Funktionen müssen den Uniform in den richtigen Typ casten (Den Typ den er auf der Grafikkarte hat. Dafür hat jedes Objekt eine "UniformDatatype" variable. Nach der soll entschieden werden in welchen Typ gecastet wird)
-		// Dann müssen die Werte gekastet werden und mit mit einer "setValue" funktion an den Uniform übergeben werden
 		void VSetUniform(const char* name, int value);
 		void VSetUniform(const char* name, float value);
 

@@ -3,11 +3,11 @@
 #include <fstream>
 
 // Chose one of this LogLevels to define LOG_LEVEL
-#define LOG_LEVEL_ALL 0
-#define LOG_LEVEL_DEBUG 1
-#define LOG_LEVEL_WARNING 2
-#define LOG_LEVEL_ERROR 3
-#define LOG_LEVEL_OFF 5
+#define LOG_LEVEL_ALL		0
+#define LOG_LEVEL_DEBUG		1
+#define LOG_LEVEL_WARNING	2
+#define LOG_LEVEL_ERROR		3
+#define LOG_LEVEL_OFF		5
 
 // Low Loglevel means that less important logs will be displayed
 #ifndef LOG_LEVEL
@@ -82,7 +82,7 @@ namespace Core
 		//! \param text logtext
 		void LogWarning(const char* text, ...);
 
-		//! \brief An errormessage will be written into the log and into the console and also will be shown in a messagebox
+		//! \brief An error message will be written into the log and into the console and also will be shown in a messagebox
         //! \param text logtext
 		void LogError(const char* text, ...);
 

@@ -32,6 +32,8 @@ namespace ACTK {
 
 		void VSwapBuffers();
 
+		void RenderContextOGL3x::VSetTexture2DSampler(const char* name, Texture2DPtr texture2DPtr, ShaderProgramPtr shaderProgramPtr, BitMapPtr image = nullptr);
+
 	private:
 		//you shall not copy
 		RenderContextOGL3x(RenderContextOGL3x&){}

@@ -179,6 +179,7 @@ namespace Core
 			buffer[i - 1] = 0;
 
 		m_logStream << buffer << '\n';
+		m_logStream.flush();
 
 		DebugOutput(buffer);
 	}

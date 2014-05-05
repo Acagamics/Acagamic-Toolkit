@@ -59,25 +59,36 @@ namespace Renderer
 		RedGreenBlue8i
 	};
 
+	enum class Texture2DDataTypeFormat : char
+	{
+
+	};
+
 	class Texture2DDescription
 	{
 	public:
-		Texture2DDescription(int width, int height, Texture2DFormat format, bool generateMipmaps = false) : 
-			m_width(), m_height(),
-			m_format(),
-			m_generateMipmaps()
+		Texture2DDescription(int width, int height, Texture2DFormat format, bool generateMipMaps = false) : 
+			m_width(width), m_height(height),
+			m_format(format),
+			m_generateMipMaps(generateMipMaps)
 		{}
 		~Texture2DDescription(){}
 
+		int GetWidth()				{ return m_width; }
+		int GetHeight()				{ return m_height; }
+		Texture2DFormat GetFormat() { return m_format; }
+		bool GetGenerateMipMaps()	{ return m_generateMipMaps; }
+
 	private:
-		int m_width, m_height;
+		int				m_width, m_height;
 		Texture2DFormat m_format;
-		bool m_generateMipmaps;
+		bool			m_generateMipMaps;
 	};
 
 	class ITexture2D
 	{
-		virtual Texture2DFormat getDiscription() = 0;
+	public:
+		virtual Texture2DDescription GetDescription() = 0;
 	};
 
 	typedef std::shared_ptr<ITexture2D> Texture2DPtr;

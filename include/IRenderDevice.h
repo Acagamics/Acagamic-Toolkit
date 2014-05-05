@@ -29,8 +29,12 @@ namespace Renderer
 		virtual ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& FragementShaderSource) = 0;
 		virtual ShaderProgramPtr	VCreateShaderProgram(const std::string& VertexShaderSource, const std::string& GeometryShaderSource, const std::string& FragementShaderSource) = 0;
 
-		//TODO
-		virtual Texture2DPtr		createTexture() = 0;
+		// No OpenGL here!
+		virtual Texture2DPtr		VCreateTexture2D(const int location, const Texture2DDescription description) = 0;
+		// Add parameter image!
+		virtual void				VSetTexture2DSampler(const char* name, Texture2DPtr texture2DPtr, ShaderProgramPtr shaderProgramPtr) = 0;
+
+		virtual BitMapPtr			VCreateImage(const std::string );
 	};
 
 	typedef std::shared_ptr<IRenderDevice> RenderDevicePtr;

@@ -146,4 +146,113 @@ namespace ACTK
 		LOG_ASSERT(false, "PrimitiveType does not exist.");
 		return GL_INVALID_ENUM;
 	}
+
+	GLenum TypeConverterOGL3x::To(Texture2DFormat format)
+	{
+		switch (format)
+		{
+			case Texture2DFormat::RedGreenBlue16:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlueAlpha8:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue8:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlue10A2:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlueAlpha16:
+				return GL_RGBA;
+			case Texture2DFormat::Depth16:
+				return GL_DEPTH_COMPONENT;
+			case Texture2DFormat::Depth24:
+				return GL_DEPTH_COMPONENT;
+			case Texture2DFormat::Red8:
+				return GL_RED;
+			case Texture2DFormat::Red16:
+				return GL_RED;
+			case Texture2DFormat::RedGreen8:
+				return GL_RG;
+			case Texture2DFormat::RedGreen16:
+				return GL_RG;
+			case Texture2DFormat::Red16f:
+				return GL_RED;
+			case Texture2DFormat::Red32f: 
+				return GL_RED;
+			case Texture2DFormat::RedGreen16f: 
+				return GL_RG;
+			case Texture2DFormat::RedGreen32f: 
+				return GL_RG;
+			case Texture2DFormat::Red8i:
+				return GL_RED;
+			case Texture2DFormat::Red8ui:
+				return GL_RED;
+			case Texture2DFormat::Red16i:
+				return GL_RED;
+			case Texture2DFormat::Red16ui:
+				return GL_RED;
+			case Texture2DFormat::Red32i:
+				return GL_RED;
+			case Texture2DFormat::Red32ui:
+				return GL_RED;
+			case Texture2DFormat::RedGreen8i:
+				return GL_RG;
+			case Texture2DFormat::RedGreen8ui:
+				return GL_RG;
+			case Texture2DFormat::RedGreen16i:
+				return GL_RG;
+			case Texture2DFormat::RedGreen16ui:
+				return GL_RG;
+			case Texture2DFormat::RedGreen32i:
+				return GL_RG;
+			case Texture2DFormat::RedGreen32ui:
+				return GL_RG;
+			case Texture2DFormat::RedGreenBlueAlpha32f:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue32f:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlueAlpha16f:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue16f:
+				return GL_RGB;
+			case Texture2DFormat::Depth24Stencil8:
+				return GL_DEPTH_STENCIL;
+			case Texture2DFormat::Red11fGreen11fBlue10f:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlue9E5:
+				return GL_RGB;
+			case Texture2DFormat::SRedGreenBlue8:
+				return GL_RGB;
+			case Texture2DFormat::SRedGreenBlue8Alpha8:
+				return GL_RGBA;
+			case Texture2DFormat::Depth32f:
+				return GL_DEPTH_COMPONENT;
+			case Texture2DFormat::Depth32fStencil8:
+				return GL_DEPTH_STENCIL;
+			case Texture2DFormat::RedGreenBlueAlpha32ui:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue32ui:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlueAlpha16ui:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue16ui:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlueAlpha8ui:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue8ui:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlueAlpha32i:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue32i:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlueAlpha16i:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue16i:
+				return GL_RGB;
+			case Texture2DFormat::RedGreenBlueAlpha8i:
+				return GL_RGBA;
+			case Texture2DFormat::RedGreenBlue8i:
+				return GL_RGB;
+		}
+		LOG_ASSERT(false, "PrimitiveType does not exist.");
+		return GL_INVALID_ENUM;
+	}
 };
